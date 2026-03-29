@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ENT3620 Flashcards</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  :root { --bg:#0a0a0a;--bg2:#1a1a2e;--bg3:#16213e;--border:#333;--text:#e0e0e0;--text2:#888;--accent:#4a6fa5;--green:#4a9f5a;--green-bg:#1a3d20;--green-border:#2d5a3d;--red:#9f4a4a;--red-bg:#3d1a1a;--red-border:#5a2d2d; }
+  body.light { --bg:#f5f5f7;--bg2:#ffffff;--bg3:#f0f4fa;--border:#ddd;--text:#1a1a1a;--text2:#666;--accent:#3a5f95;--green:#3a8f4a;--green-bg:#e8f5e9;--green-border:#a5d6a7;--red:#c44a4a;--red-bg:#fce8e8;--red-border:#ef9a9a; }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: var(--bg); color: var(--text); min-height: 100vh; transition: background 0.3s, color 0.3s; }
+
+  .container { max-width: 720px; margin: 0 auto; padding: 20px; }
+
+  h1 { font-size: 28px; margin-bottom: 8px; color: #fff; }
+  .subtitle { color: #888; margin-bottom: 24px; font-size: 14px; }
+
+  /* Menu */
+  .deck-menu { display: flex; flex-direction: column; gap: 12px; margin-bottom: 20px; }
+  .deck-btn { background: #1a1a2e; border: 1px solid #333; border-radius: 12px; padding: 18px; cursor: pointer; text-align: left; transition: all 0.2s; }
+  .deck-btn:hover { background: #16213e; border-color: #4a6fa5; transform: translateY(-2px); }
+  .deck-btn .label { font-size: 15px; font-weight: 600; color: #fff; margin-bottom: 4px; }
+  .deck-btn .desc { font-size: 12px; color: #888; }
+  .deck-btn .count { font-size: 11px; color: #4a6fa5; margin-top: 6px; }
+
+  .nav-link { display: inline-block; margin-top: 16px; color: #4a6fa5; text-decoration: none; font-size: 14px; border: 1px solid #333; padding: 8px 16px; border-radius: 8px; transition: all 0.2s; }
+  .nav-link:hover { border-color: #4a6fa5; background: #16213e; }
+
+  /* Study header */
+  .study-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; padding-bottom: 12px; border-bottom: 1px solid #333; flex-wrap: wrap; gap: 8px; }
+  .study-header .back { background: none; border: 1px solid #555; color: #aaa; padding: 6px 14px; border-radius: 6px; cursor: pointer; font-size: 13px; }
+  .study-header .back:hover { border-color: #888; color: #fff; }
+  .progress-text { font-size: 14px; color: #888; }
+
+  .progress-bar { width: 100%; height: 4px; background: #333; border-radius: 2px; margin-bottom: 20px; }
+  .progress-bar .fill { height: 100%; background: #4a6fa5; border-radius: 2px; transition: width 0.3s; }
+
+  /* Status pills */
+  .status-row { display: flex; gap: 10px; margin-bottom: 16px; font-size: 13px; }
+  .status-pill { padding: 4px 10px; border-radius: 6px; }
+  .status-pill.got { background: #1a3d20; color: #4a9f5a; border: 1px solid #2d5a3d; }
+  .status-pill.review { background: #3d1a1a; color: #9f4a4a; border: 1px solid #5a2d2d; }
+  .status-pill.remaining { background: #1a1a2e; color: #888; border: 1px solid #333; }
+
+  /* Card */
+  .card-wrapper { perspective: 1000px; margin-bottom: 20px; }
+  .card { width: 100%; min-height: 280px; position: relative; cursor: pointer; transition: transform 0.5s; transform-style: preserve-3d; }
+  .card.flipped { transform: rotateY(180deg); }
+  .card-face { position: absolute; top: 0; left: 0; width: 100%; min-height: 280px; backface-visibility: hidden; border-radius: 14px; padding: 32px 24px; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; }
+  .card-front { background: #1a1a2e; border: 2px solid #333; }
+  .card-back { background: #16213e; border: 2px solid #4a6fa5; transform: rotateY(180deg); }
+  .card-label { font-size: 11px; text-transform: uppercase; letter-spacing: 1px; color: #4a6fa5; margin-bottom: 12px; }
+  .card-text { font-size: 18px; line-height: 1.5; color: #fff; }
+  .card-back .card-text { font-size: 16px; color: #ccc; }
+  .card-hint { font-size: 12px; color: #555; margin-top: 16px; }
+
+  /* Card buttons */
+  .card-actions { display: flex; gap: 12px; margin-bottom: 20px; }
+  .card-actions button { flex: 1; padding: 14px; border: none; border-radius: 10px; font-size: 14px; font-weight: 600; cursor: pointer; transition: all 0.2s; }
+  .btn-got { background: #1a3d20; color: #4a9f5a; border: 1px solid #2d5a3d !important; }
+  .btn-got:hover { background: #2a5d30; }
+  .btn-review { background: #3d1a1a; color: #9f4a4a; border: 1px solid #5a2d2d !important; }
+  .btn-review:hover { background: #5a2a2a; }
+
+  /* Navigation */
+  .card-nav { display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+  .card-nav button { background: #1a1a2e; border: 1px solid #333; color: #aaa; padding: 10px 20px; border-radius: 8px; cursor: pointer; font-size: 14px; transition: all 0.2s; }
+  .card-nav button:hover:not(:disabled) { border-color: #4a6fa5; color: #fff; background: #16213e; }
+  .card-nav button:disabled { opacity: 0.3; cursor: default; }
+  .shuffle-btn { background: #1a1a2e; border: 1px solid #333; color: #aaa; padding: 10px 16px; border-radius: 8px; cursor: pointer; font-size: 14px; transition: all 0.2s; }
+  .shuffle-btn:hover { border-color: #4a6fa5; color: #fff; background: #16213e; }
+
+  /* Results */
+  .results { text-align: center; padding: 40px 0; }
+  .results .big-score { font-size: 64px; font-weight: 700; color: #4a9f5a; }
+  .results .big-score.low { color: #c9a227; }
+  .results .big-score.fail { color: #9f4a4a; }
+  .results .out-of { font-size: 18px; color: #888; margin-bottom: 30px; }
+  .results .grade { font-size: 24px; margin-bottom: 10px; }
+  .retry-btn { background: #4a6fa5; color: #fff; border: none; padding: 14px 28px; border-radius: 10px; font-size: 15px; font-weight: 600; cursor: pointer; margin: 8px; transition: background 0.2s; }
+  .retry-btn:hover { background: #5a8fc5; }
+  .retry-btn.secondary { background: transparent; border: 1px solid #555; }
+  .retry-btn.secondary:hover { border-color: #888; }
+
+  .hidden { display: none !important; }
+
+  @media (max-width: 500px) {
+    .card-face { padding: 24px 16px; min-height: 240px; }
+    .card { min-height: 240px; }
+    .card-text { font-size: 16px; }
+    .card-actions button { padding: 12px 8px; font-size: 13px; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+  <!-- DECK SELECTION -->
+  <div id="menu-screen">
+    <h1>ENT3620 Flashcards</h1>
+    <p class="subtitle">Innovation Strategy and Technological Change — Tap a deck to start studying</p>
+    <div class="deck-menu" id="deck-menu"></div>
+    <a href="index.html" class="nav-link">Back to Quiz</a>
+  </div>
+
+  <!-- STUDY SCREEN -->
+  <div id="study-screen" class="hidden">
+    <div class="study-header">
+      <button class="back" onclick="showDeckMenu()">Back</button>
+      <span class="progress-text" id="progress-text">1 / 40</span>
+    </div>
+    <div class="progress-bar"><div class="fill" id="progress-fill"></div></div>
+    <div class="status-row">
+      <span class="status-pill got" id="got-count">Got it: 0</span>
+      <span class="status-pill review" id="review-count">Review: 0</span>
+      <span class="status-pill remaining" id="remaining-count">Left: 40</span>
+    </div>
+    <div class="card-wrapper" onclick="flipCard()">
+      <div class="card" id="card">
+        <div class="card-face card-front">
+          <div class="card-label" id="card-label">Term</div>
+          <div class="card-text" id="card-front-text"></div>
+          <div class="card-hint">Tap to flip</div>
+        </div>
+        <div class="card-face card-back">
+          <div class="card-label">Answer</div>
+          <div class="card-text" id="card-back-text"></div>
+        </div>
+      </div>
+    </div>
+    <div class="card-actions">
+      <button class="btn-review" onclick="markCard('review')">Review Again</button>
+      <button class="btn-got" onclick="markCard('got')">Got It</button>
+    </div>
+    <div class="card-nav">
+      <button id="prev-btn" onclick="prevCard()">Prev</button>
+      <button class="shuffle-btn" onclick="shuffleDeck()">Shuffle</button>
+      <button id="next-btn" onclick="nextCard()">Next</button>
+    </div>
+  </div>
+
+  <!-- RESULTS SCREEN -->
+  <div id="results-screen" class="hidden">
+    <div class="results">
+      <div class="big-score" id="r-score">0</div>
+      <div class="out-of" id="r-out-of">out of 40 cards mastered</div>
+      <div class="grade" id="r-grade"></div>
+      <button class="retry-btn" id="retry-review-btn" onclick="retryReview()">Study "Review Again" Cards</button>
+      <button class="retry-btn secondary" onclick="restartDeck()">Restart Full Deck</button>
+      <button class="retry-btn secondary" onclick="showDeckMenu()">Back to Decks</button>
+    </div>
+  </div>
+</div>
+
+<script>
+// ============================================================
+// FLASHCARD DATA
+// ============================================================
+
+const decks = {
+  "concepts": {
+    name: "Key Concepts & Definitions",
+    desc: "Essential definitions, frameworks, and terminology from lectures and readings",
+    cards: [
+      { front: "Technology", back: "The application of tools, materials, processes, and scientific knowledge to create solutions and solve problems." },
+      { front: "Innovation", back: "The practical implementation of an idea that is new to the market. Goes beyond invention to include commercial application." },
+      { front: "Invention", back: "The creation of something entirely new. Most inventions never become innovations." },
+      { front: "Technological Innovation", back: "Innovation that applies technical knowledge (tools, materials, processes) to create new solutions. Examples: nanofabrication, fuel cells." },
+      { front: "Competitive Advantage", back: "The ability to create and retain profitability above the industry average." },
+      { front: "Technology Trajectory", back: "The path of evolution of a technology over time. Firms can get locked into a trajectory that overshoots market needs (e.g., Eli Lilly and insulin purity)." },
+      { front: "Incumbent", back: "The dominant firm in a market at a given time. Examples: Nokia in mobile phones, Eli Lilly in insulin." },
+      { front: "New Entrant", back: "A firm challenging an incumbent. Examples: Apple vs Nokia, Ford vs Selden patent holders." },
+      { front: "S-Curve (Technology Performance)", back: "Shows the lifecycle of a technology's performance over R&D effort/time: slow initial progress, rapid improvement, then diminishing returns as limits are approached." },
+      { front: "S-Curve (Adoption/Diffusion)", back: "Shows the cumulative adoption of a technology across a market over time: slow start (innovators/early adopters), rapid growth (early/late majority), then plateau (laggards). Related to Rogers' adopter categories." },
+      { front: "Market Concentration", back: "The competitive landscape of a market -- how many firms compete and how market share is distributed." },
+      { front: "Network Externalities (Direct)", back: "Value of a product increases directly with the number of users. Example: telephone -- more users means more people to call." },
+      { front: "Network Externalities (Indirect)", back: "Value increases through complementary products and services. Example: smartphone value increases with more apps in the ecosystem." },
+      { front: "Complementor", back: "A firm whose products increase the value of another firm's products. Example: app developers are complementors to smartphone manufacturers." },
+      { front: "Adoption", back: "The decision by an individual customer to buy/use a new technology or product." },
+      { front: "Diffusion", back: "The aggregate rate of adoption of a new technology across an entire market. Follows an S-curve pattern." },
+      { front: "Substitution", back: "The replacement of one technology with another. Example: smartphones replacing feature phones." },
+      { front: "Crossing the Chasm", back: "Moving from early adopters (visionaries willing to take risks) to the early majority (pragmatists who need proven solutions). The most dangerous period for a new technology. Coined by Geoffrey Moore." },
+      { front: "Dominant Design", back: "A product architecture that becomes the accepted market standard. After it emerges, competition shifts from product variation to incremental improvement and process efficiency." },
+      { front: "Shakeout", back: "The period after a dominant design emerges when many firms exit the industry. On average, about 52% of firms exit during a shakeout." },
+      { front: "Fluid Phase", back: "Early phase of a technology lifecycle characterized by high product innovation, many competing designs, and uncertainty about the dominant design." },
+      { front: "Specific Phase", back: "Later phase of a technology lifecycle after dominant design emerges. Characterized by process innovation, incremental improvements, and focus on efficiency." },
+      { front: "Product Innovation vs Process Innovation", back: "Product innovation: new or improved goods/services (e.g., Ford's Model T design). Process innovation: new or improved methods of production (e.g., Ford's moving assembly line)." },
+      { front: "Radical vs Incremental Innovation", back: "Radical: fundamentally new, creates new markets or transforms existing ones. Incremental: builds on existing knowledge, improves existing products/processes." },
+      { front: "Competence-Enhancing vs Competence-Destroying", back: "Competence-enhancing: builds on firm's existing skills and knowledge. Competence-destroying: makes existing skills/knowledge obsolete (e.g., smartphones destroyed Nokia's feature phone competence)." },
+      { front: "Architectural Innovation", back: "Changes the way components are linked together while leaving core component knowledge intact. Difficult for incumbents because it disrupts organizational routines." },
+      { front: "Modular Innovation", back: "Changes core component technology but leaves the overall architecture/linkages unchanged." },
+      { front: "Disruptive Innovation (Christensen)", back: "A process where a smaller company targets overlooked segments (low-end or new-market), gains a foothold, then moves upmarket to challenge incumbents. NOT just any breakthrough. Uber and Tesla are NOT disruptive by this definition." },
+      { front: "NPV (Net Present Value)", back: "The discounted value of all future cash flows of a project minus the initial investment. Limitation: assumes certainty about future cash flows, may undervalue high-uncertainty/high-potential projects." },
+      { front: "IRR (Internal Rate of Return)", back: "The discount rate that makes NPV equal to zero. Represents the expected rate of return on a project." },
+      { front: "Hurdle Rate", back: "The minimum rate of return on a project or investment required for it to be accepted. Projects must exceed the hurdle rate." },
+      { front: "Real Option", back: "The right, but not the obligation, to make a future investment. Valuable when uncertainty is high because it allows staged decision-making and captures the value of flexibility better than NPV alone." },
+      { front: "Adverse Selection", back: "Inventors/entrepreneurs know more about their innovations than investors (information asymmetry). One of the key financing frictions for innovation." },
+      { front: "Moral Hazard", back: "Inventors/entrepreneurs taking excessive risk with investor money without bearing the full consequences. A key financing friction alongside adverse selection." },
+      { front: "Business Angel", back: "A wealthy individual who invests directly in start-ups. Minimum ~$25,000. Earlier stage than VC, less overhead, moderate returns (<9x). Funded ventures often have 15+ angels." },
+      { front: "Venture Capitalist (VC)", back: "Professional investor who invests in start-ups on behalf of others (LPs). Charges ~2% management fee + 20-30% carry. Demands 30-70% IRR. Subset of private equity." },
+      { front: "Limited Partner (LP)", back: "Investor in a VC fund -- pension funds, university endowments, wealthy individuals. Expects 5-10x return over 7 years." },
+      { front: "Seed Funding, MVP, Series A/B/C", back: "Seed: first investment, typically to build an MVP. MVP: minimum viable product, first prototype that can be sold. Series A/B/C: subsequent funding rounds to scale ('get to market')." },
+      { front: "Skewness in Outcomes (VC)", back: "Proportionally large ROI from a small part of a portfolio. In VC: 0.4% of investments generate 97% of returns. 63.2% of cost goes to <1x returns, while 4.3% of cost generates 61.7% of value (>10x)." },
+      { front: "Appropriability", back: "The degree to which a firm can capture the financial returns (rents) from its innovation. Depends on nature of technology and strength of legal protection. Higher when knowledge is tacit or socially complex." },
+      { front: "Tacit Knowledge", back: "Knowledge that cannot be easily codified or written down. Harder for rivals to copy. Example: craft skills, organizational routines." },
+      { front: "Socially Complex Knowledge", back: "Knowledge embedded in relationships, culture, and organizational processes. Difficult for competitors to replicate even if they understand it." },
+      { front: "Patent", back: "Government-granted monopoly preventing others from exploiting an invention for 20 years (utility). Trade-off: monopoly in return for disclosure. Must be useful, novel, and non-obvious." },
+      { front: "Trade Secret", back: "Non-legal protection mechanism with potentially indefinite duration. Best for processes, inputs, materials. Examples: Coca-Cola formula, Google's ranking algorithm." },
+      { front: "Copyright", back: "Legal protection for original creative works. Granted automatically (no application needed). Duration: life of author + 70 years. Covers literary, musical, artistic works, software code." },
+      { front: "Trademark", back: "Protection to identify the provider of a product/service. Duration: 10 years, renewable as long as the mark is in use. Must be non-descriptive and non-generic." },
+      { front: "Patent Thicket", back: "A dense web of overlapping patents that firms must navigate to commercialize technology. Creates barriers to entry and can stifle innovation." },
+      { front: "Patent Troll (NPE)", back: "Non-Practicing Entity that acquires patents without intention to use them, then sues cash-rich firms for infringement. Major problem in the US." },
+      { front: "Architectural Control", back: "Control over the system architecture or platform that other firms must build upon. Source of competitive advantage (e.g., Apple's control of iOS ecosystem)." },
+      { front: "Organic vs Mechanistic Structure", back: "Organic: flexible, decentralized, informal, good for exploration/innovation. Mechanistic: rigid, centralized, formal, good for efficiency/exploitation." },
+      { front: "Functional (U-form) vs Multi-Divisional (M-form)", back: "U-form: organized by function (R&D, marketing, etc.), one P&L. M-form: organized by product/division, each with own P&L. Apple uses functional; most large firms use M-form." },
+      { front: "Organizational Slack", back: "Extra time/resources that allow employees to explore non-core activities. Example: Google's '20% time' that produced Gmail." },
+      { front: "Ambidexterity (Exploration vs Exploitation)", back: "The ability to simultaneously explore new opportunities (radical innovation) and exploit existing capabilities (incremental improvement). Key organizational challenge." },
+      { front: "Corporate Venturing (ICV vs ECV)", back: "ICV (Internal Corporate Venturing): in-house innovation projects. ECV (External Corporate Venturing): spin-offs, acquisitions, CVC. Modern R&D structure for incumbents." },
+      { front: "Spin-off", back: "Creating a legally separated and autonomous 'daughter' firm from a larger parent company. A form of external corporate venturing." },
+      { front: "CVC (Corporate Venture Capital)", back: "When established corporations invest in external startups, similar to traditional VC but with strategic (not just financial) objectives." },
+      { front: "Creative Destruction (Schumpeter)", back: "The process by which new innovations destroy the value of existing technologies and firms. Entrepreneurs drive this cycle, earning temporary 'Schumpeterian rents'." },
+      { front: "Schumpeterian Rents", back: "Temporary above-normal profits earned by innovators before competitors catch up. Driven by creative destruction." },
+      { front: "Knightian Uncertainty", back: "True uncertainty where outcomes and probabilities are unknown (as opposed to risk, where probabilities can be estimated). Common in radical innovation." },
+      { front: "Feasibility vs Viability", back: "Feasibility = technically possible. Viability = commercially sustainable. Technical feasibility does NOT imply commercial viability. Examples: Concorde (feasible, not viable), metaverse (debatable)." },
+      { front: "Bass Model", back: "Mathematical model of new product adoption/diffusion. Combines external influence (advertising, p-coefficient) and internal influence (word-of-mouth, q-coefficient) to predict adoption curves." },
+      { front: "Beachhead Strategy", back: "Targeting a specific, small market segment first to gain a foothold before expanding to broader markets. Related to crossing the chasm." },
+      { front: "Horizontal vs Vertical Marketing Strategy", back: "Horizontal: target many different market segments with the same product. Vertical: focus deeply on one specific industry or segment." },
+      { front: "Open Innovation / Connect & Develop", back: "Acquiring innovations from outside the firm while leveraging internal R&D for development. P&G's C&D model: 50% external goal, 70 technology entrepreneurs, R&D cost dropped from 4.8% to 3.4% of sales." }
+    ]
+  },
+  "cases": {
+    name: "Cases & Articles",
+    desc: "Key facts, arguments, and examples from Nokia, Moderna, P&G, Eli Lilly, Christensen, and more",
+    cards: [
+      { front: "Nokia: What was their market position at peak and how did it decline?", back: "Market cap $250B (2000) to $43B (2011). In 2007 Nokia sold 437 million units and had ~35% global market share. Used Symbian OS. Failed to transition to smartphone paradigm after iPhone launched in 2007." },
+      { front: "Nokia: What was the Nokia 7710 and why did it fail?", back: "Nokia 7710 (2004) was a touchscreen smartphone -- launched 3 years BEFORE the iPhone. It failed due to poor software/UI, resistive touchscreen, and lack of app ecosystem. Nokia had the hardware vision but not the software execution." },
+      { front: "Nokia: How did the N95 compare to the iPhone?", back: "N95 (2007) was Nokia's flagship -- 5MP camera, GPS, video, music. Technically superior hardware to original iPhone. N95 sold 10 million units; iPhone sold 13 million (2007-08). But iPhone's capacitive touchscreen, UI, and App Store ecosystem won." },
+      { front: "Nokia: What were the 5 reasons for decline (from lecture)?", back: "1) Organizational inertia / resistance to change. 2) Atmosphere of fear (middle management afraid to report bad news). 3) Complex matrixed organization slowed decision-making. 4) Over-focus on hardware, underinvestment in software. 5) Failure to recognize smartphone as new technology trajectory." },
+      { front: "Nokia: What were Stephen Elop's 3 strategic options?", back: "1) Double down on Symbian/MeeGo. 2) Diversify by adopting Android. 3) Partner with/sell to Microsoft (Windows Phone). Elop chose option 3, eventually selling Nokia's phone division to Microsoft in 2013." },
+      { front: "Nokia: 'Why good companies go bad' -- what are the 6 reasons?", back: "1) Strategic frames become blinders. 2) Processes harden into routines. 3) Relationships become shackles. 4) Values harden into dogmas. 5) Organizational structure resists change. 6) Resources become millstones (legacy assets/investments hold you back)." },
+      { front: "Moderna: When was it founded and where?", back: "Founded in 2010 in Cambridge, Massachusetts, USA. A digital biotech company focused on mRNA technology." },
+      { front: "Moderna: Explain the mRNA platform analogy", back: "Moderna described vaccines as software: 'Hardware' = lipid nanoparticles (LNP, delivery mechanism). 'Operating System' = mRNA (the instruction code). 'App' = specific vaccine (e.g., COVID-19). The platform is programmable and enables rapid development." },
+      { front: "Moderna: How fast was the COVID vaccine developed?", back: "Vaccine DESIGNED in 2 DAYS after genetic sequence was posted (Jan 11, 2020). First batch produced in 25 days (Feb 7). Shipped to NIH in 42 days. Phase 1 trial started March 23. Unprecedented speed enabled by mRNA platform." },
+      { front: "Moderna: What was their funding history?", back: "Raised $5.1 billion pre-IPO over a decade. IPO valued at $7.5 billion. Received $955 million from BARDA (US government). Had spent a decade on mRNA R&D before COVID." },
+      { front: "Moderna: Revenue trajectory", back: "$108M (2016), $206M (2017), $135M (2018), $60M (2019), $803M (2020), $17.6B (2021). Massive spike from COVID vaccine -- nearly 300x revenue increase from 2019 to 2021." },
+      { front: "Moderna: What was their track record before COVID?", back: "Had developed 9 vaccines before COVID-19 but NONE had been brought to market. The company was 'born digital' -- integrated automation, cloud computing, and AI throughout operations. Achieved vertical integration in 2018 ($125M manufacturing plant)." },
+      { front: "P&G Connect & Develop: What does 'Connect' and 'Develop' mean?", back: "Connect = find innovations from external sources (universities, suppliers, small firms). Develop = use internal R&D capabilities to bring them to market. NOT replacing internal R&D, but leveraging it with external ideas." },
+      { front: "P&G C&D: Key numbers", back: "R&D cost dropped from 4.8% to 3.4% of sales. Goal: 50% of innovations from outside. Had 7,500 researchers + 70 technology entrepreneurs worldwide. Innovation success rate more than doubled. R&D productivity up ~60%." },
+      { front: "Eli Lilly: What was the insulin purity trajectory?", back: "Purity improved over decades: 50,000 ppm (1925) -> 10,000 ppm (1950) -> 10 ppm (1980) -> 0 ppm with Humulin (genetically engineered human insulin). Lilly invested ~$1 billion. But the market was already satisfied with animal insulin purity." },
+      { front: "Eli Lilly: Why did Humulin underperform commercially?", back: "Humulin was priced at 25% premium over animal insulin. Market response was tepid -- could not sustain the premium. The market was 'not terribly dissatisfied with pork insulin.' Lilly overshot market needs on the purity dimension." },
+      { front: "Eli Lilly: What was the marketers' miscalculation?", back: "Lilly surveyed physicians and put GREATEST WEIGHT on endocrinologists (specialists). But endocrinologists wrote only ~20% of prescriptions. GPs wrote ~80%. GPs and patients were satisfied with existing purity. Lilly listened to the most demanding customers, not the mainstream." },
+      { front: "Eli Lilly: How did Novo Nordisk win?", back: "Novo Nordisk competed on CONVENIENCE instead of purity. Their insulin pen reduced injection time from 1-2 minutes to under 10 seconds. The pen commanded a 30% price premium per unit -- easily sustained. The basis of competition shifted from purity to delivery method." },
+      { front: "Selden vs Ford: What happened?", back: "Selden (patent attorney) filed first US automobile patent in 1879 but delayed issuance until 1895 for maximum protection. Investors bought his patent rights and sued automakers. Ford was denied a license (1903) but made cars anyway and invented the assembly line. Selden won initially, but Ford won on appeal in 1911 because he used a different engine type." },
+      { front: "AutoStore vs Ocado: Why is this case significant?", back: "Same pattern as Selden vs Ford -- broad patents being used to block competition. Shows that patent strategy and patent disputes remain relevant 100+ years later." },
+      { front: "Christensen: Is Uber disruptive innovation?", back: "NO. Uber did NOT originate in a low-end or new-market foothold. It launched in San Francisco (well-served taxi market), targeted existing taxi users, and offered a BETTER service (not inferior). It built its position in the mainstream FIRST -- the opposite direction of disruption. Uber is a sustaining innovation." },
+      { front: "Christensen: Is Tesla disruptive innovation?", back: "NO. Tesla's foothold is in the HIGH END of the auto market ($70,000+ cars). This segment is NOT uninteresting to incumbents. It has elicited significant competitive response. Tesla started premium and moved down -- opposite of disruptive path." },
+      { front: "Christensen: Is the iPhone disruptive?", back: "NUANCED. Launched in 2007 as a SUSTAINING innovation in the smartphone market (targeted same customers, won on product superiority). But its subsequent growth was DISRUPTIVE -- not of other smartphones, but of the LAPTOP as primary internet access point, through the App Store ecosystem." },
+      { front: "Christensen: What percentage of sustaining entrants succeed?", back: "Only 6% of sustaining entrants succeeded (from Christensen's disk drive study). Disruption theory: entrants should target overlooked niches, improve, then move into mainstream -- not attack incumbents head-on." },
+      { front: "Christensen: How does disruptive innovation work?", back: "1) Incumbents focus on most profitable customers. 2) They exceed needs of some segments, ignore others. 3) Entrants target overlooked segments with 'good enough' product. 4) Entrants gain foothold. 5) Incumbents don't respond vigorously. 6) Entrants move upmarket. 7) When mainstream adopts entrant's offering, disruption has occurred." },
+      { front: "Metaverse: Origin and key dates", back: "Term from Snow Crash (1992) by Neal Stephenson. Also Ready Player One (2011) by Ernest Cline. Metaverse boom 2021-23 (Facebook renamed to Meta, October 2021). Then 'bust' in 2023 as companies pivoted to AI." },
+      { front: "Metaverse: What is the key lesson?", back: "Technical feasibility does NOT equal commercial viability. The Concorde is the classic example: technically feasible (supersonic travel worked) but commercially unviable. Same question applies to metaverse, flying cars, etc." },
+      { front: "Apple (HBR): Why does Apple use a functional structure?", back: "Apple uses a centralized functional (U-form) structure, unusual for a company its size. Aligns deep technical expertise with decision-making authority. Leaders own/learn/teach/delegate within their domain. P&L is across the whole organization, not by product division." },
+      { front: "Apple: Why didn't M-form (multi-divisional) work?", back: "Apple's products need deep integration across hardware, software, and services. Independent divisions optimizing their own P&L would fragment this integration. The functional structure ensures experts make technical decisions, not general managers optimizing short-term profit." },
+      { front: "Concorde: Why is it a key exam example?", back: "Concorde is the textbook example of feasibility vs viability. Technically feasible (flew London-New York in 3.5 hours at Mach 2). Commercially unviable (extremely expensive, limited routes, noise restrictions, small passenger capacity, retired 2003)." }
+    ]
+  },
+  "numbers": {
+    name: "Numbers & Facts to Memorize",
+    desc: "Exact figures, durations, percentages, and statistics you need to know for the exam",
+    cards: [
+      { front: "How long does a utility patent last?", back: "20 years from the filing date." },
+      { front: "How long does copyright last?", back: "Life of the author + 70 years (in the US)." },
+      { front: "Does copyright require an application?", back: "No. Copyright is granted automatically when the work is put in tangible form. No application needed." },
+      { front: "How long does a trademark last?", back: "10 years, renewable indefinitely as long as the mark is in use." },
+      { front: "What is the typical VC management fee?", back: "~2% per year of committed capital." },
+      { front: "What is VC carry?", back: "20-30% of profits (the portion of profit retained by the VC firm)." },
+      { front: "What return do LPs expect from a VC fund?", back: "5-10x return over 7 years." },
+      { front: "What IRR do VCs typically require?", back: "30-70% IRR." },
+      { front: "What percentage of VC investments generate 97% of returns?", back: "Only 0.4% of VC investments are responsible for 97% of returns for the entire asset class." },
+      { front: "What percentage of VC portfolio cost goes to <1x returns?", back: "63.2% of cost goes to investments returning less than 1x (failures)." },
+      { front: "What percentage of VC cost goes to >10x investments, and how much value do they generate?", back: "4.3% of cost goes to >10x investments, but they generate 61.7% of total value." },
+      { front: "Of 4,000 firms seeking VC funding, how many succeed?", back: "Only 200 raise money. Of those, only 15 will reach NOK 1 billion in revenue." },
+      { front: "What is the typical minimum angel investment?", back: "~$25,000." },
+      { front: "What percentage of firms exit during a shakeout?", back: "On average, approximately 52% of firms exit." },
+      { front: "What percentage of new products depend on academic research?", back: "11% of new products depend on academic research." },
+      { front: "What percentage of new industrial processes depend on academic research?", back: "9% of new industrial processes depend on academic research." },
+      { front: "What percentage of patented inventions lead to commercial products?", back: "Less than 5% of patented inventions lead to commercial products." },
+      { front: "What is the top motivation for patenting?", back: "Prevent copying -- cited by 96% of firms." },
+      { front: "In which industry are patents most effective? Least effective?", back: "Most effective: Drugs (6.5/7). Least effective: Computers (3.4/7). More effective in biological/chemical; less in mechanical/electrical." },
+      { front: "P&G R&D cost as percentage of sales?", back: "Dropped from 4.8% (2000) to 3.4% (2006) after implementing Connect & Develop." },
+      { front: "How fast was Moderna's COVID vaccine designed and shipped?", back: "Designed in 2 days after genetic sequence posted. First batch in 25 days. Shipped to NIH in 42 days." },
+      { front: "Moderna revenue: 2019 vs 2020 vs 2021?", back: "$60 million (2019) -> $803 million (2020) -> $17.6 billion (2021)." },
+      { front: "When was Moderna founded, and how much did they raise pre-IPO?", back: "Founded in 2010. Raised $5.1 billion pre-IPO over a decade." },
+      { front: "Nokia market cap: peak vs 2011?", back: "$250 billion (2000) -> $43 billion (2011)." },
+      { front: "Nokia unit sales in 2007: total, N95, and iPhone comparison?", back: "Nokia sold 437 million units in 2007. N95 sold 10 million. iPhone sold 13 million (2007-08). Despite selling fewer total smartphones, Apple's ecosystem approach won long-term." }
+    ]
+  }
+};
+
+// ============================================================
+// STATE
+// ============================================================
+let currentDeck = null;
+let currentCards = [];
+let currentIndex = 0;
+let cardStatuses = {}; // { deckKey: { cardIndex: 'got' | 'review' } }
+let retryMode = false;
+
+function getStorageKey() {
+  return 'fc_' + currentDeck;
+}
+
+function loadStatuses() {
+  try {
+    const saved = localStorage.getItem(getStorageKey());
+    if (saved) return JSON.parse(saved);
+  } catch(e) {}
+  return {};
+}
+
+function saveStatuses() {
+  try {
+    localStorage.setItem(getStorageKey(), JSON.stringify(cardStatuses[currentDeck] || {}));
+  } catch(e) {}
+}
+
+// ============================================================
+// DECK MENU
+// ============================================================
+function renderDeckMenu() {
+  const menu = document.getElementById('deck-menu');
+  menu.innerHTML = '';
+  for (const [key, deck] of Object.entries(decks)) {
+    const stored = (() => { try { return JSON.parse(localStorage.getItem('fc_' + key)) || {}; } catch(e) { return {}; } })();
+    const gotCount = Object.values(stored).filter(v => v === 'got').length;
+    const reviewCount = Object.values(stored).filter(v => v === 'review').length;
+    const total = deck.cards.length;
+    const btn = document.createElement('div');
+    btn.className = 'deck-btn';
+    btn.onclick = () => startDeck(key);
+    let progressText = total + ' cards';
+    if (gotCount > 0 || reviewCount > 0) {
+      progressText += ` | ${gotCount} mastered, ${reviewCount} to review`;
+    }
+    btn.innerHTML = `<div class="label">${deck.name}</div><div class="desc">${deck.desc}</div><div class="count">${progressText}</div>`;
+    menu.appendChild(btn);
+  }
+}
+
+// ============================================================
+// START / NAVIGATION
+// ============================================================
+function startDeck(key) {
+  currentDeck = key;
+  if (!cardStatuses[key]) cardStatuses[key] = loadStatuses();
+  retryMode = false;
+  currentCards = decks[key].cards.map((c, i) => ({ ...c, originalIndex: i }));
+  currentIndex = 0;
+  showStudyScreen();
+}
+
+function showDeckMenu() {
+  document.getElementById('menu-screen').classList.remove('hidden');
+  document.getElementById('study-screen').classList.add('hidden');
+  document.getElementById('results-screen').classList.add('hidden');
+  renderDeckMenu();
+}
+
+function showStudyScreen() {
+  document.getElementById('menu-screen').classList.add('hidden');
+  document.getElementById('study-screen').classList.remove('hidden');
+  document.getElementById('results-screen').classList.add('hidden');
+  renderCard();
+}
+
+function showResults() {
+  document.getElementById('menu-screen').classList.add('hidden');
+  document.getElementById('study-screen').classList.add('hidden');
+  document.getElementById('results-screen').classList.remove('hidden');
+
+  const statuses = cardStatuses[currentDeck] || {};
+  const total = currentCards.length;
+  const gotCount = currentCards.filter(c => statuses[c.originalIndex] === 'got').length;
+  const reviewCount = currentCards.filter(c => statuses[c.originalIndex] === 'review').length;
+
+  const scoreEl = document.getElementById('r-score');
+  scoreEl.textContent = gotCount;
+  scoreEl.className = 'big-score';
+  const pct = total > 0 ? gotCount / total : 0;
+  if (pct < 0.5) scoreEl.classList.add('fail');
+  else if (pct < 0.8) scoreEl.classList.add('low');
+
+  document.getElementById('r-out-of').textContent = `out of ${total} cards mastered`;
+
+  let grade = '';
+  if (pct === 1) grade = 'Perfect! All cards mastered!';
+  else if (pct >= 0.8) grade = 'Great progress! Almost there.';
+  else if (pct >= 0.5) grade = 'Good start. Keep reviewing.';
+  else grade = 'Keep studying. You will get there.';
+  document.getElementById('r-grade').textContent = grade;
+
+  const retryBtn = document.getElementById('retry-review-btn');
+  if (reviewCount > 0) {
+    retryBtn.classList.remove('hidden');
+    retryBtn.textContent = `Study ${reviewCount} "Review Again" Cards`;
+  } else {
+    retryBtn.classList.add('hidden');
+  }
+}
+
+// ============================================================
+// CARD RENDERING
+// ============================================================
+function renderCard() {
+  if (currentCards.length === 0) {
+    showResults();
+    return;
+  }
+  if (currentIndex >= currentCards.length) {
+    showResults();
+    return;
+  }
+
+  const card = currentCards[currentIndex];
+  const cardEl = document.getElementById('card');
+  cardEl.classList.remove('flipped');
+
+  document.getElementById('card-front-text').textContent = card.front;
+  document.getElementById('card-back-text').textContent = card.back;
+
+  // Progress
+  document.getElementById('progress-text').textContent = `${currentIndex + 1} / ${currentCards.length}`;
+  document.getElementById('progress-fill').style.width = ((currentIndex + 1) / currentCards.length * 100) + '%';
+
+  // Status counts
+  const statuses = cardStatuses[currentDeck] || {};
+  const allCards = currentCards;
+  const gotCount = allCards.filter(c => statuses[c.originalIndex] === 'got').length;
+  const reviewCount = allCards.filter(c => statuses[c.originalIndex] === 'review').length;
+  const remaining = allCards.length - gotCount - reviewCount;
+  document.getElementById('got-count').textContent = `Got it: ${gotCount}`;
+  document.getElementById('review-count').textContent = `Review: ${reviewCount}`;
+  document.getElementById('remaining-count').textContent = `Left: ${remaining}`;
+
+  // Nav buttons
+  document.getElementById('prev-btn').disabled = currentIndex === 0;
+  document.getElementById('next-btn').disabled = currentIndex >= currentCards.length - 1;
+}
+
+function flipCard() {
+  document.getElementById('card').classList.toggle('flipped');
+}
+
+function prevCard() {
+  if (currentIndex > 0) {
+    currentIndex--;
+    renderCard();
+  }
+}
+
+function nextCard() {
+  if (currentIndex < currentCards.length - 1) {
+    currentIndex++;
+    renderCard();
+  }
+}
+
+function markCard(status) {
+  if (!cardStatuses[currentDeck]) cardStatuses[currentDeck] = {};
+  const card = currentCards[currentIndex];
+  cardStatuses[currentDeck][card.originalIndex] = status;
+  saveStatuses();
+
+  if (currentIndex < currentCards.length - 1) {
+    currentIndex++;
+    renderCard();
+  } else {
+    showResults();
+  }
+}
+
+function shuffleDeck() {
+  for (let i = currentCards.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [currentCards[i], currentCards[j]] = [currentCards[j], currentCards[i]];
+  }
+  currentIndex = 0;
+  renderCard();
+}
+
+// ============================================================
+// RETRY / RESTART
+// ============================================================
+function retryReview() {
+  const statuses = cardStatuses[currentDeck] || {};
+  const reviewCards = decks[currentDeck].cards
+    .map((c, i) => ({ ...c, originalIndex: i }))
+    .filter(c => statuses[c.originalIndex] === 'review');
+
+  if (reviewCards.length === 0) {
+    showDeckMenu();
+    return;
+  }
+
+  // Clear review statuses so they can be re-evaluated
+  reviewCards.forEach(c => { delete statuses[c.originalIndex]; });
+  saveStatuses();
+
+  currentCards = reviewCards;
+  currentIndex = 0;
+  retryMode = true;
+  showStudyScreen();
+}
+
+function restartDeck() {
+  // Clear all statuses for this deck
+  cardStatuses[currentDeck] = {};
+  saveStatuses();
+  startDeck(currentDeck);
+}
+
+// ============================================================
+// INIT
+// ============================================================
+renderDeckMenu();
+
+// Theme support
+window.addEventListener('message', (e) => {
+  if (e.data?.type === 'theme') {
+    document.body.classList.toggle('light', e.data.theme === 'light');
+  }
+});
+if (localStorage.getItem('ent3620_theme') === 'light') document.body.classList.add('light');
+if (window.parent !== window) window.parent.postMessage({ type: 'ready' }, '*');
+</script>
+</body>
+</html>
