@@ -311,6 +311,64 @@
     padding-left: 4px;
   }
 
+  /* Section toggles */
+  .section-toggle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 18px;
+    margin: 12px 0 0;
+    background: rgba(24,24,27,0.6);
+    border: 1px solid #27272a;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    user-select: none;
+    -webkit-user-select: none;
+  }
+  .section-toggle:hover {
+    background: rgba(30,30,35,0.8);
+    border-color: #3f3f46;
+  }
+  .section-toggle-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    font-weight: 700;
+    color: #e4e4e7;
+    letter-spacing: -0.2px;
+  }
+  .section-arrow {
+    font-size: 10px;
+    color: #71717a;
+    transition: transform 0.3s ease;
+    display: inline-block;
+    width: 14px;
+  }
+  .section-arrow.collapsed { transform: rotate(-90deg); }
+  .section-icon { font-size: 16px; }
+  .section-count {
+    font-size: 12px;
+    font-weight: 600;
+    color: #71717a;
+    background: #27272a;
+    padding: 3px 10px;
+    border-radius: 8px;
+  }
+  .section-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease, opacity 0.3s ease, margin 0.3s ease;
+    opacity: 0;
+    margin-top: 0;
+  }
+  .section-content.open {
+    max-height: 3000px;
+    opacity: 1;
+    margin-top: 12px;
+  }
+
   /* Footer */
   .footer {
     text-align: center;
@@ -689,12 +747,41 @@
 
     <!-- QUIZ PANEL -->
     <div class="panel active" id="panel-quiz">
-      <div class="section-label">Exam Simulations</div>
-      <div class="modules-grid" id="exam-modules"></div>
-      <div class="section-label">Topic Modules</div>
-      <div class="modules-grid" id="topic-modules"></div>
-      <div class="section-label">Deep Practice</div>
-      <div class="modules-grid" id="practice-modules"></div>
+      <div class="section-toggle" onclick="toggleSection('exam')">
+        <div class="section-toggle-left">
+          <span class="section-arrow" id="arrow-exam">▼</span>
+          <span class="section-icon">🎯</span>
+          <span>Exam Simulations</span>
+        </div>
+        <span class="section-count" id="count-exam"></span>
+      </div>
+      <div class="section-content open" id="section-exam">
+        <div class="modules-grid" id="exam-modules"></div>
+      </div>
+
+      <div class="section-toggle" onclick="toggleSection('topic')">
+        <div class="section-toggle-left">
+          <span class="section-arrow" id="arrow-topic">▼</span>
+          <span class="section-icon">📚</span>
+          <span>Lectures & Topics</span>
+        </div>
+        <span class="section-count" id="count-topic"></span>
+      </div>
+      <div class="section-content open" id="section-topic">
+        <div class="modules-grid" id="topic-modules"></div>
+      </div>
+
+      <div class="section-toggle" onclick="toggleSection('practice')">
+        <div class="section-toggle-left">
+          <span class="section-arrow" id="arrow-practice">▼</span>
+          <span class="section-icon">💪</span>
+          <span>Deep Practice</span>
+        </div>
+        <span class="section-count" id="count-practice"></span>
+      </div>
+      <div class="section-content open" id="section-practice">
+        <div class="modules-grid" id="practice-modules"></div>
+      </div>
     </div>
 
     <!-- FLASHCARDS PANEL -->
@@ -895,6 +982,141 @@ const questionBank = {
       ],
       correct: 1,
       explanation: "From the lecture slide: a business model answers three questions: (1) How do we create value? (2) How do we deliver value? (3) How do we capture value?"
+    },
+    {
+      q: "According to the course, 'technology' is defined as:",
+      options: [
+        "Only digital tools such as computers and software",
+        "Any product, process, or knowledge that extends human capabilities",
+        "Hardware devices used in manufacturing",
+        "Inventions that have been patented"
+      ],
+      correct: 1,
+      explanation: "The course defines technology broadly — it is not limited to IT or digital tools. Technology includes any product, process, or knowledge that extends human capabilities."
+    },
+    {
+      q: "The key difference between an invention and a technological innovation is:",
+      options: [
+        "An invention is always more complex than a technological innovation",
+        "An invention is the creation of something new, while technological innovation includes its successful commercialization",
+        "A technological innovation must be patented, but an invention does not",
+        "An invention requires government funding, while a technological innovation does not"
+      ],
+      correct: 1,
+      explanation: "Invention is the creation of something new. Innovation goes further — it involves bringing the invention to market or applying it commercially. Technological innovation specifically involves new technology being successfully commercialized."
+    },
+    {
+      q: "The Ford Model T (1908) is significant in the course because it illustrates:",
+      options: [
+        "Only product innovation through mass marketing",
+        "Only process innovation through the assembly line",
+        "Both product innovation (design features) and process innovation (assembly line)",
+        "Disruptive innovation entering from a low-end market"
+      ],
+      correct: 2,
+      explanation: "The Model T featured product innovations (left-hand drive, vanadium steel, one-piece engine block) AND process innovations (moving assembly line, low-skill specialization, interchangeable parts). This distinction between product and process innovation is a key course concept."
+    },
+    {
+      q: "Network externalities occur when:",
+      options: [
+        "A firm operates in multiple countries simultaneously",
+        "The value of a product or service increases as more people use it",
+        "A firm reduces costs through economies of scale",
+        "External consultants improve the firm's innovation capacity"
+      ],
+      correct: 1,
+      explanation: "Network externalities (or network effects) mean the value of a product depends on how many others adopt it. More users = more value (e.g., telephone, social media)."
+    },
+    {
+      q: "Microsoft's Xbox is used in the course as an example of:",
+      options: [
+        "Open innovation strategy",
+        "A wholly proprietary system with limited licensing for game developers",
+        "A product with strong network externalities but no complementors",
+        "Process innovation in the gaming industry"
+      ],
+      correct: 1,
+      explanation: "Xbox is classified as wholly proprietary on the hardware/console side, but with limited licensing for game developers (complementors). This positions it on the proprietary end of Schilling's open-proprietary spectrum."
+    },
+    {
+      q: "Dell Computers' competitive advantage came primarily from:",
+      options: [
+        "Superior hardware technology compared to IBM",
+        "A business model innovation (build-to-order, pay-in-advance)",
+        "Patented processor technology",
+        "Being the first company to sell personal computers"
+      ],
+      correct: 1,
+      explanation: "Dell did not innovate on technology but on its business model — build-to-order with customer pre-payment eliminated inventory risk and improved cash flow. This is an example of business model innovation rather than product or process innovation."
+    },
+    {
+      q: "A technology strategy differs from a business strategy in that it:",
+      options: [
+        "Focuses exclusively on R&D spending decisions",
+        "Specifically addresses choices about technologies, including development, deployment, and protection",
+        "Is only relevant for high-tech firms",
+        "Does not need to align with overall business objectives"
+      ],
+      correct: 1,
+      explanation: "Technology strategy focuses specifically on which technologies to develop, how to deploy them, and how to protect them. It is a subset of overall business strategy and must align with business objectives, but its scope is specifically about technology choices."
+    },
+    {
+      q: "Planned innovation differs from accidental innovation in that:",
+      options: [
+        "Planned innovation always produces better results",
+        "Planned innovation follows a deliberate process while accidental innovation arises from unexpected discoveries",
+        "Accidental innovation is not considered real innovation",
+        "Planned innovation does not require R&D investment"
+      ],
+      correct: 1,
+      explanation: "Planned innovation results from deliberate R&D efforts toward a specific goal, while accidental innovation occurs through unexpected discoveries (e.g., penicillin). Both are valid forms of innovation."
+    },
+    {
+      q: "In the context of a business model, 'capturing value' refers to:",
+      options: [
+        "How a firm markets its products to customers",
+        "How a firm designs and builds its products",
+        "How a firm generates revenue and profits from the value it creates",
+        "How a firm recruits talented employees"
+      ],
+      correct: 2,
+      explanation: "The three business model questions are: create value, deliver value, capture value. Capturing value refers to how the firm turns the value it creates into revenue and profits — the monetization mechanism."
+    },
+    {
+      q: "Technology strategy matters for firms because technology is a key driver of competitive advantage.",
+      options: ["True", "False"],
+      correct: 0,
+      explanation: "True. Technology strategy is critical because technology choices (what to develop, deploy, and protect) directly impact a firm's ability to create and sustain competitive advantage."
+    },
+    {
+      q: "Innovation in services follows the same patterns as innovation in manufacturing.",
+      options: ["True", "False"],
+      correct: 1,
+      explanation: "False. Services innovation often follows different patterns than manufacturing innovation. Barras's reverse product cycle shows that services typically start with process innovation and move toward product innovation, which is the opposite of manufacturing."
+    },
+    {
+      q: "A complementor is a firm that directly competes with another firm in the same market.",
+      options: ["True", "False"],
+      correct: 1,
+      explanation: "False. A complementor is a firm that INCREASES the value of another firm's products, not a competitor. For example, app developers are complementors to smartphone manufacturers — more apps make the phone more valuable."
+    },
+    {
+      q: "Process innovation refers to new or improved methods of producing or delivering a product.",
+      options: ["True", "False"],
+      correct: 0,
+      explanation: "True. Process innovation involves improvements to how things are made or delivered (e.g., Ford's moving assembly line), as opposed to product innovation which involves the product itself."
+    },
+    {
+      q: "The study of technological innovation is purely a technical discipline and does not require knowledge from other fields.",
+      options: ["True", "False"],
+      correct: 1,
+      explanation: "False. Technological innovation is inherently interdisciplinary, drawing on engineering, economics, strategy, sociology, psychology, and other fields. Understanding innovation requires perspectives beyond just technical knowledge."
+    },
+    {
+      q: "According to the course, the vanadium steel used in the Ford Model T is an example of product innovation.",
+      options: ["True", "False"],
+      correct: 0,
+      explanation: "True. The use of vanadium steel in the Model T was a product innovation — it was a new material that made the car lighter and stronger. The moving assembly line, by contrast, was a process innovation."
     }
   ],
 
@@ -1008,6 +1230,141 @@ const questionBank = {
       ],
       correct: 1,
       explanation: "Despite John Doerr calling it more important than the Internet, the Segway failed to shift the transportation paradigm. It shows that identifying paradigm shifts in advance is extremely difficult."
+    },
+    {
+      q: "A technological paradigm, as described by Dosi (1982), is best understood as:",
+      options: [
+        "A specific product that dominates a market",
+        "A shared framework that defines the relevant problems and approaches within a technological field",
+        "A government policy that directs R&D spending",
+        "The final stage of the technology S-curve"
+      ],
+      correct: 1,
+      explanation: "Dosi's concept of a technological paradigm refers to a shared pattern of inquiry — it prescribes the directions of technical change by defining relevant problems, methods, and approaches within a field."
+    },
+    {
+      q: "A paradigm shift in technology occurs when:",
+      options: [
+        "An existing technology becomes slightly more efficient",
+        "A fundamentally different technological approach replaces the existing framework",
+        "Market demand increases for the current technology",
+        "A firm increases its R&D spending within the current paradigm"
+      ],
+      correct: 1,
+      explanation: "A paradigm shift happens when the entire technological framework changes — not incremental improvements within the existing paradigm, but a fundamental change in the approach (e.g., from vacuum tubes to transistors)."
+    },
+    {
+      q: "Moore's Law originally predicted that:",
+      options: [
+        "Computing speed would double every 6 months",
+        "The number of transistors on a chip would roughly double every 18-24 months",
+        "Computer prices would halve every year",
+        "Software complexity would increase exponentially"
+      ],
+      correct: 1,
+      explanation: "Moore's Law, formulated by Gordon Moore, predicted that the number of transistors on a microchip would double approximately every 18 months (later adjusted to ~2 years). It is a trajectory within the semiconductor paradigm."
+    },
+    {
+      q: "The technology S-curve plots:",
+      options: [
+        "Market share over time",
+        "Number of adopters over time",
+        "Performance (or some measure of output) against cumulative effort (or investment)",
+        "Revenue growth against advertising spending"
+      ],
+      correct: 2,
+      explanation: "The technology S-curve shows how performance improves with cumulative effort/investment. It is S-shaped because early improvements are slow (learning), then rapid (exploitation), then slow again (physical limits approached)."
+    },
+    {
+      q: "When a technology S-curve approaches its upper limit, what typically happens?",
+      options: [
+        "The incumbent firm always shifts to the new S-curve",
+        "A new technology with its own S-curve may emerge and eventually surpass the old one",
+        "R&D spending automatically shifts to the new technology",
+        "The technology becomes more efficient and extends its S-curve indefinitely"
+      ],
+      correct: 1,
+      explanation: "When an old S-curve flattens out, a new technology with its own S-curve may emerge. Initially the new technology performs worse, but with effort it can surpass the old one. This is the 'shifting S-curves' concept."
+    },
+    {
+      q: "According to the course, who typically introduces the new S-curve technology that displaces the old one?",
+      options: [
+        "The incumbent firms that dominated the old technology",
+        "Government research laboratories",
+        "New entrants rather than incumbents",
+        "University spin-offs exclusively"
+      ],
+      correct: 2,
+      explanation: "Historically, new entrants — not incumbents — tend to shift the S-curve. Incumbents are reluctant to abandon their investments in the old technology, giving new entrants the opportunity to introduce the next paradigm."
+    },
+    {
+      q: "Which of the following is NOT one of the six reasons incumbents fail to shift to a new technology S-curve?",
+      options: [
+        "Sunk costs in the existing technology",
+        "Fear of cannibalizing existing products",
+        "Lack of access to venture capital funding",
+        "Organizational inertia and resistance to change"
+      ],
+      correct: 2,
+      explanation: "The six reasons include: sunk costs, cannibalization fear, organizational inertia, ability to still improve the old tech, managerial blindness, and incentive structures. Lack of VC access is not one of the six — incumbents typically have ample financial resources."
+    },
+    {
+      q: "A limitation of using S-curves as a management tool is that:",
+      options: [
+        "They always predict exactly when a new technology will emerge",
+        "They cannot tell you when the shift will happen or which new technology will succeed",
+        "They are only applicable to the electronics industry",
+        "They assume that performance never improves"
+      ],
+      correct: 1,
+      explanation: "S-curves are useful conceptual tools but have significant limitations: they do not tell managers when the shift will occur, which new technology will replace the old one, or whether customers will actually switch. Timing and direction are uncertain."
+    },
+    {
+      q: "In the Abernathy-Utterback model, a 'dominant design' emerges:",
+      options: [
+        "At the very beginning of an industry",
+        "During the transition from the fluid to the specific phase",
+        "After all firms have exited the industry",
+        "Only in service industries"
+      ],
+      correct: 1,
+      explanation: "In the Abernathy-Utterback model, a dominant design emerges during the transition from the fluid phase (many competing designs) to the specific phase (standardized design). This triggers a shakeout where ~52% of firms exit."
+    },
+    {
+      q: "During the fluid phase, product innovation dominates over process innovation. During the specific phase, this relationship reverses.",
+      options: ["True", "False"],
+      correct: 0,
+      explanation: "True. In the fluid phase, there are many competing product designs and product innovation is high. Once a dominant design emerges (specific phase), firms shift focus to process innovation — optimizing how to produce the now-standardized product efficiently."
+    },
+    {
+      q: "Electric vehicles are a recent invention with no history before the year 2000.",
+      options: ["True", "False"],
+      correct: 1,
+      explanation: "False. Electric vehicles have a long history dating back to the 1800s. They were actually common in the early automobile era before being displaced by internal combustion engines. The recent resurgence is a return, not a new invention."
+    },
+    {
+      q: "Tushman's concept of competence-destroying innovation refers to innovations that make a firm's existing knowledge and skills obsolete.",
+      options: ["True", "False"],
+      correct: 0,
+      explanation: "True. Competence-destroying innovations (Tushman & Anderson) render existing expertise obsolete — for example, the shift from vacuum tubes to integrated circuits made tube-manufacturing expertise worthless. Competence-enhancing innovations, by contrast, build on existing knowledge."
+    },
+    {
+      q: "Henderson and Clark's concept of architectural innovation involves changing how existing components are linked together, even if the individual components remain largely unchanged.",
+      options: ["True", "False"],
+      correct: 0,
+      explanation: "True. Architectural innovation reconfigures the relationships between components (the architecture) while the core component knowledge may remain the same. This is particularly dangerous for incumbents because it is subtle — they may not recognize it as a threat."
+    },
+    {
+      q: "According to the Abernathy-Utterback model, the shakeout that follows a dominant design typically causes approximately 80% of firms to exit the industry.",
+      options: ["True", "False"],
+      correct: 1,
+      explanation: "False. The average shakeout results in approximately 52% of firms exiting, though the range varies widely — from as low as 4% (shampoo) to as high as 87% (DDT)."
+    },
+    {
+      q: "Disruptive innovation, as defined by Christensen, always begins with a technologically superior product that immediately outperforms incumbents.",
+      options: ["True", "False"],
+      correct: 1,
+      explanation: "False. Disruptive innovations typically start as inferior products in terms of mainstream performance metrics. They gain a foothold in overlooked or low-end segments, then improve over time until they meet mainstream needs. The initial product is usually worse on traditional metrics, not better."
     }
   ],
 
@@ -1121,6 +1478,141 @@ const questionBank = {
       ],
       correct: 2,
       explanation: "Innovators (2.5% of adopters) buy because the product is new and interesting. They tolerate high prices, incomplete products, and beta versions."
+    },
+    {
+      q: "According to Rogers, the five adopter categories and their approximate percentages are:",
+      options: [
+        "Pioneers (5%), Followers (20%), Mainstream (50%), Skeptics (20%), Resistors (5%)",
+        "Innovators (2.5%), Early Adopters (13.5%), Early Majority (34%), Late Majority (34%), Laggards (16%)",
+        "Innovators (5%), Early Adopters (15%), Majority (60%), Late Adopters (15%), Laggards (5%)",
+        "Leaders (10%), Followers (25%), Majority (30%), Skeptics (25%), Resistors (10%)"
+      ],
+      correct: 1,
+      explanation: "Rogers' adopter categories with their exact percentages are: Innovators (2.5%), Early Adopters (13.5%), Early Majority (34%), Late Majority (34%), Laggards (16%). These percentages are based on a normal distribution."
+    },
+    {
+      q: "The difference between adoption and diffusion is:",
+      options: [
+        "They are the same concept",
+        "Adoption is the individual customer's decision to buy; diffusion is the aggregate rate of adoption across a market",
+        "Adoption is faster than diffusion",
+        "Diffusion is the individual decision; adoption is the market-level spread"
+      ],
+      correct: 1,
+      explanation: "Adoption refers to an individual customer's decision to purchase or use a new technology. Diffusion refers to the aggregate rate at which the technology spreads across the market. They operate at different levels of analysis."
+    },
+    {
+      q: "In a vertical marketing strategy, a firm focuses on:",
+      options: [
+        "Selling a general-purpose product to many different industries",
+        "Providing complete, tailored solutions within a single industry or customer segment",
+        "Reducing prices across all market segments simultaneously",
+        "Marketing exclusively through online channels"
+      ],
+      correct: 1,
+      explanation: "Vertical marketing focuses on providing deep, complete solutions within one specific industry or segment (e.g., medical software tailored specifically for hospitals). This contrasts with horizontal marketing, which targets the same product across many industries."
+    },
+    {
+      q: "Geoffrey Moore's 'crossing the chasm' concept identifies a gap between:",
+      options: [
+        "Innovators and early adopters",
+        "Early adopters and early majority",
+        "Early majority and late majority",
+        "Late majority and laggards"
+      ],
+      correct: 1,
+      explanation: "The chasm exists between early adopters (visionaries willing to take risks) and the early majority (pragmatists who need proven solutions). This gap is the most dangerous period for a new technology."
+    },
+    {
+      q: "A beachhead strategy for crossing the chasm involves:",
+      options: [
+        "Launching the product in all markets simultaneously",
+        "Targeting one specific niche segment first and dominating it before expanding",
+        "Lowering prices to attract the mass market immediately",
+        "Partnering with the largest incumbent in the industry"
+      ],
+      correct: 1,
+      explanation: "A beachhead strategy means focusing all resources on conquering one specific, winnable niche segment first. Once dominant in that niche, the firm uses it as a base to expand into adjacent segments — like an army establishing a beachhead before advancing."
+    },
+    {
+      q: "In a horizontal marketing strategy, a firm:",
+      options: [
+        "Focuses on one industry and sells multiple products to it",
+        "Sells the same product across many different industries or customer segments",
+        "Only markets to customers within its geographic region",
+        "Focuses exclusively on online marketing channels"
+      ],
+      correct: 1,
+      explanation: "Horizontal marketing targets the same product across multiple industries or segments (e.g., Microsoft Office sold to law firms, hospitals, schools). Vertical marketing, by contrast, focuses on providing complete solutions within one industry."
+    },
+    {
+      q: "The Bass diffusion model predicts adoption patterns using:",
+      options: [
+        "Only customer surveys and focus groups",
+        "A coefficient of innovation (p) representing external influence and a coefficient of imitation (q) representing word-of-mouth",
+        "Historical stock prices and market capitalization",
+        "The number of patents filed in the industry"
+      ],
+      correct: 1,
+      explanation: "The Bass model uses two parameters: p (coefficient of innovation, representing external influences like advertising) and q (coefficient of imitation, representing internal influences like word-of-mouth). Together they predict the shape of the adoption curve."
+    },
+    {
+      q: "The Delphi technique is a forecasting method that:",
+      options: [
+        "Uses computer simulations to predict market outcomes",
+        "Gathers and refines expert opinions through multiple anonymous rounds until consensus emerges",
+        "Relies exclusively on historical sales data",
+        "Surveys end consumers about their purchase intentions"
+      ],
+      correct: 1,
+      explanation: "The Delphi technique is a structured forecasting method where experts provide anonymous predictions, see aggregated results, and revise their estimates over multiple rounds. It is used when historical data is limited and expert judgment is needed."
+    },
+    {
+      q: "The Nokia N800 is used in the course as an example of:",
+      options: [
+        "A successful product launch that crossed the chasm",
+        "A tablet device that was ahead of its time but failed commercially",
+        "Disruptive innovation in the smartphone market",
+        "Successful horizontal marketing strategy"
+      ],
+      correct: 1,
+      explanation: "The Nokia N800 internet tablet was launched before the market was ready for such devices. It demonstrates how a technologically advanced product can fail if the timing, complementary technologies, and market conditions are not right."
+    },
+    {
+      q: "Direct network externalities occur when the value of a product increases because more people use the same product (e.g., telephones).",
+      options: ["True", "False"],
+      correct: 0,
+      explanation: "True. Direct network effects mean the product itself becomes more valuable as more people use it. The classic example is the telephone — a phone is useless if no one else has one, and becomes more valuable with each additional user."
+    },
+    {
+      q: "Indirect network externalities arise when increased adoption leads to more complementary products, which in turn increase the value of the original product.",
+      options: ["True", "False"],
+      correct: 0,
+      explanation: "True. Indirect network effects work through complements — for example, more smartphone users attract more app developers, which makes smartphones more valuable. The value increase is indirect, mediated through the complementary ecosystem."
+    },
+    {
+      q: "Self-substitution (cannibalization) occurs when a firm's new product replaces sales of its own existing product.",
+      options: ["True", "False"],
+      correct: 0,
+      explanation: "True. Self-substitution or cannibalization happens when a company's new product takes sales away from its own existing product. This is risky but sometimes necessary to avoid being displaced by competitors."
+    },
+    {
+      q: "The 'take-off' stage in adoption occurs when a technology transitions from slow early growth to rapid market expansion.",
+      options: ["True", "False"],
+      correct: 0,
+      explanation: "True. The take-off stage marks the inflection point where adoption accelerates dramatically — moving from the slow-growth phase (early adopters) to rapid growth (early and late majority). Identifying this point is critical but difficult."
+    },
+    {
+      q: "Demand forecasting for new technologies is straightforward because adoption patterns always follow predictable S-curves.",
+      options: ["True", "False"],
+      correct: 1,
+      explanation: "False. Demand forecasting for new technologies is extremely difficult. While the S-curve pattern is common, the timing, steepness, and ultimate ceiling are highly uncertain. Many technologies fail to follow the expected curve, and external factors (complementary technologies, regulation, competition) make prediction unreliable."
+    },
+    {
+      q: "Complementary technologies can slow down or speed up the adoption of a new innovation depending on their availability.",
+      options: ["True", "False"],
+      correct: 0,
+      explanation: "True. If key complementary technologies are unavailable (e.g., charging stations for EVs), adoption slows. If they are readily available or co-develop quickly (e.g., apps for smartphones), adoption accelerates. Complementary technologies are a critical factor in diffusion."
     }
   ],
 
@@ -1234,6 +1726,141 @@ const questionBank = {
       ],
       correct: 1,
       explanation: "One reason firms invest in R&D is to build 'absorptive capacity' — the ability to recognize, evaluate, and integrate valuable external knowledge. Without internal capability, external ideas are useless."
+    },
+    {
+      q: "The locus of innovation refers to where innovation originates. Which of the following is NOT typically identified as a major locus?",
+      options: [
+        "Private firms",
+        "Government laboratories",
+        "Universities",
+        "Stock exchanges"
+      ],
+      correct: 3,
+      explanation: "The major loci of innovation are firms (private sector), government laboratories, universities, and individual inventors/entrepreneurs. Stock exchanges are financial institutions, not sources of innovation."
+    },
+    {
+      q: "According to Shane, approximately what percentage of new products in the US depend on academic research?",
+      options: [
+        "About 50%",
+        "About 35%",
+        "About 11%",
+        "About 75%"
+      ],
+      correct: 2,
+      explanation: "Only about 11% of new products depend on academic research. This statistic highlights that while universities contribute to innovation, the vast majority of innovation comes from other sources, primarily private firms."
+    },
+    {
+      q: "The Bayh-Dole Act (1980) changed university innovation by:",
+      options: [
+        "Banning universities from conducting commercial research",
+        "Allowing universities to patent and license inventions made with federal funding",
+        "Requiring all university research to be published as open access",
+        "Transferring all university patents to the federal government"
+      ],
+      correct: 1,
+      explanation: "The Bayh-Dole Act (1980) allowed US universities to retain intellectual property rights from federally funded research and license inventions to private firms. This dramatically increased university patenting and technology transfer."
+    },
+    {
+      q: "In Stokes' model of research, the 'Pasteur quadrant' represents:",
+      options: [
+        "Pure basic research with no practical application in mind",
+        "Use-inspired basic research that is both scientifically fundamental and practically relevant",
+        "Applied development focused solely on commercial products",
+        "Research that has failed to produce any useful outcomes"
+      ],
+      correct: 1,
+      explanation: "Louis Pasteur's research on microbiology is the model for use-inspired basic research — it was both scientifically fundamental AND driven by practical needs (food safety, disease prevention). The Bohr quadrant is pure basic research, the Edison quadrant is pure applied research."
+    },
+    {
+      q: "The difference between basic research, applied research, and development is:",
+      options: [
+        "Basic research is cheapest, applied is moderate, development is most expensive",
+        "Basic seeks fundamental understanding, applied seeks practical solutions, development turns solutions into market-ready products",
+        "Only large firms do basic research, while small firms focus on development",
+        "Basic research always leads directly to commercial products"
+      ],
+      correct: 1,
+      explanation: "Basic research pursues fundamental scientific understanding without a specific application in mind. Applied research seeks solutions to practical problems. Development takes research outputs and turns them into commercially viable products or processes."
+    },
+    {
+      q: "Which of the following is NOT one of the four policies for linking R&D to development?",
+      options: [
+        "Using financial incentives to encourage researchers to consider commercial applications",
+        "Requiring all researchers to have an MBA degree",
+        "Rotating personnel between R&D and business units",
+        "Establishing joint planning between R&D and business divisions"
+      ],
+      correct: 1,
+      explanation: "The four policies for linking R&D to development include financial incentives, personnel rotation, joint planning, and organizational structures that bridge R&D and business units. Requiring MBA degrees for researchers is not one of them."
+    },
+    {
+      q: "Which of the following is a COST (not a benefit) of investing in R&D?",
+      options: [
+        "Building absorptive capacity",
+        "Generating patents and IP",
+        "Risk of locking into particular strategies early (path dependency)",
+        "Creating new products and processes"
+      ],
+      correct: 2,
+      explanation: "Costs of R&D include: risk of lock-in to specific strategies or technologies, high uncertainty about outcomes, and appropriability problems (competitors may benefit from your research). Building absorptive capacity, generating IP, and creating new products are benefits."
+    },
+    {
+      q: "Open innovation, as practiced by P&G's Connect & Develop program, involves:",
+      options: [
+        "Replacing internal R&D entirely with external sourcing",
+        "Leveraging external ideas and internal capabilities to accelerate innovation",
+        "Making all company patents freely available to competitors",
+        "Outsourcing all manufacturing to third parties"
+      ],
+      correct: 1,
+      explanation: "Open innovation (exemplified by P&G's Connect & Develop) does NOT replace internal R&D — it supplements it. The model brings external ideas in and develops them using internal capabilities. P&G's goal was to source 50% of innovations externally while maintaining strong internal R&D."
+    },
+    {
+      q: "Google ATAP (Advanced Technology and Projects) identifies radical innovation projects by:",
+      options: [
+        "Surveying customers about what products they want",
+        "Setting strict 2-year time limits on projects and killing those that fail to meet milestones",
+        "Copying competitors' most successful products",
+        "Investing equally in all proposed projects"
+      ],
+      correct: 1,
+      explanation: "Google ATAP uses strict time limits (approximately 2 years) to identify and develop radical innovation projects. Projects that fail to meet milestones are killed. This structure forces rapid iteration and prevents projects from lingering without results."
+    },
+    {
+      q: "A general purpose technology (GPT) is characterized by its wide applicability across many industries and its ability to spawn further innovations.",
+      options: ["True", "False"],
+      correct: 0,
+      explanation: "True. General purpose technologies (GPTs) are broadly applicable across many sectors and create cascading innovation opportunities. Examples include electricity, the steam engine, the internet, and semiconductors. They transform entire economies, not just single industries."
+    },
+    {
+      q: "Absorptive capacity refers to a firm's ability to recognize, evaluate, and integrate externally generated knowledge.",
+      options: ["True", "False"],
+      correct: 0,
+      explanation: "True. Absorptive capacity (Cohen & Levinthal) is a firm's ability to absorb external knowledge. It requires internal R&D investment — without internal expertise, a firm cannot recognize or make use of valuable external ideas. This is one key reason firms invest in R&D."
+    },
+    {
+      q: "Individual inventors and entrepreneurs play no significant role as a locus of innovation in modern economies.",
+      options: ["True", "False"],
+      correct: 1,
+      explanation: "False. While firms, universities, and government labs are major loci of innovation, individual inventors and entrepreneurs remain important sources. Many significant innovations have come from individuals working independently or in small teams (e.g., early computing, web technologies)."
+    },
+    {
+      q: "One benefit of investing in R&D is that it helps firms build absorptive capacity, enabling them to recognize and integrate valuable external knowledge.",
+      options: ["True", "False"],
+      correct: 0,
+      explanation: "True. R&D investment builds absorptive capacity — the ability to identify, evaluate, and utilize external knowledge. Even if a firm does not directly produce innovations from its R&D, the research capability helps it recognize and integrate valuable ideas from other sources."
+    },
+    {
+      q: "The appropriability problem in R&D means that competitors can sometimes benefit from a firm's research without bearing the costs.",
+      options: ["True", "False"],
+      correct: 0,
+      explanation: "True. Appropriability is a key cost/risk of R&D investment. When a firm invests in R&D, competitors may be able to imitate or learn from the results (through reverse engineering, hiring experts, or reading patent applications) without bearing the full cost of the original research."
+    },
+    {
+      q: "In Stokes' model, the 'Edison quadrant' represents pure basic research driven by curiosity with no consideration of practical applications.",
+      options: ["True", "False"],
+      correct: 1,
+      explanation: "False. The Edison quadrant represents pure applied research — practical problem-solving without fundamental scientific inquiry. The Bohr quadrant represents pure basic research driven by curiosity. Edison focused on practical applications (light bulb, phonograph), not fundamental science."
     }
   ],
 
@@ -1347,6 +1974,141 @@ const questionBank = {
       ],
       correct: 1,
       explanation: "Nokia's supply chain, use of anthropologists, and 2G/GSM leadership were all drivers of success. A strong app ecosystem was exactly what Nokia LACKED and what Apple built."
+    },
+    {
+      q: "At its peak around 2007, Nokia's market capitalization was approximately:",
+      options: [
+        "$50 billion",
+        "$150 billion",
+        "$250 billion",
+        "$500 billion"
+      ],
+      correct: 2,
+      explanation: "Nokia's market cap peaked at approximately $250 billion before declining to around $43 billion, illustrating the dramatic fall of a dominant incumbent."
+    },
+    {
+      q: "Despite losing market share to smartphones, Nokia's global handset market share actually increased from 30.6% to 35% during 2000-2006.",
+      options: ["True", "False"],
+      correct: 0,
+      explanation: "True. Nokia's market share grew from 30.6% to 35% during this period because it dominated the feature phone market. The smartphone revolution had not yet displaced feature phones."
+    },
+    {
+      q: "The Nokia 7710, released in 2004, is significant because it:",
+      options: [
+        "Was Nokia's first phone to run Android",
+        "Was an early touchscreen phone that failed commercially, reinforcing Nokia's belief that touchscreens were not viable",
+        "Was the best-selling phone of 2004",
+        "Introduced the Symbian OS for the first time"
+      ],
+      correct: 1,
+      explanation: "The Nokia 7710 (2004) was an early touchscreen attempt that failed commercially. This failure became Nokia's justification for dismissing touchscreens — 'we tried it before' — which proved catastrophic when Apple launched the iPhone."
+    },
+    {
+      q: "Nokia's N95 (2007) actually had superior hardware specs to the original iPhone in several ways, including a 5MP camera versus the iPhone's 2MP camera and 3G connectivity.",
+      options: ["True", "False"],
+      correct: 0,
+      explanation: "True. The N95 had a 5MP camera (vs iPhone's 2MP), 3G connectivity (iPhone launched on 2G only), and GPS. Yet the iPhone succeeded because of its software ecosystem and user experience — proving hardware superiority alone was insufficient."
+    },
+    {
+      q: "Nokia's N95 sold approximately how many units in 2007?",
+      options: [
+        "1 million",
+        "5 million",
+        "10 million",
+        "25 million"
+      ],
+      correct: 2,
+      explanation: "The Nokia N95 sold approximately 10 million units in 2007, making it a commercial success by hardware standards. Yet the iPhone's ecosystem-based model would ultimately prove more strategically valuable."
+    },
+    {
+      q: "Nokia's app store was called:",
+      options: [
+        "Nokia Store",
+        "Symbian Market",
+        "Ovi",
+        "N-Store"
+      ],
+      correct: 2,
+      explanation: "Nokia's app store was called 'Ovi,' which was unattractive to developers compared to Apple's App Store. The weak developer ecosystem was a major factor in Nokia's decline."
+    },
+    {
+      q: "Nokia refused to customize phones for US carriers, which limited its market presence in the United States.",
+      options: ["True", "False"],
+      correct: 0,
+      explanation: "True. Nokia refused to adapt its phones for US carrier requirements, unlike competitors. This strategic decision cost Nokia significant market share in one of the world's largest and most profitable smartphone markets."
+    },
+    {
+      q: "According to the Nokia case, which of the following is NOT one of the '6 reasons why good companies go bad'?",
+      options: [
+        "Binding commitments to existing strategies",
+        "Competence traps from over-reliance on existing expertise",
+        "Excessive R&D spending on exploratory projects",
+        "Cognitive bias and narrow worldview among leaders"
+      ],
+      correct: 2,
+      explanation: "Excessive R&D spending on exploration was NOT a reason Nokia failed — the opposite was true. Nokia's problems included binding commitments, competence traps, cognitive biases, atmosphere of fear, customer blindness, and organizational rigidity."
+    },
+    {
+      q: "CEO Stephen Elop presented three strategic options for Nokia. Which of the following was NOT one of them?",
+      options: [
+        "Continue with Symbian OS",
+        "Adopt Android as the primary platform",
+        "Partner with Microsoft and adopt Windows Phone",
+        "Acquire Apple to gain iOS"
+      ],
+      correct: 3,
+      explanation: "Elop's three options were: (1) continue with Symbian, (2) adopt Android, or (3) partner with Microsoft/Windows Phone. Nokia chose Microsoft. Acquiring Apple was never a realistic option."
+    },
+    {
+      q: "A 'binding commitment' in the Nokia case refers to:",
+      options: [
+        "Legal contracts that prevent switching suppliers",
+        "Strategic decisions and investments that lock a firm into a particular path, making change difficult",
+        "Employee non-compete agreements",
+        "Exclusive patent licensing deals"
+      ],
+      correct: 1,
+      explanation: "Binding commitments are past strategic decisions and investments (in Symbian, in hardware-centric design, in carrier relationships) that lock a firm into a trajectory, making it difficult and costly to change direction."
+    },
+    {
+      q: "Nokia used anthropologists rather than traditional market researchers to understand consumer needs in different regions around the world.",
+      options: ["True", "False"],
+      correct: 0,
+      explanation: "True. Nokia deployed anthropologists globally to understand regional consumer behaviors and cultural differences, which helped them design region-specific products during their successful period (2000-2006)."
+    },
+    {
+      q: "Nokia's market capitalization dropped from approximately $250 billion to $43 billion, a decline of over 80%.",
+      options: ["True", "False"],
+      correct: 0,
+      explanation: "True. Nokia's market cap fell from approximately $250B to $43B, representing a decline of over 80%. This dramatic loss of value is one of the most significant examples of incumbent failure in business history."
+    },
+    {
+      q: "The concept of 'ambidexterity' suggests that Nokia should have:",
+      options: [
+        "Focused exclusively on smartphones and abandoned feature phones immediately",
+        "Balanced exploitation of its successful feature phone business with exploration of the emerging smartphone/software ecosystem paradigm",
+        "Split into two separate companies from the start",
+        "Invested equally in all possible technologies regardless of market potential"
+      ],
+      correct: 1,
+      explanation: "Ambidexterity means simultaneously exploiting current successful products while exploring potentially disruptive new ones. Nokia over-exploited feature phones and under-explored the software/ecosystem shift."
+    },
+    {
+      q: "Nokia's internal atmosphere of fear meant that middle managers were reluctant to report negative information or challenge strategic decisions made by senior leadership.",
+      options: ["True", "False"],
+      correct: 0,
+      explanation: "True. The atmosphere of fear within Nokia's complex matrixed organization meant bad news was suppressed, problems were not flagged, and the leadership remained insulated from the reality of their strategic missteps."
+    },
+    {
+      q: "Nokia's strategic error of treating software as secondary to hardware is an example of:",
+      options: [
+        "First-mover disadvantage",
+        "A competence trap — their deep hardware expertise prevented them from recognizing software's importance",
+        "Adverse selection in product development",
+        "A failure of patent strategy"
+      ],
+      correct: 1,
+      explanation: "Nokia's hardware competence trapped them: their deep expertise in hardware design made them view software as merely a component of hardware, rather than recognizing that software ecosystems were becoming the primary driver of value in smartphones."
     }
   ],
 
@@ -1460,6 +2222,141 @@ const questionBank = {
       ],
       correct: 1,
       explanation: "Innovation projects have unpredictable revenue, often lack tangible collateral, and have high failure rates. Banks need predictable cash flows and security, so equity financing is required instead."
+    },
+    {
+      q: "The hurdle rate in project selection refers to:",
+      options: [
+        "The maximum amount a firm is willing to invest",
+        "The minimum acceptable rate of return on a project or investment",
+        "The average return across all projects in a portfolio",
+        "The interest rate charged by banks on innovation loans"
+      ],
+      correct: 1,
+      explanation: "From the dictionary: hurdle rate = the minimum rate of return on a project or investment required. Projects must exceed this threshold to be approved."
+    },
+    {
+      q: "Real options analysis is most valuable compared to NPV when a project involves high uncertainty and the firm can make staged investment decisions.",
+      options: ["True", "False"],
+      correct: 0,
+      explanation: "True. Real options capture the value of flexibility — the ability to expand, delay, or abandon a project as information is revealed. NPV assumes a fixed decision at time zero and misses this flexibility value."
+    },
+    {
+      q: "Which of the following is NOT a quantitative method for selecting innovation projects?",
+      options: [
+        "Decision trees",
+        "Monte Carlo simulation",
+        "Analytic Hierarchy Process (AHP)",
+        "SWOT analysis"
+      ],
+      correct: 3,
+      explanation: "NPV, IRR, real options, AHP, decision trees, scenario analysis, and Monte Carlo simulation are all quantitative project selection methods. SWOT analysis is a qualitative strategic framework, not a quantitative selection tool."
+    },
+    {
+      q: "The Analytic Hierarchy Process (AHP) is used in innovation project selection to:",
+      options: [
+        "Calculate the net present value of future cash flows",
+        "Rank and prioritize projects by breaking decisions into pairwise comparisons across multiple criteria",
+        "Determine the optimal debt-to-equity ratio",
+        "Forecast future technology adoption rates"
+      ],
+      correct: 1,
+      explanation: "AHP is a structured decision-making method that uses pairwise comparisons to rank alternatives across multiple criteria. It helps when projects cannot be evaluated by financial metrics alone."
+    },
+    {
+      q: "Scenario analysis differs from Monte Carlo simulation in that scenario analysis evaluates a few discrete future states, while Monte Carlo runs thousands of randomized simulations.",
+      options: ["True", "False"],
+      correct: 0,
+      explanation: "True. Scenario analysis examines a limited number of defined future scenarios (e.g., best case, worst case, base case). Monte Carlo simulation generates thousands of random outcomes to build a probability distribution of results."
+    },
+    {
+      q: "The 'Valley of Death' in innovation financing refers to:",
+      options: [
+        "The period when a VC fund has no remaining capital",
+        "The gap between initial R&D investment and commercial revenue, where many startups fail due to lack of funding",
+        "The decline phase of the technology S-curve",
+        "The moment when a patent expires"
+      ],
+      correct: 1,
+      explanation: "The Valley of Death is the critical gap between early-stage R&D spending and the point where a product generates enough revenue to sustain itself. Many innovations die here because funding runs out before commercial returns begin."
+    },
+    {
+      q: "Knightian uncertainty differs from risk because:",
+      options: [
+        "It involves lower stakes than risk",
+        "It can be fully quantified with probability distributions",
+        "The probabilities of outcomes are unknown and cannot be calculated",
+        "It only applies to financial markets"
+      ],
+      correct: 2,
+      explanation: "Knightian uncertainty (from Frank Knight) means the probabilities of outcomes are unknown and unknowable. Risk means probabilities can be estimated. Radical innovation involves Knightian uncertainty, making standard NPV/IRR tools insufficient."
+    },
+    {
+      q: "A decision tree is useful for innovation project evaluation because it:",
+      options: [
+        "Eliminates all uncertainty from the decision",
+        "Maps out sequential decisions and chance events, showing the expected value of different paths",
+        "Guarantees the highest possible return on investment",
+        "Replaces the need for any financial analysis"
+      ],
+      correct: 1,
+      explanation: "Decision trees visualize sequential decisions and probabilistic outcomes, allowing managers to calculate expected values at each decision point. They are especially useful for staged investments in innovation."
+    },
+    {
+      q: "Fixed costs remain constant regardless of output volume, while variable costs change with the level of production.",
+      options: ["True", "False"],
+      correct: 0,
+      explanation: "True. Understanding the distinction between fixed costs (rent, salaries, equipment) and variable costs (materials, per-unit labor) is important when evaluating innovation project economics and break-even points."
+    },
+    {
+      q: "When NPV analysis suggests rejecting a project but real options analysis suggests accepting it, this typically occurs because:",
+      options: [
+        "The NPV calculation contained mathematical errors",
+        "The project has high uncertainty combined with valuable flexibility to stage investments and abandon if needed",
+        "Real options always give higher valuations than NPV",
+        "The hurdle rate was set too low"
+      ],
+      correct: 1,
+      explanation: "NPV can undervalue projects with high uncertainty but significant managerial flexibility. Real options capture the value of being able to invest in stages, expand if results are promising, or abandon if they are not — value that NPV ignores."
+    },
+    {
+      q: "The IRR is defined as the discount rate that makes the NPV of a project equal to zero.",
+      options: ["True", "False"],
+      correct: 0,
+      explanation: "True. The Internal Rate of Return (IRR) is the discount rate at which the present value of cash inflows equals the present value of cash outflows (NPV = 0). Projects are typically accepted if IRR exceeds the hurdle rate."
+    },
+    {
+      q: "Which statement about adverse selection and moral hazard is correct?",
+      options: [
+        "Adverse selection occurs after the investment; moral hazard occurs before",
+        "Adverse selection is about hidden information before investment; moral hazard is about hidden actions after investment",
+        "Both terms describe the same concept",
+        "Adverse selection only applies to debt financing; moral hazard only applies to equity"
+      ],
+      correct: 1,
+      explanation: "Adverse selection = pre-investment information asymmetry (entrepreneur knows more than investor). Moral hazard = post-investment behavioral risk (entrepreneur takes excessive risk with someone else's money). Both are financing frictions."
+    },
+    {
+      q: "Crowdfunding can help solve the information asymmetry problem in innovation financing because the crowd collectively validates market demand before the product is built.",
+      options: ["True", "False"],
+      correct: 0,
+      explanation: "True. Crowdfunding provides market validation — if many people pre-order or back a product, it signals real demand. This reduces the information gap between entrepreneur and investor/backer."
+    },
+    {
+      q: "The financing sequence FFF, then angels, then VC reflects the increasing:",
+      options: [
+        "Risk tolerance of each funding source",
+        "Amount of capital needed and formality of investment at each stage",
+        "Number of investors involved at each stage",
+        "Speed of the investment process"
+      ],
+      correct: 1,
+      explanation: "The progression from FFF to angels to VC reflects increasing capital needs and increasing formality/professionalism. FFF is informal and small; angels provide moderate capital with some structure; VCs provide large amounts with formal term sheets and governance."
+    },
+    {
+      q: "VCs typically demand an IRR of 30-70% because they invest in projects with very high failure rates and need the winners to compensate for the majority of investments that fail.",
+      options: ["True", "False"],
+      correct: 0,
+      explanation: "True. The high demanded IRR reflects the extreme skewness of VC outcomes: most investments fail (63.2% of cost goes to <1x returns), so the rare winners must deliver enormous returns to make the overall fund profitable."
     }
   ],
 
@@ -4612,10 +5509,10 @@ const quizModules = {
     { name: "Mock Exam Style", key: "Mock Exam Style", count: 25 },
   ],
   topic: [
-    { name: "Lecture 1: Introduction", key: "Lecture 1: Introduction", count: 10 },
-    { name: "Lectures 2-3: Technology Evolution", key: "Lectures 2-3: Technology Evolution", count: 10 },
-    { name: "Lecture 4: Adoption & Diffusion", key: "Lecture 4: Adoption & Diffusion", count: 10 },
-    { name: "Lecture 5: Sources of Innovation", key: "Lecture 5: Sources of Innovation", count: 10 },
+    { name: "Lecture 1: Introduction", key: "Lecture 1: Introduction", count: 25 },
+    { name: "Lectures 2-3: Technology Evolution", key: "Lectures 2-3: Technology Evolution", count: 25 },
+    { name: "Lecture 4: Adoption & Diffusion", key: "Lecture 4: Adoption & Diffusion", count: 25 },
+    { name: "Lecture 5: Sources of Innovation", key: "Lecture 5: Sources of Innovation", count: 25 },
     { name: "Lecture 6: Case — Nokia", key: "Lecture 6: Case — Nokia", count: 10 },
     { name: "Lectures 7-8: Selecting & Financing", key: "Lectures 7-8: Selecting & Financing Innovation", count: 10 },
     { name: "Lecture 8: Financing Deep Dive", key: "Lecture 8: Financing (Deep Dive)", count: 10 },
@@ -4675,23 +5572,27 @@ function getDeckProgress(index, total) {
 // BUILD MENU
 // ============================================================
 function buildModules() {
-  ['exam','topic','practice'].forEach(section => {
-    const container = document.getElementById(section + '-modules');
+  ['exam','topic','practice'].forEach(function(section) {
+    var container = document.getElementById(section + '-modules');
     container.innerHTML = '';
-    quizModules[section].forEach(mod => {
-      const card = document.createElement('div');
+    var totalQ = 0;
+    quizModules[section].forEach(function(mod) {
+      totalQ += mod.count;
+      var card = document.createElement('div');
       card.className = 'module-card' + (mod.full ? ' full-width' : '');
-      const best = getBest(mod.key);
-      const attempts = getAttempts(mod.key);
-      let bestHtml = '';
+      var best = getBest(mod.key);
+      var attempts = getAttempts(mod.key);
+      var bestHtml = '';
       if (best !== null) {
-        const cls = best >= 80 ? 'good' : best >= 60 ? 'ok' : 'bad';
+        var cls = best >= 80 ? 'good' : best >= 60 ? 'ok' : 'bad';
         bestHtml = '<span class="mod-best ' + cls + '">Best: ' + best + '%</span><span class="mod-attempts">' + attempts + ' tries</span>';
       }
       card.innerHTML = '<div class="mod-name">' + mod.name + '</div><div class="mod-meta"><span class="mod-count">📝 ' + mod.count + 'q</span>' + bestHtml + '</div>';
       card.onclick = function() { startQuiz(mod.key); };
       container.appendChild(card);
     });
+    var countEl = document.getElementById('count-' + section);
+    if (countEl) countEl.textContent = totalQ + ' questions';
   });
 }
 
@@ -4732,6 +5633,24 @@ function switchTab(tab, el) {
   el.classList.add('active');
   document.querySelectorAll('.panel').forEach(function(p) { p.classList.remove('active'); });
   document.getElementById('panel-' + tab).classList.add('active');
+  if (tab === 'flashcards') {
+    document.getElementById('flashcard-decks').style.display = '';
+    document.getElementById('fc-deck-label').style.display = '';
+    document.getElementById('fc-study').style.display = 'none';
+  }
+}
+
+function toggleSection(id) {
+  var content = document.getElementById('section-' + id);
+  var arrow = document.getElementById('arrow-' + id);
+  var isOpen = content.classList.contains('open');
+  if (isOpen) {
+    content.classList.remove('open');
+    arrow.classList.add('collapsed');
+  } else {
+    content.classList.add('open');
+    arrow.classList.remove('collapsed');
+  }
 }
 
 // Launch flashcards inline
