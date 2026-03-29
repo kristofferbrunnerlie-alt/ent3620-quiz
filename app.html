@@ -5,268 +5,532 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>ENT3620 — Innovation Strategy Study Hub</title>
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎯</text></svg>">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
-
   * { box-sizing: border-box; margin: 0; padding: 0; }
 
-  :root {
-    --bg: #09090b; --bg2: #18181b; --bg3: #27272a; --border: #3f3f46;
-    --text: #fafafa; --text2: #a1a1aa; --text3: #71717a;
-    --accent: #6366f1; --accent-hover: #818cf8; --accent-subtle: #6366f115;
-    --green: #22c55e; --green-bg: #22c55e15; --red: #ef4444; --red-bg: #ef444415;
-    --shadow: 0 1px 3px rgba(0,0,0,0.5);
-    --radius: 12px;
-  }
-  body.light {
-    --bg: #fafafa; --bg2: #ffffff; --bg3: #f4f4f5; --border: #e4e4e7;
-    --text: #09090b; --text2: #52525b; --text3: #a1a1aa;
-    --accent: #4f46e5; --accent-hover: #6366f1; --accent-subtle: #4f46e510;
-    --green: #16a34a; --green-bg: #16a34a10; --red: #dc2626; --red-bg: #dc262610;
-    --shadow: 0 1px 3px rgba(0,0,0,0.08);
-  }
-
   body {
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-    background: var(--bg);
-    color: var(--text);
+    font-family: 'Inter', -apple-system, sans-serif;
+    background: #0a0a0f;
+    color: #e4e4e7;
     min-height: 100vh;
-    transition: background 0.3s ease, color 0.3s ease;
+    overflow-x: hidden;
   }
 
-  /* Top bar */
-  .topbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 24px;
-    height: 56px;
-    border-bottom: 1px solid var(--border);
-    background: var(--bg2);
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
+  /* Animated background */
+  .bg-anim {
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    z-index: 0;
+    overflow: hidden;
+    pointer-events: none;
+  }
+  .orb {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(80px);
+    opacity: 0.15;
+    animation: float 20s ease-in-out infinite;
+  }
+  .orb-1 { width: 600px; height: 600px; background: #8b5cf6; top: -10%; left: -10%; animation-delay: 0s; }
+  .orb-2 { width: 500px; height: 500px; background: #06b6d4; bottom: -10%; right: -10%; animation-delay: -7s; }
+  .orb-3 { width: 400px; height: 400px; background: #ec4899; top: 50%; left: 50%; animation-delay: -14s; }
+  .orb-4 { width: 300px; height: 300px; background: #10b981; top: 20%; right: 20%; animation-delay: -3s; animation-duration: 25s; }
+
+  @keyframes float {
+    0%, 100% { transform: translate(0, 0) scale(1); }
+    25% { transform: translate(80px, -60px) scale(1.1); }
+    50% { transform: translate(-40px, 80px) scale(0.9); }
+    75% { transform: translate(60px, 40px) scale(1.05); }
   }
 
-  .brand {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-  }
-  .brand-icon {
-    width: 32px;
-    height: 32px;
-    background: var(--accent);
-    border-radius: 8px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 16px;
-    font-weight: 800;
-    color: #fff;
-    letter-spacing: -0.5px;
-  }
-  .brand-text {
-    display: flex;
-    flex-direction: column;
-    gap: 0;
-  }
-  .brand-title {
-    font-size: 15px;
-    font-weight: 700;
-    color: var(--text);
-    letter-spacing: -0.3px;
-  }
-  .brand-sub {
-    font-size: 11px;
-    color: var(--text3);
-    font-weight: 500;
-    letter-spacing: 0.2px;
+  /* Grid lines background */
+  .grid-bg {
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    z-index: 0;
+    background-image:
+      linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px);
+    background-size: 60px 60px;
+    pointer-events: none;
   }
 
-  .topbar-right {
-    display: flex;
-    align-items: center;
-    gap: 16px;
-  }
-
-  /* Tabs */
-  .tabs {
-    display: flex;
-    gap: 2px;
-    background: var(--bg3);
-    padding: 3px;
-    border-radius: 10px;
-    border: 1px solid var(--border);
-  }
-  .tab {
-    padding: 7px 18px;
-    border-radius: 8px;
-    border: none;
-    background: transparent;
-    color: var(--text2);
-    font-family: 'Inter', sans-serif;
-    font-size: 13px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: all 0.2s ease;
+  /* Content wrapper */
+  .wrapper {
     position: relative;
+    z-index: 1;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    min-height: 100vh;
   }
-  .tab.active {
-    background: var(--accent);
-    color: #fff;
-    box-shadow: 0 1px 4px rgba(99,102,241,0.3);
-  }
-  .tab:hover:not(.active) {
-    background: var(--border);
-    color: var(--text);
-  }
-  .tab-icon { margin-right: 6px; font-size: 14px; }
 
-  /* Stats pill */
-  .stats-pill {
-    display: flex;
+  /* Header */
+  .header {
+    text-align: center;
+    padding: 40px 0 30px;
+  }
+  .header-badge {
+    display: inline-flex;
     align-items: center;
-    gap: 12px;
-    padding: 5px 14px;
-    background: var(--bg3);
-    border: 1px solid var(--border);
+    gap: 8px;
+    padding: 6px 16px;
+    background: rgba(139,92,246,0.1);
+    border: 1px solid rgba(139,92,246,0.2);
     border-radius: 20px;
     font-size: 12px;
-    color: var(--text2);
+    font-weight: 600;
+    color: #a78bfa;
+    margin-bottom: 16px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
   }
-  .stats-pill .stat-val { color: var(--accent); font-weight: 700; }
+  .header h1 {
+    font-size: 36px;
+    font-weight: 900;
+    letter-spacing: -1px;
+    background: linear-gradient(135deg, #e4e4e7 0%, #a78bfa 50%, #06b6d4 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 8px;
+  }
+  .header p {
+    color: #71717a;
+    font-size: 15px;
+    font-weight: 500;
+  }
+  .header-stats {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    margin-top: 20px;
+  }
+  .h-stat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+  }
+  .h-stat-val {
+    font-size: 24px;
+    font-weight: 800;
+    color: #a78bfa;
+  }
+  .h-stat-label {
+    font-size: 11px;
+    color: #71717a;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-weight: 600;
+  }
 
-  /* Theme toggle */
-  .theme-toggle {
-    width: 44px;
-    height: 24px;
-    border-radius: 12px;
-    border: 1px solid var(--border);
-    background: var(--bg3);
-    cursor: pointer;
-    position: relative;
-    transition: all 0.3s ease;
-    flex-shrink: 0;
+  /* Tab toggle */
+  .tab-container {
+    display: flex;
+    justify-content: center;
+    margin: 24px 0;
   }
-  .theme-toggle::after {
+  .tab-toggle {
+    display: flex;
+    background: rgba(39,39,42,0.8);
+    border: 1px solid #3f3f46;
+    border-radius: 14px;
+    padding: 4px;
+    backdrop-filter: blur(12px);
+  }
+  .tab-btn {
+    padding: 12px 32px;
+    border-radius: 10px;
+    border: none;
+    background: transparent;
+    color: #71717a;
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    letter-spacing: -0.2px;
+  }
+  .tab-btn.active {
+    background: linear-gradient(135deg, #8b5cf6, #6366f1);
+    color: #fff;
+    box-shadow: 0 4px 15px rgba(139,92,246,0.3);
+  }
+  .tab-btn:hover:not(.active) { color: #a1a1aa; }
+  .tab-btn .tab-emoji { margin-right: 8px; }
+  .tab-count {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 22px;
+    height: 20px;
+    padding: 0 6px;
+    border-radius: 10px;
+    font-size: 11px;
+    font-weight: 700;
+    margin-left: 8px;
+  }
+  .tab-btn.active .tab-count { background: rgba(255,255,255,0.2); color: #fff; }
+  .tab-btn:not(.active) .tab-count { background: #3f3f46; color: #71717a; }
+
+  /* Content panels */
+  .panel { display: none; animation: fadeUp 0.4s ease; }
+  .panel.active { display: block; }
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(16px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  /* Module cards grid */
+  .modules-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+  .module-card {
+    background: rgba(24,24,27,0.8);
+    border: 1px solid #27272a;
+    border-radius: 14px;
+    padding: 20px;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    backdrop-filter: blur(8px);
+    position: relative;
+    overflow: hidden;
+  }
+  .module-card::before {
     content: '';
     position: absolute;
-    top: 2px;
-    left: 2px;
-    width: 18px;
-    height: 18px;
-    border-radius: 50%;
-    background: var(--accent);
-    transition: all 0.3s ease;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+    top: 0; left: 0; right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #8b5cf6, transparent);
+    opacity: 0;
+    transition: opacity 0.3s;
   }
-  body.light .theme-toggle::after {
-    left: 22px;
-    background: #f59e0b;
+  .module-card:hover {
+    border-color: #8b5cf640;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 30px rgba(139,92,246,0.08);
   }
-  .theme-toggle .t-icon {
-    position: absolute;
-    font-size: 11px;
-    top: 4px;
-  }
-  .theme-toggle .t-moon { left: 5px; }
-  .theme-toggle .t-sun { right: 4px; }
+  .module-card:hover::before { opacity: 1; }
+  .module-card.full-width { grid-column: 1 / -1; }
 
-  /* Content frame */
-  .content {
-    width: 100%;
-    height: calc(100vh - 57px);
-    border: none;
-    background: var(--bg);
+  .mod-name {
+    font-size: 14px;
+    font-weight: 700;
+    color: #e4e4e7;
+    margin-bottom: 6px;
+    letter-spacing: -0.2px;
   }
+  .mod-meta {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 12px;
+    color: #71717a;
+  }
+  .mod-count {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    padding: 2px 8px;
+    background: #27272a;
+    border-radius: 6px;
+    font-weight: 600;
+  }
+  .mod-best {
+    font-weight: 700;
+    padding: 2px 8px;
+    border-radius: 6px;
+  }
+  .mod-best.good { color: #22c55e; background: #22c55e15; }
+  .mod-best.ok { color: #eab308; background: #eab30815; }
+  .mod-best.bad { color: #ef4444; background: #ef444415; }
+  .mod-attempts { color: #52525b; }
+
+  /* Flashcard deck cards */
+  .deck-card {
+    background: rgba(24,24,27,0.8);
+    border: 1px solid #27272a;
+    border-radius: 16px;
+    padding: 28px;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    backdrop-filter: blur(8px);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .deck-card:hover {
+    border-color: #06b6d440;
+    transform: translateY(-3px);
+    box-shadow: 0 12px 40px rgba(6,182,212,0.08);
+  }
+  .deck-icon { font-size: 36px; margin-bottom: 12px; }
+  .deck-name { font-size: 16px; font-weight: 700; color: #e4e4e7; margin-bottom: 4px; }
+  .deck-count { font-size: 13px; color: #71717a; }
+  .deck-progress-bar {
+    width: 100%;
+    height: 4px;
+    background: #27272a;
+    border-radius: 2px;
+    margin-top: 16px;
+    overflow: hidden;
+  }
+  .deck-progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #06b6d4, #8b5cf6);
+    border-radius: 2px;
+    transition: width 0.5s ease;
+  }
+  .decks-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 16px;
+    margin-bottom: 20px;
+  }
+
+  /* Section label */
+  .section-label {
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #52525b;
+    margin: 24px 0 12px;
+    padding-left: 4px;
+  }
+
+  /* Footer */
+  .footer {
+    text-align: center;
+    padding: 40px 0 20px;
+    color: #3f3f46;
+    font-size: 12px;
+  }
+  .footer a { color: #71717a; text-decoration: none; }
+  .footer a:hover { color: #a78bfa; }
 
   /* Mobile */
   @media (max-width: 640px) {
-    .topbar { padding: 0 12px; height: 50px; }
-    .brand-sub { display: none; }
-    .stats-pill { display: none; }
-    .tab { padding: 6px 14px; font-size: 12px; }
-    .content { height: calc(100vh - 51px); }
+    .wrapper { padding: 12px; }
+    .header { padding: 24px 0 16px; }
+    .header h1 { font-size: 24px; }
+    .modules-grid { grid-template-columns: 1fr; }
+    .decks-grid { grid-template-columns: 1fr; }
+    .tab-btn { padding: 10px 20px; font-size: 14px; }
+    .header-stats { gap: 16px; }
+    .h-stat-val { font-size: 20px; }
   }
 </style>
 </head>
 <body>
-  <div class="topbar">
-    <div class="brand">
-      <div class="brand-icon">BI</div>
-      <div class="brand-text">
-        <span class="brand-title">ENT3620 Study Hub</span>
-        <span class="brand-sub">Innovation Strategy & Technological Change</span>
-      </div>
-    </div>
-    <div class="topbar-right">
-      <div class="stats-pill" id="stats-pill"></div>
-      <div class="tabs">
-        <button class="tab active" onclick="switchTab('quiz', this)">
-          <span class="tab-icon">📝</span>Quiz
-        </button>
-        <button class="tab" onclick="switchTab('flashcards', this)">
-          <span class="tab-icon">🃏</span>Flashcards
-        </button>
-      </div>
-      <div class="theme-toggle" onclick="toggleTheme()" title="Toggle light/dark mode">
-        <span class="t-icon t-moon">🌙</span>
-        <span class="t-icon t-sun">☀️</span>
-      </div>
+
+<div class="bg-anim">
+  <div class="orb orb-1"></div>
+  <div class="orb orb-2"></div>
+  <div class="orb orb-3"></div>
+  <div class="orb orb-4"></div>
+</div>
+<div class="grid-bg"></div>
+
+<div class="wrapper">
+  <div class="header">
+    <div class="header-badge">BI Norwegian Business School</div>
+    <h1>ENT3620 Study Hub</h1>
+    <p>Innovation Strategy & Technological Change</p>
+    <div class="header-stats" id="header-stats"></div>
+  </div>
+
+  <div class="tab-container">
+    <div class="tab-toggle">
+      <button class="tab-btn active" onclick="switchTab('quiz', this)">
+        <span class="tab-emoji">📝</span>Quiz<span class="tab-count" id="quiz-count">349</span>
+      </button>
+      <button class="tab-btn" onclick="switchTab('flashcards', this)">
+        <span class="tab-emoji">🃏</span>Flashcards<span class="tab-count" id="fc-count">115</span>
+      </button>
     </div>
   </div>
-  <iframe id="content-frame" class="content" src="index.html"></iframe>
+
+  <!-- QUIZ PANEL -->
+  <div class="panel active" id="panel-quiz">
+    <div class="section-label">Exam Simulations</div>
+    <div class="modules-grid" id="exam-modules"></div>
+    <div class="section-label">Topic Modules</div>
+    <div class="modules-grid" id="topic-modules"></div>
+    <div class="section-label">Deep Practice</div>
+    <div class="modules-grid" id="practice-modules"></div>
+  </div>
+
+  <!-- FLASHCARDS PANEL -->
+  <div class="panel" id="panel-flashcards">
+    <div class="section-label">Study Decks</div>
+    <div class="decks-grid" id="flashcard-decks"></div>
+    <div id="flashcard-embed" style="display:none;">
+      <button onclick="backToDecks()" style="background:none;border:1px solid #3f3f46;color:#a1a1aa;padding:8px 16px;border-radius:8px;cursor:pointer;font-family:Inter,sans-serif;font-size:13px;font-weight:600;margin-bottom:12px;">← Back to decks</button>
+      <iframe id="fc-frame" style="width:100%;height:70vh;border:none;border-radius:14px;"></iframe>
+    </div>
+  </div>
+
+  <div class="footer">
+    Built for ENT3620 exam prep — <a href="https://github.com/kristofferbrunnerlie-alt/ent3620-quiz" target="_blank">GitHub</a>
+  </div>
+</div>
 
 <script>
-  // Theme
-  const savedTheme = localStorage.getItem('ent3620_theme') || 'dark';
-  if (savedTheme === 'light') document.body.classList.add('light');
+  // Quiz modules config
+  const quizModules = {
+    exam: [
+      { name: "All Questions — Full Simulation", key: "all", count: 349, full: true },
+      { name: "Final Prep Exam 1", key: "Final Prep Exam 1", count: 25 },
+      { name: "Final Prep Exam 2", key: "Final Prep Exam 2", count: 25 },
+      { name: "Exam Sprint 1", key: "Exam Sprint 1", count: 25 },
+      { name: "Exam Sprint 2", key: "Exam Sprint 2", count: 25 },
+      { name: "Hard Exam", key: "Hard Exam", count: 25 },
+      { name: "Exam Simulator", key: "Exam Simulator", count: 25 },
+      { name: "Mock Exam Style", key: "Mock Exam Style", count: 25 },
+    ],
+    topic: [
+      { name: "Lecture 1: Introduction", key: "Lecture 1: Introduction", count: 10 },
+      { name: "Lectures 2-3: Technology Evolution", key: "Lectures 2-3: Technology Evolution", count: 10 },
+      { name: "Lecture 4: Adoption & Diffusion", key: "Lecture 4: Adoption & Diffusion", count: 10 },
+      { name: "Lecture 5: Sources of Innovation", key: "Lecture 5: Sources of Innovation", count: 10 },
+      { name: "Lecture 6: Case — Nokia", key: "Lecture 6: Case — Nokia", count: 10 },
+      { name: "Lectures 7-8: Selecting & Financing", key: "Lectures 7-8: Selecting & Financing Innovation", count: 10 },
+      { name: "Lecture 8: Financing Deep Dive", key: "Lecture 8: Financing (Deep Dive)", count: 10 },
+      { name: "Lecture 9: Protecting Innovation", key: "Lecture 9: Protecting Innovation", count: 10 },
+      { name: "Lecture 10: Metaverse Wars", key: "Lecture 10: Metaverse Wars", count: 10 },
+      { name: "Lectures 11-12: Org Structure & Moderna", key: "Lectures 11-12: Org Structure & Moderna", count: 19 },
+    ],
+    practice: [
+      { name: "Hard Mode: Tricky Connections", key: "Hard Mode: Tricky Connections", count: 20 },
+      { name: "Weak Spots Drill", key: "Weak Spots Drill", count: 25 },
+      { name: "Fresh Challenge", key: "Fresh Challenge", count: 20 },
+    ]
+  };
 
-  function toggleTheme() {
-    document.body.classList.toggle('light');
-    const isLight = document.body.classList.contains('light');
-    localStorage.setItem('ent3620_theme', isLight ? 'light' : 'dark');
-    const frame = document.getElementById('content-frame');
-    try { frame.contentWindow.postMessage({ type: 'theme', theme: isLight ? 'light' : 'dark' }, '*'); } catch(e) {}
+  const flashDecks = [
+    { name: "Key Concepts & Definitions", icon: "📖", count: 72, index: 0 },
+    { name: "Cases & Articles", icon: "📋", count: 37, index: 1 },
+    { name: "Numbers & Facts", icon: "🔢", count: 30, index: 2 },
+  ];
+
+  // Build quiz modules
+  function buildModules() {
+    const history = getHistory();
+    ['exam','topic','practice'].forEach(section => {
+      const container = document.getElementById(section + '-modules');
+      container.innerHTML = '';
+      quizModules[section].forEach(mod => {
+        const card = document.createElement('div');
+        card.className = 'module-card' + (mod.full ? ' full-width' : '');
+        const best = getBest(mod.key);
+        const attempts = getAttempts(mod.key);
+        let bestHtml = '';
+        if (best !== null) {
+          const cls = best >= 80 ? 'good' : best >= 60 ? 'ok' : 'bad';
+          bestHtml = `<span class="mod-best ${cls}">Best: ${best}%</span><span class="mod-attempts">${attempts} tries</span>`;
+        }
+        card.innerHTML = `<div class="mod-name">${mod.name}</div><div class="mod-meta"><span class="mod-count">📝 ${mod.count}q</span>${bestHtml}</div>`;
+        card.onclick = () => launchQuiz(mod.key);
+        container.appendChild(card);
+      });
+    });
   }
 
-  // Tabs
-  function switchTab(tab, el) {
-    document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
-    el.classList.add('active');
-    const frame = document.getElementById('content-frame');
-    frame.src = tab === 'quiz' ? 'index.html' : 'flashcards.html';
+  // Build flashcard decks
+  function buildDecks() {
+    const container = document.getElementById('flashcard-decks');
+    container.innerHTML = '';
+    flashDecks.forEach(deck => {
+      const card = document.createElement('div');
+      card.className = 'deck-card';
+      const progress = getDeckProgress(deck.index, deck.count);
+      card.innerHTML = `
+        <div class="deck-icon">${deck.icon}</div>
+        <div class="deck-name">${deck.name}</div>
+        <div class="deck-count">${deck.count} cards</div>
+        <div class="deck-progress-bar"><div class="deck-progress-fill" style="width:${progress}%"></div></div>
+      `;
+      card.onclick = () => launchFlashcards(deck.index);
+      container.appendChild(card);
+    });
   }
 
-  // Pass theme on iframe load
-  window.addEventListener('message', (e) => {
-    if (e.data?.type === 'ready') {
-      const isLight = document.body.classList.contains('light');
-      const frame = document.getElementById('content-frame');
-      try { frame.contentWindow.postMessage({ type: 'theme', theme: isLight ? 'light' : 'dark' }, '*'); } catch(e2) {}
-    }
-  });
+  // History helpers
+  function getHistory() {
+    try { return JSON.parse(localStorage.getItem('ent3620_history') || '{}'); } catch(e) { return {}; }
+  }
+  function getBest(key) {
+    const h = getHistory();
+    if (!h[key] || !h[key].length) return null;
+    return Math.max(...h[key].map(a => a.pct));
+  }
+  function getAttempts(key) {
+    const h = getHistory();
+    return h[key] ? h[key].length : 0;
+  }
+  function getDeckProgress(index, total) {
+    try {
+      const key = 'ent3620_fc_' + index;
+      const data = JSON.parse(localStorage.getItem(key) || '{}');
+      const mastered = Object.values(data).filter(v => v === 'got').length;
+      return Math.round((mastered / total) * 100);
+    } catch(e) { return 0; }
+  }
 
   // Stats
   function updateStats() {
-    try {
-      const history = JSON.parse(localStorage.getItem('ent3620_history') || '{}');
-      let attempts = 0, correct = 0, total = 0;
-      Object.values(history).forEach(a => a.forEach(r => { attempts++; correct += r.score; total += r.total; }));
-      const pill = document.getElementById('stats-pill');
-      if (attempts > 0) {
-        const avg = Math.round((correct/total)*100);
-        pill.innerHTML = `<span><span class="stat-val">${attempts}</span> sessions</span><span><span class="stat-val">${avg}%</span> avg</span>`;
-      } else {
-        pill.innerHTML = '<span>No sessions yet</span>';
-      }
-    } catch(e) {}
+    const h = getHistory();
+    let sessions = 0, correct = 0, total = 0;
+    Object.values(h).forEach(a => a.forEach(r => { sessions++; correct += r.score; total += r.total; }));
+    const el = document.getElementById('header-stats');
+    if (sessions > 0) {
+      const avg = Math.round((correct/total)*100);
+      el.innerHTML = `
+        <div class="h-stat"><span class="h-stat-val">${sessions}</span><span class="h-stat-label">Sessions</span></div>
+        <div class="h-stat"><span class="h-stat-val">${total}</span><span class="h-stat-label">Answered</span></div>
+        <div class="h-stat"><span class="h-stat-val">${avg}%</span><span class="h-stat-label">Average</span></div>
+      `;
+    }
   }
+
+  // Tab switching
+  function switchTab(tab, el) {
+    document.querySelectorAll('.tab-btn').forEach(t => t.classList.remove('active'));
+    el.classList.add('active');
+    document.querySelectorAll('.panel').forEach(p => p.classList.remove('active'));
+    document.getElementById('panel-' + tab).classList.add('active');
+    if (tab === 'flashcards') {
+      document.getElementById('flashcard-decks').style.display = '';
+      document.getElementById('flashcard-embed').style.display = 'none';
+    }
+  }
+
+  // Launch quiz in iframe overlay
+  function launchQuiz(key) {
+    const url = key === 'all' ? 'index.html?module=all' : 'index.html?module=' + encodeURIComponent(key);
+    window.open(url, '_blank');
+  }
+
+  // Launch flashcards
+  function launchFlashcards(deckIndex) {
+    window.open('flashcards.html?deck=' + deckIndex, '_blank');
+  }
+
+  function backToDecks() {
+    document.getElementById('flashcard-decks').style.display = '';
+    document.getElementById('flashcard-embed').style.display = 'none';
+  }
+
+  // Init
+  buildModules();
+  buildDecks();
   updateStats();
-  setInterval(updateStats, 5000);
 </script>
 </body>
 </html>
