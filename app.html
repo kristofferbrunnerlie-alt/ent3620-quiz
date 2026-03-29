@@ -749,37 +749,37 @@
     <div class="panel active" id="panel-quiz">
       <div class="section-toggle" onclick="toggleSection('exam')">
         <div class="section-toggle-left">
-          <span class="section-arrow" id="arrow-exam">▼</span>
+          <span class="section-arrow collapsed" id="arrow-exam">▼</span>
           <span class="section-icon">🎯</span>
           <span>Exam Simulations</span>
         </div>
         <span class="section-count" id="count-exam"></span>
       </div>
-      <div class="section-content open" id="section-exam">
+      <div class="section-content" id="section-exam">
         <div class="modules-grid" id="exam-modules"></div>
       </div>
 
       <div class="section-toggle" onclick="toggleSection('topic')">
         <div class="section-toggle-left">
-          <span class="section-arrow" id="arrow-topic">▼</span>
+          <span class="section-arrow collapsed" id="arrow-topic">▼</span>
           <span class="section-icon">📚</span>
           <span>Lectures & Topics</span>
         </div>
         <span class="section-count" id="count-topic"></span>
       </div>
-      <div class="section-content open" id="section-topic">
+      <div class="section-content" id="section-topic">
         <div class="modules-grid" id="topic-modules"></div>
       </div>
 
       <div class="section-toggle" onclick="toggleSection('practice')">
         <div class="section-toggle-left">
-          <span class="section-arrow" id="arrow-practice">▼</span>
+          <span class="section-arrow collapsed" id="arrow-practice">▼</span>
           <span class="section-icon">💪</span>
           <span>Deep Practice</span>
         </div>
         <span class="section-count" id="count-practice"></span>
       </div>
-      <div class="section-content open" id="section-practice">
+      <div class="section-content" id="section-practice">
         <div class="modules-grid" id="practice-modules"></div>
       </div>
     </div>
@@ -2470,6 +2470,141 @@ const questionBank = {
       ],
       correct: 1,
       explanation: "Selden held a broad patent on the gasoline automobile. Ford challenged it. The case illustrates how broad patents can be used to control or block an entire industry — a key patent strategy issue."
+    },
+    {
+      q: "A utility patent provides protection for 20 years from the date of filing, after which the invention enters the public domain.",
+      options: ["True", "False"],
+      correct: 0,
+      explanation: "True. Utility patents last 20 years from the filing date. This is shorter than copyright (life + 70 years) and differs from trademarks (10 years, renewable). After 20 years, the invention enters the public domain."
+    },
+    {
+      q: "Which of the following CANNOT be patented?",
+      options: [
+        "A new chemical compound",
+        "A mathematical formula",
+        "A manufacturing process",
+        "A composition of matter"
+      ],
+      correct: 1,
+      explanation: "Mathematical formulas, ideas, natural laws, and natural substances cannot be patented. Patents cover processes, machines, manufactured items, and compositions of matter — things that are novel, nonobvious, and useful."
+    },
+    {
+      q: "Patent effectiveness is rated highest in the pharmaceutical/drug industry (6.5 out of 7) and lowest in computers (3.4 out of 7).",
+      options: ["True", "False"],
+      correct: 0,
+      explanation: "True. Patents are most effective in biological/chemical industries (drugs 6.5/7, organic chemicals 6.1/7) and least effective in mechanical/electrical industries (computers 3.4/7, pulp/paper 3.3/7)."
+    },
+    {
+      q: "A 'patent thicket' refers to:",
+      options: [
+        "A large portfolio of patents held by a single company",
+        "A dense web of overlapping patents held by multiple firms that creates barriers to innovation",
+        "A government program to encourage patent filing",
+        "A collection of expired patents in the public domain"
+      ],
+      correct: 1,
+      explanation: "A patent thicket is a dense overlapping set of patents from multiple holders that a firm must navigate to commercialize a technology. This is especially problematic in industries like semiconductors and smartphones."
+    },
+    {
+      q: "Copyright is granted automatically when a work is put in tangible form, while patents require a formal application and examination process.",
+      options: ["True", "False"],
+      correct: 0,
+      explanation: "True. Copyright protection is automatic upon creation of a tangible work ('by hand and by spirit'). Patents require filing an application, examination by a patent office, and meeting requirements of novelty, nonobviousness, and utility."
+    },
+    {
+      q: "According to survey data, the top motivation for firms to patent their inventions is:",
+      options: [
+        "Licensing revenue (28%)",
+        "Enhancing reputation (48%)",
+        "Preventing copying (96%)",
+        "Using patents in negotiation (47%)"
+      ],
+      correct: 2,
+      explanation: "Preventing copying is the top motivation at 96%, followed by blocking others (82%), preventing lawsuits (59%), enhancing reputation (48%), negotiation (47%), and licensing (28%)."
+    },
+    {
+      q: "The 'working requirement' for patents means:",
+      options: [
+        "The patent holder must demonstrate the invention works during the application process",
+        "In some jurisdictions, the patent holder must actually use or manufacture the patented invention, or risk losing patent rights",
+        "The patent must be renewed every year to remain valid",
+        "All employees must be trained on the patented technology"
+      ],
+      correct: 1,
+      explanation: "The working requirement means patent holders must commercially exploit their patent (manufacture, sell, or license) within a certain period. Failure to work the patent can lead to compulsory licensing or revocation in some jurisdictions."
+    },
+    {
+      q: "In the Selden vs. Ford case, Ford ultimately won on appeal because:",
+      options: [
+        "Selden's patent had expired before Ford started manufacturing",
+        "Ford used a different type of engine than the one covered by Selden's patent",
+        "Ford had filed his own patent before Selden",
+        "The Supreme Court declared all automobile patents invalid"
+      ],
+      correct: 1,
+      explanation: "Ford won on appeal in 1911 because his cars used a different engine type (Otto cycle) than the one specified in Selden's patent (Brayton engine). This showed that process innovation can circumvent broad patents."
+    },
+    {
+      q: "Microsoft Windows is an example of which position on the open vs. proprietary spectrum?",
+      options: [
+        "Wholly open",
+        "Wholly proprietary",
+        "Moderate licensing — controlled by one firm but with broad third-party access",
+        "Liberal licensing"
+      ],
+      correct: 2,
+      explanation: "Microsoft Windows represents moderate licensing on the open-proprietary spectrum. Microsoft controls the platform but licenses it broadly, allowing third-party software development while maintaining architectural control."
+    },
+    {
+      q: "A trademark can be lost through cancellation proceedings, abandonment, or by becoming generic (when the brand name becomes the common term for a product category).",
+      options: ["True", "False"],
+      correct: 0,
+      explanation: "True. Trademarks can be lost through cancellation, abandonment (not using the mark), or genericide — when a brand becomes so common it is used as a generic term (e.g., 'aspirin' or 'escalator' were once trademarks)."
+    },
+    {
+      q: "Tacit knowledge protects innovation because it:",
+      options: [
+        "Is registered with patent offices",
+        "Cannot be easily codified, written down, or transferred, making imitation difficult",
+        "Is protected by international copyright law",
+        "Expires after 20 years like a patent"
+      ],
+      correct: 1,
+      explanation: "Tacit knowledge — skills, intuition, and know-how embedded in people and organizations — cannot be easily written down or transferred. This makes it a natural barrier to imitation, independent of any legal mechanism."
+    },
+    {
+      q: "A non-compete agreement typically prohibits a former employee from working for competitors for a limited time and geographic area.",
+      options: ["True", "False"],
+      correct: 0,
+      explanation: "True. Non-compete agreements restrict former employees from joining competitors or starting competing businesses for a specified period and within a defined geographic scope. They complement legal IP protections."
+    },
+    {
+      q: "Which of the following is a correct match between an IPR type and its example from the lecture?",
+      options: [
+        "Patent — Coca-Cola formula",
+        "Trade secrecy — Gillette Sensor razor",
+        "Copyright — Mickey Mouse / Steamboat Willie",
+        "Trademark — Lipitor drug"
+      ],
+      correct: 2,
+      explanation: "From the lecture: Gillette = Patent, Coca-Cola = Secrecy, Mickey Mouse = Copyright, Nike swoosh = Trademark. Copyright protects creative works like Disney's films and characters."
+    },
+    {
+      q: "VHS won over Betamax despite Beta having superior technical quality, illustrating that:",
+      options: [
+        "Patents always determine market winners",
+        "The technically superior product always wins in the long run",
+        "Licensing strategy and network effects can be more important than technical quality",
+        "Government regulation determined the outcome"
+      ],
+      correct: 2,
+      explanation: "VHS won over Betamax because of JVC's more liberal licensing strategy, which attracted more manufacturers and content providers, creating stronger network effects. Technical superiority alone does not determine market outcomes."
+    },
+    {
+      q: "An NDA (non-disclosure agreement) specifies what information is considered secret, how it may legitimately be used, and how documents should be handled.",
+      options: ["True", "False"],
+      correct: 0,
+      explanation: "True. NDAs are contractual protections that define what counts as confidential information, acceptable uses, and document handling procedures. They complement but do not replace formal IP protections like patents and trade secrets."
     }
   ],
 
@@ -2583,6 +2718,141 @@ const questionBank = {
       ],
       correct: 0,
       explanation: "From lecture 8: Stage 1 = building the fund (assembling LPs), Stage 2 = investing the capital (networking, due diligence), Stage 3 = exit (IPO or acquisition, returning capital)."
+    },
+    {
+      q: "Angel investment funds differ from VC funds in that angel funds typically have:",
+      options: [
+        "A 10-year fund life with strict return deadlines",
+        "An infinite fund life with no defined end date",
+        "A 5-year fund life with quarterly distributions",
+        "A 3-year fund life focused on rapid exits"
+      ],
+      correct: 1,
+      explanation: "Angel investment funds have an 'infinite' fund life (no defined end date), unlike VC funds which typically have a 7-10 year life. This allows angels to be more patient with their investments."
+    },
+    {
+      q: "The minimum investment size for a typical angel investor is approximately $25,000, while VCs invest significantly larger amounts.",
+      options: ["True", "False"],
+      correct: 0,
+      explanation: "True. Angels typically invest a minimum of about $25,000 from their personal wealth. VCs invest much larger sums from pooled funds, often millions of dollars per deal."
+    },
+    {
+      q: "Angel investors typically expect returns of less than 9x on their investments, which is lower than VC fund expectations of 5-10x.",
+      options: ["True", "False"],
+      correct: 0,
+      explanation: "True. Angels expect moderate returns (less than 9x) because they invest earlier (higher risk of total loss but smaller amounts). VCs expect 5-10x returns over 7 years from their LPs' perspective."
+    },
+    {
+      q: "Of 4,000 firms seeking VC funding, approximately how many will successfully raise capital?",
+      options: [
+        "1,000",
+        "500",
+        "200",
+        "50"
+      ],
+      correct: 2,
+      explanation: "Of 4,000 firms seeking VC, only about 200 (5%) will successfully raise capital. Of those 200, only 15 will reach NOK 1 billion in revenue. This illustrates the extreme selectivity of VC."
+    },
+    {
+      q: "During the 1960s 'Cottage Industry' era of VC, power was held primarily by VCs because capital was scarce and entrepreneurs had few alternatives.",
+      options: ["True", "False"],
+      correct: 0,
+      explanation: "True. In the 1960s cottage industry era, VCs held the power because capital was scarce. Over time, the balance shifted: the 2012 era of democratization became more 'founder-friendly' with micro VC and more capital available."
+    },
+    {
+      q: "Which event in the VC history timeline led to a capital boom in the 1980s?",
+      options: [
+        "The dot-com crash",
+        "The ERISA Act allowing pension funds to invest in VC",
+        "The founding of Y Combinator",
+        "The launch of Kickstarter"
+      ],
+      correct: 1,
+      explanation: "The ERISA Act allowed pension funds to invest in venture capital, leading to a capital boom in the 1980s. This brought 'smart money' into the industry and the emergence of corporate venture capital (CVC)."
+    },
+    {
+      q: "A term sheet's 'preferred payout' component determines:",
+      options: [
+        "The salary of the CEO",
+        "Which investors get paid first in case of an exit or liquidation",
+        "The dividend policy of the company",
+        "The tax rate on capital gains"
+      ],
+      correct: 1,
+      explanation: "Preferred payout in a term sheet specifies the order in which investors receive returns during an exit event. Typically, preferred shareholders (VCs) get paid before common shareholders (founders, employees)."
+    },
+    {
+      q: "The 'employee pool' in a VC term sheet refers to:",
+      options: [
+        "The total number of employees the startup must hire",
+        "Stock or equity reserved for future employee compensation",
+        "A bonus pool for the founding team",
+        "The VC's own internal team assigned to the portfolio company"
+      ],
+      correct: 1,
+      explanation: "The employee pool is equity set aside in the cap table for future employee stock options and compensation. This dilutes existing shareholders but is essential for attracting talent. It is a standard term sheet component."
+    },
+    {
+      q: "Equity-based crowdfunding gives backers an ownership stake in the company, while reward-based crowdfunding gives backers a product or reward.",
+      options: ["True", "False"],
+      correct: 0,
+      explanation: "True. Equity crowdfunding = backers become shareholders. Reward crowdfunding (e.g., Kickstarter) = backers receive the product or a reward. Both address the Valley of Death funding gap but with different structures."
+    },
+    {
+      q: "The '2 and 20' model in venture capital means:",
+      options: [
+        "VCs invest in 2 companies and expect 20x returns",
+        "VCs charge 2% annual management fee and keep 20% of profits (carry)",
+        "VCs hold investments for 2 years and exit within 20 months",
+        "2% of startups succeed and 20% break even"
+      ],
+      correct: 1,
+      explanation: "The '2 and 20' model: VCs charge approximately 2% of the fund per year as a management fee, plus approximately 20-30% of profits (carry). LPs receive the remaining 70-80% of profits."
+    },
+    {
+      q: "A funded startup venture typically has how many angel investors?",
+      options: [
+        "1-3",
+        "5-10",
+        "15 or more",
+        "Exactly one lead angel"
+      ],
+      correct: 2,
+      explanation: "From the lecture: funded ventures often have 15+ angels. Each angel writes an individual check and receives individual returns, unlike VC where one firm makes one investment from a pooled fund."
+    },
+    {
+      q: "The board structure in a VC term sheet typically includes company seats, investor seats, and neutral/independent seats.",
+      options: ["True", "False"],
+      correct: 0,
+      explanation: "True. The term sheet specifies board composition: company-appointed directors, investor-appointed directors, and neutral/independent directors. This balances control between founders and investors."
+    },
+    {
+      q: "Information asymmetry is the fundamental reason why financing R&D and innovation is more challenging than financing traditional business activities.",
+      options: ["True", "False"],
+      correct: 0,
+      explanation: "True. R&D outcomes are highly uncertain, entrepreneurs know more about their technology than investors (adverse selection), and investors cannot easily monitor how funds are used (moral hazard). These information asymmetries create financing frictions."
+    },
+    {
+      q: "The 2012 'Era of Democratization' in VC was characterized by:",
+      options: [
+        "Government regulation closing VC to all but the wealthiest investors",
+        "The dot-com crash eliminating most VC firms",
+        "A micro VC boom and increasingly founder-friendly terms",
+        "VCs shifting entirely to debt-based financing"
+      ],
+      correct: 2,
+      explanation: "The 2012 era saw a micro VC boom with smaller, more numerous funds, and a shift toward founder-friendly terms. New entrants democratized access to venture funding, reducing the power imbalance between VCs and entrepreneurs."
+    },
+    {
+      q: "According to VC skewness data, 4.3% of portfolio cost goes to investments returning more than 10x, but these generate approximately what percentage of total value?",
+      options: [
+        "25%",
+        "42%",
+        "61.7%",
+        "97%"
+      ],
+      correct: 2,
+      explanation: "4.3% of cost goes to >10x investments, and these generate 61.7% of total portfolio value. Meanwhile, 63.2% of cost goes to <1x investments (failures). This extreme skewness is the defining feature of VC."
     }
   ],
 
@@ -2696,6 +2966,141 @@ const questionBank = {
       ],
       correct: 2,
       explanation: "The metaverse boom ran 2021-2023, then interest shifted dramatically toward AI (especially after ChatGPT's launch in late 2022)."
+    },
+    {
+      q: "Snow Crash (1992) by Neal Stephenson predicted all of the following EXCEPT:",
+      options: [
+        "Electronic currencies",
+        "Avatars in virtual worlds",
+        "Artificial general intelligence",
+        "Online subcultures"
+      ],
+      correct: 2,
+      explanation: "Snow Crash predicted electronic currencies, avatars, and online subcultures. Artificial general intelligence was not a central prediction of the novel — its focus was on immersive virtual reality and VR/AR headsets."
+    },
+    {
+      q: "Ready Player One (2011) by Ernest Cline explores themes of VR as escape from dystopia, corporate greed, and the importance of human contact.",
+      options: ["True", "False"],
+      correct: 0,
+      explanation: "True. Ready Player One depicts a dystopian future where VR (the OASIS) is used as an escape. Key themes include corporate greed (IOI corporation), friendship, and the value of real human contact over virtual existence."
+    },
+    {
+      q: "Which sci-fi work predicted wireless earbuds?",
+      options: [
+        "Star Trek (1966)",
+        "2001: A Space Odyssey (1968)",
+        "Fahrenheit 451 (1953)",
+        "Total Recall (1990)"
+      ],
+      correct: 2,
+      explanation: "Fahrenheit 451 (Ray Bradbury, 1953) described 'thimble radios' or 'seashells' worn in the ear — essentially predicting wireless earbuds. Star Trek predicted folding phones; 2001 predicted videoconferencing; Total Recall predicted self-driving cars."
+    },
+    {
+      q: "The folding mobile phone was inspired by the communicator device in Star Trek (1966).",
+      options: ["True", "False"],
+      correct: 0,
+      explanation: "True. The Star Trek communicator (1966) inspired the design of flip/folding mobile phones. Motorola's Martin Cooper, who invented the first handheld cell phone, has cited Star Trek as an inspiration."
+    },
+    {
+      q: "Internal corporate venturing (ICV) differs from external corporate venturing (ECV) in that ICV involves:",
+      options: [
+        "Acquiring external startups",
+        "In-house innovation projects developed within the existing organization",
+        "Creating spin-off companies",
+        "Investing in external VC funds"
+      ],
+      correct: 1,
+      explanation: "ICV = internal innovation projects within the firm. ECV = external activities including spin-offs, acquisitions, and corporate venture capital (CVC) investments in outside startups."
+    },
+    {
+      q: "The Concorde supersonic jet flew faster than the speed of sound but failed commercially, making it a case of feasibility without viability.",
+      options: ["True", "False"],
+      correct: 0,
+      explanation: "True. The Concorde was technically feasible (supersonic commercial flight) but commercially unviable due to high operating costs, limited routes, noise restrictions, and small passenger capacity. It illustrates that technical achievement does not guarantee commercial success."
+    },
+    {
+      q: "Which CEO/company pairing is correct for the metaverse race?",
+      options: [
+        "Tim Cook — Meta",
+        "Satya Nadella — Microsoft",
+        "Mark Zuckerberg — Nvidia",
+        "Jensen Huang — Epic Games"
+      ],
+      correct: 1,
+      explanation: "Satya Nadella leads Microsoft. Mark Zuckerberg leads Meta. Jensen Huang leads Nvidia. Tim Cook leads Apple. Tim Sweeney leads Epic Games. Andrew Wilson leads Electronic Arts."
+    },
+    {
+      q: "The metaverse concept envisions a 3D immersive successor to the internet, facilitated primarily by virtual reality technology.",
+      options: ["True", "False"],
+      correct: 0,
+      explanation: "True. The metaverse is envisioned as a 3D immersive virtual world that succeeds the current 2D internet, facilitated by VR and AR technology. Both Snow Crash and Ready Player One depicted this vision."
+    },
+    {
+      q: "A 'closed' metaverse strategy means:",
+      options: [
+        "The metaverse is free and open to all developers",
+        "One company controls the platform with limited interoperability with other virtual worlds",
+        "Government regulation prevents access",
+        "Only academic researchers can participate"
+      ],
+      correct: 1,
+      explanation: "A closed metaverse means a single company controls the platform, user data, and ecosystem with limited interoperability. An open metaverse would allow users and content to move freely between different virtual worlds."
+    },
+    {
+      q: "The metaverse 'bust' in 2023 was primarily caused by:",
+      options: [
+        "Government bans on VR technology",
+        "A shift in tech industry attention and investment toward artificial intelligence",
+        "Hardware costs becoming too expensive",
+        "Consumer rejection of all digital entertainment"
+      ],
+      correct: 1,
+      explanation: "The metaverse boom (2021-2023) gave way to an AI boom, particularly after ChatGPT's launch in late 2022. Investment, attention, and talent shifted from metaverse projects to AI, causing the metaverse 'bust.'"
+    },
+    {
+      q: "Early examples of metaverse-like virtual worlds include The Sims and Second Life.",
+      options: ["True", "False"],
+      correct: 0,
+      explanation: "True. Before the current metaverse hype, virtual worlds like The Sims and Second Life provided early experiences of persistent online virtual environments where users could interact, build, and create."
+    },
+    {
+      q: "Videoconferencing was predicted in which science fiction work?",
+      options: [
+        "Fahrenheit 451 (1953)",
+        "Star Trek (1966)",
+        "2001: A Space Odyssey (1968)",
+        "Snow Crash (1992)"
+      ],
+      correct: 2,
+      explanation: "2001: A Space Odyssey (1968) by Arthur C. Clarke and Stanley Kubrick depicted video phone calls from space — predicting modern videoconferencing technology."
+    },
+    {
+      q: "Corporate venturing (CV) encompasses which two broad categories?",
+      options: [
+        "Debt financing and equity financing",
+        "Internal corporate venturing (ICV) and external corporate venturing (ECV)",
+        "Product innovation and process innovation",
+        "Seed funding and Series A funding"
+      ],
+      correct: 1,
+      explanation: "Corporate venturing has two categories: ICV (in-house innovation projects) and ECV (external activities like spin-offs, acquisitions, and CVC investments). Both allow established firms to innovate beyond their core business."
+    },
+    {
+      q: "Which of the following technologies predicted by science fiction has NOT yet become commercially viable?",
+      options: [
+        "Wireless earbuds (Fahrenheit 451)",
+        "Videoconferencing (2001: A Space Odyssey)",
+        "Folding phones (Star Trek)",
+        "Flying cars (multiple sci-fi sources)"
+      ],
+      correct: 3,
+      explanation: "Wireless earbuds, videoconferencing, and folding phones have all become commercially viable consumer products. Flying cars remain technically possible but commercially unviable — another example of feasibility vs. viability."
+    },
+    {
+      q: "Epic Games, known for Fortnite and the Unreal Engine, is led by CEO Tim Sweeney and advocates for an open metaverse with interoperability.",
+      options: ["True", "False"],
+      correct: 0,
+      explanation: "True. Tim Sweeney / Epic Games has been a vocal advocate for an open, interoperable metaverse, contrasting with Meta's more closed-platform approach. Their Unreal Engine and Fortnite represent steps toward metaverse-like experiences."
     }
   ],
 
@@ -2908,6 +3313,67 @@ const questionBank = {
       ],
       correct: 1,
       explanation: "Surveys of R&D managers consistently show that lead time, learning curves, and complementary assets are rated as more effective than patents in most industries. Patents are most effective in pharma and chemicals."
+    },
+    {
+      q: "Apple's 'discretionary leadership' model categorizes a leader's activities into four quadrants. Which list is correct?",
+      options: [
+        "Plan, Execute, Review, Delegate",
+        "Own, Learn, Teach, Delegate",
+        "Create, Build, Test, Ship",
+        "Explore, Exploit, Evaluate, Exit"
+      ],
+      correct: 1,
+      explanation: "Apple VPs categorize activities into Own (high expertise, high detail — ~40% of time), Learn (low expertise, high detail — ~30%), Teach (high expertise, low detail — ~15%), and Delegate (low expertise, low detail — ~15%). This allows leaders to focus on highest-value activities as their scope grows."
+    },
+    {
+      q: "According to Shane Ch 16, which of the following is a benefit of CENTRALIZED R&D?",
+      options: [
+        "It improves access to external information by having more contact points with stakeholders",
+        "It encourages radical and large-scale innovation because centralized units can make big bets that decentralized units are too small to pursue",
+        "It makes R&D more market-oriented by placing researchers closer to customers",
+        "It reduces financial risk by isolating failed efforts in individual units"
+      ],
+      correct: 1,
+      explanation: "Shane identifies centralization benefits: reduces coordination costs, frees technical personnel from operational activities, encourages radical innovation (decentralized managers focus on incremental), encourages large-scale innovation (decentralized units too small), and facilitates corporate strategy. The other options are benefits of DECENTRALIZATION."
+    },
+    {
+      q: "Moderna is described as an 'AI factory' because:",
+      options: [
+        "It uses AI chatbots to sell vaccines directly to consumers",
+        "It integrates machine learning and AI throughout its digital technology stack — from genomics and data science to vaccine design and manufacturing",
+        "It replaced all human researchers with AI systems",
+        "It licenses AI patents to other pharmaceutical companies"
+      ],
+      correct: 1,
+      explanation: "Moderna's operating model integrates AI/ML across its entire technology stack: Cloud → Integration → IoT → Automation & Robotics → Analytics → AI → Digital. This 'born digital' approach enabled novel use of machine learning for mRNA vaccine development — faster and more accurate than traditional methods."
+    },
+    {
+      q: "Organizational slack can be costly. Which statement best captures why innovative companies still maintain slack despite the cost?",
+      options: [
+        "Slack is legally required for companies above a certain size",
+        "Innovation is inherently uncertain and inefficient — slack provides the time and resources for exploration that creates dead-ends but also breakthroughs like Gmail and Google News",
+        "Slack only applies to non-profit organizations",
+        "Maintaining slack reduces employee turnover but has no connection to innovation output"
+      ],
+      correct: 1,
+      explanation: "Shane notes that investment in innovation is inefficient: uncertain, creates dead-ends, costs never recouped, and cannibalizes existing activities. Yet highly innovative companies resist cutting R&D for short-term efficiency. Google's 20% time (organizational slack) produced Gmail, Google News, and Orkut."
+    },
+    {
+      q: "Internal corporate venturing (ICV) involves in-house innovation projects, while external corporate venturing (ECV) includes spin-offs, acquisitions, and CVC. Which of the following is an example of ECV?",
+      options: [
+        "Google allowing engineers 20% time to work on side projects",
+        "A large pharma company acquiring a biotech startup to gain access to its mRNA platform",
+        "A company creating a dedicated internal R&D lab for exploring new technologies",
+        "An employee developing a new product idea during organizational slack time"
+      ],
+      correct: 1,
+      explanation: "ECV = external approaches: spin-offs (creating new legally separate firms), acquisitions/M&A (internalizing outside firms), and CVC (corporate venture capital — investing in startups). An acquisition is a classic ECV activity. The other options describe internal innovation activities (ICV or organizational slack)."
+    },
+    {
+      q: "When Steve Jobs returned to Apple in 1997, he fired all general managers of business units in a single day and put the entire company under one P&L. This move shifted Apple from a multi-divisional to a functional structure.",
+      options: ["True", "False"],
+      correct: 0,
+      explanation: "True. Jobs eliminated the divisional structure where each product line had its own general manager with independent P&L. He replaced it with a functional structure organized by expertise (design, engineering, marketing, etc.) with a single companywide P&L. This radical restructuring is credited with enabling Apple's subsequent innovation success."
     }
   ],
 
@@ -5513,11 +5979,11 @@ const quizModules = {
     { name: "Lectures 2-3: Technology Evolution", key: "Lectures 2-3: Technology Evolution", count: 25 },
     { name: "Lecture 4: Adoption & Diffusion", key: "Lecture 4: Adoption & Diffusion", count: 25 },
     { name: "Lecture 5: Sources of Innovation", key: "Lecture 5: Sources of Innovation", count: 25 },
-    { name: "Lecture 6: Case — Nokia", key: "Lecture 6: Case — Nokia", count: 10 },
-    { name: "Lectures 7-8: Selecting & Financing", key: "Lectures 7-8: Selecting & Financing Innovation", count: 10 },
-    { name: "Lecture 8: Financing Deep Dive", key: "Lecture 8: Financing (Deep Dive)", count: 10 },
-    { name: "Lecture 9: Protecting Innovation", key: "Lecture 9: Protecting Innovation", count: 10 },
-    { name: "Lecture 10: Metaverse Wars", key: "Lecture 10: Metaverse Wars", count: 10 },
+    { name: "Lecture 6: Case — Nokia", key: "Lecture 6: Case — Nokia", count: 25 },
+    { name: "Lectures 7-8: Selecting & Financing", key: "Lectures 7-8: Selecting & Financing Innovation", count: 25 },
+    { name: "Lecture 8: Financing Deep Dive", key: "Lecture 8: Financing (Deep Dive)", count: 25 },
+    { name: "Lecture 9: Protecting Innovation", key: "Lecture 9: Protecting Innovation", count: 25 },
+    { name: "Lecture 10: Metaverse Wars", key: "Lecture 10: Metaverse Wars", count: 25 },
     { name: "Lectures 11-12: Org Structure & Moderna", key: "Lectures 11-12: Org Structure & Moderna", count: 19 },
   ],
   practice: [
