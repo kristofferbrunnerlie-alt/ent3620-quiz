@@ -4889,6 +4889,59 @@ function playStreak() {
   } catch(e) {}
 }
 
+function playHurray() {
+  try {
+    var ctx = getAudio();
+    // Big celebratory fanfare — major chord arpeggio up then resolution
+    var notes = [
+      { f: 261.63, t: 0, d: 0.3 },     // C4
+      { f: 329.63, t: 0.12, d: 0.3 },   // E4
+      { f: 392.00, t: 0.24, d: 0.3 },   // G4
+      { f: 523.25, t: 0.36, d: 0.5 },   // C5
+      { f: 659.25, t: 0.48, d: 0.5 },   // E5
+      { f: 783.99, t: 0.60, d: 0.6 },   // G5
+      { f: 1046.50, t: 0.75, d: 0.8 },  // C6 — big finish
+    ];
+    notes.forEach(function(n) {
+      var osc = ctx.createOscillator();
+      var gain = ctx.createGain();
+      osc.connect(gain);
+      gain.connect(ctx.destination);
+      osc.type = 'triangle';
+      osc.frequency.value = n.f;
+      gain.gain.setValueAtTime(0.15, ctx.currentTime + n.t);
+      gain.gain.setValueAtTime(0.15, ctx.currentTime + n.t + n.d * 0.6);
+      gain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + n.t + n.d);
+      osc.start(ctx.currentTime + n.t);
+      osc.stop(ctx.currentTime + n.t + n.d);
+    });
+    // Add a shimmery pad underneath
+    var pad = ctx.createOscillator();
+    var padGain = ctx.createGain();
+    pad.connect(padGain);
+    padGain.connect(ctx.destination);
+    pad.type = 'sine';
+    pad.frequency.value = 523.25;
+    padGain.gain.setValueAtTime(0.08, ctx.currentTime + 0.3);
+    padGain.gain.setValueAtTime(0.08, ctx.currentTime + 1.0);
+    padGain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + 1.8);
+    pad.start(ctx.currentTime + 0.3);
+    pad.stop(ctx.currentTime + 1.8);
+    // Second pad harmony
+    var pad2 = ctx.createOscillator();
+    var padGain2 = ctx.createGain();
+    pad2.connect(padGain2);
+    padGain2.connect(ctx.destination);
+    pad2.type = 'sine';
+    pad2.frequency.value = 659.25;
+    padGain2.gain.setValueAtTime(0.06, ctx.currentTime + 0.5);
+    padGain2.gain.setValueAtTime(0.06, ctx.currentTime + 1.0);
+    padGain2.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + 1.8);
+    pad2.start(ctx.currentTime + 0.5);
+    pad2.stop(ctx.currentTime + 1.8);
+  } catch(e) {}
+}
+
 function playFlip() {
   try {
     var ctx = getAudio();
@@ -5161,10 +5214,13 @@ function showResults() {
 
   // 67 celebration for 85%+
   if (pct >= 85) {
-    spawnConfetti(25);
-    playStreak();
-    setTimeout(function() { spawnConfetti(15); }, 500);
-    setTimeout(function() { spawnConfetti(10); }, 1000);
+    playHurray();
+    spawnConfetti(40);
+    setTimeout(function() { spawnConfetti(30); }, 400);
+    setTimeout(function() { spawnConfetti(25); }, 800);
+    setTimeout(function() { spawnConfetti(20); }, 1200);
+    setTimeout(function() { spawnConfetti(15); }, 1600);
+    setTimeout(function() { spawnConfetti(10); }, 2000);
     var sixseven = document.createElement('div');
     sixseven.style.cssText = 'position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);font-size:120px;font-weight:900;z-index:9999;pointer-events:none;animation:sixsevenAnim 2.5s ease forwards;text-shadow:0 0 60px rgba(139,92,246,0.8);';
     sixseven.textContent = '67';
