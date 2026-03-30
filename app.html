@@ -1120,7 +1120,7 @@ const questionBank = {
     }
   ],
 
-  "Lectures 2-3: Technology Evolution": [
+  "Lecture 2: Technology Evolution": [
     {
       q: "In the Abernathy-Utterback model, which phase comes first?",
       options: [
@@ -1131,17 +1131,6 @@ const questionBank = {
       ],
       correct: 2,
       explanation: "The fluid phase comes first — characterized by high uncertainty, many competing designs, and product innovation. It ends when a dominant design emerges."
-    },
-    {
-      q: "A shakeout in an industry typically results in approximately what percentage of firms exiting?",
-      options: [
-        "About 10%",
-        "About 25%",
-        "About 52%",
-        "About 90%"
-      ],
-      correct: 2,
-      explanation: "Shane cites data showing the average industry loses about 52% of its firms during a shakeout, though it ranges from 4% (shampoo) to 87% (DDT)."
     },
     {
       q: "Why is the technology S-curve S-shaped?",
@@ -1320,23 +1309,6 @@ const questionBank = {
       explanation: "S-curves are useful conceptual tools but have significant limitations: they do not tell managers when the shift will occur, which new technology will replace the old one, or whether customers will actually switch. Timing and direction are uncertain."
     },
     {
-      q: "In the Abernathy-Utterback model, a 'dominant design' emerges:",
-      options: [
-        "At the very beginning of an industry",
-        "During the transition from the fluid to the specific phase",
-        "After all firms have exited the industry",
-        "Only in service industries"
-      ],
-      correct: 1,
-      explanation: "In the Abernathy-Utterback model, a dominant design emerges during the transition from the fluid phase (many competing designs) to the specific phase (standardized design). This triggers a shakeout where ~52% of firms exit."
-    },
-    {
-      q: "During the fluid phase, product innovation dominates over process innovation. During the specific phase, this relationship reverses.",
-      options: ["True", "False"],
-      correct: 0,
-      explanation: "True. In the fluid phase, there are many competing product designs and product innovation is high. Once a dominant design emerges (specific phase), firms shift focus to process innovation — optimizing how to produce the now-standardized product efficiently."
-    },
-    {
       q: "Electric vehicles are a recent invention with no history before the year 2000.",
       options: ["True", "False"],
       correct: 1,
@@ -1355,16 +1327,312 @@ const questionBank = {
       explanation: "True. Architectural innovation reconfigures the relationships between components (the architecture) while the core component knowledge may remain the same. This is particularly dangerous for incumbents because it is subtle — they may not recognize it as a threat."
     },
     {
+      q: "Disruptive innovation, as defined by Christensen, always begins with a technologically superior product that immediately outperforms incumbents.",
+      options: ["True", "False"],
+      correct: 1,
+      explanation: "False. Disruptive innovations typically start as inferior products in terms of mainstream performance metrics. They gain a foothold in overlooked or low-end segments, then improve over time until they meet mainstream needs. The initial product is usually worse on traditional metrics, not better."
+    },
+    {
+      q: "A technology trajectory refers to:",
+      options: [
+        "The marketing plan for a new product launch",
+        "The path of evolution of a technology over time",
+        "The geographic spread of a technology across countries",
+        "The organizational chart of an R&D department"
+      ],
+      correct: 1,
+      explanation: "From the course dictionary: a technology trajectory is the path of evolution of a technology. It describes the direction and rate of improvement along specific performance dimensions within a paradigm."
+    },
+    {
+      q: "Competence-enhancing innovation differs from competence-destroying innovation because competence-enhancing innovation:",
+      options: [
+        "Always comes from new entrants",
+        "Builds on and extends a firm's existing knowledge and skills",
+        "Requires completely new capabilities unrelated to the old ones",
+        "Only occurs in the service sector"
+      ],
+      correct: 1,
+      explanation: "Competence-enhancing innovations build on existing expertise (e.g., each new generation of Intel processors). Competence-destroying innovations render existing knowledge obsolete (e.g., vacuum tubes to transistors). Incumbents tend to thrive with the former and struggle with the latter."
+    },
+    {
+      q: "The Henderson-Clark framework classifies innovations along two dimensions: changes in components and changes in linkages between components. Which type of innovation changes BOTH?",
+      options: [
+        "Incremental innovation",
+        "Modular innovation",
+        "Architectural innovation",
+        "Radical innovation"
+      ],
+      correct: 3,
+      explanation: "Radical innovation changes both the core components AND the linkages between them. Incremental changes neither; modular changes components but not linkages; architectural changes linkages but not components."
+    },
+    {
+      q: "Christensen distinguishes between 'sustaining' and 'disruptive' innovations. Sustaining innovations:",
+      options: [
+        "Always come from new entrants targeting underserved markets",
+        "Improve performance along dimensions that mainstream customers already value",
+        "Are always cheaper and simpler than existing products",
+        "Enter from the high end of the market"
+      ],
+      correct: 1,
+      explanation: "Sustaining innovations improve products on the dimensions valued by existing mainstream customers. They can be incremental or radical. Incumbents usually win sustaining battles. Disruptive innovations initially target overlooked segments with different value propositions."
+    }
+  ],
+
+  "Lecture 3: Adoption & Diffusion": [
+    {
+      q: "A shakeout in an industry typically results in approximately what percentage of firms exiting?",
+      options: [
+        "About 10%",
+        "About 25%",
+        "About 52%",
+        "About 90%"
+      ],
+      correct: 2,
+      explanation: "Shane cites data showing the average industry loses about 52% of its firms during a shakeout, though it ranges from 4% (shampoo) to 87% (DDT)."
+    },
+    {
+      q: "In the Abernathy-Utterback model, a 'dominant design' emerges:",
+      options: [
+        "At the very beginning of an industry",
+        "During the transition from the fluid to the specific phase",
+        "After all firms have exited the industry",
+        "Only in service industries"
+      ],
+      correct: 1,
+      explanation: "In the Abernathy-Utterback model, a dominant design emerges during the transition from the fluid phase (many competing designs) to the specific phase (standardized design). This triggers a shakeout where ~52% of firms exit."
+    },
+    {
+      q: "During the fluid phase, product innovation dominates over process innovation. During the specific phase, this relationship reverses.",
+      options: ["True", "False"],
+      correct: 0,
+      explanation: "True. In the fluid phase, there are many competing product designs and product innovation is high. Once a dominant design emerges (specific phase), firms shift focus to process innovation — optimizing how to produce the now-standardized product efficiently."
+    },
+    {
       q: "According to the Abernathy-Utterback model, the shakeout that follows a dominant design typically causes approximately 80% of firms to exit the industry.",
       options: ["True", "False"],
       correct: 1,
       explanation: "False. The average shakeout results in approximately 52% of firms exiting, though the range varies widely — from as low as 4% (shampoo) to as high as 87% (DDT)."
     },
     {
-      q: "Disruptive innovation, as defined by Christensen, always begins with a technologically superior product that immediately outperforms incumbents.",
-      options: ["True", "False"],
+      q: "A dominant design is important because it:",
+      options: [
+        "Is always the most technically advanced design in the market",
+        "Establishes the standard architecture that the majority of the market adopts, shifting competition from product to process innovation",
+        "Is always introduced by the largest firm in the industry",
+        "Guarantees the innovating firm will capture all profits"
+      ],
       correct: 1,
-      explanation: "False. Disruptive innovations typically start as inferior products in terms of mainstream performance metrics. They gain a foothold in overlooked or low-end segments, then improve over time until they meet mainstream needs. The initial product is usually worse on traditional metrics, not better."
+      explanation: "A dominant design is not necessarily the best technically — it is the architecture that wins broad market acceptance. Once established, competition shifts from product variety to process efficiency, and a shakeout eliminates firms that cannot adapt."
+    },
+    {
+      q: "The QWERTY keyboard layout is often cited as an example of:",
+      options: [
+        "A technically optimal design that won on merit",
+        "A dominant design that persisted due to switching costs and network effects, not technical superiority",
+        "A design that was quickly replaced by a better alternative",
+        "An example of successful disruptive innovation"
+      ],
+      correct: 1,
+      explanation: "QWERTY became the dominant design despite alternatives (like Dvorak) potentially being faster. High switching costs and network effects (everyone learned QWERTY) locked in the standard. This illustrates that dominant designs are not always technically optimal."
+    },
+    {
+      q: "After a dominant design emerges, which type of firm typically gains competitive advantage?",
+      options: [
+        "Small startups focused on product experimentation",
+        "Large established firms that can achieve economies of scale in production",
+        "Firms that continue to introduce radical product variations",
+        "Government research laboratories"
+      ],
+      correct: 1,
+      explanation: "Once the dominant design is set, competition shifts to process innovation and cost efficiency. Large incumbents with scale economies, established supply chains, and manufacturing expertise gain advantage over smaller experimental firms."
+    },
+    {
+      q: "The shakeout in the US automobile industry resulted in the number of firms declining from over 270 to approximately:",
+      options: [
+        "100 firms",
+        "50 firms",
+        "3 firms (the Big Three)",
+        "The industry was never concentrated"
+      ],
+      correct: 2,
+      explanation: "The US auto industry went from over 270 firms in its early years to eventually just three dominant firms (GM, Ford, Chrysler — the 'Big Three'). This is one of the most dramatic shakeout examples in business history."
+    },
+    {
+      q: "Market concentration typically increases after a dominant design emerges because:",
+      options: [
+        "The government regulates the number of firms allowed",
+        "Economies of scale in process innovation favor large firms, causing smaller firms to exit or be acquired",
+        "Customers stop buying the product entirely",
+        "New technology makes the industry obsolete"
+      ],
+      correct: 1,
+      explanation: "After the dominant design, competition shifts to efficiency and cost reduction. Firms that cannot achieve economies of scale become uncompetitive, leading to exits, mergers, and increased concentration."
+    },
+    {
+      q: "In the specific phase of the Abernathy-Utterback model, innovation is primarily:",
+      options: [
+        "Radical product innovation with many competing designs",
+        "Incremental process innovation focused on efficiency and cost reduction",
+        "Disruptive innovation from new entrants",
+        "Architectural innovation that reconfigures component linkages"
+      ],
+      correct: 1,
+      explanation: "The specific phase follows the dominant design. Innovation becomes incremental and focused on process improvements — making production more efficient, reducing costs, and improving quality within the established design framework."
+    },
+    {
+      q: "The 'era of ferment' in an industry refers to:",
+      options: [
+        "The period after a dominant design when firms optimize production",
+        "The period of intense competition between alternative designs before a dominant design emerges",
+        "The period when an industry is in decline",
+        "The period when government regulation is being established"
+      ],
+      correct: 1,
+      explanation: "The era of ferment (similar to the fluid phase) is characterized by many competing designs, high uncertainty, and intense experimentation. It ends when a dominant design emerges and the industry consolidates."
+    },
+    {
+      q: "Which factor does NOT typically contribute to the emergence of a dominant design?",
+      options: [
+        "Network externalities that favor one design over others",
+        "Government regulation or standards setting",
+        "A single firm having the lowest advertising budget",
+        "Switching costs that lock customers into one design"
+      ],
+      correct: 2,
+      explanation: "Dominant designs emerge through network effects, switching costs, complementary assets, government standards, and learning curves — not through low advertising spend. In fact, marketing and ecosystem building often help establish a dominant design."
+    },
+    {
+      q: "The VHS vs Betamax format war illustrates that:",
+      options: [
+        "The technically superior format always wins",
+        "Network effects, complementary goods (movie availability), and strategic alliances can determine the dominant design regardless of pure technical quality",
+        "Government regulation always picks the winner",
+        "Format wars never have a clear winner"
+      ],
+      correct: 1,
+      explanation: "Betamax was arguably technically superior (better picture quality), but VHS won through longer recording time, lower licensing fees, wider availability of movies, and more manufacturers. This is a classic example of how the dominant design is shaped by market forces, not just technical merit."
+    },
+    {
+      q: "A 'standards battle' occurs when:",
+      options: [
+        "Two firms compete on price for the same product",
+        "Competing technologies vie to become the dominant platform or format, often involving network effects and installed base dynamics",
+        "A firm sues another for patent infringement",
+        "An industry agrees on safety regulations"
+      ],
+      correct: 1,
+      explanation: "Standards battles (e.g., VHS vs Betamax, Blu-ray vs HD DVD) are competitions where the outcome determines the dominant design/platform. Winners benefit from network effects and lock-in; losers face exit."
+    },
+    {
+      q: "Installed base refers to:",
+      options: [
+        "The number of manufacturing plants a firm owns",
+        "The total number of units of a product currently in use by customers",
+        "The founding team of a startup",
+        "The patent portfolio of a company"
+      ],
+      correct: 1,
+      explanation: "Installed base is the total number of a product's units actively in use. A large installed base creates network effects and switching costs that reinforce the dominant design and make it harder for competing standards to gain traction."
+    },
+    {
+      q: "Switching costs make it harder for customers to adopt a new technology because:",
+      options: [
+        "The new technology is always more expensive",
+        "Customers have invested time, money, and learning in the current technology, making change costly",
+        "Government regulations prohibit switching",
+        "New technologies are always unreliable"
+      ],
+      correct: 1,
+      explanation: "Switching costs include retraining, data migration, loss of complementary investments, and compatibility issues. These costs can lock customers into an existing dominant design even when a technically superior alternative exists."
+    },
+    {
+      q: "The concept of 'increasing returns to adoption' means:",
+      options: [
+        "Each unit sold becomes more expensive",
+        "The more a technology is adopted, the more attractive it becomes to additional adopters due to network effects and learning",
+        "Government subsidies increase over time",
+        "Innovation speed increases with each product generation"
+      ],
+      correct: 1,
+      explanation: "Increasing returns to adoption (Arthur, 1989) means that early adoption advantages compound: more users attract more complementary products, which attract more users, creating a positive feedback loop that reinforces the dominant design."
+    },
+    {
+      q: "Path dependency in technology adoption means:",
+      options: [
+        "Technologies always improve in a linear fashion",
+        "Early events and decisions can lock an industry into a particular technological path, even if better alternatives exist",
+        "The fastest technology always wins",
+        "Government policy determines all technology outcomes"
+      ],
+      correct: 1,
+      explanation: "Path dependency means that historical events (which may involve chance) can determine which technology becomes dominant. Once a path is established, switching costs and network effects make it very difficult to change course — even if the 'locked-in' technology is not optimal."
+    },
+    {
+      q: "The transitional phase in the Abernathy-Utterback model is characterized by:",
+      options: [
+        "Maximum product variety and experimentation",
+        "The emergence of a dominant design and the beginning of the shift from product to process innovation",
+        "Complete industry maturity with no innovation",
+        "The entry of many new firms into the market"
+      ],
+      correct: 1,
+      explanation: "The transitional phase sits between the fluid and specific phases. It marks the emergence of the dominant design, the beginning of the shakeout, and the gradual shift from product innovation to process innovation."
+    },
+    {
+      q: "Winner-take-all dynamics are most likely in markets where:",
+      options: [
+        "Products are highly differentiated with no network effects",
+        "Strong network effects and high switching costs create positive feedback loops favoring a single dominant platform",
+        "Government regulation ensures equal market share",
+        "There are very low barriers to entry"
+      ],
+      correct: 1,
+      explanation: "Winner-take-all (or winner-take-most) outcomes occur when strong network effects and high switching costs create a tipping point. Once one platform gains a critical mass, the feedback loop accelerates its dominance (e.g., Windows in PC operating systems)."
+    },
+    {
+      q: "Complementary goods are important in standards battles because:",
+      options: [
+        "They reduce the price of the core technology",
+        "They increase the value of the platform, attracting more users and creating indirect network effects",
+        "They are required by law for every technology product",
+        "They always come from the same firm that makes the core product"
+      ],
+      correct: 1,
+      explanation: "Complementary goods (e.g., apps for smartphones, games for consoles) increase platform value through indirect network effects. In standards battles, the platform with more/better complements tends to win the installed base race."
+    },
+    {
+      q: "The 'technology cycle' model suggests that after a period of ferment and the emergence of a dominant design, the industry enters a period of incremental change until the next discontinuity.",
+      options: ["True", "False"],
+      correct: 0,
+      explanation: "True. The technology cycle (Tushman & Anderson) follows: technological discontinuity → era of ferment → dominant design → era of incremental change → next discontinuity. Each cycle restarts when a new breakthrough disrupts the established paradigm."
+    },
+    {
+      q: "Lock-in occurs when:",
+      options: [
+        "A firm patents every possible variation of a technology",
+        "Users become dependent on a technology due to switching costs, network effects, and complementary investments, making it costly to change",
+        "A government mandates the use of a specific technology",
+        "A firm achieves the lowest manufacturing cost"
+      ],
+      correct: 1,
+      explanation: "Lock-in happens when switching costs (retraining, data migration, lost investments) and network effects make it prohibitively expensive for users to adopt an alternative. This reinforces the dominant design and creates barriers for competing technologies."
+    },
+    {
+      q: "Industry consolidation after a shakeout typically leads to an oligopoly structure where a few large firms dominate the market.",
+      options: ["True", "False"],
+      correct: 0,
+      explanation: "True. After the shakeout, the industry typically consolidates into an oligopoly — a small number of large firms that have achieved economies of scale. Examples include automobiles (Big Three), aircraft (Boeing, Airbus), and operating systems (Windows, macOS)."
+    },
+    {
+      q: "The range of firm exits during industry shakeouts varies widely. Which industry experienced the highest exit rate?",
+      options: [
+        "Shampoo (~4%)",
+        "Automobiles (~60%)",
+        "DDT (~87%)",
+        "Television (~50%)"
+      ],
+      correct: 2,
+      explanation: "DDT experienced the highest shakeout rate at approximately 87% of firms exiting. Shampoo had the lowest at about 4%. The average across industries is approximately 52%. This wide range shows that shakeout severity depends heavily on industry characteristics."
     }
   ],
 
@@ -2112,7 +2380,7 @@ const questionBank = {
     }
   ],
 
-  "Lectures 7-8: Selecting & Financing Innovation": [
+  "Lecture 7: Project Selection & Decision Tools": [
     {
       q: "The four types of uncertainty in innovation project selection are:",
       options: [
@@ -2145,83 +2413,6 @@ const questionBank = {
       ],
       correct: 2,
       explanation: "NPV treats decisions as fixed. Real options analysis captures the value of being able to expand, delay, or abandon a project as uncertainty resolves — which is critical in innovation."
-    },
-    {
-      q: "'Adverse selection' in innovation financing means:",
-      options: [
-        "Investors always choose the wrong projects",
-        "Entrepreneurs take excessive risks with investor money",
-        "Inventors/entrepreneurs know more about their innovations than investors do",
-        "Banks charge higher interest to innovative firms"
-      ],
-      correct: 2,
-      explanation: "From the dictionary: adverse selection = inventors/entrepreneurs know more about innovations than investors. This information asymmetry makes financing difficult."
-    },
-    {
-      q: "'Moral hazard' in innovation financing occurs when:",
-      options: [
-        "Investors refuse to fund any innovation",
-        "Entrepreneurs take excessive risk without having to bear the consequences",
-        "Patents are filed for unoriginal ideas",
-        "Firms lie about their revenue"
-      ],
-      correct: 1,
-      explanation: "From the dictionary: moral hazard = inventors/entrepreneurs taking excessive risk without having to bear consequences. This happens when they invest other people's money."
-    },
-    {
-      q: "The typical startup financing lifecycle order is:",
-      options: [
-        "VC → Business angels → IPO → Crowdfunding",
-        "IPO → Series A → Seed → Family",
-        "Family, friends and fools → Business angels → Venture capital → IPO",
-        "Bank loan → VC → Business angels → Crowdfunding"
-      ],
-      correct: 2,
-      explanation: "The typical progression: FFF (pre-seed) → business angels (seed) → venture capital (Series A, B, C) → IPO or acquisition."
-    },
-    {
-      q: "A business angel is:",
-      options: [
-        "A professional investor who manages a fund on behalf of others",
-        "A wealthy individual who invests in startups directly",
-        "A government agency that provides grants",
-        "A bank that specializes in technology lending"
-      ],
-      correct: 1,
-      explanation: "From the dictionary: business angel = wealthy individual who invests in startups directly. Different from VC, who invests on behalf of others (limited partners)."
-    },
-    {
-      q: "A venture capitalist (VC) differs from a business angel because:",
-      options: [
-        "VCs invest their own personal money",
-        "VCs invest smaller amounts",
-        "VCs are professional investors who invest on behalf of others (limited partners)",
-        "VCs only invest in biotech companies"
-      ],
-      correct: 2,
-      explanation: "VCs manage funds from limited partners (pension funds, wealthy individuals, etc.) and invest professionally. Angels invest their own money directly."
-    },
-    {
-      q: "'Skewness in outcomes' in venture capital means:",
-      options: [
-        "All investments produce roughly equal returns",
-        "A proportionally large ROI comes from a small part of the portfolio",
-        "Most investments succeed but with modest returns",
-        "VCs diversify equally across all sectors"
-      ],
-      correct: 1,
-      explanation: "From the dictionary: skewness in outcomes = proportionally large ROI from a small part of a portfolio/fund. Most VC investments fail, but a few huge winners drive overall returns."
-    },
-    {
-      q: "Why is debt financing generally NOT available for most innovation projects?",
-      options: [
-        "Banks are prohibited from lending to tech firms",
-        "Innovation projects have uncertain cash flows, no collateral, and high failure rates",
-        "Debt is always more expensive than equity",
-        "Entrepreneurs prefer debt but banks prefer equity"
-      ],
-      correct: 1,
-      explanation: "Innovation projects have unpredictable revenue, often lack tangible collateral, and have high failure rates. Banks need predictable cash flows and security, so equity financing is required instead."
     },
     {
       q: "The hurdle rate in project selection refers to:",
@@ -2325,38 +2516,120 @@ const questionBank = {
       explanation: "True. The Internal Rate of Return (IRR) is the discount rate at which the present value of cash inflows equals the present value of cash outflows (NPV = 0). Projects are typically accepted if IRR exceeds the hurdle rate."
     },
     {
-      q: "Which statement about adverse selection and moral hazard is correct?",
+      q: "NPV is calculated by:",
       options: [
-        "Adverse selection occurs after the investment; moral hazard occurs before",
-        "Adverse selection is about hidden information before investment; moral hazard is about hidden actions after investment",
-        "Both terms describe the same concept",
-        "Adverse selection only applies to debt financing; moral hazard only applies to equity"
+        "Adding up all future revenues without adjustment",
+        "Discounting expected future cash flows back to present value and subtracting the initial investment",
+        "Multiplying expected revenue by the probability of success",
+        "Dividing total profit by the number of years"
       ],
       correct: 1,
-      explanation: "Adverse selection = pre-investment information asymmetry (entrepreneur knows more than investor). Moral hazard = post-investment behavioral risk (entrepreneur takes excessive risk with someone else's money). Both are financing frictions."
+      explanation: "NPV = sum of discounted future cash flows minus the initial investment. A positive NPV means the project is expected to create value above the required return (hurdle rate). The discount rate reflects the time value of money and risk."
     },
     {
-      q: "Crowdfunding can help solve the information asymmetry problem in innovation financing because the crowd collectively validates market demand before the product is built.",
-      options: ["True", "False"],
-      correct: 0,
-      explanation: "True. Crowdfunding provides market validation — if many people pre-order or back a product, it signals real demand. This reduces the information gap between entrepreneur and investor/backer."
-    },
-    {
-      q: "The financing sequence FFF, then angels, then VC reflects the increasing:",
+      q: "A project should generally be accepted if its IRR is:",
       options: [
-        "Risk tolerance of each funding source",
-        "Amount of capital needed and formality of investment at each stage",
-        "Number of investors involved at each stage",
-        "Speed of the investment process"
+        "Equal to zero",
+        "Lower than the hurdle rate",
+        "Higher than the hurdle rate",
+        "Equal to the inflation rate"
+      ],
+      correct: 2,
+      explanation: "A project is accepted when IRR exceeds the hurdle rate (minimum required return). If IRR < hurdle rate, the project does not generate sufficient returns to justify the risk and investment."
+    },
+    {
+      q: "The main advantage of using multiple project selection methods (NPV, real options, AHP, scenario analysis) rather than just one is:",
+      options: [
+        "It makes the decision process slower and more bureaucratic",
+        "Each method captures different aspects of uncertainty and value, providing a more complete picture for decision-making",
+        "It guarantees the correct decision will be made",
+        "It is required by law for publicly traded companies"
       ],
       correct: 1,
-      explanation: "The progression from FFF to angels to VC reflects increasing capital needs and increasing formality/professionalism. FFF is informal and small; angels provide moderate capital with some structure; VCs provide large amounts with formal term sheets and governance."
+      explanation: "No single method captures everything. NPV provides financial baseline, real options capture flexibility value, AHP handles multi-criteria decisions, and scenario analysis explores different futures. Using multiple methods reduces blind spots."
     },
     {
-      q: "VCs typically demand an IRR of 30-70% because they invest in projects with very high failure rates and need the winners to compensate for the majority of investments that fail.",
+      q: "A 'stage-gate' process in innovation project selection involves:",
+      options: [
+        "Investing all funds upfront before any development begins",
+        "Dividing the project into stages with evaluation gates where the project can be continued, modified, or killed",
+        "Allowing unlimited budget for promising projects",
+        "Selecting projects based solely on the founder's reputation"
+      ],
+      correct: 1,
+      explanation: "Stage-gate processes break innovation into stages (e.g., concept, development, testing, launch). At each gate, managers evaluate progress and decide whether to proceed, pivot, or kill the project. This is closely related to the real options concept."
+    },
+    {
+      q: "Sensitivity analysis in project evaluation tests:",
+      options: [
+        "Whether employees are emotionally committed to the project",
+        "How the project's NPV or IRR changes when key assumptions (price, volume, cost) are varied individually",
+        "Whether the project complies with environmental regulations",
+        "How quickly a project can be completed"
+      ],
+      correct: 1,
+      explanation: "Sensitivity analysis ('what-if' analysis) varies one input at a time to see how sensitive the project's value is to changes in assumptions. This identifies which variables matter most and where uncertainty is most dangerous."
+    },
+    {
+      q: "The break-even point for an innovation project is:",
+      options: [
+        "The point where the project reaches maximum profitability",
+        "The output level at which total revenue equals total costs (zero profit/loss)",
+        "The date when the patent expires",
+        "The moment when all R&D spending is approved"
+      ],
+      correct: 1,
+      explanation: "Break-even is where total revenue = total costs (fixed + variable). Below break-even, the project loses money; above it, the project generates profit. Understanding break-even helps managers assess how much demand is needed to justify the investment."
+    },
+    {
+      q: "The discount rate used in NPV calculations reflects:",
+      options: [
+        "The inflation rate only",
+        "The time value of money and the risk premium required by investors",
+        "The company's current stock price",
+        "The number of years until the project ends"
+      ],
+      correct: 1,
+      explanation: "The discount rate captures two things: the time value of money (a dollar today is worth more than a dollar tomorrow) and a risk premium (riskier projects require higher returns). For innovation projects, the discount rate is often higher due to greater uncertainty."
+    },
+    {
+      q: "An 'option to abandon' is valuable in innovation because:",
+      options: [
+        "It forces firms to complete every project they start",
+        "It allows managers to cut losses on failing projects, limiting downside risk while preserving upside potential",
+        "It guarantees the project will be profitable",
+        "It eliminates all project risk"
+      ],
+      correct: 1,
+      explanation: "The option to abandon means managers can stop investing if early results are poor, limiting losses. NPV assumes the project runs to completion, but in reality managers can kill bad projects early. This flexibility has real value that only real options analysis captures."
+    },
+    {
+      q: "Portfolio management in innovation means:",
+      options: [
+        "Investing all R&D funds in a single high-potential project",
+        "Balancing a mix of innovation projects across risk levels, time horizons, and strategic objectives",
+        "Copying competitors' product portfolios",
+        "Delegating all project decisions to external consultants"
+      ],
+      correct: 1,
+      explanation: "Innovation portfolio management involves balancing short-term incremental projects (lower risk, quicker returns) with long-term radical projects (higher risk, potentially transformative). This diversification approach mirrors financial portfolio theory."
+    },
+    {
+      q: "When using AHP, the consistency ratio (CR) is used to check whether the decision maker's pairwise comparisons are logically consistent.",
       options: ["True", "False"],
       correct: 0,
-      explanation: "True. The high demanded IRR reflects the extreme skewness of VC outcomes: most investments fail (63.2% of cost goes to <1x returns), so the rare winners must deliver enormous returns to make the overall fund profitable."
+      explanation: "True. AHP includes a consistency check. If a decision maker says A > B and B > C but then says C > A, the comparisons are inconsistent. The consistency ratio flags this, ensuring the rankings are reliable."
+    },
+    {
+      q: "Under Knightian uncertainty, traditional quantitative tools like NPV and IRR are less reliable because:",
+      options: [
+        "They require known probability distributions, which do not exist under true uncertainty",
+        "They are too simple to calculate",
+        "They only work for manufacturing projects",
+        "They assume zero discount rate"
+      ],
+      correct: 0,
+      explanation: "NPV and IRR require estimating future cash flows and their probabilities. Under Knightian uncertainty, probabilities are fundamentally unknowable — not just hard to estimate. This is why qualitative judgment, real options thinking, and staged approaches become essential for radical innovation."
     }
   ],
 
@@ -2608,7 +2881,7 @@ const questionBank = {
     }
   ],
 
-  "Lecture 8: Financing (Deep Dive)": [
+  "Lecture 8: Financing Innovation": [
     {
       q: "What percentage of VC portfolio cost typically goes to investments returning less than 1x?",
       options: [
@@ -2663,6 +2936,28 @@ const questionBank = {
       ],
       correct: 3,
       explanation: "From lecture 8: of 4,000 firms seeking VC, only 200 will raise money. Of those 200, only 15 will reach NOK 1B revenue."
+    },
+    {
+      q: "'Adverse selection' in innovation financing means:",
+      options: [
+        "Investors always choose the wrong projects",
+        "Entrepreneurs take excessive risks with investor money",
+        "Inventors/entrepreneurs know more about their innovations than investors do",
+        "Banks charge higher interest to innovative firms"
+      ],
+      correct: 2,
+      explanation: "From the dictionary: adverse selection = inventors/entrepreneurs know more about innovations than investors. This information asymmetry makes financing difficult."
+    },
+    {
+      q: "'Moral hazard' in innovation financing occurs when:",
+      options: [
+        "Investors refuse to fund any innovation",
+        "Entrepreneurs take excessive risk without having to bear the consequences",
+        "Patents are filed for unoriginal ideas",
+        "Firms lie about their revenue"
+      ],
+      correct: 1,
+      explanation: "From the dictionary: moral hazard = inventors/entrepreneurs taking excessive risk without having to bear consequences. This happens when they invest other people's money."
     },
     {
       q: "A term sheet between a VC and a startup typically includes all EXCEPT:",
@@ -2720,44 +3015,26 @@ const questionBank = {
       explanation: "From lecture 8: Stage 1 = building the fund (assembling LPs), Stage 2 = investing the capital (networking, due diligence), Stage 3 = exit (IPO or acquisition, returning capital)."
     },
     {
-      q: "Angel investment funds differ from VC funds in that angel funds typically have:",
+      q: "Why is debt financing generally NOT available for most innovation projects?",
       options: [
-        "A 10-year fund life with strict return deadlines",
-        "An infinite fund life with no defined end date",
-        "A 5-year fund life with quarterly distributions",
-        "A 3-year fund life focused on rapid exits"
+        "Banks are prohibited from lending to tech firms",
+        "Innovation projects have uncertain cash flows, no collateral, and high failure rates",
+        "Debt is always more expensive than equity",
+        "Entrepreneurs prefer debt but banks prefer equity"
       ],
       correct: 1,
-      explanation: "Angel investment funds have an 'infinite' fund life (no defined end date), unlike VC funds which typically have a 7-10 year life. This allows angels to be more patient with their investments."
+      explanation: "Innovation projects have unpredictable revenue, often lack tangible collateral, and have high failure rates. Banks need predictable cash flows and security, so equity financing is required instead."
     },
     {
-      q: "The minimum investment size for a typical angel investor is approximately $25,000, while VCs invest significantly larger amounts.",
-      options: ["True", "False"],
-      correct: 0,
-      explanation: "True. Angels typically invest a minimum of about $25,000 from their personal wealth. VCs invest much larger sums from pooled funds, often millions of dollars per deal."
-    },
-    {
-      q: "Angel investors typically expect returns of less than 9x on their investments, which is lower than VC fund expectations of 5-10x.",
-      options: ["True", "False"],
-      correct: 0,
-      explanation: "True. Angels expect moderate returns (less than 9x) because they invest earlier (higher risk of total loss but smaller amounts). VCs expect 5-10x returns over 7 years from their LPs' perspective."
-    },
-    {
-      q: "Of 4,000 firms seeking VC funding, approximately how many will successfully raise capital?",
+      q: "The typical startup financing lifecycle order is:",
       options: [
-        "1,000",
-        "500",
-        "200",
-        "50"
+        "VC → Business angels → IPO → Crowdfunding",
+        "IPO → Series A → Seed → Family",
+        "Family, friends and fools → Business angels → Venture capital → IPO",
+        "Bank loan → VC → Business angels → Crowdfunding"
       ],
       correct: 2,
-      explanation: "Of 4,000 firms seeking VC, only about 200 (5%) will successfully raise capital. Of those 200, only 15 will reach NOK 1 billion in revenue. This illustrates the extreme selectivity of VC."
-    },
-    {
-      q: "During the 1960s 'Cottage Industry' era of VC, power was held primarily by VCs because capital was scarce and entrepreneurs had few alternatives.",
-      options: ["True", "False"],
-      correct: 0,
-      explanation: "True. In the 1960s cottage industry era, VCs held the power because capital was scarce. Over time, the balance shifted: the 2012 era of democratization became more 'founder-friendly' with micro VC and more capital available."
+      explanation: "The typical progression: FFF (pre-seed) → business angels (seed) → venture capital (Series A, B, C) → IPO or acquisition."
     },
     {
       q: "Which event in the VC history timeline led to a capital boom in the 1980s?",
@@ -2793,12 +3070,6 @@ const questionBank = {
       explanation: "The employee pool is equity set aside in the cap table for future employee stock options and compensation. This dilutes existing shareholders but is essential for attracting talent. It is a standard term sheet component."
     },
     {
-      q: "Equity-based crowdfunding gives backers an ownership stake in the company, while reward-based crowdfunding gives backers a product or reward.",
-      options: ["True", "False"],
-      correct: 0,
-      explanation: "True. Equity crowdfunding = backers become shareholders. Reward crowdfunding (e.g., Kickstarter) = backers receive the product or a reward. Both address the Valley of Death funding gap but with different structures."
-    },
-    {
       q: "The '2 and 20' model in venture capital means:",
       options: [
         "VCs invest in 2 companies and expect 20x returns",
@@ -2810,38 +3081,49 @@ const questionBank = {
       explanation: "The '2 and 20' model: VCs charge approximately 2% of the fund per year as a management fee, plus approximately 20-30% of profits (carry). LPs receive the remaining 70-80% of profits."
     },
     {
-      q: "A funded startup venture typically has how many angel investors?",
+      q: "Which statement about adverse selection and moral hazard is correct?",
       options: [
-        "1-3",
-        "5-10",
-        "15 or more",
-        "Exactly one lead angel"
+        "Adverse selection occurs after the investment; moral hazard occurs before",
+        "Adverse selection is about hidden information before investment; moral hazard is about hidden actions after investment",
+        "Both terms describe the same concept",
+        "Adverse selection only applies to debt financing; moral hazard only applies to equity"
       ],
-      correct: 2,
-      explanation: "From the lecture: funded ventures often have 15+ angels. Each angel writes an individual check and receives individual returns, unlike VC where one firm makes one investment from a pooled fund."
+      correct: 1,
+      explanation: "Adverse selection = pre-investment information asymmetry (entrepreneur knows more than investor). Moral hazard = post-investment behavioral risk (entrepreneur takes excessive risk with someone else's money). Both are financing frictions."
     },
     {
-      q: "The board structure in a VC term sheet typically includes company seats, investor seats, and neutral/independent seats.",
+      q: "VCs typically demand an IRR of 30-70% because they invest in projects with very high failure rates and need the winners to compensate for the majority of investments that fail.",
       options: ["True", "False"],
       correct: 0,
-      explanation: "True. The term sheet specifies board composition: company-appointed directors, investor-appointed directors, and neutral/independent directors. This balances control between founders and investors."
+      explanation: "True. The high demanded IRR reflects the extreme skewness of VC outcomes: most investments fail (63.2% of cost goes to <1x returns), so the rare winners must deliver enormous returns to make the overall fund profitable."
     },
     {
-      q: "Information asymmetry is the fundamental reason why financing R&D and innovation is more challenging than financing traditional business activities.",
+      q: "Angel investment funds differ from VC funds in that angel funds typically have:",
+      options: [
+        "A 10-year fund life with strict return deadlines",
+        "An infinite fund life with no defined end date",
+        "A 5-year fund life with quarterly distributions",
+        "A 3-year fund life focused on rapid exits"
+      ],
+      correct: 1,
+      explanation: "Angel investment funds have an 'infinite' fund life (no defined end date), unlike VC funds which typically have a 7-10 year life. This allows angels to be more patient with their investments."
+    },
+    {
+      q: "Crowdfunding can help solve the information asymmetry problem in innovation financing because the crowd collectively validates market demand before the product is built.",
       options: ["True", "False"],
       correct: 0,
-      explanation: "True. R&D outcomes are highly uncertain, entrepreneurs know more about their technology than investors (adverse selection), and investors cannot easily monitor how funds are used (moral hazard). These information asymmetries create financing frictions."
+      explanation: "True. Crowdfunding provides market validation — if many people pre-order or back a product, it signals real demand. This reduces the information gap between entrepreneur and investor/backer."
     },
     {
-      q: "The 2012 'Era of Democratization' in VC was characterized by:",
+      q: "Of 4,000 firms seeking VC funding, approximately how many will successfully raise capital?",
       options: [
-        "Government regulation closing VC to all but the wealthiest investors",
-        "The dot-com crash eliminating most VC firms",
-        "A micro VC boom and increasingly founder-friendly terms",
-        "VCs shifting entirely to debt-based financing"
+        "1,000",
+        "500",
+        "200",
+        "50"
       ],
       correct: 2,
-      explanation: "The 2012 era saw a micro VC boom with smaller, more numerous funds, and a shift toward founder-friendly terms. New entrants democratized access to venture funding, reducing the power imbalance between VCs and entrepreneurs."
+      explanation: "Of 4,000 firms seeking VC, only about 200 (5%) will successfully raise capital. Of those 200, only 15 will reach NOK 1 billion in revenue. This illustrates the extreme selectivity of VC."
     },
     {
       q: "According to VC skewness data, 4.3% of portfolio cost goes to investments returning more than 10x, but these generate approximately what percentage of total value?",
@@ -2853,6 +3135,17 @@ const questionBank = {
       ],
       correct: 2,
       explanation: "4.3% of cost goes to >10x investments, and these generate 61.7% of total portfolio value. Meanwhile, 63.2% of cost goes to <1x investments (failures). This extreme skewness is the defining feature of VC."
+    },
+    {
+      q: "The 2012 'Era of Democratization' in VC was characterized by:",
+      options: [
+        "Government regulation closing VC to all but the wealthiest investors",
+        "The dot-com crash eliminating most VC firms",
+        "A micro VC boom and increasingly founder-friendly terms",
+        "VCs shifting entirely to debt-based financing"
+      ],
+      correct: 2,
+      explanation: "The 2012 era saw a micro VC boom with smaller, more numerous funds, and a shift toward founder-friendly terms. New entrants democratized access to venture funding, reducing the power imbalance between VCs and entrepreneurs."
     }
   ],
 
@@ -3104,51 +3397,7 @@ const questionBank = {
     }
   ],
 
-  "Lectures 11-12: Org Structure & Moderna": [
-    {
-      q: "Moderna designed its COVID-19 vaccine in:",
-      options: [
-        "Six months after the outbreak",
-        "Two days after the viral genetic sequence was posted online",
-        "Two weeks after Phase 1 trials began",
-        "Three months after WHO declared a pandemic"
-      ],
-      correct: 1,
-      explanation: "Moderna designed the mRNA vaccine in just TWO DAYS after the viral genetic sequence was posted online on January 11, 2020. First batch was produced by February 7 (25 days)."
-    },
-    {
-      q: "Moderna's mRNA platform is compared to smartphones using the analogy:",
-      options: [
-        "Screen = mRNA, Battery = lipid nanoparticles, App = vaccine",
-        "Hardware = lipid nanoparticles, OS = mRNA, App = specific vaccine",
-        "Processor = DNA, Memory = RNA, Software = protein",
-        "Cloud = manufacturing, Device = vaccine, User = patient"
-      ],
-      correct: 1,
-      explanation: "From the lecture: Hardware = lipid nanoparticles (delivery mechanism), OS = mRNA (programmable instructions), App = the specific vaccine (COVID-19, flu, etc.)."
-    },
-    {
-      q: "Moderna's revenue went from approximately $60M in 2019 to:",
-      options: [
-        "$500M in 2020",
-        "$3B in 2021",
-        "$17.6B in 2021",
-        "$50B in 2022"
-      ],
-      correct: 2,
-      explanation: "Moderna's revenue: $60M (2019) → $803M (2020) → $17,675M (2021). An extraordinary spike driven by COVID-19 vaccine sales."
-    },
-    {
-      q: "Moderna is described as 'born digital' because:",
-      options: [
-        "It only sells products online",
-        "It has no physical offices",
-        "It integrates automation, cloud computing, AI, and seamless data sharing throughout operations with no silos",
-        "It was founded by a software company"
-      ],
-      correct: 2,
-      explanation: "'Born digital' means Moderna built its operations from the ground up with digital technology: no silos, seamless data sharing, AI/ML integration, enabled by vertical integration."
-    },
+  "Lecture 11: Organizational Structure": [
     {
       q: "Organizational 'slack' in the context of innovation means:",
       options: [
@@ -3194,17 +3443,6 @@ const questionBank = {
       explanation: "Exploration = searching for new innovations, technologies, and business models. Exploitation = optimizing and profiting from what you already have. Firms need both — this is the ambidexterity challenge."
     },
     {
-      q: "Before COVID-19, Moderna had developed how many vaccines?",
-      options: [
-        "Zero — COVID-19 was their first",
-        "3 vaccines, all commercially successful",
-        "9 vaccines, but none had been brought to market",
-        "Over 20 vaccines across multiple disease areas"
-      ],
-      correct: 2,
-      explanation: "Moderna had developed 9 vaccines prior to COVID-19 but had never brought any to market. The COVID-19 pandemic was the breakthrough that proved the mRNA platform."
-    },
-    {
       q: "In Teece's framework, whether an innovator or imitator captures value depends on:",
       options: [
         "Who has the most employees",
@@ -3238,17 +3476,6 @@ const questionBank = {
       explanation: "Generic complementary assets are widely available (e.g., general manufacturing). Specialized ones are specific to the innovation (e.g., GE's hospital relationships for medical devices). When complementary assets are specialized, the asset holder has more power."
     },
     {
-      q: "Which organizational structure does Apple use, and why is it unusual for its size?",
-      options: [
-        "Multi-divisional structure, because it separates products into independent business units",
-        "Functional structure, because experts are grouped by discipline rather than product line",
-        "Matrix structure, combining product and geographic divisions",
-        "Flat structure with no management hierarchy"
-      ],
-      correct: 1,
-      explanation: "Apple uses a functional structure where experts (design, engineering, marketing) are organized by discipline. This is unusual for a $2 trillion company — most large firms use multi-divisional structures."
-    },
-    {
       q: "The GM/DuPont multi-divisional structure didn't work for Apple because:",
       options: [
         "Apple was too small for divisional structure",
@@ -3260,28 +3487,6 @@ const questionBank = {
       explanation: "Multi-divisional structures create autonomous profit centers. Apple needed experts who could collaborate deeply across functions on integrated products. Functional structure keeps expertise concentrated."
     },
     {
-      q: "In the Metaverse Wars case, companies are primarily competing over:",
-      options: [
-        "Patent rights to virtual reality technology",
-        "Platform dominance and control of the next computing paradigm",
-        "Government contracts for VR equipment",
-        "Manufacturing costs of VR headsets"
-      ],
-      correct: 1,
-      explanation: "The Metaverse case is about platform competition — which firm will control the next major computing paradigm. This connects to network effects, dominant design, and standards battles."
-    },
-    {
-      q: "Moderna's mRNA technology can be classified as:",
-      options: [
-        "Incremental innovation within the existing pharmaceutical paradigm",
-        "A radical, potentially competence-destroying innovation that creates an entirely new platform for medicine",
-        "A minor process improvement in vaccine manufacturing",
-        "An architectural innovation that rearranges existing drug components"
-      ],
-      correct: 1,
-      explanation: "mRNA technology is fundamentally different from traditional vaccine development. It represents a new paradigm — a platform technology that can be adapted for many diseases, not just COVID-19."
-    },
-    {
       q: "First mover advantage is strongest when:",
       options: [
         "The technology is easy to imitate",
@@ -3291,28 +3496,6 @@ const questionBank = {
       ],
       correct: 2,
       explanation: "First mover advantage is strongest when: strong network effects lock in users, high switching costs prevent customers from leaving, and learning curve effects give the first mover a cost advantage."
-    },
-    {
-      q: "Nonlegal appropriability mechanisms include all of the following EXCEPT:",
-      options: [
-        "Lead time and first mover advantage",
-        "Economies of scale",
-        "Patent protection",
-        "Controlling key resources"
-      ],
-      correct: 2,
-      explanation: "Patents are LEGAL mechanisms. Nonlegal mechanisms include: controlling key resources, reputation, architectural control, economies of scale, learning curve, and first mover advantage."
-    },
-    {
-      q: "Research shows that for protecting innovation, nonlegal barriers are often:",
-      options: [
-        "Irrelevant compared to patents",
-        "More effective than legal barriers in most industries",
-        "Only useful for service firms",
-        "Required by law"
-      ],
-      correct: 1,
-      explanation: "Surveys of R&D managers consistently show that lead time, learning curves, and complementary assets are rated as more effective than patents in most industries. Patents are most effective in pharma and chemicals."
     },
     {
       q: "Apple's 'discretionary leadership' model categorizes a leader's activities into four quadrants. Which list is correct?",
@@ -3335,17 +3518,6 @@ const questionBank = {
       ],
       correct: 1,
       explanation: "Shane identifies centralization benefits: reduces coordination costs, frees technical personnel from operational activities, encourages radical innovation (decentralized managers focus on incremental), encourages large-scale innovation (decentralized units too small), and facilitates corporate strategy. The other options are benefits of DECENTRALIZATION."
-    },
-    {
-      q: "Moderna is described as an 'AI factory' because:",
-      options: [
-        "It uses AI chatbots to sell vaccines directly to consumers",
-        "It integrates machine learning and AI throughout its digital technology stack — from genomics and data science to vaccine design and manufacturing",
-        "It replaced all human researchers with AI systems",
-        "It licenses AI patents to other pharmaceutical companies"
-      ],
-      correct: 1,
-      explanation: "Moderna's operating model integrates AI/ML across its entire technology stack: Cloud → Integration → IoT → Automation & Robotics → Analytics → AI → Digital. This 'born digital' approach enabled novel use of machine learning for mRNA vaccine development — faster and more accurate than traditional methods."
     },
     {
       q: "Organizational slack can be costly. Which statement best captures why innovative companies still maintain slack despite the cost?",
@@ -3374,6 +3546,390 @@ const questionBank = {
       options: ["True", "False"],
       correct: 0,
       explanation: "True. Jobs eliminated the divisional structure where each product line had its own general manager with independent P&L. He replaced it with a functional structure organized by expertise (design, engineering, marketing, etc.) with a single companywide P&L. This radical restructuring is credited with enabling Apple's subsequent innovation success."
+    },
+    {
+      q: "According to Shane Ch 16, which of the following is a benefit of DECENTRALIZED R&D?",
+      options: [
+        "It reduces coordination costs across the organization",
+        "It frees technical personnel from day-to-day operational pressures",
+        "It makes R&D more market-oriented by placing researchers closer to customers and business units",
+        "It encourages large-scale, radical innovation projects"
+      ],
+      correct: 2,
+      explanation: "Decentralization benefits include: improved access to external information, more market-oriented R&D, reduced financial risk (failed projects isolated in individual units), and stronger motivation for business unit managers. Centralization benefits include reduced coordination costs and encouraging radical innovation."
+    },
+    {
+      q: "An 'organic' organizational structure is characterized by:",
+      options: [
+        "Strict hierarchy, formal rules, and centralized decision-making",
+        "Flexible roles, lateral communication, and decentralized decision-making that fosters innovation",
+        "No management structure at all",
+        "Government-mandated organizational charts"
+      ],
+      correct: 1,
+      explanation: "Organic structures (Burns & Stalker) feature flexible roles, lateral communication, low formalization, and decentralized authority. They are better suited for innovation and dynamic environments. Mechanistic structures have rigid hierarchy, formal rules, and centralized control — better for stable environments."
+    },
+    {
+      q: "A 'mechanistic' organizational structure is best suited for:",
+      options: [
+        "Rapidly changing, uncertain environments requiring constant innovation",
+        "Stable, predictable environments where efficiency and standardization are priorities",
+        "Startup companies with fewer than 10 employees",
+        "Companies that only do exploratory research"
+      ],
+      correct: 1,
+      explanation: "Mechanistic structures (Burns & Stalker) with their rigid hierarchy, formal rules, and centralized control work best in stable environments where efficiency matters. Organic structures are better for dynamic, innovative environments."
+    },
+    {
+      q: "Ambidexterity in organizations means:",
+      options: [
+        "Having employees who can work in multiple departments",
+        "Simultaneously pursuing exploration of new opportunities and exploitation of existing capabilities",
+        "Operating in two different countries",
+        "Having two CEOs share leadership responsibilities"
+      ],
+      correct: 1,
+      explanation: "Organizational ambidexterity is the ability to simultaneously explore (search for new innovations) and exploit (optimize current products/processes). This is extremely difficult because exploration and exploitation require different structures, cultures, and incentives."
+    },
+    {
+      q: "A spin-off in corporate venturing refers to:",
+      options: [
+        "A marketing campaign for a new product",
+        "Creating a legally separated and autonomous 'daughter' firm from the parent company",
+        "Hiring employees from a competitor",
+        "Licensing technology to another company"
+      ],
+      correct: 1,
+      explanation: "A spin-off creates a new, legally independent company from the parent organization. This is a form of external corporate venturing (ECV) that allows the new entity to pursue innovation without the constraints of the parent's culture and processes."
+    },
+    {
+      q: "Corporate venture capital (CVC) is when:",
+      options: [
+        "A startup raises money from family and friends",
+        "A large corporation invests in external startups, often for strategic rather than purely financial reasons",
+        "A VC firm is incorporated as a corporation instead of a partnership",
+        "A government agency funds corporate R&D"
+      ],
+      correct: 1,
+      explanation: "CVC is when established corporations invest in startups — often to gain a window on emerging technologies, access new markets, or complement internal R&D. Unlike traditional VC, CVC has strategic motives beyond financial returns."
+    },
+    {
+      q: "Google's '20% time' policy, which produced Gmail and Google News, is an example of:",
+      options: [
+        "External corporate venturing",
+        "Organizational slack that enables exploration",
+        "A mechanistic organizational structure",
+        "A spin-off strategy"
+      ],
+      correct: 1,
+      explanation: "Google's 20% time is a classic example of organizational slack — giving employees dedicated time to explore ideas outside their core responsibilities. This created space for breakthrough innovations like Gmail, Google News, and Orkut."
+    },
+    {
+      q: "Shane Ch 16 identifies that decentralized R&D managers tend to focus on incremental innovation rather than radical innovation. Why?",
+      options: [
+        "They lack technical skills",
+        "They face pressure to meet short-term business unit targets and cannot justify risky, long-term projects",
+        "Government regulations prevent radical innovation at the division level",
+        "Radical innovation is illegal in decentralized structures"
+      ],
+      correct: 1,
+      explanation: "Decentralized R&D managers are evaluated on their business unit's short-term performance. Radical innovation is risky, expensive, and may not pay off within their evaluation period. Centralized R&D units can take longer-term bets because they are not tied to specific business unit P&Ls."
+    },
+    {
+      q: "Nonlegal appropriability mechanisms include all of the following EXCEPT:",
+      options: [
+        "Lead time and first mover advantage",
+        "Economies of scale",
+        "Patent protection",
+        "Controlling key resources"
+      ],
+      correct: 2,
+      explanation: "Patents are LEGAL mechanisms. Nonlegal mechanisms include: controlling key resources, reputation, architectural control, economies of scale, learning curve, and first mover advantage."
+    },
+    {
+      q: "Research shows that for protecting innovation, nonlegal barriers are often:",
+      options: [
+        "Irrelevant compared to patents",
+        "More effective than legal barriers in most industries",
+        "Only useful for service firms",
+        "Required by law"
+      ],
+      correct: 1,
+      explanation: "Surveys of R&D managers consistently show that lead time, learning curves, and complementary assets are rated as more effective than patents in most industries. Patents are most effective in pharma and chemicals."
+    },
+    {
+      q: "An ambidextrous organization might create a structurally separate unit for exploration while maintaining the existing organization for exploitation.",
+      options: ["True", "False"],
+      correct: 0,
+      explanation: "True. One approach to ambidexterity is structural separation: creating an independent unit (with its own culture, processes, and metrics) focused on exploration, while the main organization continues exploitation. This prevents the dominant exploitation logic from killing exploratory projects."
+    }
+  ],
+
+  "Lecture 12: Case — Moderna": [
+    {
+      q: "Moderna designed its COVID-19 vaccine in:",
+      options: [
+        "Six months after the outbreak",
+        "Two days after the viral genetic sequence was posted online",
+        "Two weeks after Phase 1 trials began",
+        "Three months after WHO declared a pandemic"
+      ],
+      correct: 1,
+      explanation: "Moderna designed the mRNA vaccine in just TWO DAYS after the viral genetic sequence was posted online on January 11, 2020. First batch was produced by February 7 (25 days)."
+    },
+    {
+      q: "Moderna's mRNA platform is compared to smartphones using the analogy:",
+      options: [
+        "Screen = mRNA, Battery = lipid nanoparticles, App = vaccine",
+        "Hardware = lipid nanoparticles, OS = mRNA, App = specific vaccine",
+        "Processor = DNA, Memory = RNA, Software = protein",
+        "Cloud = manufacturing, Device = vaccine, User = patient"
+      ],
+      correct: 1,
+      explanation: "From the lecture: Hardware = lipid nanoparticles (delivery mechanism), OS = mRNA (programmable instructions), App = the specific vaccine (COVID-19, flu, etc.)."
+    },
+    {
+      q: "Moderna's revenue went from approximately $60M in 2019 to:",
+      options: [
+        "$500M in 2020",
+        "$3B in 2021",
+        "$17.6B in 2021",
+        "$50B in 2022"
+      ],
+      correct: 2,
+      explanation: "Moderna's revenue: $60M (2019) → $803M (2020) → $17,675M (2021). An extraordinary spike driven by COVID-19 vaccine sales."
+    },
+    {
+      q: "Moderna is described as 'born digital' because:",
+      options: [
+        "It only sells products online",
+        "It has no physical offices",
+        "It integrates automation, cloud computing, AI, and seamless data sharing throughout operations with no silos",
+        "It was founded by a software company"
+      ],
+      correct: 2,
+      explanation: "'Born digital' means Moderna built its operations from the ground up with digital technology: no silos, seamless data sharing, AI/ML integration, enabled by vertical integration."
+    },
+    {
+      q: "Before COVID-19, Moderna had developed how many vaccines?",
+      options: [
+        "Zero — COVID-19 was their first",
+        "3 vaccines, all commercially successful",
+        "9 vaccines, but none had been brought to market",
+        "Over 20 vaccines across multiple disease areas"
+      ],
+      correct: 2,
+      explanation: "Moderna had developed 9 vaccines prior to COVID-19 but had never brought any to market. The COVID-19 pandemic was the breakthrough that proved the mRNA platform."
+    },
+    {
+      q: "Moderna's mRNA technology can be classified as:",
+      options: [
+        "Incremental innovation within the existing pharmaceutical paradigm",
+        "A radical, potentially competence-destroying innovation that creates an entirely new platform for medicine",
+        "A minor process improvement in vaccine manufacturing",
+        "An architectural innovation that rearranges existing drug components"
+      ],
+      correct: 1,
+      explanation: "mRNA technology is fundamentally different from traditional vaccine development. It represents a new paradigm — a platform technology that can be adapted for many diseases, not just COVID-19."
+    },
+    {
+      q: "Moderna is described as an 'AI factory' because:",
+      options: [
+        "It uses AI chatbots to sell vaccines directly to consumers",
+        "It integrates machine learning and AI throughout its digital technology stack — from genomics and data science to vaccine design and manufacturing",
+        "It replaced all human researchers with AI systems",
+        "It licenses AI patents to other pharmaceutical companies"
+      ],
+      correct: 1,
+      explanation: "Moderna's operating model integrates AI/ML across its entire technology stack: Cloud → Integration → IoT → Automation & Robotics → Analytics → AI → Digital. This 'born digital' approach enabled novel use of machine learning for mRNA vaccine development — faster and more accurate than traditional methods."
+    },
+    {
+      q: "In the Metaverse Wars case, companies are primarily competing over:",
+      options: [
+        "Patent rights to virtual reality technology",
+        "Platform dominance and control of the next computing paradigm",
+        "Government contracts for VR equipment",
+        "Manufacturing costs of VR headsets"
+      ],
+      correct: 1,
+      explanation: "The Metaverse case is about platform competition — which firm will control the next major computing paradigm. This connects to network effects, dominant design, and standards battles."
+    },
+    {
+      q: "Moderna was founded in:",
+      options: [
+        "2005 in San Francisco",
+        "2010 in Cambridge, Massachusetts",
+        "2015 in Boston",
+        "2000 in New York"
+      ],
+      correct: 1,
+      explanation: "Moderna was founded in 2010 in Cambridge, MA. By 2020, the company had spent a decade developing mRNA technology and had raised over $5 billion in funding."
+    },
+    {
+      q: "Moderna achieved vertical integration in 2018 by:",
+      options: [
+        "Acquiring a competitor pharma company",
+        "Building a $125M manufacturing plant in Norwood, MA",
+        "Outsourcing all production to China",
+        "Merging with Pfizer"
+      ],
+      correct: 1,
+      explanation: "Moderna invested $125M in a manufacturing plant in Norwood, MA in 2018, achieving vertical integration. This allowed them to control the entire production process — critical for their rapid COVID-19 vaccine development."
+    },
+    {
+      q: "The first batch of Moderna's COVID-19 vaccine was produced on February 7, 2020 — approximately how many days after the viral genetic sequence was shared?",
+      options: [
+        "10 days",
+        "25 days",
+        "42 days",
+        "60 days"
+      ],
+      correct: 1,
+      explanation: "The viral genetic sequence was shared on January 11, 2020. The first batch was produced on February 7 — just 25 days later (after the vaccine was designed in 2 days). Phase 1 trial started March 23."
+    },
+    {
+      q: "Moderna's digital technology stack follows the order:",
+      options: [
+        "AI → Cloud → Robotics → Analytics → Digital",
+        "Cloud → Integration → IoT → Automation & Robotics → Analytics → AI → Digital",
+        "Digital → AI → Cloud → Manufacturing → Sales",
+        "Hardware → Software → Cloud → Blockchain → AI"
+      ],
+      correct: 1,
+      explanation: "Moderna's technology stack builds from foundational to advanced: Cloud → Integration → IoT → Automation & Robotics → Analytics → AI → Digital. Each layer enables the next, creating a fully integrated 'born digital' operation."
+    },
+    {
+      q: "Traditional vaccines work by using weakened or inactivated viruses, while mRNA vaccines work by:",
+      options: [
+        "Using stronger, more dangerous viruses",
+        "Providing genetic instructions that tell human cells to produce a specific protein, triggering an immune response",
+        "Directly injecting antibodies into the bloodstream",
+        "Using radiation to kill the virus inside the body"
+      ],
+      correct: 1,
+      explanation: "mRNA acts as a 'digital instruction manual' — it provides genetic instructions for human cells to produce a specific protein (like the spike protein of SARS-CoV-2). The immune system then recognizes this protein and builds defenses against it."
+    },
+    {
+      q: "By 2020, Moderna had raised over how much in total funding?",
+      options: [
+        "$500 million",
+        "$1 billion",
+        "$5 billion",
+        "$20 billion"
+      ],
+      correct: 2,
+      explanation: "By 2020, Moderna had raised over $5 billion in funding across multiple rounds. This massive investment funded a decade of mRNA R&D before the COVID-19 pandemic provided the commercial breakthrough."
+    },
+    {
+      q: "A key discussion question from the Moderna case is whether Moderna should spin off its COVID-19 business. An argument FOR spinning off would be:",
+      options: [
+        "It would destroy all of Moderna's mRNA capabilities",
+        "It would allow focused management of the COVID-19 revenue stream while the parent company pursues other mRNA applications",
+        "Spin-offs always fail in the pharmaceutical industry",
+        "Government regulations require all biotech firms to spin off profitable divisions"
+      ],
+      correct: 1,
+      explanation: "A spin-off could allow focused management of the massive COVID-19 revenue while freeing the parent to pursue the broader mRNA platform (flu, cancer, rare diseases) without being distracted by COVID-19 operations. This connects to the exploration vs exploitation tension."
+    },
+    {
+      q: "Moderna's largest R&D spending category in 2021 was:",
+      options: [
+        "Cancer therapeutics",
+        "Rare disease treatments",
+        "Prophylactic vaccines ($1,099M)",
+        "Cardiovascular drugs"
+      ],
+      correct: 2,
+      explanation: "In 2021, Moderna's largest R&D category was prophylactic vaccines at $1,099M out of total R&D spending of $1,991M. Total R&D grew from $496M (2019) to $1,991M (2021), reflecting massive reinvestment of COVID-19 revenues."
+    },
+    {
+      q: "What enabled Moderna to move so fast with the COVID-19 vaccine? The most important factor was:",
+      options: [
+        "They had the most employees in the pharma industry",
+        "Government regulation was suspended for them",
+        "Their programmable mRNA platform, born-digital operating model, and vertical integration allowed rapid design and manufacturing",
+        "They simply copied another company's vaccine design"
+      ],
+      correct: 2,
+      explanation: "Moderna's speed came from three key factors: (1) the mRNA platform is 'programmable' — just swap the genetic instructions, (2) their born-digital model with AI/automation enabled rapid iteration, and (3) vertical integration meant they controlled manufacturing. Together, these allowed 2-day design and 25-day production."
+    },
+    {
+      q: "Moderna received approximately $955M from BARDA (Biomedical Advanced Research and Development Authority) for COVID-19 vaccine development.",
+      options: ["True", "False"],
+      correct: 0,
+      explanation: "True. BARDA provided approximately $955M to support Moderna's COVID-19 vaccine development. This public funding was critical in accelerating clinical trials and manufacturing scale-up."
+    },
+    {
+      q: "The mRNA platform's key advantage over traditional vaccines is that it is 'programmable' — meaning the same manufacturing process can produce vaccines for different diseases by changing only the genetic sequence.",
+      options: ["True", "False"],
+      correct: 0,
+      explanation: "True. This is the core insight of the smartphone analogy: the 'hardware' (lipid nanoparticles) and 'OS' (mRNA delivery system) stay the same; only the 'app' (specific genetic instructions) changes. This enables rapid development of new vaccines without redesigning the entire production process."
+    },
+    {
+      q: "Moderna's COVID-19 vaccine development timeline shows that Phase 1 trials began on:",
+      options: [
+        "January 11, 2020",
+        "February 7, 2020",
+        "March 23, 2020",
+        "June 15, 2020"
+      ],
+      correct: 2,
+      explanation: "Phase 1 trial started March 23, 2020. Timeline: Jan 11 (sequence shared) → Jan 13 (vaccine designed, 2 days) → Feb 7 (first batch produced, 25 days) → Mar 23 (Phase 1 trial) → Apr 27 (Phase 2 IND submitted)."
+    },
+    {
+      q: "An argument AGAINST Moderna spinning off its COVID-19 business would be:",
+      options: [
+        "The COVID-19 business generates too little revenue to be independent",
+        "Spinning off would separate the COVID-19 revenue from the broader mRNA platform it funds, potentially starving long-term R&D of capital",
+        "Government regulations prohibit spin-offs in biotech",
+        "COVID-19 vaccines are no longer needed"
+      ],
+      correct: 1,
+      explanation: "COVID-19 revenues ($17.6B in 2021) fund Moderna's entire R&D pipeline. Spinning it off could deprive the parent of the capital needed to develop other mRNA applications (flu, cancer, rare diseases). The exploration-exploitation balance depends on COVID-19 cash flows."
+    },
+    {
+      q: "Moderna's operating model contrasts with traditional pharma by eliminating organizational silos. This means:",
+      options: [
+        "Different departments cannot communicate with each other",
+        "Data and knowledge flow seamlessly across all functions, enabled by integrated digital systems",
+        "Each department operates as an independent profit center",
+        "Moderna has no organizational structure at all"
+      ],
+      correct: 1,
+      explanation: "Traditional pharma often has functional silos (research, manufacturing, clinical, commercial) with poor data sharing. Moderna's 'born digital' model ensures seamless data flow across functions through integrated cloud, IoT, and AI systems — enabling faster decision-making and iteration."
+    },
+    {
+      q: "Moderna's 2020 revenue of $803M primarily came from:",
+      options: [
+        "Sales of consumer health products",
+        "Government contracts and advance purchase agreements for the COVID-19 vaccine",
+        "Licensing mRNA patents to competitors",
+        "Consulting services for other pharma companies"
+      ],
+      correct: 1,
+      explanation: "Moderna's 2020 revenue of $803M came primarily from government contracts and advance purchase agreements for the COVID-19 vaccine, which was still in clinical trials and received Emergency Use Authorization in December 2020."
+    },
+    {
+      q: "The Moderna case illustrates the concept of 'platform thinking' because:",
+      options: [
+        "Moderna built a social media platform",
+        "The mRNA technology serves as a general-purpose platform that can be adapted for many different diseases, similar to how a smartphone platform supports many apps",
+        "Moderna's stock is traded on a trading platform",
+        "Moderna uses a platform to manage employee schedules"
+      ],
+      correct: 1,
+      explanation: "Moderna's mRNA is a platform technology: the core system (lipid nanoparticle delivery + mRNA mechanism) remains constant while specific applications (COVID, flu, cancer) are swapped in like 'apps.' This platform approach enables rapid development and scalability across diseases."
+    },
+    {
+      q: "Moderna's IPO raised approximately:",
+      options: [
+        "$600 million",
+        "$7.5 billion — one of the largest biotech IPOs in history",
+        "$100 million",
+        "$2 billion"
+      ],
+      correct: 1,
+      explanation: "Moderna's IPO raised approximately $7.5 billion, making it one of the largest biotech IPOs in history. Combined with over $5 billion in prior funding and $955M from BARDA, Moderna secured massive capital to fund its mRNA platform development."
     }
   ],
 
@@ -6582,7 +7138,7 @@ var flashcardDecks = {
 
 const quizModules = {
   exam: [
-    { name: "All Questions — Full Simulation", key: "all", count: 415, full: true },
+    { name: "All Questions — Full Simulation", key: "all", count: 600, full: true },
     { name: "Final Prep Exam 1", key: "Final Prep Exam 1", count: 25 },
     { name: "Final Prep Exam 2", key: "Final Prep Exam 2", count: 25 },
     { name: "Exam Sprint 1", key: "Exam Sprint 1", count: 25 },
@@ -6593,15 +7149,17 @@ const quizModules = {
   ],
   topic: [
     { name: "Lecture 1: Introduction", key: "Lecture 1: Introduction", count: 25 },
-    { name: "Lectures 2-3: Technology Evolution", key: "Lectures 2-3: Technology Evolution", count: 25 },
+    { name: "Lecture 2: Technology Evolution", key: "Lecture 2: Technology Evolution", count: 25 },
+    { name: "Lecture 3: Adoption & Diffusion", key: "Lecture 3: Adoption & Diffusion", count: 25 },
     { name: "Lecture 4: Adoption & Diffusion", key: "Lecture 4: Adoption & Diffusion", count: 25 },
     { name: "Lecture 5: Sources of Innovation", key: "Lecture 5: Sources of Innovation", count: 25 },
     { name: "Lecture 6: Case — Nokia", key: "Lecture 6: Case — Nokia", count: 25 },
-    { name: "Lectures 7-8: Selecting & Financing", key: "Lectures 7-8: Selecting & Financing Innovation", count: 25 },
-    { name: "Lecture 8: Financing Deep Dive", key: "Lecture 8: Financing (Deep Dive)", count: 25 },
+    { name: "Lecture 7: Project Selection & Decision Tools", key: "Lecture 7: Project Selection & Decision Tools", count: 25 },
+    { name: "Lecture 8: Financing Innovation", key: "Lecture 8: Financing Innovation", count: 25 },
     { name: "Lecture 9: Protecting Innovation", key: "Lecture 9: Protecting Innovation", count: 25 },
     { name: "Lecture 10: Metaverse Wars", key: "Lecture 10: Metaverse Wars", count: 25 },
-    { name: "Lectures 11-12: Org Structure & Moderna", key: "Lectures 11-12: Org Structure & Moderna", count: 25 },
+    { name: "Lecture 11: Organizational Structure", key: "Lecture 11: Organizational Structure", count: 25 },
+    { name: "Lecture 12: Case — Moderna", key: "Lecture 12: Case — Moderna", count: 25 },
     { name: "Lecture 2: Tech Evolution (Slides)", key: "Lecture 2: Tech Evolution (Slides)", count: 25 },
     { name: "Lecture 3: Industry Evolution (Slides)", key: "Lecture 3: Industry Evolution (Slides)", count: 25 },
   ],
