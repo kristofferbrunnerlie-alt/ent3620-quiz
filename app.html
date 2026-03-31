@@ -7148,20 +7148,20 @@ const quizModules = {
     { name: "Mock Exam Style", key: "Mock Exam Style", count: 25 },
   ],
   topic: [
-    { name: "Lecture 1: Introduction", key: "Lecture 1: Introduction", count: 25 },
-    { name: "Lecture 2: Technology Evolution", key: "Lecture 2: Technology Evolution", count: 25 },
-    { name: "Lecture 3: Adoption & Diffusion", key: "Lecture 3: Adoption & Diffusion", count: 25 },
-    { name: "Lecture 4: Adoption & Diffusion", key: "Lecture 4: Adoption & Diffusion", count: 25 },
-    { name: "Lecture 5: Sources of Innovation", key: "Lecture 5: Sources of Innovation", count: 25 },
-    { name: "Lecture 6: Case — Nokia", key: "Lecture 6: Case — Nokia", count: 25 },
-    { name: "Lecture 7: Project Selection & Decision Tools", key: "Lecture 7: Project Selection & Decision Tools", count: 25 },
-    { name: "Lecture 8: Financing Innovation", key: "Lecture 8: Financing Innovation", count: 25 },
-    { name: "Lecture 9: Protecting Innovation", key: "Lecture 9: Protecting Innovation", count: 25 },
-    { name: "Lecture 10: Metaverse Wars", key: "Lecture 10: Metaverse Wars", count: 25 },
-    { name: "Lecture 11: Organizational Structure", key: "Lecture 11: Organizational Structure", count: 25 },
-    { name: "Lecture 12: Case — Moderna", key: "Lecture 12: Case — Moderna", count: 25 },
-    { name: "Lecture 2: Tech Evolution (Slides)", key: "Lecture 2: Tech Evolution (Slides)", count: 25 },
-    { name: "Lecture 3: Industry Evolution (Slides)", key: "Lecture 3: Industry Evolution (Slides)", count: 25 },
+    { name: "Lecture 1: Introduction", key: "Lecture 1: Introduction", count: 25, desc: "Invention vs innovation, technology definition, Ford Model T, Xbox, Dell, business model, complementors" },
+    { name: "Lecture 2: Technology Evolution", key: "Lecture 2: Technology Evolution", count: 25, desc: "S-curves, paradigms, A-U model, Barras, Tushman, Henderson & Clark, Christensen, Kodak, photography" },
+    { name: "Lecture 3: Adoption & Diffusion", key: "Lecture 3: Adoption & Diffusion", count: 25, desc: "Dominant design, shakeout, fluid/specific phase, standards, VHS vs Beta, increasing returns" },
+    { name: "Lecture 4: Adoption & Diffusion", key: "Lecture 4: Adoption & Diffusion", count: 25, desc: "5 adopter categories, crossing the chasm, Bass model, Delphi, beachhead strategy, substitution" },
+    { name: "Lecture 5: Sources of Innovation", key: "Lecture 5: Sources of Innovation", count: 25, desc: "3 sources of opportunity, R&D types, Pasteur/Bohr/Edison, Bayh-Dole, P&G Connect & Develop, ATAP" },
+    { name: "Lecture 6: Case — Nokia", key: "Lecture 6: Case — Nokia", count: 25, desc: "Nokia decline, Symbian, Ovi, touchscreen blindness, atmosphere of fear, Elop's 3 options, ambidexterity" },
+    { name: "Lecture 7: Decision Tools", key: "Lecture 7: Project Selection & Decision Tools", count: 25, desc: "NPV, IRR, real options, AHP, decision trees, Monte Carlo, scenario analysis, hurdle rate" },
+    { name: "Lecture 8: Financing", key: "Lecture 8: Financing Innovation", count: 25, desc: "VC model (2%/20-30%), angels, adverse selection, moral hazard, skewness (0.4%→97%), term sheet" },
+    { name: "Lecture 9: IP Protection", key: "Lecture 9: Protecting Innovation", count: 25, desc: "Patents (20yr), secrecy, copyright (life+70), trademarks (10yr), Selden vs Ford, AutoStore vs Ocado" },
+    { name: "Lecture 10: Metaverse", key: "Lecture 10: Metaverse Wars", count: 25, desc: "Feasibility vs viability, Concorde, Snow Crash 1992, open vs closed, Meta/Microsoft/Nvidia/Epic/Apple" },
+    { name: "Lecture 11: Org Structure", key: "Lecture 11: Organizational Structure", count: 25, desc: "Organic vs mechanistic, centralized vs decentralized, Apple functional, Shane Ch 16, ICV/ECV, slack" },
+    { name: "Lecture 12: Moderna", key: "Lecture 12: Case — Moderna", count: 25, desc: "mRNA platform (HW/OS/app), 2-day design, 42 days to NIH, born digital, $5.1B raised, AI factory" },
+    { name: "L2 Slides: Schumpeter & Waves", key: "Lecture 2: Tech Evolution (Slides)", count: 25, desc: "6 innovation waves, Schumpeterian cycle, market concentration, Google acquisitions, Kodak timeline" },
+    { name: "L3 Slides: Creative Destruction", key: "Lecture 3: Industry Evolution (Slides)", count: 25, desc: "Schumpeterian/monopoly/Ricardian rents, creative destruction, competitive life cycles, hipster test" },
   ],
   practice: [
     { name: "Hard Mode: Tricky Connections", key: "Hard Mode: Tricky Connections", count: 25 },
@@ -7230,7 +7230,8 @@ function buildModules() {
         var cls = best >= 80 ? 'good' : best >= 60 ? 'ok' : 'bad';
         bestHtml = '<span class="mod-best ' + cls + '">Best: ' + best + '%</span><span class="mod-attempts">' + attempts + ' tries</span>';
       }
-      card.innerHTML = '<div class="mod-name">' + mod.name + '</div><div class="mod-meta"><span class="mod-count">📝 ' + mod.count + 'q</span>' + bestHtml + '</div>';
+      var descHtml = mod.desc ? '<div style="font-size:11px;color:#71717a;margin-top:4px;line-height:1.4;">' + mod.desc + '</div>' : '';
+      card.innerHTML = '<div class="mod-name">' + mod.name + '</div>' + descHtml + '<div class="mod-meta" style="margin-top:8px;"><span class="mod-count">📝 ' + mod.count + 'q</span>' + bestHtml + '</div>';
       card.onclick = function() { startQuiz(mod.key); };
       container.appendChild(card);
     });
