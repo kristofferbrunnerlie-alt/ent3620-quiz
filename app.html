@@ -732,6 +732,7 @@
       <h1>ENT3620 Study Hub</h1>
       <p>Innovation Strategy & Technological Change</p>
       <div class="header-stats" id="header-stats"></div>
+      <div id="unlock-btn-container" style="margin-top:16px;"></div>
     </div>
 
     <div class="tab-container">
@@ -7203,6 +7204,90 @@ var flashDecks = flashDeckKeys.map(function(key, i) {
 });
 
 // ============================================================
+// PAYWALL & ACCESS CONTROL
+// ============================================================
+var STRIPE_LINK = ""; // Add Stripe Payment Link here when ready
+var VALID_CODES = ["FRIEND2026", "BETA", "VEISDAL", "BI2026", "GRATIS"];
+var FREE_QUIZ_KEYS = ["Lecture 1: Introduction", "Lecture 2: Technology Evolution"];
+var FREE_FLASHCARD_INDICES = [3]; // "thinkers" deck (index 3)
+
+function hasAccess() {
+  return localStorage.getItem('ent3620_premium') === 'true';
+}
+
+function unlockPremium() {
+  localStorage.setItem('ent3620_premium', 'true');
+}
+
+function isModuleFree(key) {
+  return FREE_QUIZ_KEYS.indexOf(key) !== -1;
+}
+
+function isDeckFree(index) {
+  return FREE_FLASHCARD_INDICES.indexOf(index) !== -1;
+}
+
+function tryCode(code) {
+  if (VALID_CODES.indexOf(code.toUpperCase().trim()) !== -1) {
+    unlockPremium();
+    return true;
+  }
+  return false;
+}
+
+function checkStripeSuccess() {
+  var params = new URLSearchParams(window.location.search);
+  if (params.get('success') === 'true' || params.get('paid') === 'true') {
+    unlockPremium();
+    window.history.replaceState({}, '', window.location.pathname);
+  }
+}
+checkStripeSuccess();
+
+function showPaywall() {
+  var overlay = document.createElement('div');
+  overlay.id = 'paywall-overlay';
+  overlay.style.cssText = 'position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.85);z-index:10000;display:flex;align-items:center;justify-content:center;backdrop-filter:blur(8px);';
+  overlay.innerHTML = '<div style="background:#18181b;border:1px solid #27272a;border-radius:20px;padding:40px;max-width:420px;width:90%;text-align:center;">' +
+    '<div style="font-size:48px;margin-bottom:16px;">🔒</div>' +
+    '<h2 style="color:#e4e4e7;font-size:22px;margin-bottom:8px;">Lås opp alle quizer & flashcards</h2>' +
+    '<p style="color:#71717a;font-size:14px;margin-bottom:24px;">600+ spørsmål · 20+ moduler · 160 flashcards<br>Eksamensnære oppgaver basert på alt pensum</p>' +
+    '<div style="font-size:36px;font-weight:900;color:#8b5cf6;margin-bottom:4px;">149 kr</div>' +
+    '<div style="color:#71717a;font-size:12px;margin-bottom:24px;">Engangsbetaling · Tilgang hele semesteret</div>' +
+    (STRIPE_LINK ? '<a href="' + STRIPE_LINK + '" style="display:block;background:linear-gradient(135deg,#8b5cf6,#6366f1);color:#fff;padding:14px 28px;border-radius:12px;font-size:16px;font-weight:700;text-decoration:none;margin-bottom:16px;">Betal med Stripe</a>' : '<div style="background:#27272a;color:#71717a;padding:14px 28px;border-radius:12px;font-size:14px;margin-bottom:16px;">Betaling kommer snart</div>') +
+    '<div style="margin-bottom:16px;"><input id="code-input" type="text" placeholder="Har du en kode?" style="background:#27272a;border:1px solid #3f3f46;color:#e4e4e7;padding:12px 16px;border-radius:10px;font-size:14px;width:60%;font-family:Inter,sans-serif;outline:none;" />' +
+    '<button onclick="handleCode()" style="background:#3f3f46;color:#e4e4e7;border:none;padding:12px 16px;border-radius:10px;font-size:14px;font-weight:600;cursor:pointer;margin-left:8px;font-family:Inter,sans-serif;">Aktiver</button></div>' +
+    '<div id="code-msg" style="font-size:13px;margin-bottom:16px;"></div>' +
+    '<button onclick="closePaywall()" style="background:none;border:none;color:#52525b;font-size:13px;cursor:pointer;font-family:Inter,sans-serif;">← Tilbake til gratisversjonen</button>' +
+    '</div>';
+  document.body.appendChild(overlay);
+  // Enter key on code input
+  setTimeout(function() {
+    var inp = document.getElementById('code-input');
+    if (inp) inp.addEventListener('keydown', function(e) { if (e.key === 'Enter') handleCode(); });
+  }, 100);
+}
+
+function handleCode() {
+  var input = document.getElementById('code-input');
+  var msg = document.getElementById('code-msg');
+  if (tryCode(input.value)) {
+    msg.style.color = '#22c55e';
+    msg.textContent = '✓ Kode aktivert! Full tilgang låst opp.';
+    setTimeout(function() { closePaywall(); buildModules(); buildDecks(); }, 1000);
+  } else {
+    msg.style.color = '#ef4444';
+    msg.textContent = 'Ugyldig kode. Prøv igjen.';
+    input.value = '';
+  }
+}
+
+function closePaywall() {
+  var el = document.getElementById('paywall-overlay');
+  if (el) el.remove();
+}
+
+// ============================================================
 // HISTORY (localStorage)
 // ============================================================
 function getHistory() {
@@ -7256,9 +7341,19 @@ function buildModules() {
         var cls = best >= 80 ? 'good' : best >= 60 ? 'ok' : 'bad';
         bestHtml = '<span class="mod-best ' + cls + '">Best: ' + best + '%</span><span class="mod-attempts">' + attempts + ' tries</span>';
       }
+      var isFree = mod.full || isModuleFree(mod.key) || hasAccess();
+      var lockIcon = isFree ? '' : '<span style="float:right;font-size:16px;opacity:0.4;">🔒</span>';
       var descHtml = mod.desc ? '<div style="font-size:11px;color:#71717a;margin-top:4px;line-height:1.4;">' + mod.desc + '</div>' : '';
-      card.innerHTML = '<div class="mod-name">' + mod.name + '</div>' + descHtml + '<div class="mod-meta" style="margin-top:8px;"><span class="mod-count">📝 ' + mod.count + 'q</span>' + bestHtml + '</div>';
-      card.onclick = function() { startQuiz(mod.key); };
+      var freeTag = isModuleFree(mod.key) && !hasAccess() ? '<span style="background:#22c55e20;color:#22c55e;font-size:10px;font-weight:700;padding:2px 6px;border-radius:4px;margin-left:8px;">GRATIS</span>' : '';
+      card.innerHTML = lockIcon + '<div class="mod-name">' + mod.name + freeTag + '</div>' + descHtml + '<div class="mod-meta" style="margin-top:8px;"><span class="mod-count">📝 ' + mod.count + 'q</span>' + bestHtml + '</div>';
+      if (!isFree) { card.style.opacity = '0.6'; }
+      card.onclick = function() {
+        if (mod.full || isModuleFree(mod.key) || hasAccess()) {
+          startQuiz(mod.key);
+        } else {
+          showPaywall();
+        }
+      };
       container.appendChild(card);
     });
     var countEl = document.getElementById('count-' + section);
@@ -7273,12 +7368,23 @@ function buildDecks() {
     const card = document.createElement('div');
     card.className = 'deck-card';
     const progress = getDeckProgress(deck.index, deck.count);
+    var deckFree = isDeckFree(deck.index) || hasAccess();
+    var deckLock = deckFree ? '' : '<div style="font-size:14px;opacity:0.4;margin-top:4px;">🔒</div>';
+    var deckFreeTag = isDeckFree(deck.index) && !hasAccess() ? '<div style="font-size:10px;color:#22c55e;font-weight:700;margin-top:4px;">GRATIS</div>' : '';
     card.innerHTML =
       '<div class="deck-icon">' + deck.icon + '</div>' +
       '<div class="deck-name">' + deck.name + '</div>' +
       '<div class="deck-count">' + deck.count + ' cards</div>' +
+      deckFreeTag + deckLock +
       '<div class="deck-progress-bar"><div class="deck-progress-fill" style="width:' + progress + '%"></div></div>';
-    card.onclick = function() { launchFlashcards(deck.index); };
+    if (!deckFree) { card.style.opacity = '0.6'; }
+    card.onclick = function() {
+      if (isDeckFree(deck.index) || hasAccess()) {
+        launchFlashcards(deck.index);
+      } else {
+        showPaywall();
+      }
+    };
     container.appendChild(card);
   });
 }
@@ -7898,6 +8004,17 @@ buildModules();
 buildDecks();
 updateStats();
 handleUrlParams();
+
+// Unlock button
+function renderUnlockBtn() {
+  var container = document.getElementById('unlock-btn-container');
+  if (hasAccess()) {
+    container.innerHTML = '<span style="color:#22c55e;font-size:13px;font-weight:600;">✓ Premium — full tilgang</span>';
+  } else {
+    container.innerHTML = '<button onclick="showPaywall()" style="background:linear-gradient(135deg,#8b5cf6,#6366f1);color:#fff;border:none;padding:10px 24px;border-radius:10px;font-size:14px;font-weight:700;cursor:pointer;font-family:Inter,sans-serif;">🔓 Lås opp alle 600+ spørsmål — 149 kr</button>';
+  }
+}
+renderUnlockBtn();
 </script>
 </body>
 </html>
