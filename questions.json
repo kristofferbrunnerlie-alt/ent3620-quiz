@@ -6326,5 +6326,282 @@
       "correct": 0,
       "explanation": "True. 'Entrepreneurial rent' and 'Schumpeterian rent' are synonymous. Both refer to the temporary profit innovators earn in the window between introducing an innovation and its widespread diffusion by competitors."
     }
+  ],
+  "Gap Drill: Holes & Weak Spots": [
+    {
+      "q": "What shifted the basis of competition in the insulin market during the early 1980s?",
+      "options": [
+        "Price competition from generic manufacturers",
+        "Competition shifted from purity to convenience/delivery method",
+        "Government regulation forced standardized pricing",
+        "Patients demanded organic, non-synthetic insulin"
+      ],
+      "correct": 1,
+      "explanation": "Eli Lilly invested ~$1B in Humulin (rDNA human insulin, 0 ppm impurities), but the market was already satisfied with pork insulin purity. Novo Nordisk's insulin pen shifted competition to convenience — it commanded a 30% price premium because injection took <10 seconds vs 1-2 minutes."
+    },
+    {
+      "q": "Eli Lilly's failure to respond to the insulin pen is best explained by:",
+      "options": [
+        "Lack of R&D funding",
+        "Path dependency — 5+ decades locked into the purity trajectory",
+        "The insulin pen was patented by a competitor and couldn't be copied",
+        "Regulatory barriers prevented Lilly from making medical devices"
+      ],
+      "correct": 1,
+      "explanation": "Lilly's entire corporate identity was built around pharmaceutical chemistry and purity improvement. 50+ years on the purity trajectory created path dependency — they were a drug company, not a device company. Their marketers also surveyed specialists (lead users) rather than mainstream patients."
+    },
+    {
+      "q": "Eli Lilly's Humulin case illustrates which concept from Shane's technology evolution framework?",
+      "options": [
+        "Creative destruction",
+        "First-mover advantage",
+        "Overshooting — exceeding customer needs on the current trajectory",
+        "Dominant design emergence"
+      ],
+      "correct": 2,
+      "explanation": "Overshooting occurs when a technological trajectory exceeds customer needs. Lilly pushed insulin purity beyond what patients needed, opening the door for Novo Nordisk to compete on a different dimension (convenience) where Lilly had no advantage."
+    },
+    {
+      "q": "According to Lerner & Nanda, which is NOT a limitation of venture capital as a funding mechanism for innovation?",
+      "options": [
+        "Short-term focus due to fund lifecycle pressure",
+        "Herd behavior — VCs cluster in trendy sectors",
+        "Geographic concentration in a few regions",
+        "VC firms charge excessive management fees of 10-15%"
+      ],
+      "correct": 3,
+      "explanation": "VC management fees are typically 2% (not 10-15%). The real limitations are: short-term focus (must return capital within fund life), herd behavior (overinvesting in trendy areas), geographic bias (concentrated in Silicon Valley/Boston/NYC), and inability to fund all types of innovation."
+    },
+    {
+      "q": "In the VC model, the extreme skewness of returns means that:",
+      "options": [
+        "Most VC-funded startups achieve moderate success",
+        "0.4% of investments generate approximately 97% of total returns",
+        "Returns are evenly distributed across portfolio companies",
+        "Only biotech investments generate outsized returns"
+      ],
+      "correct": 1,
+      "explanation": "VC returns follow a power law: 0.4% of investments generate ~97% of returns. This means most VC-funded companies fail or return little, while a tiny fraction produce massive returns that carry the entire portfolio."
+    },
+    {
+      "q": "A VC fund typically expects returns of 5-10x over approximately how many years?",
+      "options": [
+        "2-3 years",
+        "5-7 years",
+        "7 years",
+        "15-20 years"
+      ],
+      "correct": 2,
+      "explanation": "VCs target 5-10x returns over approximately 7 years. The fund lifecycle creates pressure to invest in companies with relatively quick paths to exit (IPO or acquisition), which is one limitation of VC funding."
+    },
+    {
+      "q": "When Steve Jobs returned to Apple in 1997, what organizational change did he make on his first day?",
+      "options": [
+        "He created autonomous business units for each product line",
+        "He fired all general managers and put the company under one P&L",
+        "He outsourced manufacturing to reduce costs",
+        "He established a matrix organization with dual reporting"
+      ],
+      "correct": 1,
+      "explanation": "Jobs fired ALL general managers of business units in a single day and reorganized Apple into a functional structure under one P&L. This was radical — most companies Apple's size use multi-divisional structures. Apple kept this functional structure even as it grew from 8,000 to 137,000 employees."
+    },
+    {
+      "q": "Apple's functional structure is based on the principle of aligning:",
+      "options": [
+        "Accountability and control",
+        "Expertise and decision rights",
+        "Revenue targets and bonuses",
+        "Product lines and market segments"
+      ],
+      "correct": 1,
+      "explanation": "Apple's functional structure aligns EXPERTISE with DECISION RIGHTS — those who know the most make the decisions. Multi-divisional structures align accountability and control instead. Apple believes it's easier to train an expert to manage than to train a manager to become an expert."
+    },
+    {
+      "q": "In Apple's discretionary leadership model, a VP who spends time deeply involved in a NEW area where they lack expertise is operating in the:",
+      "options": [
+        "Owning box",
+        "Learning box",
+        "Teaching box",
+        "Delegating box"
+      ],
+      "correct": 1,
+      "explanation": "The Learning box = low expertise + high detail involvement. Leaders adopt a beginner's mindset for new areas. The four boxes: Owning (high expertise, high involvement, ~40% time), Learning (low expertise, high involvement, ~30%), Teaching (high expertise, low involvement, ~15%), Delegating (low expertise, low involvement, ~15%)."
+    },
+    {
+      "q": "How did Apple manage organizational scaling from 1998 to 2019?",
+      "options": [
+        "They added general managers for each new product category",
+        "They limited VP growth (8x employees, 2x VPs), split functions, and added AI/ML",
+        "They adopted a multi-divisional structure once revenue exceeded $100B",
+        "They outsourced management to consulting firms"
+      ],
+      "correct": 1,
+      "explanation": "While employees grew 8x (8K→137K) and VPs only ~2x (50→96), Apple maintained its functional structure by: splitting hardware into Hardware Engineering and Hardware Technologies, adding AI/ML as a new function, and merging Human Interface with Industrial Design. Leaders moved mature activities from 'owning' to 'teaching.'"
+    },
+    {
+      "q": "According to Podolny & Hansen (2020), at most multi-divisional companies, general managers spend most of their time in the _____ box, while Apple VPs spend most time in the _____ boxes.",
+      "options": [
+        "Delegating; owning and learning",
+        "Owning; teaching and delegating",
+        "Learning; owning and teaching",
+        "Teaching; learning and delegating"
+      ],
+      "correct": 0,
+      "explanation": "General managers at divisional companies primarily delegate because they oversee broad portfolios. Apple VPs primarily own and learn — they stay deeply involved in details, either in areas of expertise (owning) or actively building new competence (learning)."
+    },
+    {
+      "q": "Apple's iPhone 7 Plus Portrait Mode required collaboration from approximately how many specialist teams?",
+      "options": [
+        "5 teams",
+        "12 teams",
+        "40+ teams",
+        "Over 100 teams"
+      ],
+      "correct": 2,
+      "explanation": "Portrait Mode required 40+ specialist teams (silicon design, camera software, reliability engineering, motion sensors, video engineering, etc.). Paul Hubel conceived the idea in 2009, and it launched with iPhone 7 Plus. The feature was deferred one year to address edge cases. This illustrates Apple's 'accountability without control' model."
+    },
+    {
+      "q": "The Metaverse case primarily illustrates which strategic concept?",
+      "options": [
+        "First-mover advantage guarantees market dominance",
+        "Technical feasibility does not equal commercial viability",
+        "All disruptive innovations eventually succeed",
+        "Platform markets always converge to a single standard"
+      ],
+      "correct": 1,
+      "explanation": "The Metaverse case illustrates that technical feasibility ≠ commercial viability. The Concorde is used as a parallel example — supersonic flight was technically feasible but commercially unviable. The same question applies to VR/metaverse technology, flying cars, and other technologies."
+    },
+    {
+      "q": "The term 'metaverse' originates from:",
+      "options": [
+        "A 2021 Facebook press release",
+        "Neal Stephenson's novel Snow Crash (1992)",
+        "Ernest Cline's novel Ready Player One (2011)",
+        "A Stanford research paper on virtual worlds"
+      ],
+      "correct": 1,
+      "explanation": "The term 'metaverse' comes from Neal Stephenson's 1992 science fiction novel Snow Crash. Ready Player One (2011) by Ernest Cline also popularized the concept. Facebook renamed itself Meta in October 2021, but the concept predates it by decades."
+    },
+    {
+      "q": "Should Moderna spin off its COVID vaccine business into a separate unit?",
+      "options": [
+        "Yes — a dedicated unit would be faster and more agile",
+        "Yes — it would prevent COVID from overshadowing the other 22 pipeline programs",
+        "No — Moderna's competitive advantage comes from shared data and integrated platform across all programs",
+        "No — spinning off is illegal under BARDA grant terms"
+      ],
+      "correct": 2,
+      "explanation": "Moderna should NOT spin off. Their competitive advantage comes from shared data, integrated digital infrastructure, and cross-learning between programs. Spinning off would create the silos that Moderna specifically designed its organization to avoid. As the case states: 'Moderna's competitive advantage came exactly from a shared understanding and shared data across all departments and teams.'"
+    },
+    {
+      "q": "Moderna's most important priorities going forward include:",
+      "options": [
+        "Focusing exclusively on COVID boosters and pandemic preparedness",
+        "Expanding the mRNA platform to other diseases while maintaining the born-digital model",
+        "Transitioning to a traditional pharmaceutical organizational structure",
+        "Outsourcing manufacturing to reduce costs"
+      ],
+      "correct": 1,
+      "explanation": "Moderna's priorities are: expanding the mRNA platform across the 23-program pipeline (CMV, RSV, Zika, cancer vaccines), maintaining platform economics, and sustaining their born-digital/AI factory model. COVID was their 10th vaccine — the platform's value is in treating many diseases, not just one."
+    },
+    {
+      "q": "Moderna CEO Stephane Bancel describes the company as:",
+      "options": [
+        "A pharmaceutical company with strong digital tools",
+        "A technology company that happens to do biology",
+        "A biotech startup focused on vaccine development",
+        "A digital health platform for telemedicine"
+      ],
+      "correct": 1,
+      "explanation": "Bancel explicitly states: 'We're a technology company that happens to do biology.' This reflects Moderna's born-digital identity — drugs designed on computer, paperless factory, 20+ AI algorithms in production, all data shared and integrated across departments."
+    },
+    {
+      "q": "Moderna's mRNA platform analogy is:",
+      "options": [
+        "mRNA is the factory and LNPs are the products",
+        "mRNA is the software and LNPs are the hardware",
+        "mRNA is the hardware and diseases are the software",
+        "mRNA is the medicine and AI is the delivery system"
+      ],
+      "correct": 1,
+      "explanation": "CSO Melissa Moore: 'mRNA is the software and LNPs (lipid nanoparticles) are the hardware.' Another analogy: 'mRNA is a platform like the iPhone; individual drugs are like apps.' This platform logic means if one drug works, others can work on the same underlying technology."
+    },
+    {
+      "q": "According to Christensen (2015), Uber is:",
+      "options": [
+        "A classic example of disruptive innovation",
+        "A sustaining innovation relative to taxis, not disruptive",
+        "A new-market disruptive innovation",
+        "A low-end disruptive innovation"
+      ],
+      "correct": 1,
+      "explanation": "Christensen argues Uber is NOT disruptive. It launched in San Francisco (a well-served market), targeted existing taxi users (not nonconsumers), and offered BETTER service (not inferior). It built position in the mainstream first, then expanded — the OPPOSITE direction of disruption. Uber is a sustaining innovation."
+    },
+    {
+      "q": "According to Christensen (2015), Tesla is not considered disruptive because:",
+      "options": [
+        "Electric vehicles are not innovative",
+        "Tesla's foothold is in the high end of the market, which IS interesting to incumbents",
+        "Tesla was acquired by an incumbent before it could disrupt",
+        "Tesla uses the same business model as traditional automakers"
+      ],
+      "correct": 1,
+      "explanation": "Tesla entered at the HIGH END ($70,000+ cars), a segment very much of interest to incumbents. True disruption starts in the low end or new-market foothold — segments incumbents ignore. Tesla attracted significant attention and investment from established automakers, the opposite of what happens with disruptive entrants."
+    },
+    {
+      "q": "According to Christensen (2015), disruption is best understood as:",
+      "options": [
+        "A product that replaces an existing one",
+        "A process whereby smaller firms successfully challenge incumbents by targeting overlooked segments",
+        "Any innovation that significantly changes a market",
+        "A sudden technological breakthrough that destroys an industry"
+      ],
+      "correct": 1,
+      "explanation": "Christensen defines disruption as a PROCESS, not a product. Smaller firms target overlooked segments (low-end or new-market), gain a foothold, then move upmarket until mainstream customers adopt their offering. It can take decades — discount department stores took 50+ years to fully challenge traditional ones."
+    },
+    {
+      "q": "The iPhone's launch in 2007 was a sustaining innovation in the smartphone market, but its subsequent growth was disruptive to:",
+      "options": [
+        "Feature phones like Nokia",
+        "The laptop as primary internet access device",
+        "Digital cameras",
+        "MP3 players like the iPod"
+      ],
+      "correct": 1,
+      "explanation": "The iPhone launched as a sustaining innovation in smartphones (targeting the same customers with a better product). But it became disruptive to LAPTOPS as the primary internet access device, enabled by a new business model (the App Store ecosystem). This shows disruption is relative — the same product can be sustaining in one market and disruptive in another."
+    },
+    {
+      "q": "The AutoStore vs Ocado case in the FT article illustrates the same patent strategy dynamic as:",
+      "options": [
+        "Eli Lilly vs Novo Nordisk",
+        "Apple vs Samsung",
+        "Selden vs Ford",
+        "Moderna vs Pfizer"
+      ],
+      "correct": 2,
+      "explanation": "AutoStore vs Ocado mirrors Selden vs Ford — using broad patents to restrict competitors' market entry. Selden held a broad automobile patent (1879-1911) and sued manufacturers. Ford won on appeal by using a different engine type. The same strategic dynamics play out across centuries: patents can be circumvented through alternative technical approaches."
+    },
+    {
+      "q": "According to Christensen (2015), how should incumbents respond to disruptive threats?",
+      "options": [
+        "Immediately pivot the entire company toward the disruptive technology",
+        "Continue investing in sustaining innovation for core customers AND create a separate division for the disruptive opportunity",
+        "Acquire the disruptive entrant as quickly as possible",
+        "Reduce R&D spending and focus on cost cutting"
+      ],
+      "correct": 1,
+      "explanation": "Christensen recommends a dual approach: continue investing in sustaining innovations for core customers (don't dismantle a profitable business), while creating a SEPARATE division for the disruptive opportunity. The new division must be kept separate from the core business. The mantra 'disrupt or be disrupted' can misguide if it leads to overreaction."
+    },
+    {
+      "q": "In Christensen's disk drive study, what percentage of sustaining entrants succeeded?",
+      "options": [
+        "0.4%",
+        "6%",
+        "34%",
+        "52%"
+      ],
+      "correct": 1,
+      "explanation": "Only 6% of sustaining entrants succeeded in the disk drive industry. This statistic highlights how difficult it is for new entrants to compete head-on with incumbents using sustaining innovations. Disruption, by contrast, avoids direct competition initially by targeting overlooked segments."
+    }
   ]
 }
