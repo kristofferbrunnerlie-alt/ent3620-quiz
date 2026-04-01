@@ -7805,6 +7805,7 @@ function startQuiz(moduleKey) {
 }
 
 function showQuestion() {
+  answered = false;
   var q = currentQuiz[currentIndex];
   document.getElementById('q-label').textContent = 'Question ' + (currentIndex + 1) + ' of ' + currentQuiz.length;
   document.getElementById('q-progress').textContent = (currentIndex + 1) + '/' + currentQuiz.length;
@@ -7829,7 +7830,10 @@ function showQuestion() {
   document.getElementById('feedback-msg').textContent = '';
 }
 
+var answered = false;
 function selectAnswer(selected) {
+  if (answered) return;
+  answered = true;
   var q = currentQuiz[currentIndex];
   var options = document.querySelectorAll('#q-options .option');
 
