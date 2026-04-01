@@ -7206,13 +7206,13 @@ var flashDecks = flashDeckKeys.map(function(key, i) {
 // ============================================================
 // PAYWALL & ACCESS CONTROL
 // ============================================================
-var STRIPE_LINK = "https://buy.stripe.com/test_14A3cx1SAcYhdWx2VL8Vi00";
+var STRIPE_LINK = "";
 var VALID_CODES = ["FRIEND2026", "BETA", "VEISDAL", "BI2026", "GRATIS"];
 var FREE_QUIZ_KEYS = ["Lecture 1: Introduction", "Lecture 2: Technology Evolution"];
 var FREE_FLASHCARD_INDICES = [3]; // "thinkers" deck (index 3)
 
 function hasAccess() {
-  return localStorage.getItem('ent3620_premium') === 'true';
+  return true; // All content free
 }
 
 function unlockPremium() {
