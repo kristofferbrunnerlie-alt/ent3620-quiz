@@ -6603,5 +6603,280 @@
       "correct": 1,
       "explanation": "Only 6% of sustaining entrants succeeded in the disk drive industry. This statistic highlights how difficult it is for new entrants to compete head-on with incumbents using sustaining innovations. Disruption, by contrast, avoids direct competition initially by targeting overlooked segments."
     }
+  ],
+  "Hard Mock Exam 3": [
+    {
+      "q": "Which of the following is NOT a reason Eli Lilly failed to respond to Novo Nordisk's insulin pen?",
+      "options": [
+        "Path dependency from 50+ years on the purity trajectory",
+        "Corporate identity built around pharmaceutical chemistry",
+        "Surveyed specialists (lead users) instead of mainstream patients",
+        "Lilly lacked the financial resources to develop a competing pen"
+      ],
+      "correct": 3,
+      "explanation": "Lilly invested nearly $1B in Humulin — money was not the problem. The real barriers were path dependency, a drug-company identity (not device), and marketing research biased toward high-end specialists who valued purity over convenience."
+    },
+    {
+      "q": "In the Abernathy-Utterback model, the rate of PROCESS innovation peaks:",
+      "options": [
+        "During the fluid phase, before a dominant design emerges",
+        "At the same time as product innovation",
+        "During the specific phase, after a dominant design emerges",
+        "During the transitional phase, around the time of dominant design emergence"
+      ],
+      "correct": 2,
+      "explanation": "In the A-U model, product innovation peaks during the fluid phase. After dominant design emerges (transitional phase), process innovation increases and peaks during the specific phase — firms shift focus from product variation to efficient production."
+    },
+    {
+      "q": "A firm discovers that its technology now exceeds what mainstream customers need, while a competitor offers a simpler alternative. This scenario describes:",
+      "options": [
+        "Creative destruction",
+        "Overshooting on the technology S-curve",
+        "A competence-destroying discontinuity",
+        "The chasm between early adopters and early majority"
+      ],
+      "correct": 1,
+      "explanation": "Overshooting occurs when a firm's technology trajectory exceeds mainstream customer needs, opening the door for simpler alternatives. This is distinct from creative destruction (replacement of industries), competence destruction (skills become obsolete), and the chasm (gap between adopter categories)."
+    },
+    {
+      "q": "According to Christensen (2015), the iPhone's launch in 2007 was disruptive to the smartphone market.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "correct": 1,
+      "explanation": "False. The iPhone launched as a SUSTAINING innovation in the smartphone market — it targeted the same customers as incumbents and competed on product superiority. Its subsequent growth was disruptive to LAPTOPS as primary internet access devices, not to smartphones."
+    },
+    {
+      "q": "Nokia's market capitalization fell from $250B to approximately:",
+      "options": [
+        "$7B",
+        "$23B",
+        "$43B",
+        "$98B"
+      ],
+      "correct": 2,
+      "explanation": "Nokia's market cap fell from $250B at its peak to ~$43B. This dramatic decline illustrates how even dominant firms can fail when technological discontinuities shift the basis of competition — in Nokia's case, from hardware to software/ecosystems."
+    },
+    {
+      "q": "Which is NOT one of Apple's three leadership characteristics according to Podolny & Hansen (2020)?",
+      "options": [
+        "Deep expertise — experts lead experts",
+        "Immersion in details three levels down",
+        "Willingness to collaboratively debate across functions",
+        "Strong P&L accountability for individual product lines"
+      ],
+      "correct": 3,
+      "explanation": "Apple explicitly does NOT use individual product P&L accountability — the entire company runs under ONE P&L. The three characteristics are: deep expertise, immersion in details, and willingness to collaboratively debate. R&D bonuses are based on companywide performance."
+    },
+    {
+      "q": "Moderna shipped its COVID vaccine candidate to the NIH within 42 days of the genome sequence being posted. The previous fastest vaccine development timeline was:",
+      "options": [
+        "6 months for H1N1",
+        "20 months for SARS",
+        "3 years for Ebola",
+        "5 years for HPV"
+      ],
+      "correct": 1,
+      "explanation": "The previous fastest was 20 MONTHS for SARS. Moderna achieved a 90% reduction in time (42 days vs 20 months). Their team finalized the vaccine design just 2 DAYS after the genome sequence was posted, first clinical batch manufactured by day 25."
+    },
+    {
+      "q": "In the VC model, the typical management fee and carry structure is:",
+      "options": [
+        "5% fee, 50% carry",
+        "2% fee, 20-30% carry",
+        "1% fee, 10% carry",
+        "10% fee, 15% carry"
+      ],
+      "correct": 1,
+      "explanation": "Standard VC economics: 2% annual management fee on committed capital + 20-30% carried interest (share of profits). VCs target 5-10x returns over ~7 years. The 0.4%→97% statistic shows extreme return skewness."
+    },
+    {
+      "q": "Selden's automobile patent case (1879-1911) is historically significant because Ford ultimately won by:",
+      "options": [
+        "Proving that Selden never built a working automobile",
+        "Showing that his car used a four-cycle engine, not Selden's patented Brayton two-stroke",
+        "Demonstrating that Selden's patent had expired",
+        "Lobbying Congress to change patent law"
+      ],
+      "correct": 1,
+      "explanation": "Ford lost the initial case but won on appeal by showing his cars used a different engine type (four-cycle) than what Selden's patent covered (Brayton two-stroke). Key lesson: broad patents can be circumvented through alternative technical approaches. AutoStore vs Ocado mirrors this same dynamic."
+    },
+    {
+      "q": "According to Christensen (2015), which statement about disruption is correct?",
+      "options": [
+        "Disruption is a product characteristic that can be identified at launch",
+        "All successful startups are disruptive by definition",
+        "Disruption is a process that can take decades to unfold",
+        "Disruptive innovations always succeed in the marketplace"
+      ],
+      "correct": 2,
+      "explanation": "Disruption is a PROCESS, not a product attribute at a fixed point. Discount department stores took 50+ years to fully challenge traditional ones. Some disruptive innovations succeed, some don't — success is not built into the definition. Not every successful newcomer follows a disruptive path."
+    },
+    {
+      "q": "The 'shakeout' phase of industry evolution typically eliminates approximately what percentage of firms?",
+      "options": [
+        "25%",
+        "40%",
+        "52%",
+        "75%"
+      ],
+      "correct": 2,
+      "explanation": "The shakeout typically eliminates ~52% of firms in an industry. This occurs after a dominant design emerges and the basis of competition shifts from product innovation to process efficiency and cost reduction."
+    },
+    {
+      "q": "An organic organizational structure is MOST appropriate when:",
+      "options": [
+        "The firm operates in a stable environment with routine tasks",
+        "The firm needs to explore new technologies in an uncertain environment",
+        "The firm is primarily focused on cost reduction and efficiency",
+        "The firm has achieved dominant market share in a mature industry"
+      ],
+      "correct": 1,
+      "explanation": "Organic structures (flat, decentralized, informal) suit uncertain environments where exploration and flexibility are needed. Mechanistic structures (hierarchical, centralized, formal) suit stable environments with routine tasks. Burns & Stalker's classic distinction."
+    },
+    {
+      "q": "Copyright protection is automatic upon creation and lasts for:",
+      "options": [
+        "20 years from filing date",
+        "Life of the creator plus 50 years",
+        "Life of the creator plus 70 years",
+        "10 years, renewable indefinitely"
+      ],
+      "correct": 2,
+      "explanation": "Copyright = automatic (no registration needed), lasts life + 70 years. Compare: patents = 20 years from filing (requires application), trademarks = 10 years (renewable). Copyright's automatic nature and long duration make it unique among IP protections."
+    },
+    {
+      "q": "Moderna's CSO Melissa Moore describes the company's platform using which analogy?",
+      "options": [
+        "mRNA is the factory; diseases are the products",
+        "mRNA is the software and LNPs are the hardware",
+        "mRNA is the fuel; the body is the engine",
+        "mRNA is the architect; proteins are the buildings"
+      ],
+      "correct": 1,
+      "explanation": "Moore: 'mRNA is the software and LNPs (lipid nanoparticles) are the hardware.' Also: 'mRNA is a platform like the iPhone; individual drugs are like apps.' This platform logic means if one drug works on mRNA, others can too — COVID was Moderna's 10th vaccine, not their first."
+    },
+    {
+      "q": "Which concept from Teece's appropriability framework determines whether an innovator can capture value from their innovation?",
+      "options": [
+        "The strength of the dominant design",
+        "The tightness of the appropriability regime and control of complementary assets",
+        "The number of patents filed",
+        "The size of the R&D budget relative to competitors"
+      ],
+      "correct": 1,
+      "explanation": "Teece argues that value capture depends on: (1) the tightness of the appropriability regime (how easy it is for others to imitate), and (2) control of complementary assets (manufacturing, distribution, brand). Having a great innovation means nothing if you can't appropriate the returns."
+    },
+    {
+      "q": "P&G's Connect and Develop strategy aimed to source innovation externally. Their R&D as a percentage of sales went from:",
+      "options": [
+        "2.1% to 4.8%",
+        "4.8% to 3.4%",
+        "6.2% to 4.8%",
+        "3.4% to 1.2%"
+      ],
+      "correct": 1,
+      "explanation": "P&G reduced R&D spending from 4.8% to 3.4% of sales while increasing innovation output through Connect and Develop. By sourcing ideas externally (from inventors, suppliers, competitors), they got more innovation for less internal R&D spending."
+    },
+    {
+      "q": "According to the course, approximately what percentage of commercially successful products originate from academic/university research?",
+      "options": [
+        "2%",
+        "11%",
+        "25%",
+        "40%"
+      ],
+      "correct": 1,
+      "explanation": "Only about 11% of commercially successful products trace back to academic research. This highlights that most innovation comes from firms, individual inventors, and other sources rather than universities — though universities remain important for breakthrough discoveries."
+    },
+    {
+      "q": "The Metaverse case uses which historical example to illustrate that technical feasibility does not guarantee commercial viability?",
+      "options": [
+        "Google Glass",
+        "The Segway",
+        "Concorde supersonic jet",
+        "3D television"
+      ],
+      "correct": 2,
+      "explanation": "The Concorde is used as the key parallel: supersonic travel was technically feasible (it worked!) but commercially unviable. The metaverse faces the same question — just because VR technology works doesn't mean it will be commercially successful at scale."
+    },
+    {
+      "q": "In a decision tree analysis, the key limitation compared to other project selection tools is that:",
+      "options": [
+        "It cannot handle more than two outcomes",
+        "It restricts decisions to information available at the current stage",
+        "It requires perfect information about all future outcomes",
+        "It only works for incremental innovations"
+      ],
+      "correct": 1,
+      "explanation": "Decision trees limit you to using information available at the current decision point — you make sequential decisions as uncertainty resolves. This contrasts with tools like NPV that try to estimate all future cash flows upfront, or real options that value the flexibility to abandon."
+    },
+    {
+      "q": "Adverse selection in innovation financing refers to:",
+      "options": [
+        "Investors choosing projects with the highest risk",
+        "Investors being unable to distinguish good projects from bad ones before investing",
+        "Entrepreneurs deliberately choosing investors with the least oversight",
+        "Banks selecting only large firms for innovation loans"
+      ],
+      "correct": 1,
+      "explanation": "Adverse selection = PRE-investment information asymmetry. Investors can't tell good projects from bad, so they may underfund good innovations or overfund bad ones. Moral hazard is POST-investment — the entrepreneur may change behavior after receiving funding. Both are key problems in financing innovation."
+    },
+    {
+      "q": "According to Shane, which of the following is NOT one of the four policies for linking research to development?",
+      "options": [
+        "Financial incentives for researchers who contribute to development",
+        "Having researchers use the same equipment as developers",
+        "Exposing researchers to the development process",
+        "Hiring external consultants to bridge the research-development gap"
+      ],
+      "correct": 3,
+      "explanation": "Shane's four R&D linking policies (p.88): (1) financial incentives, (2) same equipment, (3) expose to development, (4) fit with strategy. External consultants are NOT one of the four. These policies help prevent the common disconnect between research discoveries and commercial development."
+    },
+    {
+      "q": "Moderna's IPO in December 2018 was notable because:",
+      "options": [
+        "It was the first biotech IPO on NASDAQ",
+        "The company was already profitable",
+        "It was the biggest biotech IPO in history at $7.5B valuation",
+        "The stock price doubled on the first day"
+      ],
+      "correct": 2,
+      "explanation": "Moderna's IPO at $7.5B was the biggest biotech IPO in history at that time — remarkable for a company with $60.2M revenue and $514M net loss in 2019. They had raised $5.1B total, including $750M from strategic partners. The valuation reflected belief in the mRNA platform potential."
+    },
+    {
+      "q": "Creative accumulation differs from creative destruction in that:",
+      "options": [
+        "Creative accumulation occurs only in service industries",
+        "Incumbents build on existing knowledge rather than being replaced by newcomers",
+        "Creative accumulation is slower and always produces inferior innovations",
+        "Creative accumulation requires government subsidies"
+      ],
+      "correct": 1,
+      "explanation": "Creative destruction (Schumpeter Mark I): new entrants destroy incumbents with radical innovations. Creative accumulation (Schumpeter Mark II): incumbents leverage existing knowledge, resources, and R&D to drive innovation — building on what exists rather than replacing it. Both patterns coexist in different industries."
+    },
+    {
+      "q": "According to Christensen (2015), incumbents facing disruption should:",
+      "options": [
+        "Immediately pivot the entire organization toward the disruptive technology",
+        "Ignore the disruption and focus solely on profitable core customers",
+        "Continue sustaining innovation in the core business AND create a separate division for the disruptive opportunity",
+        "Acquire the disruptive entrant to eliminate the threat"
+      ],
+      "correct": 2,
+      "explanation": "Christensen recommends BOTH: keep investing in sustaining innovations for core customers (don't dismantle a profitable business) AND create a separate division for the disruptive opportunity. The key is keeping the new division separate. 'Disrupt or be disrupted' can misguide if it leads to abandoning a still-profitable core."
+    },
+    {
+      "q": "The adopter category that represents 13.5% of the market and is characterized by being opinion leaders who are respected by peers but more deliberate than innovators is:",
+      "options": [
+        "Innovators",
+        "Early adopters",
+        "Early majority",
+        "Late majority"
+      ],
+      "correct": 1,
+      "explanation": "Early adopters = 13.5%. They are opinion leaders respected by peers, more integrated in the social system than innovators (2.5%), but more willing to take risks than the early majority (34%). The full distribution: innovators 2.5%, early adopters 13.5%, early majority 34%, late majority 34%, laggards 16%."
+    }
   ]
 }
