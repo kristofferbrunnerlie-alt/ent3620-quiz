@@ -7420,6 +7420,17 @@
       ],
       "correct": 1,
       "explanation": "Late majority (34%) adopts out of economic necessity or peer pressure — NOT enthusiasm. They are skeptical and risk-averse, waiting until a technology is well-established. Innovators (2.5%) take risks. Early adopters (13.5%) are opinion leaders. Laggards (16%) resist until forced."
+    },
+    {
+      "q": "Eli Lilly's marketers surveyed endocrinologists to assess demand for Humulin. According to the case, this was a critical error because:",
+      "options": [
+        "Endocrinologists had no knowledge of insulin products",
+        "Endocrinologists represented the most demanding lead users, not the mainstream market",
+        "The survey sample size was too small",
+        "Endocrinologists recommended Novo Nordisk's pen instead"
+      ],
+      "correct": 1,
+      "explanation": "Endocrinologists were the MOST DEMANDING, HIGH-END customers who emphasized the need for pure human insulin. But mainstream patients (and their GPs) were 'pretty happy with pork insulin' at 10 ppm. Lilly made the classic Christensen mistake: listening to lead users and overshooting mainstream needs."
     }
   ]
 }
