@@ -3,15 +3,15 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-<title>ENT3620 — Innovation Strategy Study Hub</title>
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎯</text></svg>">
+<title>ENT3620 — Innovation Strategy Study Hub 🐣</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🐣</text></svg>">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 <style>
   * { box-sizing: border-box; margin: 0; padding: 0; }
 
   body {
     font-family: 'Inter', -apple-system, sans-serif;
-    background: #0a0a0f;
+    background: #1a1025;
     color: #e4e4e7;
     min-height: 100vh;
     overflow-x: hidden;
@@ -33,16 +33,36 @@
     opacity: 0.15;
     animation: float 20s ease-in-out infinite;
   }
-  .orb-1 { width: 600px; height: 600px; background: #8b5cf6; top: -10%; left: -10%; animation-delay: 0s; }
-  .orb-2 { width: 500px; height: 500px; background: #06b6d4; bottom: -10%; right: -10%; animation-delay: -7s; }
-  .orb-3 { width: 400px; height: 400px; background: #ec4899; top: 50%; left: 50%; animation-delay: -14s; }
-  .orb-4 { width: 300px; height: 300px; background: #10b981; top: 20%; right: 20%; animation-delay: -3s; animation-duration: 25s; }
+  .orb-1 { width: 600px; height: 600px; background: #a855f7; top: -10%; left: -10%; animation: floatOrb1 18s ease-in-out infinite; opacity: 0.25; }
+  .orb-2 { width: 500px; height: 500px; background: #34d399; bottom: -10%; right: -10%; animation: floatOrb2 22s ease-in-out infinite; opacity: 0.2; }
+  .orb-3 { width: 400px; height: 400px; background: #fb7185; top: 50%; left: 50%; animation: floatOrb3 20s ease-in-out infinite; opacity: 0.2; }
+  .orb-4 { width: 300px; height: 300px; background: #fbbf24; top: 20%; right: 20%; animation: floatOrb4 25s ease-in-out infinite; opacity: 0.2; }
 
   @keyframes float {
     0%, 100% { transform: translate(0, 0) scale(1); }
     25% { transform: translate(80px, -60px) scale(1.1); }
     50% { transform: translate(-40px, 80px) scale(0.9); }
     75% { transform: translate(60px, 40px) scale(1.05); }
+  }
+  @keyframes floatOrb1 {
+    0%, 100% { transform: translate(0, 0) scale(1); background: #a855f7; }
+    33% { transform: translate(120px, -80px) scale(1.2); background: #ec4899; }
+    66% { transform: translate(-60px, 100px) scale(0.85); background: #8b5cf6; }
+  }
+  @keyframes floatOrb2 {
+    0%, 100% { transform: translate(0, 0) scale(1); background: #34d399; }
+    33% { transform: translate(-100px, -70px) scale(1.15); background: #4ade80; }
+    66% { transform: translate(80px, 60px) scale(0.9); background: #2dd4bf; }
+  }
+  @keyframes floatOrb3 {
+    0%, 100% { transform: translate(0, 0) scale(1); background: #fb7185; }
+    33% { transform: translate(90px, -100px) scale(1.1); background: #f472b6; }
+    66% { transform: translate(-70px, 50px) scale(0.95); background: #fda4af; }
+  }
+  @keyframes floatOrb4 {
+    0%, 100% { transform: translate(0, 0) scale(1); background: #fbbf24; }
+    33% { transform: translate(-80px, 90px) scale(1.15); background: #f97316; }
+    66% { transform: translate(60px, -40px) scale(0.9); background: #facc15; }
   }
 
   /* Grid lines background */
@@ -77,12 +97,12 @@
     align-items: center;
     gap: 8px;
     padding: 6px 16px;
-    background: rgba(139,92,246,0.1);
-    border: 1px solid rgba(139,92,246,0.2);
+    background: rgba(168,85,247,0.15);
+    border: 1px solid rgba(168,85,247,0.3);
     border-radius: 20px;
     font-size: 12px;
     font-weight: 600;
-    color: #a78bfa;
+    color: #c084fc;
     margin-bottom: 16px;
     letter-spacing: 0.5px;
     text-transform: uppercase;
@@ -91,14 +111,14 @@
     font-size: 36px;
     font-weight: 900;
     letter-spacing: -1px;
-    background: linear-gradient(135deg, #e4e4e7 0%, #a78bfa 50%, #06b6d4 100%);
+    background: linear-gradient(135deg, #c084fc 0%, #fb7185 50%, #fbbf24 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
     margin-bottom: 8px;
   }
   .header p {
-    color: #71717a;
+    color: #a1a1aa;
     font-size: 15px;
     font-weight: 500;
   }
@@ -117,7 +137,7 @@
   .h-stat-val {
     font-size: 24px;
     font-weight: 800;
-    color: #a78bfa;
+    color: #c084fc;
   }
   .h-stat-label {
     font-size: 11px;
@@ -157,9 +177,9 @@
     min-height: 44px;
   }
   .tab-btn.active {
-    background: linear-gradient(135deg, #8b5cf6, #6366f1);
+    background: linear-gradient(135deg, #a855f7, #ec4899);
     color: #fff;
-    box-shadow: 0 4px 15px rgba(139,92,246,0.3);
+    box-shadow: 0 4px 15px rgba(168,85,247,0.4);
   }
   .tab-btn:hover:not(.active) { color: #a1a1aa; }
   .tab-btn .tab-emoji { margin-right: 8px; }
@@ -209,14 +229,14 @@
     position: absolute;
     top: 0; left: 0; right: 0;
     height: 2px;
-    background: linear-gradient(90deg, transparent, #8b5cf6, transparent);
+    background: linear-gradient(90deg, transparent, #c084fc, #fb7185, transparent);
     opacity: 0;
     transition: opacity 0.3s;
   }
   .module-card:hover {
-    border-color: #8b5cf640;
+    border-color: #7c3aed40;
     transform: translateY(-2px);
-    box-shadow: 0 8px 30px rgba(139,92,246,0.08);
+    box-shadow: 0 8px 30px rgba(168,85,247,0.12);
   }
   .module-card:hover::before { opacity: 1; }
   .module-card:active { transform: translateY(0); }
@@ -251,9 +271,9 @@
     padding: 2px 8px;
     border-radius: 6px;
   }
-  .mod-best.good { color: #22c55e; background: #22c55e15; }
-  .mod-best.ok { color: #eab308; background: #eab30815; }
-  .mod-best.bad { color: #ef4444; background: #ef444415; }
+  .mod-best.good { color: #4ade80; background: #22c55e15; }
+  .mod-best.ok { color: #fbbf24; background: #eab30815; }
+  .mod-best.bad { color: #fb7185; background: #ef444415; }
   .mod-attempts { color: #52525b; }
 
   /* Flashcard deck cards */
@@ -271,9 +291,9 @@
     min-height: 44px;
   }
   .deck-card:hover {
-    border-color: #06b6d440;
+    border-color: #c084fc40;
     transform: translateY(-3px);
-    box-shadow: 0 12px 40px rgba(6,182,212,0.08);
+    box-shadow: 0 12px 40px rgba(168,85,247,0.1);
   }
   .deck-card:active { transform: translateY(0); }
   .deck-icon { font-size: 36px; margin-bottom: 12px; }
@@ -289,7 +309,7 @@
   }
   .deck-progress-fill {
     height: 100%;
-    background: linear-gradient(90deg, #06b6d4, #8b5cf6);
+    background: linear-gradient(90deg, #4ade80, #c084fc);
     border-radius: 2px;
     transition: width 0.5s ease;
   }
@@ -328,7 +348,7 @@
   }
   .section-toggle:hover {
     background: rgba(30,30,35,0.8);
-    border-color: #3f3f46;
+    border-color: #7c3aed40;
   }
   .section-toggle-left {
     display: flex;
@@ -377,7 +397,7 @@
     font-size: 12px;
   }
   .footer a { color: #71717a; text-decoration: none; }
-  .footer a:hover { color: #a78bfa; }
+  .footer a:hover { color: #c084fc; }
 
   /* ============================================================ */
   /* QUIZ STATE STYLES */
@@ -410,13 +430,13 @@
     display: flex;
     align-items: center;
   }
-  .quiz-back-btn:hover { border-color: #a1a1aa; color: #e4e4e7; }
+  .quiz-back-btn:hover { border-color: #c084fc; color: #e4e4e7; }
   .quiz-progress-text {
     font-size: 14px;
     color: #71717a;
   }
   .quiz-progress-text .q-score-val {
-    color: #22c55e;
+    color: #4ade80;
     font-weight: 700;
   }
 
@@ -430,7 +450,7 @@
   }
   .progress-bar .fill {
     height: 100%;
-    background: linear-gradient(90deg, #8b5cf6, #06b6d4);
+    background: linear-gradient(90deg, #a855f7, #fb7185);
     border-radius: 3px;
     transition: width 0.3s ease;
   }
@@ -444,12 +464,12 @@
     min-height: 32px;
   }
   .streak-badge {
-    background: rgba(139,92,246,0.15);
-    border: 1px solid rgba(139,92,246,0.3);
+    background: rgba(192,132,252,0.15);
+    border: 1px solid rgba(192,132,252,0.3);
     border-radius: 8px;
     padding: 6px 12px;
     font-size: 13px;
-    color: #a78bfa;
+    color: #c084fc;
     font-weight: 600;
     display: none;
   }
@@ -460,14 +480,14 @@
     animation: pulse 0.5s ease;
   }
   .streak-badge.fire {
-    background: rgba(234,179,8,0.15);
-    border-color: rgba(234,179,8,0.3);
-    color: #eab308;
+    background: rgba(251,191,36,0.15);
+    border-color: rgba(251,191,36,0.3);
+    color: #fbbf24;
   }
   .streak-badge.super {
-    background: rgba(239,68,68,0.15);
-    border-color: rgba(239,68,68,0.3);
-    color: #ef4444;
+    background: rgba(251,113,133,0.15);
+    border-color: rgba(251,113,133,0.3);
+    color: #fb7185;
     animation: glow 1s ease infinite alternate;
   }
 
@@ -509,7 +529,7 @@
 
   .question-num {
     font-size: 12px;
-    color: #8b5cf6;
+    color: #c084fc;
     text-transform: uppercase;
     letter-spacing: 1px;
     margin-bottom: 8px;
@@ -542,19 +562,19 @@
     backdrop-filter: blur(8px);
   }
   .option:hover:not(.disabled) {
-    border-color: #8b5cf6;
-    background: rgba(139,92,246,0.08);
+    border-color: #c084fc;
+    background: rgba(168,85,247,0.1);
   }
   .option:active:not(.disabled) {
     transform: scale(0.98);
   }
   .option.correct {
-    border-color: #22c55e;
+    border-color: #4ade80;
     background: rgba(34,197,94,0.1);
     animation: correctFlash 0.6s ease;
   }
   .option.wrong {
-    border-color: #ef4444;
+    border-color: #fb7185;
     background: rgba(239,68,68,0.1);
     animation: wrongShake 0.4s ease;
   }
@@ -579,7 +599,7 @@
 
   .next-btn {
     margin-top: 20px;
-    background: linear-gradient(135deg, #8b5cf6, #6366f1);
+    background: linear-gradient(135deg, #a855f7, #ec4899);
     color: #fff;
     border: none;
     padding: 16px 28px;
@@ -607,7 +627,7 @@
   .big-score {
     font-size: 72px;
     font-weight: 900;
-    background: linear-gradient(135deg, #22c55e, #06b6d4);
+    background: linear-gradient(135deg, #22c55e, #a855f7);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -634,7 +654,7 @@
     color: #a1a1aa;
   }
   .result-btn {
-    background: linear-gradient(135deg, #8b5cf6, #6366f1);
+    background: linear-gradient(135deg, #a855f7, #fb7185);
     color: #fff;
     border: none;
     padding: 14px 28px;
@@ -655,7 +675,7 @@
     border: 1px solid #3f3f46;
     color: #a1a1aa;
   }
-  .result-btn.secondary:hover { border-color: #a1a1aa; color: #e4e4e7; }
+  .result-btn.secondary:hover { border-color: #c084fc; color: #e4e4e7; }
 
   .wrong-review {
     text-align: left;
@@ -665,7 +685,7 @@
   }
   .wrong-review h3 {
     margin-bottom: 16px;
-    color: #ef4444;
+    color: #fb7185;
     font-size: 16px;
   }
   .wrong-item {
@@ -676,10 +696,82 @@
     margin-bottom: 12px;
   }
   .wrong-item .wq { font-weight: 600; margin-bottom: 8px; font-size: 14px; }
-  .wrong-item .wa { color: #ef4444; font-size: 13px; }
-  .wrong-item .wc { color: #22c55e; font-size: 13px; margin-top: 4px; }
+  .wrong-item .wa { color: #fb7185; font-size: 13px; }
+  .wrong-item .wc { color: #4ade80; font-size: 13px; margin-top: 4px; }
 
   .hidden { display: none !important; }
+
+  /* ============================================================ */
+  /* EASTER THEME */
+  /* ============================================================ */
+  .easter-bunny {
+    position: fixed;
+    bottom: 10px;
+    right: 15px;
+    width: 180px;
+    height: 220px;
+    z-index: 2;
+    animation: bunnyBounce 2s ease-in-out infinite;
+    filter: drop-shadow(0 10px 25px rgba(0,0,0,0.4));
+    cursor: pointer;
+    user-select: none;
+  }
+  @media (max-width: 640px) {
+    .easter-bunny { width: 110px; height: 140px; bottom: 5px; right: 8px; }
+  }
+  .easter-bunny:hover {
+    animation: bunnyWiggle 0.5s ease-in-out;
+  }
+  @keyframes bunnyBounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-18px); }
+  }
+  @keyframes bunnyWiggle {
+    0%, 100% { transform: rotate(0deg) scale(1); }
+    25% { transform: rotate(-12deg) scale(1.1); }
+    75% { transform: rotate(12deg) scale(1.1); }
+  }
+
+  .easter-egg-float {
+    position: fixed;
+    pointer-events: none;
+    z-index: 1;
+    animation: eggFloat linear infinite;
+    opacity: 0.5;
+  }
+  @keyframes eggFloat {
+    0% { transform: translateY(110vh) rotate(0deg); opacity: 0; }
+    10% { opacity: 0.5; }
+    90% { opacity: 0.5; }
+    100% { transform: translateY(-10vh) rotate(360deg); opacity: 0; }
+  }
+
+  .easter-grass {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    z-index: 1;
+    pointer-events: none;
+    background: linear-gradient(to top, rgba(34,197,94,0.25) 0%, rgba(74,222,128,0.1) 50%, transparent 100%);
+  }
+
+  .easter-deco-egg {
+    position: fixed;
+    pointer-events: none;
+    z-index: 0;
+    opacity: 0.12;
+    animation: decoEggBob 8s ease-in-out infinite;
+  }
+  .easter-deco-egg:nth-child(1) { top: 8%; left: -3%; animation-delay: 0s; }
+  .easter-deco-egg:nth-child(2) { top: 15%; right: -4%; animation-delay: -3s; transform: rotate(25deg); }
+  .easter-deco-egg:nth-child(3) { bottom: 18%; left: 5%; animation-delay: -5s; transform: rotate(-15deg); }
+  .easter-deco-egg:nth-child(4) { top: 55%; right: 2%; animation-delay: -2s; transform: rotate(10deg); }
+  @keyframes decoEggBob {
+    0%, 100% { transform: translateY(0) rotate(var(--rot, 0deg)); }
+    50% { transform: translateY(-12px) rotate(var(--rot, 0deg)); }
+  }
 
   /* ============================================================ */
   /* MOBILE RESPONSIVE */
@@ -721,6 +813,95 @@
   <div class="orb orb-4"></div>
 </div>
 <div class="grid-bg"></div>
+<!-- Large decorative Easter eggs -->
+<div class="easter-deco-egg" style="--rot:-10deg;">
+  <svg width="180" height="230" viewBox="0 0 80 104" xmlns="http://www.w3.org/2000/svg">
+    <ellipse cx="40" cy="52" rx="36" ry="48" fill="#3b82f6"/>
+    <path d="M8 35 L16 28 L24 35 L32 28 L40 35 L48 28 L56 35 L64 28 L72 35" stroke="#fbbf24" stroke-width="4" fill="none" stroke-linecap="round"/>
+    <path d="M6 55 L14 48 L22 55 L30 48 L38 55 L46 48 L54 55 L62 48 L74 55" stroke="#fbbf24" stroke-width="4" fill="none" stroke-linecap="round"/>
+    <circle cx="20" cy="72" r="5" fill="#fff" opacity="0.3"/>
+    <circle cx="40" cy="75" r="5" fill="#fff" opacity="0.3"/>
+    <circle cx="60" cy="72" r="5" fill="#fff" opacity="0.3"/>
+  </svg>
+</div>
+<div class="easter-deco-egg" style="--rot:20deg;">
+  <svg width="160" height="200" viewBox="0 0 80 104" xmlns="http://www.w3.org/2000/svg">
+    <ellipse cx="40" cy="52" rx="36" ry="48" fill="#f87171"/>
+    <path d="M10 30 Q25 22 40 30 Q55 38 70 30" stroke="#fff" stroke-width="3.5" fill="none"/>
+    <path d="M10 50 Q25 42 40 50 Q55 58 70 50" stroke="#fff" stroke-width="3.5" fill="none"/>
+    <path d="M12 70 Q27 62 40 70 Q53 78 68 70" stroke="#fff" stroke-width="3.5" fill="none"/>
+    <circle cx="25" cy="40" r="4" fill="#fbbf24" opacity="0.7"/>
+    <circle cx="55" cy="40" r="4" fill="#fbbf24" opacity="0.7"/>
+    <circle cx="40" cy="60" r="4" fill="#fbbf24" opacity="0.7"/>
+  </svg>
+</div>
+<div class="easter-deco-egg" style="--rot:-18deg;">
+  <svg width="150" height="190" viewBox="0 0 80 104" xmlns="http://www.w3.org/2000/svg">
+    <ellipse cx="40" cy="52" rx="36" ry="48" fill="#4ade80"/>
+    <line x1="8" y1="30" x2="72" y2="30" stroke="#fff" stroke-width="5" opacity="0.4" stroke-linecap="round"/>
+    <line x1="5" y1="50" x2="75" y2="50" stroke="#fff" stroke-width="5" opacity="0.4" stroke-linecap="round"/>
+    <line x1="8" y1="70" x2="72" y2="70" stroke="#fff" stroke-width="5" opacity="0.4" stroke-linecap="round"/>
+    <circle cx="20" cy="40" r="6" fill="#fbbf24" opacity="0.6"/>
+    <circle cx="50" cy="40" r="6" fill="#fb7185" opacity="0.6"/>
+    <circle cx="35" cy="60" r="6" fill="#a855f7" opacity="0.6"/>
+    <circle cx="60" cy="60" r="6" fill="#60a5fa" opacity="0.6"/>
+  </svg>
+</div>
+<div class="easter-deco-egg" style="--rot:12deg;">
+  <svg width="140" height="180" viewBox="0 0 80 104" xmlns="http://www.w3.org/2000/svg">
+    <ellipse cx="40" cy="52" rx="36" ry="48" fill="#fbbf24"/>
+    <circle cx="20" cy="25" r="5" fill="#fff" opacity="0.5"/>
+    <circle cx="40" cy="20" r="5" fill="#fff" opacity="0.5"/>
+    <circle cx="60" cy="25" r="5" fill="#fff" opacity="0.5"/>
+    <circle cx="15" cy="45" r="5" fill="#fff" opacity="0.5"/>
+    <circle cx="40" cy="42" r="5" fill="#fff" opacity="0.5"/>
+    <circle cx="65" cy="45" r="5" fill="#fff" opacity="0.5"/>
+    <circle cx="20" cy="65" r="5" fill="#fff" opacity="0.5"/>
+    <circle cx="40" cy="62" r="5" fill="#fff" opacity="0.5"/>
+    <circle cx="60" cy="65" r="5" fill="#fff" opacity="0.5"/>
+    <circle cx="30" cy="80" r="5" fill="#fff" opacity="0.5"/>
+    <circle cx="50" cy="80" r="5" fill="#fff" opacity="0.5"/>
+  </svg>
+</div>
+
+<div class="easter-grass"></div>
+<div class="easter-bunny" id="easter-bunny" title="God paske!">
+  <svg viewBox="0 0 120 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <!-- Ears -->
+    <ellipse cx="42" cy="35" rx="14" ry="40" fill="#f0e0d0" stroke="#d4a88c" stroke-width="1.5"/>
+    <ellipse cx="42" cy="35" rx="8" ry="30" fill="#fda4af"/>
+    <ellipse cx="78" cy="35" rx="14" ry="40" fill="#f0e0d0" stroke="#d4a88c" stroke-width="1.5"/>
+    <ellipse cx="78" cy="35" rx="8" ry="30" fill="#fda4af"/>
+    <!-- Body -->
+    <ellipse cx="60" cy="120" rx="32" ry="30" fill="#f5f0eb"/>
+    <!-- Head -->
+    <circle cx="60" cy="82" r="30" fill="#f5f0eb" stroke="#e8ddd4" stroke-width="1"/>
+    <!-- Cheeks -->
+    <circle cx="42" cy="88" r="8" fill="#fda4af" opacity="0.4"/>
+    <circle cx="78" cy="88" r="8" fill="#fda4af" opacity="0.4"/>
+    <!-- Eyes -->
+    <circle cx="50" cy="78" r="5" fill="#2d2d3f"/>
+    <circle cx="70" cy="78" r="5" fill="#2d2d3f"/>
+    <circle cx="52" cy="76" r="2" fill="white"/>
+    <circle cx="72" cy="76" r="2" fill="white"/>
+    <!-- Nose -->
+    <ellipse cx="60" cy="87" rx="4" ry="3" fill="#fb7185"/>
+    <!-- Mouth -->
+    <path d="M56 91 Q60 96 64 91" stroke="#d4a88c" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+    <!-- Whiskers -->
+    <line x1="30" y1="85" x2="45" y2="87" stroke="#d4a88c" stroke-width="1" opacity="0.5"/>
+    <line x1="30" y1="90" x2="45" y2="90" stroke="#d4a88c" stroke-width="1" opacity="0.5"/>
+    <line x1="75" y1="87" x2="90" y2="85" stroke="#d4a88c" stroke-width="1" opacity="0.5"/>
+    <line x1="75" y1="90" x2="90" y2="90" stroke="#d4a88c" stroke-width="1" opacity="0.5"/>
+    <!-- Feet -->
+    <ellipse cx="45" cy="148" rx="14" ry="8" fill="#f5f0eb" stroke="#e8ddd4" stroke-width="1"/>
+    <ellipse cx="75" cy="148" rx="14" ry="8" fill="#f5f0eb" stroke="#e8ddd4" stroke-width="1"/>
+    <!-- Bow tie -->
+    <polygon points="52,105 60,110 60,104" fill="#a855f7"/>
+    <polygon points="68,105 60,110 60,104" fill="#c084fc"/>
+    <circle cx="60" cy="107" r="3" fill="#7c3aed"/>
+  </svg>
+</div>
 
 <div class="wrapper">
   <!-- ============================================================ -->
@@ -729,8 +910,8 @@
   <div id="menu-state">
     <div class="header">
       <div class="header-badge">BI Norwegian Business School</div>
-      <h1>ENT3620 Study Hub</h1>
-      <p>Innovation Strategy & Technological Change</p>
+      <h1>ENT3620 Study Hub 🐣</h1>
+      <p>God Paske! Innovation Strategy & Technological Change</p>
       <div class="header-stats" id="header-stats"></div>
       <div id="unlock-btn-container" style="margin-top:16px;"></div>
     </div>
@@ -820,7 +1001,7 @@
     </div>
 
     <div class="footer">
-      Built for ENT3620 exam prep — <a href="https://github.com/kristofferbrunnerlie-alt/ent3620-quiz" target="_blank">GitHub</a>
+      🐣 God paske! Built for ENT3620 exam prep — <a href="https://github.com/kristofferbrunnerlie-alt/ent3620-quiz" target="_blank">GitHub</a>
     </div>
   </div>
 
@@ -1750,6 +1931,96 @@ function renderUnlockBtn() {
   }
 }
 renderUnlockBtn();
+
+// ============================================================
+// EASTER THEME — floating decorated SVG eggs & bunny interaction
+// ============================================================
+(function() {
+  var eggPatterns = [
+    // Purple with zigzag
+    function(w) {
+      return '<svg width="'+w+'" height="'+(w*1.3)+'" viewBox="0 0 40 52" xmlns="http://www.w3.org/2000/svg">' +
+        '<ellipse cx="20" cy="26" rx="18" ry="24" fill="#a855f7"/>' +
+        '<path d="M5 20 L10 15 L15 20 L20 15 L25 20 L30 15 L35 20" stroke="#fbbf24" stroke-width="2.5" fill="none" stroke-linecap="round"/>' +
+        '<path d="M5 30 L10 25 L15 30 L20 25 L25 30 L30 25 L35 30" stroke="#fbbf24" stroke-width="2.5" fill="none" stroke-linecap="round"/>' +
+        '<ellipse cx="20" cy="10" rx="8" ry="4" fill="#c084fc" opacity="0.5"/></svg>';
+    },
+    // Pink with dots
+    function(w) {
+      return '<svg width="'+w+'" height="'+(w*1.3)+'" viewBox="0 0 40 52" xmlns="http://www.w3.org/2000/svg">' +
+        '<ellipse cx="20" cy="26" rx="18" ry="24" fill="#fb7185"/>' +
+        '<circle cx="12" cy="18" r="3" fill="#fff" opacity="0.7"/>' +
+        '<circle cx="28" cy="18" r="3" fill="#fff" opacity="0.7"/>' +
+        '<circle cx="20" cy="26" r="3" fill="#fff" opacity="0.7"/>' +
+        '<circle cx="12" cy="34" r="3" fill="#fff" opacity="0.7"/>' +
+        '<circle cx="28" cy="34" r="3" fill="#fff" opacity="0.7"/>' +
+        '<ellipse cx="20" cy="10" rx="8" ry="4" fill="#fda4af" opacity="0.5"/></svg>';
+    },
+    // Green with stripes
+    function(w) {
+      return '<svg width="'+w+'" height="'+(w*1.3)+'" viewBox="0 0 40 52" xmlns="http://www.w3.org/2000/svg">' +
+        '<ellipse cx="20" cy="26" rx="18" ry="24" fill="#4ade80"/>' +
+        '<line x1="6" y1="16" x2="34" y2="16" stroke="#fff" stroke-width="3" opacity="0.5" stroke-linecap="round"/>' +
+        '<line x1="4" y1="26" x2="36" y2="26" stroke="#fff" stroke-width="3" opacity="0.5" stroke-linecap="round"/>' +
+        '<line x1="6" y1="36" x2="34" y2="36" stroke="#fff" stroke-width="3" opacity="0.5" stroke-linecap="round"/>' +
+        '<ellipse cx="20" cy="10" rx="8" ry="4" fill="#86efac" opacity="0.5"/></svg>';
+    },
+    // Yellow with waves
+    function(w) {
+      return '<svg width="'+w+'" height="'+(w*1.3)+'" viewBox="0 0 40 52" xmlns="http://www.w3.org/2000/svg">' +
+        '<ellipse cx="20" cy="26" rx="18" ry="24" fill="#fbbf24"/>' +
+        '<path d="M5 18 Q12 14 20 18 Q28 22 35 18" stroke="#f97316" stroke-width="2.5" fill="none"/>' +
+        '<path d="M5 28 Q12 24 20 28 Q28 32 35 28" stroke="#f97316" stroke-width="2.5" fill="none"/>' +
+        '<path d="M7 38 Q14 34 20 38 Q26 42 33 38" stroke="#f97316" stroke-width="2.5" fill="none"/>' +
+        '<ellipse cx="20" cy="10" rx="8" ry="4" fill="#fde68a" opacity="0.5"/></svg>';
+    },
+    // Blue with stars
+    function(w) {
+      return '<svg width="'+w+'" height="'+(w*1.3)+'" viewBox="0 0 40 52" xmlns="http://www.w3.org/2000/svg">' +
+        '<ellipse cx="20" cy="26" rx="18" ry="24" fill="#60a5fa"/>' +
+        '<text x="12" y="22" font-size="10" fill="#fff" opacity="0.8">&#9733;</text>' +
+        '<text x="24" y="30" font-size="8" fill="#fff" opacity="0.6">&#9733;</text>' +
+        '<text x="10" y="38" font-size="7" fill="#fff" opacity="0.7">&#9733;</text>' +
+        '<text x="26" y="16" font-size="6" fill="#fff" opacity="0.6">&#9733;</text>' +
+        '<ellipse cx="20" cy="10" rx="8" ry="4" fill="#93c5fd" opacity="0.5"/></svg>';
+    },
+    // Red with chevrons
+    function(w) {
+      return '<svg width="'+w+'" height="'+(w*1.3)+'" viewBox="0 0 40 52" xmlns="http://www.w3.org/2000/svg">' +
+        '<ellipse cx="20" cy="26" rx="18" ry="24" fill="#f87171"/>' +
+        '<path d="M8 18 L20 24 L32 18" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round"/>' +
+        '<path d="M8 28 L20 34 L32 28" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round"/>' +
+        '<ellipse cx="20" cy="10" rx="8" ry="4" fill="#fca5a5" opacity="0.5"/></svg>';
+    }
+  ];
+
+  function spawnEgg() {
+    var egg = document.createElement('div');
+    egg.className = 'easter-egg-float';
+    var size = 28 + Math.floor(Math.random() * 20);
+    var patternFn = eggPatterns[Math.floor(Math.random() * eggPatterns.length)];
+    egg.innerHTML = patternFn(size);
+    egg.style.left = (Math.random() * 90 + 5) + '%';
+    egg.style.animationDuration = (14 + Math.random() * 14) + 's';
+    egg.style.animationDelay = (Math.random() * 2) + 's';
+    document.body.appendChild(egg);
+    setTimeout(function() { egg.remove(); }, 32000);
+  }
+
+  for (var i = 0; i < 4; i++) {
+    setTimeout(spawnEgg, i * 2500);
+  }
+  setInterval(spawnEgg, 6000);
+
+  var bunny = document.getElementById('easter-bunny');
+  if (bunny) {
+    bunny.addEventListener('click', function() {
+      for (var j = 0; j < 6; j++) {
+        setTimeout(spawnEgg, j * 200);
+      }
+    });
+  }
+})();
 </script>
 </body>
 </html>
