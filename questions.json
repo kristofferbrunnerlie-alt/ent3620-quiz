@@ -6878,5 +6878,548 @@
       "correct": 1,
       "explanation": "Early adopters = 13.5%. They are opinion leaders respected by peers, more integrated in the social system than innovators (2.5%), but more willing to take risks than the early majority (34%). The full distribution: innovators 2.5%, early adopters 13.5%, early majority 34%, late majority 34%, laggards 16%."
     }
+  ],
+  "Hard Mock Exam 4": [
+    {
+      "q": "P&G's Connect and Develop strategy found that for every 100 external ideas evaluated, approximately how many reached the market?",
+      "options": [
+        "10",
+        "5",
+        "1",
+        "25"
+      ],
+      "correct": 2,
+      "explanation": "Only 1 out of every 100 external ideas made it to market. This shows that open innovation requires massive screening effort — external ideas are not 'free' or 'easy.' Strong internal capabilities are needed to evaluate, develop, and commercialize outside ideas."
+    },
+    {
+      "q": "P&G's innovation success rate after implementing Connect and Develop:",
+      "options": [
+        "Stayed at 35% but cost less",
+        "More than doubled from the previous 35% rate",
+        "Tripled to over 100 products per year",
+        "Decreased because external ideas were lower quality"
+      ],
+      "correct": 1,
+      "explanation": "P&G's innovation success rate more than doubled after C&D. Additionally, R&D productivity increased ~60%, and R&D as % of sales fell from 4.8% to 3.4%. The stock price also doubled within 5 years."
+    },
+    {
+      "q": "The Pringle Prints innovation (printing images on chips) originated from:",
+      "options": [
+        "P&G's internal R&D lab in Cincinnati",
+        "A university professor running a bakery in Bologna, Italy",
+        "A competing snack manufacturer in Japan",
+        "MIT's food science department"
+      ],
+      "correct": 1,
+      "explanation": "A university professor in Bologna, Italy had developed inkjet printing technology for edible products (cakes and cookies). P&G's technology entrepreneurs found this through their external network and adapted it for Pringles. Concept to launch took less than 1 year (vs. the old ~2 year timeline)."
+    },
+    {
+      "q": "According to the Nature 2023 study (Park, Leahey & Funk), the absolute number of disruptive scientific papers has:",
+      "options": [
+        "Declined sharply since 1970",
+        "Stayed broadly the same — but the SHARE dropped because total output exploded",
+        "Increased proportionally with total research output",
+        "Doubled every decade since 1945"
+      ],
+      "correct": 1,
+      "explanation": "The absolute number of disruptive papers stayed broadly the same, but the SHARE of disruptive papers dropped because the total number of papers, patents, and funding exploded. More research is being done, but most of it is consolidating (building on existing work) rather than disruptive (replacing old paradigms)."
+    },
+    {
+      "q": "In the Nature 2023 study, a 'consolidating' paper is one where subsequent work citing it:",
+      "options": [
+        "Is less likely to also cite the paper's predecessors",
+        "Is more likely to also cite the paper's predecessors",
+        "Receives fewer total citations over time",
+        "Is retracted or corrected within 5 years"
+      ],
+      "correct": 1,
+      "explanation": "A consolidating paper BUILDS ON existing work — papers that cite it also cite its predecessors. A disruptive paper REPLACES old ones — papers that cite it are LESS likely to cite predecessors. The CD (disruption) index measures this distinction."
+    },
+    {
+      "q": "According to Smil (WSJ 2023), processor performance annual growth went from 52% (1986-2003) to what level by 2015-2018?",
+      "options": [
+        "23%",
+        "12%",
+        "Less than 4%",
+        "0% — performance stopped improving"
+      ],
+      "correct": 2,
+      "explanation": "Processor performance growth collapsed: 52% annually (1986-2003) → 23% (2003-2011) → less than 4% (2015-2018). This is Smil's core argument — even the fastest-improving technology (Moore's Law) is slowing down dramatically."
+    },
+    {
+      "q": "According to the NBER patent study cited by Smil, breakthrough patents in computers and electronics peaked:",
+      "options": [
+        "Before 1900",
+        "Before 1950",
+        "Post-1970",
+        "They have not peaked yet"
+      ],
+      "correct": 2,
+      "explanation": "Only agriculture (GMOs), medical equipment, and computers/electronics had breakthrough patent peaks post-1970. Most other sectors peaked much earlier: furniture, textiles, transportation before 1900; mining, electrical equipment, rubber before 1950."
+    },
+    {
+      "q": "Moderna's revenue growth from 2019 to 2021 went from $60M to approximately:",
+      "options": [
+        "$800M",
+        "$5.1B",
+        "$17.7B",
+        "$19B"
+      ],
+      "correct": 2,
+      "explanation": "Moderna's revenue exploded: $60M (2019) → $803M (2020) → $17,675M (2021). This nearly 300x growth in 2 years demonstrates the power of the mRNA platform when a massive market need (COVID) aligned with their technology."
+    },
+    {
+      "q": "Which is NOT a requirement for an invention to be patentable?",
+      "options": [
+        "Useful — produces a desirable result or solves a problem",
+        "Novel — not already described in public literature",
+        "Non-obvious — to a person experienced in the field",
+        "Profitable — must demonstrate commercial viability"
+      ],
+      "correct": 3,
+      "explanation": "The three requirements are: useful, novel, and non-obvious. Commercial viability/profitability is NOT required. Many patented inventions never generate revenue. You can patent something that has no proven market."
+    },
+    {
+      "q": "According to Shane, the TOP motivation for firms to patent (96% of respondents) is:",
+      "options": [
+        "Licensing revenue",
+        "Preventing copying",
+        "Enhancing company reputation",
+        "Blocking competitors from adjacent markets"
+      ],
+      "correct": 1,
+      "explanation": "Preventing copying: 96% (top), blocking others: 82%, preventing lawsuits: 59%, enhancing reputation: 48%, negotiation: 47%, licensing: only 28% (lowest). Most firms patent defensively, not for licensing income."
+    },
+    {
+      "q": "Patents are rated MOST effective as protection in which industry?",
+      "options": [
+        "Computers (3.4/7)",
+        "Organic chemicals (6.1/7)",
+        "Drugs/pharmaceuticals (6.5/7)",
+        "Pulp and paper (3.3/7)"
+      ],
+      "correct": 2,
+      "explanation": "Drugs are rated 6.5/7 for patent effectiveness — highest of all industries. This is because drugs have clear molecular structures that are easy to define in patent claims. Computers (3.4/7) and pulp/paper (3.3/7) are among the lowest. Patents work best in biological/chemical industries."
+    },
+    {
+      "q": "Apple's Roger Rosner's function grew from 150 to approximately how many people over the past decade?",
+      "options": [
+        "300",
+        "500",
+        "1,000",
+        "2,500"
+      ],
+      "correct": 2,
+      "explanation": "Rosner's function grew from 150 to ~1,000 people. Despite this massive growth, Apple maintained its functional structure. Leaders managed scaling by moving mature activities from 'owning' to 'teaching' and taking on new areas in the 'learning' box."
+    },
+    {
+      "q": "In Apple's functional structure, 'accountability without control' means:",
+      "options": [
+        "Managers are not held responsible for outcomes",
+        "Teams have no budget oversight",
+        "You are accountable for project success even though you don't control all teams involved",
+        "Apple uses external contractors with no accountability"
+      ],
+      "correct": 2,
+      "explanation": "Accountability without control means you're responsible for making a project succeed even though you don't control all the teams involved. A 'good mess' = teams work with shared purpose across boundaries. A 'bad mess' = teams push their own agendas. This is how 40+ teams collaborated on Portrait Mode."
+    },
+    {
+      "q": "Moderna's Norwood manufacturing plant can produce a manufactured molecule from a scientist's sequence in:",
+      "options": [
+        "48 hours",
+        "7 days",
+        "30 days",
+        "90 days"
+      ],
+      "correct": 2,
+      "explanation": "Scientist sends sequence to Norwood → manufactured molecule in 30 days, with all data available and shared. The plant can reference 25,000+ past iterations. This 'paperless factory' has all machines directly connected to digital manufacturing systems."
+    },
+    {
+      "q": "Moderna's technology transfer to manufacturing partner Lonza was completed in less than 3 months. The industry norm for such transfers is:",
+      "options": [
+        "6 months",
+        "1 year",
+        "2-3 years",
+        "5 years"
+      ],
+      "correct": 2,
+      "explanation": "Technology transfer to Lonza took <3 months vs. the industry norm of 2-3 YEARS. This speed was possible because of Moderna's digital-first approach — all processes were documented digitally, enabling rapid knowledge transfer."
+    },
+    {
+      "q": "The term 'squircle' in the Apple HBR case refers to:",
+      "options": [
+        "Apple's circular organizational chart",
+        "The shape of Apple Watch display",
+        "Continuous curves Apple uses instead of standard rounded rectangles",
+        "A type of chip architecture in Apple Silicon"
+      ],
+      "correct": 2,
+      "explanation": "A squircle is a continuous curve shape (between a square and circle) that Apple uses instead of standard rounded rectangles. It requires extremely precise manufacturing tolerances. This detail illustrates Apple's obsession with design precision — 'leaders should know details three levels down.'"
+    },
+    {
+      "q": "Patent trolls (Non-Practicing Entities / NPEs) are characterized by:",
+      "options": [
+        "Filing patents and actively developing products from them",
+        "Acquiring patents WITHOUT intention to use them, then suing cash-rich firms",
+        "Offering free patent licenses to startups",
+        "Working with universities to commercialize research"
+      ],
+      "correct": 1,
+      "explanation": "NPEs/patent trolls acquire patents without any intention of making products. Instead, they sue cash-rich companies for alleged infringement. This is a major problem in the US patent system and represents a strategic abuse of patent rights."
+    },
+    {
+      "q": "Solar panel cost now represents only about what percentage of total residential PV system cost?",
+      "options": [
+        "50%",
+        "35%",
+        "15%",
+        "5%"
+      ],
+      "correct": 2,
+      "explanation": "Solar panels are now only ~15% of total residential PV system cost. The rest is structural/electrical components, labor, permitting, and taxes. This is why overall solar cost reduction has slowed: 55% drop (2010-2015) but only 20% (2015-2020). Panel prices can't drive further cost reductions alone."
+    },
+    {
+      "q": "P&G's external innovation network included YourEncore, which consisted of:",
+      "options": [
+        "Competing firms sharing R&D resources",
+        "800 retired scientists and engineers from 150 companies",
+        "University labs in 20 countries",
+        "Government research agencies"
+      ],
+      "correct": 1,
+      "explanation": "YourEncore connected P&G with 800 retired scientists and engineers from 150 companies. Combined with NineSigma (connecting problem-owners to solvers) and 70 'technology entrepreneurs' globally, P&G built a network to access external innovation systematically."
+    },
+    {
+      "q": "Which of the following can NOT be patented?",
+      "options": [
+        "A manufacturing process",
+        "A mathematical formula",
+        "A composition of matter",
+        "A machine"
+      ],
+      "correct": 1,
+      "explanation": "Mathematical formulas cannot be patented, along with ideas, natural laws, and natural substances. Patentable items include: processes, machines, manufactured items, and compositions of matter ('recipes')."
+    },
+    {
+      "q": "Apple's camera hardware team has approximately how many specialists working together in one functional group?",
+      "options": [
+        "50",
+        "150",
+        "600+",
+        "2,000"
+      ],
+      "correct": 2,
+      "explanation": "Apple has 600+ camera hardware experts in one group, led by Graham Townsend. In a divisional structure, these experts would be scattered across iPhone, iPad, Mac divisions with much smaller teams. The functional structure creates a deep specialist bench that enables innovations like Portrait Mode."
+    },
+    {
+      "q": "According to Smil, battery energy density has grown from 25 Wh/kg in 1900 to ~300 Wh/kg in 2022. This represents an annual growth rate of approximately:",
+      "options": [
+        "0.5%",
+        "2%",
+        "5%",
+        "10%"
+      ],
+      "correct": 1,
+      "explanation": "Battery energy density grew at only ~2% per year over 122 years (25 → 300 Wh/kg). This is far slower than Moore's Law (~35% per year for chips). Smil uses this to argue that progress in energy and materials is fundamentally slower than in computing."
+    },
+    {
+      "q": "In Christensen's framework, Netflix initially appealed to which segment?",
+      "options": [
+        "Blockbuster's most profitable mainstream customers",
+        "A niche of movie buffs and early DVD adopters",
+        "International markets underserved by US competitors",
+        "Corporate clients needing content libraries"
+      ],
+      "correct": 1,
+      "explanation": "Netflix started as a niche service for movie buffs and early DVD adopters — NOT Blockbuster's core customers. Streaming later made it appeal to Blockbuster's mainstream audience. This follows the classic disruptive pattern: overlooked segment → foothold → move upmarket."
+    },
+    {
+      "q": "Pfizer's Lipitor revenue dropped dramatically after patent expiry, from approximately $13B to:",
+      "options": [
+        "$8B",
+        "$5B",
+        "$2B",
+        "$500M"
+      ],
+      "correct": 2,
+      "explanation": "Lipitor revenue fell from ~$13B to ~$2B after patent expiry — illustrating why patents are rated 6.5/7 effectiveness in pharmaceuticals. Without patent protection, generic competitors entered and captured most of the market almost immediately."
+    },
+    {
+      "q": "According to Christensen (2015), for incumbents facing disruption, the strategy 'disrupt or be disrupted' is:",
+      "options": [
+        "The best guiding principle for any established company",
+        "Only applicable to technology companies",
+        "Potentially misleading — it can cause firms to prematurely dismantle profitable businesses",
+        "Irrelevant because incumbents always lose to disruptors"
+      ],
+      "correct": 2,
+      "explanation": "Christensen warns that 'disrupt or be disrupted' can MISGUIDE. Incumbents should NOT dismantle still-profitable core businesses. Instead: continue investing in sustaining innovations for core customers AND create a separate division for the disruptive opportunity. Overreaction is as dangerous as inaction."
+    }
+  ],
+  "Hard Mock Exam 5": [
+    {
+      "q": "The Barras reverse product cycle differs from the traditional A-U model because:",
+      "options": [
+        "Product innovation always precedes process innovation",
+        "In services, process innovation comes FIRST, then product innovation follows",
+        "It only applies to manufacturing industries",
+        "Innovation rates remain constant throughout the cycle"
+      ],
+      "correct": 1,
+      "explanation": "Barras (1986) showed that in SERVICE industries, the cycle is reversed: firms first adopt process innovations (e.g. IT systems to improve efficiency), which then enable entirely new product/service innovations. This is the opposite of A-U where product innovation leads."
+    },
+    {
+      "q": "Henderson & Clark's architectural innovation is dangerous to incumbents because:",
+      "options": [
+        "It requires entirely new components and knowledge",
+        "It reconfigures the linkages between EXISTING components in new ways",
+        "It is always more expensive than radical innovation",
+        "It can only occur in the fluid phase"
+      ],
+      "correct": 1,
+      "explanation": "Architectural innovation keeps the same components but changes how they fit together. It's especially dangerous because incumbents don't realize their existing knowledge is being undermined — they see familiar components and assume they understand the product, but the architecture has shifted."
+    },
+    {
+      "q": "Which type of innovation uses NEW components but the SAME architecture?",
+      "options": [
+        "Incremental innovation",
+        "Architectural innovation",
+        "Modular innovation",
+        "Radical innovation"
+      ],
+      "correct": 2,
+      "explanation": "Henderson & Clark's 2x2: Incremental = same components, same architecture. Modular = NEW components, same architecture. Architectural = same components, NEW architecture. Radical = new components, new architecture. Modular is the one students most often forget."
+    },
+    {
+      "q": "The Bayh-Dole Act (1980) was significant because it:",
+      "options": [
+        "Banned universities from conducting commercial research",
+        "Allowed universities to patent and license inventions from federally funded research",
+        "Required all patents to be filed within 1 year of invention",
+        "Created the US Patent and Trademark Office"
+      ],
+      "correct": 1,
+      "explanation": "Before Bayh-Dole, inventions from federally funded research belonged to the government. The Act allowed universities to retain ownership, patent, and license these inventions. This dramatically increased university-industry technology transfer and spin-off creation."
+    },
+    {
+      "q": "In the Abernathy-Utterback model, the fluid phase is characterized by:",
+      "options": [
+        "Low product innovation and high process innovation",
+        "High product innovation, many competing designs, no dominant design yet",
+        "A single dominant design and focus on cost reduction",
+        "Equal rates of product and process innovation"
+      ],
+      "correct": 1,
+      "explanation": "The fluid phase: high product innovation, many firms experimenting with different designs, no dominant design. Transitional phase: dominant design emerges, product innovation declines, process innovation rises. Specific phase: process innovation peaks, focus on efficiency."
+    },
+    {
+      "q": "Moral hazard in innovation financing refers to:",
+      "options": [
+        "Investors being unable to distinguish good from bad projects before investing",
+        "Entrepreneurs changing their behavior AFTER receiving funding",
+        "Banks charging excessive interest rates on innovation loans",
+        "Government subsidies crowding out private investment"
+      ],
+      "correct": 1,
+      "explanation": "Moral hazard = POST-investment problem. After getting funded, the entrepreneur may take excessive risks, shirk, or divert resources. Adverse selection = PRE-investment problem (can't tell good from bad). VCs mitigate moral hazard through staged funding, board seats, and covenants."
+    },
+    {
+      "q": "Nokia's decline illustrates all of the following EXCEPT:",
+      "options": [
+        "An atmosphere of fear that prevented bad news from reaching top management",
+        "Failure to transition from hardware to software/ecosystem competition",
+        "Lack of financial resources for R&D investment",
+        "The danger of incumbent blindness to new technology trajectories"
+      ],
+      "correct": 2,
+      "explanation": "Nokia had plenty of money — at its peak it had $250B market cap. The problems were organizational: fear culture suppressed information flow, the company was locked into Symbian/hardware thinking, and management failed to recognize the shift to software ecosystems (iOS, Android). Resources were not the issue."
+    },
+    {
+      "q": "Creative destruction (Schumpeter Mark I) differs from creative accumulation (Mark II) in that:",
+      "options": [
+        "Mark I: new entrants destroy incumbents; Mark II: incumbents drive innovation through accumulated knowledge",
+        "Mark I: large firms dominate; Mark II: startups lead",
+        "Mark I: process innovation; Mark II: product innovation",
+        "Mark I and II are identical concepts with different names"
+      ],
+      "correct": 0,
+      "explanation": "Mark I (creative destruction): entrepreneurs and new entrants drive innovation, destroying incumbents. Mark II (creative accumulation): large incumbents leverage existing R&D, knowledge, and resources to drive innovation, accumulating advantage over time. Both patterns coexist in different industries."
+    },
+    {
+      "q": "The 'chasm' in Moore's technology adoption lifecycle exists between:",
+      "options": [
+        "Innovators and early adopters",
+        "Early adopters and early majority",
+        "Early majority and late majority",
+        "Late majority and laggards"
+      ],
+      "correct": 1,
+      "explanation": "The chasm is between early adopters (visionaries, 13.5%) and early majority (pragmatists, 34%). Early adopters buy for competitive advantage and tolerate imperfection. The early majority wants proven, complete solutions. Many innovations die in this gap because the same marketing doesn't work for both groups."
+    },
+    {
+      "q": "Real options thinking in project selection adds value over NPV because it:",
+      "options": [
+        "Always produces a higher valuation",
+        "Eliminates uncertainty from the decision",
+        "Values the flexibility to abandon, expand, or delay a project as information is revealed",
+        "Requires fewer assumptions about future cash flows"
+      ],
+      "correct": 2,
+      "explanation": "Real options values FLEXIBILITY — the right (not obligation) to abandon a failing project, expand a successful one, or delay until uncertainty resolves. NPV treats projects as 'now or never' decisions. Real options adds value to projects with high uncertainty and staged decision points."
+    },
+    {
+      "q": "Willful patent infringement can result in penalties up to:",
+      "options": [
+        "The original licensing fee",
+        "Double the lost profits",
+        "Triple damages",
+        "Criminal imprisonment"
+      ],
+      "correct": 2,
+      "explanation": "Willful infringement can result in up to TRIPLE damages (treble damages) plus injunction and legal fees. This makes intentional infringement very risky. Regular infringement typically results in lost profits/reasonable royalties and injunction."
+    },
+    {
+      "q": "P&G had 7,500 internal researchers, but their suppliers' combined R&D staff numbered:",
+      "options": [
+        "15,000",
+        "25,000",
+        "50,000",
+        "100,000"
+      ],
+      "correct": 2,
+      "explanation": "P&G's suppliers had a combined R&D staff of 50,000 — nearly 7x P&G's own 7,500. This insight drove Connect and Develop: why limit yourself to your own researchers when there's a massive pool of external talent and ideas accessible through your supply chain?"
+    },
+    {
+      "q": "In Apple's 2019 organizational chart, approximately how many functional areas did the company have?",
+      "options": [
+        "8",
+        "12",
+        "17",
+        "24"
+      ],
+      "correct": 2,
+      "explanation": "Apple grew from 8 functions (1998) to 17 functions (2019). New additions included Design, HW Technologies, Services, ML & AI, Marketing Comm., Retail, People, Corporate Comm., Environment/Policy/Social, and Corporate Dev. Yet all still under ONE P&L — no divisional structure."
+    },
+    {
+      "q": "Kodak dominated photography for 100 years using all of the following EXCEPT:",
+      "options": [
+        "Patent protection",
+        "Tacit knowledge",
+        "Time dependency advantages",
+        "Open-source technology sharing"
+      ],
+      "correct": 3,
+      "explanation": "Kodak used patents, tacit knowledge (hard to imitate expertise), and time dependency (accumulated advantages over decades). They did NOT share technology openly — their strategy was proprietary protection. Despite all this, digital photography disrupted them because it was a completely different technology trajectory."
+    },
+    {
+      "q": "Increasing returns to adoption means that:",
+      "options": [
+        "Prices always increase as more people adopt a technology",
+        "The more a technology is adopted, the more valuable and likely to be further adopted it becomes",
+        "Returns on investment increase linearly with market share",
+        "Only the first adopters benefit from the technology"
+      ],
+      "correct": 1,
+      "explanation": "Increasing returns: adoption → more value → more adoption (positive feedback loop). Sources include network externalities (more users = more value, e.g. phone network), learning effects, and complementary goods. This can lead to lock-in and winner-take-all dynamics."
+    },
+    {
+      "q": "The Portrait Mode feature on iPhone 7 Plus was first conceived by Paul Hubel in:",
+      "options": [
+        "2007, alongside the original iPhone",
+        "2009, seven years before the feature launched",
+        "2014, two years before launch",
+        "2016, just months before the iPhone 7 Plus shipped"
+      ],
+      "correct": 1,
+      "explanation": "Hubel conceived the idea for computational bokeh (portrait effect) in 2009 — seven years before it launched with iPhone 7 Plus in 2016. The feature was even deferred one year to address edge cases like chicken wire. This timeline shows how long breakthrough features can take even at Apple."
+    },
+    {
+      "q": "The Moderna case describes a 2012 incident where CEO Bancel was horrified to find a scientist:",
+      "options": [
+        "Using outdated laboratory equipment",
+        "Manually entering a nucleotide sequence into Excel",
+        "Publishing research results without peer review",
+        "Outsourcing drug design to a contractor"
+      ],
+      "correct": 1,
+      "explanation": "Bancel found a scientist manually entering a nucleotide sequence in Excel and was horrified — 'if any cell was wrong, the entire drug design would be useless.' This incident drove Moderna to create a 'drug design studio' where drugs are designed on computers, leading to their 'born digital' identity."
+    },
+    {
+      "q": "In a technology S-curve, the inflection point represents:",
+      "options": [
+        "The point where the technology becomes obsolete",
+        "The point where improvement rate is highest — maximum acceleration",
+        "The exact moment a dominant design emerges",
+        "The point where all firms exit the market"
+      ],
+      "correct": 1,
+      "explanation": "The inflection point is where the S-curve is steepest — the rate of improvement is at its maximum. Before this point, progress is slow (investment phase). After it, diminishing returns set in. This is also where ATAP looks for opportunities — recognizing inflection points in science."
+    },
+    {
+      "q": "A firm uses a functional organizational structure (like Apple). Which statement is TRUE?",
+      "options": [
+        "Each product line has its own P&L and general manager",
+        "Decision rights are aligned with expertise rather than product accountability",
+        "It is only suitable for small companies under 1,000 employees",
+        "Communication is primarily vertical within product divisions"
+      ],
+      "correct": 1,
+      "explanation": "Functional structures align EXPERTISE with DECISION RIGHTS — those who know most make the decisions. Multi-divisional structures align accountability with control (each GM owns a P&L). Apple proves functional structures can work at massive scale (137,000 employees, $260B revenue)."
+    },
+    {
+      "q": "How many of the three competitors' imitation methods involve reading publicly available documents?",
+      "options": [
+        "None — all require covert activity",
+        "One — reading patent applications",
+        "Two — reading patents and academic papers",
+        "All three methods use public information"
+      ],
+      "correct": 1,
+      "explanation": "The three imitation methods are: (1) reverse engineering, (2) hiring experts, (3) reading patent applications. Only reading patent applications uses publicly available documents. This is an irony of patents — you must disclose your invention publicly, which helps competitors understand and potentially work around it."
+    },
+    {
+      "q": "Denmark, Ireland, and Germany have the highest share of wind and solar energy in the EU. According to Smil, they also have:",
+      "options": [
+        "The lowest electricity prices",
+        "The highest electricity prices",
+        "Average electricity prices",
+        "The most stable electricity grids"
+      ],
+      "correct": 1,
+      "explanation": "Smil points out the irony: countries with the highest renewable energy share (Denmark, Ireland, Germany) also have the highest electricity prices in the EU. He uses this to argue that the transition to renewables is more complex and costly than commonly presented."
+    },
+    {
+      "q": "Moderna had developed how many vaccines BEFORE the COVID-19 vaccine?",
+      "options": [
+        "None — COVID was their first",
+        "3 vaccines",
+        "9 vaccines",
+        "15 vaccines"
+      ],
+      "correct": 2,
+      "explanation": "Moderna had 9 vaccines in development before COVID — including a 2-year MERS vaccine collaboration with Fauci/NIH. COVID was their TENTH vaccine. The platform was already proven; COVID just demonstrated its speed. This is why spinning off COVID would have been wrong — it was one 'app' on an existing platform."
+    },
+    {
+      "q": "AHP (Analytic Hierarchy Process) as a decision tool is best described as:",
+      "options": [
+        "A simulation that runs thousands of random scenarios",
+        "A method that ranks alternatives by comparing them against weighted criteria in pairs",
+        "An anonymous expert opinion process",
+        "A discounted cash flow analysis"
+      ],
+      "correct": 1,
+      "explanation": "AHP structures complex decisions by breaking them into criteria, weighting the criteria, then doing pairwise comparisons of alternatives against each criterion. It's semi-quantitative — uses numbers but based on subjective judgments. Different from Monte Carlo (simulation), Delphi (expert opinion), and NPV (cash flow)."
+    },
+    {
+      "q": "In the adopter categories model, the late majority (34%) is characterized by:",
+      "options": [
+        "Willingness to take risks on unproven technology",
+        "Adopting only after most of the market has already adopted, driven by peer pressure or necessity",
+        "Never adopting new technologies under any circumstances",
+        "Being opinion leaders who influence the early majority"
+      ],
+      "correct": 1,
+      "explanation": "Late majority (34%) adopts out of economic necessity or peer pressure — NOT enthusiasm. They are skeptical and risk-averse, waiting until a technology is well-established. Innovators (2.5%) take risks. Early adopters (13.5%) are opinion leaders. Laggards (16%) resist until forced."
+    }
   ]
 }
