@@ -8239,5 +8239,266 @@
       "correct": 1,
       "explanation": "Moderna's advantage was 'shared understanding and shared data across all departments and teams.' Spinning off COVID would create silos — the exact organizational structure Moderna had 'seen the detrimental effects of in big pharma.' The integrated platform enables cross-learning between all 23 programs."
     }
+  ],
+  "Revenge Round: Every Mistake Drilled": [
+    {
+      "q": "Which force influences the RULES of the society in which technology advance takes place?",
+      "options": [
+        "Economic",
+        "Competitive",
+        "Political",
+        "Social"
+      ],
+      "correct": 2,
+      "explanation": "POLITICAL = rules/regulations. ECONOMIC = resources. SOCIAL = attitudes/demographics. COMPETITIVE = actions of other firms. You answered 'competitive' on the real quiz. The economic environment influences resources, NOT rules."
+    },
+    {
+      "q": "The economic environment influences the rules of the society in which the technology advance takes place.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "correct": 1,
+      "explanation": "False. The POLITICAL environment influences the rules. The ECONOMIC environment influences the RESOURCES available for innovation. You got this wrong on Quiz 1 by selecting True."
+    },
+    {
+      "q": "The Pentium computer processor is an example of a radical technology.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "correct": 1,
+      "explanation": "False. Pentium is incremental — same x86 architecture, same component types, just faster. Radical would be a fundamentally different computing paradigm (quantum computing, neuromorphic chips)."
+    },
+    {
+      "q": "As a group, early adopters are:",
+      "options": [
+        "Smaller than innovators",
+        "Larger than innovators",
+        "About the same size as innovators",
+        "Depends on the product"
+      ],
+      "correct": 1,
+      "explanation": "Early adopters (13.5%) are LARGER than innovators (2.5%). You selected 'about the same' on the real quiz. Remember: 2.5 / 13.5 / 34 / 34 / 16."
+    },
+    {
+      "q": "For which segment is it most important to develop an advertising message emphasizing reliability and low cost?",
+      "options": [
+        "Innovators",
+        "Early majority",
+        "Late majority",
+        "Laggards"
+      ],
+      "correct": 3,
+      "explanation": "LAGGARDS — not late majority. Laggards (16%) are the most price-sensitive and skeptical. They only adopt when it's cheap, proven, and unavoidable. You selected late majority on the real quiz. Late majority is skeptical too, but laggards are the extreme."
+    },
+    {
+      "q": "Which of the following is NOT an attribute of technological change associated with subsequent innovation?",
+      "options": [
+        "The magnitude of the change",
+        "The commercial viability of the change",
+        "The specificity of the change",
+        "All of the above are attributes"
+      ],
+      "correct": 1,
+      "explanation": "Commercial viability is NOT an attribute of the technological change itself — it's an outcome. The two attributes are: magnitude (how big?) and specificity (how broad/narrow?). You may have confused this — the correct answer to 'which is NOT' is commercial viability."
+    },
+    {
+      "q": "In P&G's Connect and Develop, the innovation success rate doubled merely by implementing the external search strategy.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "correct": 1,
+      "explanation": "False. It wasn't 'merely' — C&D required massive internal capabilities to screen (100:1 ratio), evaluate, and develop external ideas. They also needed 70 technology entrepreneurs, networks like NineSigma and YourEncore, and strong internal R&D. You got this wrong by selecting True."
+    },
+    {
+      "q": "Which of the following is NOT a primary reason for good companies to go bad?",
+      "options": [
+        "Competency traps",
+        "Lack of innovativeness",
+        "Narrow technological focus",
+        "Lack of agility"
+      ],
+      "correct": 1,
+      "explanation": "Lack of innovativeness is NOT listed — good companies that go bad are often VERY innovative, just in the wrong direction. The real reasons: competency traps, narrow technological focus, and lack of agility. You selected this incorrectly on Quiz 3."
+    },
+    {
+      "q": "As part of which strategic action should you minimize your investment in non-salvageable assets?",
+      "options": [
+        "Seeking high returns",
+        "Minimizing investment",
+        "Maintaining flexibility",
+        "Reallocating uncertainty to others"
+      ],
+      "correct": 1,
+      "explanation": "MINIMIZING INVESTMENT — not maintaining flexibility. Non-salvageable = money you can't get back. Minimizing investment = spend less overall. Maintaining flexibility = keep options open with modular/adaptable approaches. You got this wrong on both the real quiz AND when I first explained it."
+    },
+    {
+      "q": "Wholly proprietary systems differ from wholly open systems in that wholly proprietary systems:",
+      "options": [
+        "Comprise technology based on available standards openly diffused to producers",
+        "Are typically compatible with products offered by other manufacturers",
+        "Provide their developers with the opportunity to appropriate rents from the technology",
+        "Comprise technologies that may be freely accessed by anyone"
+      ],
+      "correct": 2,
+      "explanation": "Proprietary = you control it = you can appropriate rents (capture value). The other options describe OPEN systems. You got this wrong on Quiz 5 by selecting the open-system description."
+    },
+    {
+      "q": "A service mark distinguishes the provider of a service rather than a product.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "correct": 0,
+      "explanation": "True. Service mark = services (FedEx delivery). Trademark = products (Nike shoes). In practice they're treated similarly, but the distinction is tested. You got this right on Quiz 5 — keeping it here for reinforcement."
+    },
+    {
+      "q": "To innovate successfully, companies need to be concerned with:",
+      "options": [
+        "Centralization only",
+        "Efficiency only",
+        "Creating new companies only",
+        "All of the above"
+      ],
+      "correct": 3,
+      "explanation": "ALL of the above — centralization, efficiency, AND creating new companies. Innovation requires balancing multiple organizational concerns. You selected 'efficiency' alone on Quiz 6."
+    },
+    {
+      "q": "What advantage of decentralization was Microsoft trying to exploit when it reorganized its centralized structure?",
+      "options": [
+        "Improves access to information",
+        "Facilitates innovation in noncore areas",
+        "Facilitates idea generation",
+        "Improved coordination"
+      ],
+      "correct": 2,
+      "explanation": "Facilitates IDEA GENERATION. Microsoft's centralized structure was stifling creativity — decentralization gives more people autonomy to generate ideas. You selected 'improves access to information' on the real quiz. Note: 'facilitates innovation in noncore areas' is a DIFFERENT advantage of decentralization."
+    },
+    {
+      "q": "What is a benefit of centralization?",
+      "options": [
+        "Encourages companies to invest in radical innovation",
+        "Increases market orientation",
+        "Reduces financial risk to the overall organization",
+        "Makes it easier to get government aid"
+      ],
+      "correct": 0,
+      "explanation": "Centralization ENCOURAGES RADICAL INNOVATION — because top management can direct large investments toward risky, long-term bets without needing approval from multiple divisions. You selected 'reduces financial risk' on Quiz 6."
+    },
+    {
+      "q": "3M changed its structure so managers of all R&D units report to the same senior manager. This was an attempt to:",
+      "options": [
+        "Increase the mechanistic nature",
+        "Increase the organic nature",
+        "Increase centralization",
+        "Increase decentralization"
+      ],
+      "correct": 2,
+      "explanation": "Having all R&D managers report to ONE senior manager = CENTRALIZATION (decisions flow to one point). You selected 'increase organic nature' — but organic vs centralized are different dimensions. Organic = flat/informal. Centralized = decisions at top. You can be organic AND centralized."
+    },
+    {
+      "q": "General Motors resisted pressure to cut R&D during financial difficulties. This was primarily an attempt to:",
+      "options": [
+        "Increase efficiency",
+        "Reduce costs",
+        "Focus on the long-term as compared to the short-term",
+        "Eliminate dead-end costs"
+      ],
+      "correct": 2,
+      "explanation": "LONG-TERM FOCUS. Cutting R&D saves money short-term but destroys future innovation. GM chose to protect R&D spending despite financial pressure = prioritizing long-term over short-term. You selected 'eliminate dead-end costs.'"
+    },
+    {
+      "q": "What is more consistent with a large firm compared to a small one?",
+      "options": [
+        "Large firms have an increased ability to colocate marketing and engineering",
+        "Large firms promote fewer talented researchers to management",
+        "Large firms produce innovation at lower R&D cost",
+        "Large firms improve the quality of human capital"
+      ],
+      "correct": 3,
+      "explanation": "Large firms IMPROVE QUALITY OF HUMAN CAPITAL — they can attract better talent with higher salaries, training programs, and career paths. You selected 'colocate marketing and engineering' — but colocation is actually HARDER in large firms due to size and bureaucracy."
+    },
+    {
+      "q": "Small firms tend to be more innovative in which type of industry?",
+      "options": [
+        "Less advertising intensive",
+        "Older industries",
+        "More concentrated",
+        "Less reliant on skilled labor"
+      ],
+      "correct": 0,
+      "explanation": "LESS ADVERTISING INTENSIVE. In advertising-heavy industries, big firms have the advantage (economies of scale in marketing). Small firms thrive where advertising matters less and technical innovation matters more. You selected 'more concentrated' — but concentrated industries favor incumbents."
+    },
+    {
+      "q": "Options have positive value if the expected cash flow from making the investment is more than the value of maintaining the option.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "correct": 1,
+      "explanation": "False (per Shane p. 106). The value of an option comes from the FLEXIBILITY to wait — not from the cash flow exceeding the option value. When cash flows exceed option value, you EXERCISE the option (invest), but that's about when to act, not about whether the option has value."
+    },
+    {
+      "q": "Felix designed foldable sunglasses by adding a hinge. Can he receive a patent?",
+      "options": [
+        "No — the invention is only eligible for copyright protection",
+        "No — he is merely making the sunglasses more portable",
+        "No — the invention is not useful",
+        "Yes — the invention is a tangible product"
+      ],
+      "correct": 1,
+      "explanation": "He CANNOT patent it because adding a hinge is merely making sunglasses more portable — it fails the NON-OBVIOUS requirement. A person skilled in eyewear design would consider this an obvious modification, not an invention."
+    },
+    {
+      "q": "In the United States, an inventor can publish an invention up to how long before applying for a patent?",
+      "options": [
+        "30 days",
+        "6 months",
+        "1 year",
+        "There is no grace period"
+      ],
+      "correct": 2,
+      "explanation": "In the US, there is a 1-year grace period — you can publish your invention and still file a patent within one year. This is unusual — most countries require filing BEFORE any public disclosure."
+    },
+    {
+      "q": "Patent trolling refers to:",
+      "options": [
+        "Filing for a patent but not receiving approval",
+        "Owning patents primarily to extort money from other firms",
+        "A dense web of overlapping patents making competition difficult",
+        "Patenting inventions in countries where you won't produce"
+      ],
+      "correct": 1,
+      "explanation": "Patent trolling (NPEs) = acquiring patents WITHOUT intent to make products, then suing cash-rich firms for infringement to extract settlements. The 'dense web of overlapping patents' describes a PATENT THICKET — a different concept."
+    },
+    {
+      "q": "If you register a trademark in a Madrid Union member country, it is protected throughout the world.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "correct": 1,
+      "explanation": "False. Madrid Union simplifies FILING in multiple countries, but you still need to register in each country individually through the system. One registration does NOT automatically give worldwide protection."
+    },
+    {
+      "q": "An advantage of corporate venturing is that it reduces risks on companies.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "correct": 1,
+      "explanation": "False. Corporate venturing can actually INCREASE risk — it involves investing in uncertain new ventures. A disadvantage is it can interfere with ongoing operations. The advantages are about exploring new opportunities and accessing innovation outside the core business."
+    },
+    {
+      "q": "Functional organizations only work best for companies selling to innovators and early adopters.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "correct": 1,
+      "explanation": "False. Functional organizations can work across ALL adopter segments. Apple proves this — functional structure at $260B revenue, selling to mainstream consumers. The type of organizational structure is not determined by which adopter category you target."
+    }
   ]
 }
