@@ -8500,5 +8500,555 @@
       "correct": 1,
       "explanation": "False. Functional organizations can work across ALL adopter segments. Apple proves this — functional structure at $260B revenue, selling to mainstream consumers. The type of organizational structure is not determined by which adopter category you target."
     }
+  ],
+  "Curveball Exam 1": [
+    {
+      "q": "First movers in a market have a failure rate of approximately:",
+      "options": [
+        "15%",
+        "30%",
+        "47%",
+        "65%"
+      ],
+      "correct": 2,
+      "explanation": "First movers fail 47% of the time and achieve only ~10% market share on average. Late movers can free-ride on first mover's R&D, correct mistakes, and leapfrog with newer technology. Examples: Google beat Lycos, Microsoft beat VisiCalc and Netscape."
+    },
+    {
+      "q": "According to R&D managers, which mechanism is MOST effective at deterring imitation?",
+      "options": [
+        "Patents (33% effectiveness)",
+        "Complementary assets like manufacturing/marketing (43%)",
+        "Lead time advantage (~50%)",
+        "Trade secrets (25%)"
+      ],
+      "correct": 2,
+      "explanation": "Lead time (~50%) is rated most effective, followed by complementary assets (43%), then patents (33%). This is counterintuitive — most people assume patents are the best protection. In practice, being first and having the right assets matters more than legal protection."
+    },
+    {
+      "q": "The Bass model of technology diffusion is best suited for predicting adoption of:",
+      "options": [
+        "Software-as-a-service products",
+        "Consumer durables whose value is not exhausted in one year",
+        "Competing technologies in the same market",
+        "Government-funded research programs"
+      ],
+      "correct": 1,
+      "explanation": "The Bass model works best for consumer durables (appliances, cars, TVs). It is LESS accurate for: competing technologies, economic shocks, and supply-constrained markets. It also cannot estimate at the very beginning (needs prior period data)."
+    },
+    {
+      "q": "Xerox invented the mouse, GUI, and Ethernet but lost billions because it failed to:",
+      "options": [
+        "Patent these inventions",
+        "Connect its research inventions to its operating units",
+        "Hire enough engineers",
+        "Market the products internationally"
+      ],
+      "correct": 1,
+      "explanation": "Xerox PARC invented groundbreaking technology but failed to LINK research to development — the classic R&D disconnect. Apple and Microsoft commercialized the GUI instead. Shane uses this as the key example of why firms need policies to connect research labs to business units."
+    },
+    {
+      "q": "Which of the following is NOT one of Shane's four solutions for linking research to development?",
+      "options": [
+        "Financial incentives aligned with development success",
+        "Shared equipment and materials between R&D units",
+        "Hiring external consultants to bridge the gap",
+        "Temporary development rotations for new researchers"
+      ],
+      "correct": 2,
+      "explanation": "The four solutions are: (1) financial incentives, (2) shared equipment/materials, (3) temporary development rotations, (4) strategic fit criteria for funding decisions. Hiring external consultants is NOT one of the four."
+    },
+    {
+      "q": "Absorptive capacity is the ability to:",
+      "options": [
+        "Maximize production output per employee",
+        "Recognize the value of external knowledge and apply it",
+        "Absorb financial losses during product development",
+        "Process large amounts of customer data"
+      ],
+      "correct": 1,
+      "explanation": "Absorptive capacity = ability to recognize, value, and apply external knowledge. IBM researched X-ray lithography not to use it, but to SPOT outside breakthroughs. This is critical for open innovation — firms without absorptive capacity cannot benefit from external ideas."
+    },
+    {
+      "q": "When complementary assets are SPECIALIZED rather than generic, a firm should:",
+      "options": [
+        "Contract for them from external suppliers",
+        "License the technology to a partner",
+        "Own them rather than contract for them",
+        "Share them through a joint venture"
+      ],
+      "correct": 2,
+      "explanation": "Specialized assets cannot be redeployed cheaply. Contracting fails because of the 'opportunistic renegotiation problem' — the supplier can exploit your dependence to strike a better deal. Generic assets CAN be contracted. Example: cell phone companies could contract for switching networks (generic) but not for specialized chip designs."
+    },
+    {
+      "q": "A noncompete agreement in the United States must be:",
+      "options": [
+        "Unlimited in duration to be valid",
+        "Limited in length and geographic breadth, or it may be declared invalid",
+        "Approved by a federal court before it takes effect",
+        "Signed only by employees earning above minimum wage"
+      ],
+      "correct": 1,
+      "explanation": "Noncompete agreements must be limited in both TIME and GEOGRAPHY — otherwise courts declare them invalid. They also cannot preclude someone from earning a living in their chosen field. California cannot enforce noncompete agreements at all."
+    },
+    {
+      "q": "Under the work-for-hire doctrine, copyright belongs to:",
+      "options": [
+        "The individual creator in all cases",
+        "The commissioning entity if the work was done within scope of employment",
+        "The patent office that registered the work",
+        "Whoever publishes the work first"
+      ],
+      "correct": 1,
+      "explanation": "Work-for-hire: copyright goes to the commissioning entity (employer), NOT the creator, if: (1) work was done within scope of employment, OR (2) there's a written agreement requesting work on the contractor's behalf."
+    },
+    {
+      "q": "The Patent Cooperation Treaty preserves the right to apply for patent protection in member countries for:",
+      "options": [
+        "6 months",
+        "12 months",
+        "30 months",
+        "5 years"
+      ],
+      "correct": 2,
+      "explanation": "PCT preserves patent application rights for 30 months across ~100 countries. Other key treaties: Paris Convention (160 countries, prohibits differential rights), European Patent Convention (single application), Madrid Protocol (70 countries, trademarks), TRIPS (uniform 20-year patent length)."
+    },
+    {
+      "q": "Technology substitution can take very different amounts of time. The fastest substitution studied was:",
+      "options": [
+        "Margarine replacing butter (56 years)",
+        "Plastics replacing metals in cars (16 years)",
+        "Animal/detergent soap (9 years)",
+        "Synthetic rubber replacing natural (58 years)"
+      ],
+      "correct": 2,
+      "explanation": "Animal/detergent soap substitution took only 9 years — the fastest. Synthetic rubber, synthetic fibers, and plastic leather all took 56-58 years. The speed matters enormously for strategy: if you bet on 20 years but it happens in 5, competitors enter before you're ready."
+    },
+    {
+      "q": "The 'cost spiral' in technology substitution occurs when:",
+      "options": [
+        "New technology gets cheaper through economies of scale",
+        "Substitution reduces incumbent's production volume, raising costs, causing more substitution",
+        "Government subsidies artificially reduce costs of new technology",
+        "Patent expiration allows cheaper generic alternatives"
+      ],
+      "correct": 1,
+      "explanation": "Cost spiral: substitution → old tech production volume drops → costs rise (loss of scale) → more customers switch → more volume loss → bankruptcy. This was observed with steel minimills disrupting integrated steel producers."
+    },
+    {
+      "q": "Before the mid-19th century, approximately what percentage of patenting inventors had NO formal scientific training?",
+      "options": [
+        "20%",
+        "40%",
+        "60%",
+        "80%"
+      ],
+      "correct": 3,
+      "explanation": "80% of patenting inventors had no formal scientific training before the mid-1800s. Innovation had low barriers to entry and 'technical simplicity.' The shift to institutional R&D began with Edison's Menlo Park lab (1876), and patenting per capita actually DROPPED as innovation consolidated within firms."
+    },
+    {
+      "q": "The TRIPS Agreement makes patent length uniform across all signatory countries at:",
+      "options": [
+        "10 years",
+        "15 years",
+        "20 years",
+        "25 years"
+      ],
+      "correct": 2,
+      "explanation": "TRIPS standardizes patents at 20 years across all signatories. It also requires patents on chemical/pharmaceutical products and restricts mandatory licensing. Other IP treaties focus on different aspects: PCT (application rights), Paris Convention (non-discrimination), Madrid Protocol (trademarks)."
+    },
+    {
+      "q": "Lead users are valuable for innovation because they:",
+      "options": [
+        "Represent the average customer's preferences",
+        "Are so dissatisfied with existing products that they create their own solutions",
+        "Always adopt technology last and provide final validation",
+        "Have the largest purchasing budgets"
+      ],
+      "correct": 1,
+      "explanation": "Lead users are customers so unhappy with current products they're already building their own solutions. They're likely the first users of truly new products and eager beta testers. 3M uses a 4-phase lead user method involving 10-15 users in workshops. Examples: mountain bikes, Gatorade, sports bras."
+    },
+    {
+      "q": "The innovation waves identified by Edelson Institute have been getting:",
+      "options": [
+        "Longer over time (60 → 80 years)",
+        "Shorter over time (60 → 25 years)",
+        "Staying constant at about 50 years",
+        "More unpredictable with no clear pattern"
+      ],
+      "correct": 1,
+      "explanation": "Innovation waves are getting shorter: 1st wave ~60 years (water/textiles/iron, 1785), 2nd ~55 years (steam/rail, 1845), 3rd ~50 years (electricity, 1900), 4th ~40 years (electronics, 1950), 5th ~30 years (digital, 1990), 6th ~25 years (AI/IoT/clean tech, 2020)."
+    },
+    {
+      "q": "Google has averaged approximately one acquisition per month over which period?",
+      "options": [
+        "2005-2010",
+        "2010-2015",
+        "2000-2018",
+        "2015-2025"
+      ],
+      "correct": 2,
+      "explanation": "Google averaged ~1 acquisition/month from 2000 to 2018 (nearly 2 decades). OECD found that firms often buy startups to eliminate competition before growth, and post-acquisition innovation often declines. Top 5 US tech firms = ~25% of top 500 public firms."
+    },
+    {
+      "q": "Conditions that favor trade secrecy OVER patents include all EXCEPT:",
+      "options": [
+        "Few sources of information about the technology",
+        "Product complexity makes reverse engineering difficult",
+        "Knowledge is tacit and lives in people's heads",
+        "The product is easily observable by customers"
+      ],
+      "correct": 3,
+      "explanation": "Observable products FAVOR patents over secrecy — because customers can reverse engineer them, making secrecy useless. Secrecy works when: few info sources, complex products, poorly understood processes, tacit knowledge, and knowledge not observable in use."
+    },
+    {
+      "q": "Kodak invented the digital CMOS sensor in what year?",
+      "options": [
+        "1968",
+        "1976",
+        "1989",
+        "1995"
+      ],
+      "correct": 1,
+      "explanation": "Kodak invented the digital CMOS sensor in 1976 — yet Sony and Apple commercialized the first digital cameras in the 1980s-90s. Classic case: inventing ≠ commercializing. Kodak's incumbent inertia and path dependency in chemical film prevented them from pursuing their own invention."
+    },
+    {
+      "q": "In the VC industry, what percentage of portfolio cost typically goes to investments returning less than 1x (failures)?",
+      "options": [
+        "25%",
+        "45%",
+        "63%",
+        "80%"
+      ],
+      "correct": 2,
+      "explanation": "63.2% of portfolio cost goes to <1x returns (failures). Only 4.3% of cost goes to >10x investments, but those generate 61.7% of total value. Of 4,000 firms seeking VC, only 200 raise money, and only 15 reach 1B NOK revenue."
+    },
+    {
+      "q": "A nondisclosure agreement must specify:",
+      "options": [
+        "All employee knowledge as confidential",
+        "Exactly what information is secret and identify who can receive it",
+        "Only the employee's salary and title",
+        "The company's entire patent portfolio"
+      ],
+      "correct": 1,
+      "explanation": "NDAs must specify EXACTLY what info is secret (cannot be 'all employee knowledge'), provide consideration (salary counts), specify legitimate uses, identify people who can receive info, and state what happens to documents during/after employment."
+    },
+    {
+      "q": "In the aircraft industry, the innovation ratio of large to small firms is approximately:",
+      "options": [
+        "0.067 (small firms dominate)",
+        "1.0 (equal)",
+        "9.231 (large firms dominate)",
+        "31.000 (large firms strongly dominate)"
+      ],
+      "correct": 3,
+      "explanation": "Aircraft: 31.000 (large firms dominate massively). Pharmaceutical: 9.231 (large dominate). Measuring/controlling devices: 0.067 (small firms dominate). Small firms are more innovative in younger, less R&D-intensive, less concentrated industries."
+    },
+    {
+      "q": "Moderna uses approximately what percentage of off-the-shelf SaaS tools vs custom-built tools?",
+      "options": [
+        "50% off-the-shelf, 50% custom",
+        "85% undifferentiated off-the-shelf, ~85% company-specific custom",
+        "95% custom-built, 5% off-the-shelf",
+        "70% off-the-shelf, 30% custom"
+      ],
+      "correct": 1,
+      "explanation": "Moderna uses ~85% undifferentiated SaaS tools (like Workday for HR) AND ~85% company-specific custom tools for their core drug development. Damiani's principle: 'You cannot blindly translate manual processes into digital — processes must be redesigned.'"
+    },
+    {
+      "q": "DNA sequencing performance has increased at a rate that:",
+      "options": [
+        "Exactly matches Moore's Law",
+        "Is slower than Moore's Law",
+        "Is faster than Moore's Law",
+        "Has remained constant since 1977"
+      ],
+      "correct": 2,
+      "explanation": "DNA sequencing performance increased FASTER than Moore's Law — from Sanger's chain-termination (1977) through Illumina's bridge PCR (2004) to modern techniques. This is one of the few technology areas that outpaced semiconductor improvement, driven by biotech innovation cascades."
+    },
+    {
+      "q": "Organizational slack is important for innovation because it:",
+      "options": [
+        "Reduces the total number of employees needed",
+        "Provides employees time and resources for non-core exploration",
+        "Increases short-term profitability",
+        "Eliminates the need for formal R&D departments"
+      ],
+      "correct": 1,
+      "explanation": "Slack = extra time/resources for exploration beyond core duties. Google's 20% time produced Gmail and Orkut. Companies facing financial pressure often cut slack for efficiency — GM resisted this by maintaining R&D in electric/fuel cell vehicles despite financial difficulties."
+    }
+  ],
+  "Curveball Exam 2": [
+    {
+      "q": "First mover advantage is MORE effective in industries where products are:",
+      "options": [
+        "Cheap, frequently purchased, and commoditized",
+        "Expensive, durable, and infrequently purchased",
+        "Sold only to government agencies",
+        "Digital and easily copied"
+      ],
+      "correct": 1,
+      "explanation": "First movers benefit most when products are expensive, durable, and infrequently purchased — because customers won't repurchase soon, giving the first mover a longer window. Also more effective in advertising-intensive industries and where distributors must hold large stocks."
+    },
+    {
+      "q": "The 'opportunistic renegotiation problem' in contracting for complementary assets occurs when:",
+      "options": [
+        "Both parties have equal bargaining power",
+        "The asset is generic and easily replaceable",
+        "One party exploits the other's dependence on a specialized investment",
+        "Government regulations change the terms of the contract"
+      ],
+      "correct": 2,
+      "explanation": "When assets are specialized (can't be redeployed cheaply), the supplier can exploit the innovator's dependence — 'hold-up problem.' The innovator is locked in and the supplier demands better terms. This is why Teece says firms must OWN specialized complementary assets, not contract for them."
+    },
+    {
+      "q": "The Bass model's key limitation is that it assumes:",
+      "options": [
+        "All customers adopt simultaneously",
+        "Prices remain constant over time",
+        "Demand-side factors only — ignoring supply constraints",
+        "Technology never improves after launch"
+      ],
+      "correct": 2,
+      "explanation": "The Bass model is demand-side only — it ignores supply constraints like raw material availability, production capacity, and manufacturing bottlenecks. Other limitations: can't estimate at the very beginning, accuracy depends on correct market size (m), and declines with competing technologies or economic shocks."
+    },
+    {
+      "q": "The 4-phase lead user method involves a workshop with approximately how many lead users?",
+      "options": [
+        "3-5",
+        "10-15",
+        "25-30",
+        "50+"
+      ],
+      "correct": 1,
+      "explanation": "The lead user workshop (phase 4) includes 10-15 lead users to fill gaps in product concepts. Phase 1: identify markets/trends. Phase 2: select specific trend, plan interviews. Phase 3: interview lead users, gather needs. Phase 4: workshop. 3M used this with MASH unit surgeons and veterinary surgeons."
+    },
+    {
+      "q": "California is unique in US employment law because it:",
+      "options": [
+        "Requires all employees to sign noncompete agreements",
+        "Cannot enforce noncompete agreements at all",
+        "Has the longest noncompete duration in the US",
+        "Requires federal court approval for all NDAs"
+      ],
+      "correct": 1,
+      "explanation": "California CANNOT enforce noncompete agreements — this is one reason Silicon Valley has such high employee mobility and rapid knowledge diffusion between firms. Other states allow noncompetes but they must be limited in time and geography."
+    },
+    {
+      "q": "Schumpeter's exact definition of creative destruction includes the phrase:",
+      "options": [
+        "'survival of the fittest in the marketplace'",
+        "'a process of industrial mutation that incessantly revolutionizes the economic structure from within'",
+        "'the invisible hand of market competition'",
+        "'technological progress through planned obsolescence'"
+      ],
+      "correct": 1,
+      "explanation": "Schumpeter: 'A process of industrial mutation...that incessantly revolutionizes the economic structure from within, incessantly destroying the old one, incessantly creating a new one.' (1945, p82). Key word: FROM WITHIN — not external destruction but internal transformation."
+    },
+    {
+      "q": "The 6th innovation wave (~2020) is characterized by:",
+      "options": [
+        "Digital networks, software, new media",
+        "Petrochemicals, electronics, aviation",
+        "AI & IoT, robots & drones, clean tech",
+        "Electricity, chemicals, internal combustion"
+      ],
+      "correct": 2,
+      "explanation": "6th wave (~2020, ~25 years): AI & IoT, robots & drones, clean tech. Previous waves: 5th (digital/software, 1990), 4th (petrochemicals/electronics, 1950), 3rd (electricity/chemicals, 1900), 2nd (steam/rail, 1845), 1st (water/textiles, 1785)."
+    },
+    {
+      "q": "Firm performance is determined by the interaction of which three types of rents?",
+      "options": [
+        "Patent rents, licensing rents, trademark rents",
+        "Schumpeterian rents, monopoly rents, Ricardian rents",
+        "Short-term rents, medium-term rents, long-term rents",
+        "Production rents, marketing rents, distribution rents"
+      ],
+      "correct": 1,
+      "explanation": "Three rent types: Schumpeterian (change-based: profit between innovation and diffusion), Monopoly (environment-based: industry position, barriers to entry), Ricardian (firm-specific: resources, capabilities, barriers to imitation). All three interact to determine firm performance."
+    },
+    {
+      "q": "Moderna CEO Bancel's principle for digitization, articulated by CDO Damiani, is:",
+      "options": [
+        "'Move fast and break things'",
+        "'Digital-first, analog-never'",
+        "'You cannot blindly translate manual processes into digital — processes must be redesigned'",
+        "'Automate everything, question nothing'"
+      ],
+      "correct": 2,
+      "explanation": "Damiani's principle: processes must be REDESIGNED for digital, not just digitized. The 2012 anecdote of a scientist entering nucleotide sequences in Excel horrified Bancel — one wrong cell could ruin an entire drug design. This led to the 'drug design studio' approach."
+    },
+    {
+      "q": "Which of the following is NOT a limitation of the Bass model?",
+      "options": [
+        "Cannot estimate at the very beginning of a product launch",
+        "Accuracy depends on correctly estimating total market size",
+        "It overestimates adoption in supply-constrained markets",
+        "It accounts for competition from substitute technologies"
+      ],
+      "correct": 3,
+      "explanation": "The Bass model does NOT account for competing technologies — that's a limitation, not a feature. It assumes no competition. Other limitations: can't estimate at start (needs prior data), depends on correct market size (m), demand-side only (ignores supply), accuracy declines over time."
+    },
+    {
+      "q": "An advantage of being a late mover into a market is the ability to:",
+      "options": [
+        "Set industry standards before competitors",
+        "Build brand recognition as the pioneer",
+        "Free ride on the first mover's R&D investments and correct their mistakes",
+        "Secure exclusive supplier contracts"
+      ],
+      "correct": 2,
+      "explanation": "Late movers can: free-ride on first mover's R&D, correct first mover's design mistakes, leapfrog with newer technology (first movers locked into older designs), benefit from knowledge spillovers (cost of innovation > cost of imitation), and time complementary technology better."
+    },
+    {
+      "q": "In Teece's appropriability framework, the decision to license vs. integrate depends on three factors. Which is NOT one of them?",
+      "options": [
+        "Are patents/trade secrets effective?",
+        "Has the dominant design converged?",
+        "Are complementary assets specialized or generic?",
+        "Is the company publicly traded?"
+      ],
+      "correct": 3,
+      "explanation": "Teece's three decision axes: (1) Are patents/trade secrets effective? (2) Has dominant design converged? (3) Are complementary assets specialized or generic? Whether the company is publicly traded is irrelevant to the appropriability framework."
+    },
+    {
+      "q": "The first industrial research laboratories were established in:",
+      "options": [
+        "1776 by Adam Smith",
+        "1836 at MIT",
+        "1876 by Edison (Menlo Park) and Alexander Graham Bell",
+        "1920 at Bell Labs"
+      ],
+      "correct": 2,
+      "explanation": "The first industrial labs appeared in 1876: Edison's Menlo Park and Bell's laboratory. The concept spread to European pharma/dye labs in Germany (1880-1890). This marked the shift from individual inventors (80% had no formal training) to collective, institutional R&D."
+    },
+    {
+      "q": "OECD research found that after large firms acquire small startups, the typical result is:",
+      "options": [
+        "Innovation accelerates dramatically",
+        "The startup's products are distributed more widely",
+        "Innovation often declines and products are discontinued",
+        "The acquiring firm becomes more entrepreneurial"
+      ],
+      "correct": 2,
+      "explanation": "OECD found firms often buy startups to eliminate competition before growth. Post-acquisition: innovation frequently declines and products are discontinued. Google averaged 1 acquisition/month (2000-2018), described culturally as 'Jimmy Got a Job at Google' — purchased firms stagnate in silos."
+    },
+    {
+      "q": "The science fiction novel that predicted electronic currencies, avatars, and VR headsets was:",
+      "options": [
+        "Ready Player One (2011)",
+        "Fahrenheit 451 (1955)",
+        "Snow Crash (1992)",
+        "2001: A Space Odyssey (1968)"
+      ],
+      "correct": 2,
+      "explanation": "Snow Crash (1992) by Neal Stephenson predicted electronic currencies, avatars, online subcultures, and VR/AR headsets — and coined the term 'metaverse.' Other sci-fi predictions: wireless earbuds (Fahrenheit 451, 1955), folding phone (Star Trek, 1966), videoconferencing (2001, 1968)."
+    },
+    {
+      "q": "In the VC pipeline, approximately how many firms seeking venture capital actually raise money?",
+      "options": [
+        "2,000 out of 4,000",
+        "1,000 out of 4,000",
+        "200 out of 4,000",
+        "50 out of 4,000"
+      ],
+      "correct": 2,
+      "explanation": "Of 4,000 firms seeking VC: only 200 raise money (5%), and only 15 reach 1B NOK revenue. Combined with the skewness stat (0.4% of investments → 97% of returns), this shows how extremely selective and winner-take-all the VC industry is."
+    },
+    {
+      "q": "Angel investors differ from VCs in that angels have:",
+      "options": [
+        "Defined fund lifecycles of 7-10 years",
+        "Minimum investments of $1M+",
+        "Infinite fund life and smaller check sizes (~$25,000)",
+        "Higher expected returns than VCs"
+      ],
+      "correct": 2,
+      "explanation": "Angels: infinite fund life (no forced exit timeline), small checks (~$25k minimum), earlier stage (pre-seed/seed), moderate returns (<9x). Funded ventures often have 15+ angels. VCs: defined fund life (7-10 years), larger checks, higher return targets (5-10x), 2% fee + 20-30% carry."
+    },
+    {
+      "q": "A VC term sheet typically includes all of the following EXCEPT:",
+      "options": [
+        "Cap table showing ownership percentages",
+        "Employee stock pool allocation",
+        "Board structure (company vs. investor vs. neutral seats)",
+        "The company's 5-year marketing budget"
+      ],
+      "correct": 3,
+      "explanation": "Term sheet components: cap table (who owns what %), employee pool (stock for employees), board structure (company vs. investor vs. neutral seats), preferred payout (order of investment payouts). A 5-year marketing budget is an operational document, not a term sheet item."
+    },
+    {
+      "q": "The era of VC 'democratization' (micro VC boom, founder-friendly terms) began approximately in:",
+      "options": [
+        "1980",
+        "2000",
+        "2012",
+        "2020"
+      ],
+      "correct": 2,
+      "explanation": "VC history: 1960 (cottage industry), 1980 (capital boom/ERISA Act), 2000 (dot com bust), 2004 (capital + service era), 2012 (democratization: micro VC, founder-friendly), 2018+ (adapting: bigger funds, diversity, data-driven)."
+    },
+    {
+      "q": "Requiring R&D laboratories to use the SAME facilities is an example of a procedure that encourages links between research and development.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "correct": 0,
+      "explanation": "True. Shared equipment/materials is one of the four R&D linking policies. Note the trap: the mock exam asked about DIFFERENT facilities, which is False. SAME facilities = True (encourages linking). DIFFERENT facilities = False (hinders linking)."
+    },
+    {
+      "q": "Knowledge spillovers are particularly problematic for innovators because:",
+      "options": [
+        "The cost of innovation exceeds the cost of imitation",
+        "Government regulations require sharing research results",
+        "Customers always prefer the original inventor's product",
+        "Spillovers only affect small firms"
+      ],
+      "correct": 0,
+      "explanation": "The cost of innovating is higher than the cost of imitating — so competitors can hire your people and copy your knowledge at lower cost than it took you to create it. This is the fundamental knowledge spillover problem and one reason why late movers can succeed."
+    },
+    {
+      "q": "In Moderna's digital pyramid, the layers from bottom to top are:",
+      "options": [
+        "AI → Analytics → Automation → Integration → Cloud",
+        "Cloud → Integration → Automation & Robotics → Analytics → AI",
+        "Data → Processing → Output → Feedback → Learning",
+        "Hardware → Software → Network → Applications → Users"
+      ],
+      "correct": 1,
+      "explanation": "Moderna's digital stack bottom to top: Cloud (AWS since 2013) → Integration (data harmonized, IoT) → Automation & Robotics (islands connected) → Analytics → AI. By spring 2020: ~20 AI algorithms in production, ~20 in development, MVP AI model built in avg 6 months."
+    },
+    {
+      "q": "Codified knowledge differs from tacit knowledge in that codified knowledge:",
+      "options": [
+        "Can only be transferred through personal demonstration",
+        "Spreads slowly through apprenticeship",
+        "Can be written down and transferred instantly across distance",
+        "Lives only in people's heads and is learned by doing"
+      ],
+      "correct": 2,
+      "explanation": "Codified = written in blueprints/formulas, transfers instantly, spreads fast across distance. Tacit = lives in people's heads, learned by doing, spreads slowly (e.g., plant manager's assembly line intuition, salesperson's pitch timing). This distinction matters for choosing patents vs. secrecy."
+    },
+    {
+      "q": "R&D intensity is much higher for small firms than for large ones.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "correct": 0,
+      "explanation": "True. Small firms spend a HIGHER percentage of revenue on R&D (higher intensity) and produce innovations at lower R&D cost. However, large firms spend more in absolute terms and can hire more talented/diverse employees. Small firms also have higher innovation rates per employee."
+    },
+    {
+      "q": "The 'hipster indicator' of creative destruction suggests that:",
+      "options": [
+        "Hipsters are the most innovative consumer segment",
+        "Products hipsters like were once mainstream and disrupted by newer alternatives",
+        "Hipster businesses have the highest failure rate",
+        "Creative destruction only affects artisanal products"
+      ],
+      "correct": 1,
+      "explanation": "From lectures: 'If hipsters like it, it was likely at some point the victim of creative destruction.' Examples: vinyl records, typewriters, mechanical watches, cargo bikes, brick buildings. These products were displaced by newer alternatives but maintained niche appeal."
+    }
   ]
 }
