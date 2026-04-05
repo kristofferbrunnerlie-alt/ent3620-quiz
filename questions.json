@@ -8745,15 +8745,15 @@
       "explanation": "Aircraft: 31.000 (large firms dominate massively). Pharmaceutical: 9.231 (large dominate). Measuring/controlling devices: 0.067 (small firms dominate). Small firms are more innovative in younger, less R&D-intensive, less concentrated industries."
     },
     {
-      "q": "Moderna uses approximately what percentage of off-the-shelf SaaS tools vs custom-built tools?",
+      "q": "Moderna's 'virtuous cycle' in their AI factory model works by:",
       "options": [
-        "50% off-the-shelf, 50% custom",
-        "85% undifferentiated off-the-shelf, ~85% company-specific custom",
-        "95% custom-built, 5% off-the-shelf",
-        "70% off-the-shelf, 30% custom"
+        "More patents → more licensing revenue → more R&D funding",
+        "More data → better algorithms → better mRNA medicines → more trials → more data",
+        "More employees → more ideas → more products → more employees",
+        "Lower prices → more customers → more revenue → lower prices"
       ],
       "correct": 1,
-      "explanation": "Moderna uses ~85% undifferentiated SaaS tools (like Workday for HR) AND ~85% company-specific custom tools for their core drug development. Damiani's principle: 'You cannot blindly translate manual processes into digital — processes must be redesigned.'"
+      "explanation": "Moderna's virtuous cycle: More data → Better algorithms → Better mRNA medicines → More trials → More data. By spring 2020 they had ~20 AI algorithms in production and ~20 in development. This data flywheel is core to their 'born digital' competitive advantage."
     },
     {
       "q": "DNA sequencing performance has increased at a rate that:",
