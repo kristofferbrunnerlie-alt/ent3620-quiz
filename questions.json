@@ -7432,5 +7432,812 @@
       "correct": 1,
       "explanation": "Endocrinologists were the MOST DEMANDING, HIGH-END customers who emphasized the need for pure human insulin. But mainstream patients (and their GPs) were 'pretty happy with pork insulin' at 10 ppm. Lilly made the classic Christensen mistake: listening to lead users and overshooting mainstream needs."
     }
+  ],
+  "Veisdal-Style Mock 1": [
+    {
+      "q": "Which of the following is most likely to be a competence-destroying discontinuity for an incumbent?",
+      "options": [
+        "An improvement in the manufacturing process of existing products",
+        "A shift to a fundamentally different knowledge base that renders existing expertise obsolete",
+        "A price reduction strategy by a new competitor",
+        "An incremental upgrade to the current product line"
+      ],
+      "correct": 1,
+      "explanation": "Competence-destroying discontinuities require entirely new knowledge/skills, making the incumbent's accumulated expertise obsolete. This is what happened to Kodak (chemical film → digital) and Nokia (hardware → software ecosystems)."
+    },
+    {
+      "q": "As part of which strategic action should you use licensing and joint ventures to share risk with partners?",
+      "options": [
+        "Maintaining flexibility",
+        "Minimizing investment",
+        "Seeking high returns",
+        "Reallocating uncertainty to others"
+      ],
+      "correct": 3,
+      "explanation": "Reallocating uncertainty to others means transferring risk to partners through licensing, joint ventures, outsourcing, or franchise models. You let others bear part of the financial risk."
+    },
+    {
+      "q": "Which group of adopters is typically more than two standard deviations before the mean?",
+      "options": [
+        "Early adopters",
+        "Innovators",
+        "Early majority",
+        "Late majority"
+      ],
+      "correct": 1,
+      "explanation": "Innovators (2.5%) are more than 2 standard deviations before the mean. Early adopters (13.5%) are 1-2 standard deviations before. Early majority (34%) and late majority (34%) are around the mean."
+    },
+    {
+      "q": "The political environment influences the rules of the society in which technology advance takes place.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "correct": 0,
+      "explanation": "True. The POLITICAL environment influences the rules of society. Note: the economic environment influences the RESOURCES available for innovation, not the rules. This is a common trap — don't confuse economic and political."
+    },
+    {
+      "q": "What quantitative method evaluates projects by calculating a percentage return that can be compared against a hurdle rate?",
+      "options": [
+        "Net present value",
+        "Analytical hierarchy process",
+        "Internal rate of return",
+        "Real options"
+      ],
+      "correct": 2,
+      "explanation": "IRR calculates the discount rate that yields NPV = 0, expressed as a percentage. If IRR > hurdle rate, the project is worth pursuing. NPV gives a dollar amount, not a percentage."
+    },
+    {
+      "q": "Which of the following is NOT a way competitors can learn about a patented invention?",
+      "options": [
+        "Reverse engineering the product",
+        "Hiring the inventor's employees",
+        "Reading the patent application",
+        "Accessing the inventor's trade secrets database"
+      ],
+      "correct": 3,
+      "explanation": "The three ways competitors imitate patented inventions are: reverse engineering, hiring experts, and reading patent applications (which are public). Trade secrets databases are private and protected — accessing them would be illegal corporate espionage, not a standard method."
+    },
+    {
+      "q": "In the Abernathy-Utterback model, when does the rate of product innovation peak?",
+      "options": [
+        "During the specific phase",
+        "During the transitional phase",
+        "During the fluid phase",
+        "After the dominant design has been established"
+      ],
+      "correct": 2,
+      "explanation": "Product innovation peaks during the fluid phase — many competing designs, no dominant design yet. After dominant design emerges (transitional phase), product innovation declines and process innovation rises. Process innovation peaks in the specific phase."
+    },
+    {
+      "q": "Nokia's engineers never developed touchscreen technology before Apple's iPhone launch.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "correct": 1,
+      "explanation": "False. Nokia engineers DID create touchscreen devices before the iPhone. The problem was organizational — an atmosphere of fear prevented information from flowing upward, and management failed to act on the technology they already had."
+    },
+    {
+      "q": "Which segment of the market is most concerned with proven track records and established standards before adopting?",
+      "options": [
+        "Innovators",
+        "Early adopters",
+        "Early majority",
+        "Late majority"
+      ],
+      "correct": 2,
+      "explanation": "The early majority (pragmatists, 34%) wants to see a whole product solution, value proposition, and proven track record before buying. They are practical — unlike early adopters who buy for competitive advantage and tolerate imperfection."
+    },
+    {
+      "q": "As part of which strategic action should you demand compensation proportional to the level of risk you are taking?",
+      "options": [
+        "Maintaining flexibility",
+        "Minimizing investment",
+        "Seeking high returns",
+        "Reallocating uncertainty to others"
+      ],
+      "correct": 2,
+      "explanation": "Seeking high returns means if you accept high risk, you demand high potential payoff to compensate. This is the VC logic: target 5-10x returns because most investments fail. Risk must be matched by potential reward."
+    },
+    {
+      "q": "A patent grants the holder the right to exclude others from making, using, or selling the invention for how many years?",
+      "options": [
+        "10 years",
+        "15 years",
+        "20 years",
+        "Life of the inventor plus 70 years"
+      ],
+      "correct": 2,
+      "explanation": "Patents last 20 years from filing date. Copyright = life + 70 years (automatic). Trademarks = 10 years (renewable). Don't confuse patent and copyright duration — it's a common exam trap."
+    },
+    {
+      "q": "Procter & Gamble's Connect and Develop strategy involved outsourcing the 'develop' part of R&D.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "correct": 1,
+      "explanation": "False. P&G outsourced the CONNECT part (finding ideas externally), not the DEVELOP part. Development still happened internally at P&G. They found ideas outside through networks of technology entrepreneurs, NineSigma, and YourEncore, then developed them in-house."
+    },
+    {
+      "q": "A technology that has broad applicability across many different industries and use cases is called a:",
+      "options": [
+        "Complementary technology",
+        "Radical technology",
+        "General purpose technology",
+        "Dominant design"
+      ],
+      "correct": 2,
+      "explanation": "General purpose technologies (GPTs) have broad applicability across many sectors — e.g., electricity, the internet, AI. They are particularly important for new firms because they permit strategic flexibility."
+    },
+    {
+      "q": "Which of the following is a primary reason for good companies to 'go bad'?",
+      "options": [
+        "Excessive R&D spending",
+        "Competency traps",
+        "Too much customer focus",
+        "Lack of patents"
+      ],
+      "correct": 1,
+      "explanation": "Competency traps occur when a firm becomes so good at what it currently does that it cannot adapt to new technologies or markets. Other reasons include narrow technological focus and lack of agility. Excessive R&D spending is NOT listed as a primary reason."
+    },
+    {
+      "q": "What term describes a situation where the more a technology is adopted, the more valuable it becomes to each user?",
+      "options": [
+        "Diminishing returns",
+        "Technology overshooting",
+        "Increasing returns to adoption",
+        "Creative destruction"
+      ],
+      "correct": 2,
+      "explanation": "Increasing returns to adoption: more users → more value → more adoption (positive feedback loop). Sources include network externalities, learning effects, and complementary goods. This can lead to lock-in and winner-take-all dynamics."
+    },
+    {
+      "q": "The economic environment influences the resources available for innovative activity.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "correct": 0,
+      "explanation": "True. The economic environment determines RESOURCES for innovation (capital, labor, market demand). The POLITICAL environment influences the RULES. The SOCIAL environment influences attitudes and demographics. Don't mix these up."
+    },
+    {
+      "q": "Which decision-making tool is best suited when a firm needs to make sequential decisions as new information becomes available over time?",
+      "options": [
+        "Net present value",
+        "Checklist",
+        "Analytical hierarchy process",
+        "Real options"
+      ],
+      "correct": 3,
+      "explanation": "Real options limits decision making to information known at the current stage. You make sequential decisions as uncertainty resolves — you can abandon, expand, or delay. NPV and IRR require estimating all future cash flows upfront."
+    },
+    {
+      "q": "Nokia fell behind Apple primarily because it spent less on R&D.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "correct": 1,
+      "explanation": "False. Nokia actually spent MORE on R&D than Apple. The problem was organizational: fear culture, inability to transition from hardware to software/ecosystem thinking, and management blindness to the smartphone revolution. Money was not the issue."
+    },
+    {
+      "q": "Which of the following forces is most directly related to changes in demographics and lifestyle trends?",
+      "options": [
+        "Economic",
+        "Competitive",
+        "Political",
+        "Social"
+      ],
+      "correct": 3,
+      "explanation": "Social forces include demographics, lifestyle trends, attitudes, fears, and perceptions of risk. The creation of body odor products is the classic example of social change driving innovation."
+    },
+    {
+      "q": "Any innovation opportunity that generates a positive NPV is always worth pursuing.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "correct": 1,
+      "explanation": "False. A positive NPV doesn't automatically mean you should invest. You must also consider: opportunity cost (is there a BETTER project?), strategic fit, risk tolerance, and whether the project aligns with company capabilities. Resources are limited."
+    },
+    {
+      "q": "A beachhead strategy is most appropriate at which stage of market development?",
+      "options": [
+        "After successfully crossing the chasm",
+        "During the decline stage",
+        "Before crossing the chasm — to gain initial foothold",
+        "During mass market adoption"
+      ],
+      "correct": 2,
+      "explanation": "A beachhead strategy is used BEFORE crossing the chasm — you focus on one narrow segment (the beachhead) to gain a strong foothold, then expand from there. It is NOT appropriate after the chasm has been crossed."
+    },
+    {
+      "q": "What percentage of all commercially successful new products would not have been developed without academic research?",
+      "options": [
+        "5 percent",
+        "11 percent",
+        "25 percent",
+        "45 percent"
+      ],
+      "correct": 1,
+      "explanation": "11% of commercially successful products trace back to academic research. This shows universities are important but most innovation comes from companies and individuals, not academia."
+    },
+    {
+      "q": "Which of the following correctly describes the relationship between fixed costs and production level?",
+      "options": [
+        "Fixed costs increase proportionally with production",
+        "Fixed costs decrease as production increases",
+        "Fixed costs remain constant regardless of the level of production",
+        "Fixed costs are only incurred during peak production"
+      ],
+      "correct": 2,
+      "explanation": "Fixed costs (rent, loan payments, insurance) remain constant regardless of production level. Variable costs change with production. Total costs = fixed + variable. This is basic but Veisdal tests it."
+    },
+    {
+      "q": "Development is best defined as:",
+      "options": [
+        "The discovery of new scientific principles",
+        "The effort to use technical knowledge to produce something of commercial use",
+        "Basic research conducted at universities",
+        "The marketing of a new product"
+      ],
+      "correct": 1,
+      "explanation": "Development = using technical knowledge to create commercial products/processes. Research = discovering new knowledge. Don't confuse research (discovery) with development (application). The R&D process goes: research → invention → development → innovation."
+    },
+    {
+      "q": "When crossing the chasm, you should focus on a vertical marketing strategy rather than a horizontal one.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "correct": 0,
+      "explanation": "True. Vertical = targeting one specific industry/segment deeply (the beachhead). Horizontal = targeting many segments broadly. Crossing the chasm requires deep focus on one segment to build a complete solution and references before expanding."
+    }
+  ],
+  "Veisdal-Style Mock 2": [
+    {
+      "q": "Which entity accounts for the majority of total R&D spending?",
+      "options": [
+        "Universities",
+        "Government agencies",
+        "Companies",
+        "Individual inventors"
+      ],
+      "correct": 2,
+      "explanation": "Companies account for the majority of R&D spending (over 70%). Universities and government agencies contribute much less. Of the entities that undertake innovation, companies are also the most prolific source."
+    },
+    {
+      "q": "As part of which strategic action should you begin operations on a small scale?",
+      "options": [
+        "Seeking high returns",
+        "Minimizing investment",
+        "Maintaining flexibility",
+        "Reallocating uncertainty to others"
+      ],
+      "correct": 1,
+      "explanation": "Starting small = minimizing investment. You keep costs low until you know more about whether the opportunity is viable. This reduces the total amount at risk if the project fails."
+    },
+    {
+      "q": "What describes the knowledge that cannot be readily codified or transferred in written form?",
+      "options": [
+        "Explicit knowledge",
+        "Patent claims",
+        "Tacit knowledge",
+        "Trade secrets"
+      ],
+      "correct": 2,
+      "explanation": "Tacit knowledge is knowledge that is difficult to write down, codify, or transfer — it's learned through experience and practice. Unlike trade secrets (which are deliberately kept hidden), tacit knowledge is inherently hard to communicate even if you wanted to share it."
+    },
+    {
+      "q": "The S-curve shows that early investment in a technology typically produces:",
+      "options": [
+        "Rapid performance improvement",
+        "Constant performance improvement",
+        "Very little performance improvement for each unit of effort",
+        "Decreasing performance improvement"
+      ],
+      "correct": 2,
+      "explanation": "At the bottom of the S-curve, performance improvement is slow despite significant effort — you're building foundational knowledge. The rapid improvement phase comes in the middle (steep part). At the top, diminishing returns set in."
+    },
+    {
+      "q": "Which of the following is NOT a requirement for an invention to receive patent protection?",
+      "options": [
+        "It must be useful",
+        "It must be novel",
+        "It must be non-obvious to a person skilled in the field",
+        "It must be commercially profitable"
+      ],
+      "correct": 3,
+      "explanation": "The three requirements are: useful, novel, and non-obvious. Commercial profitability is NOT required. You can patent something that never makes money. Many patented inventions are never commercialized."
+    },
+    {
+      "q": "Diffusion refers to:",
+      "options": [
+        "The process of inventing a new product",
+        "The rate at which a new technology becomes adopted by potential users",
+        "The decline in price of a product over time",
+        "The speed of R&D development"
+      ],
+      "correct": 1,
+      "explanation": "Diffusion = the rate at which a technology spreads through potential users. It's different from adoption (an individual's decision to use) and innovation (creating something new). The Bass model is a key tool for predicting diffusion rates."
+    },
+    {
+      "q": "In P&G's Connect and Develop strategy, external ideas were successful because P&G merely needed to find them and put them on the market.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "correct": 1,
+      "explanation": "False. C&D required strong INTERNAL capabilities to evaluate, develop, and commercialize external ideas. For every 100 ideas found, only 1 reached market. External ideas also had to have evidence of working (prototype or proven technology). It was NOT just about finding ideas."
+    },
+    {
+      "q": "A firm in a highly uncertain market should primarily focus on which combination of strategic actions?",
+      "options": [
+        "Seeking high returns and maximizing investment",
+        "Maintaining flexibility and minimizing investment",
+        "Reallocating uncertainty and seeking low returns",
+        "Maximizing investment and maintaining rigidity"
+      ],
+      "correct": 1,
+      "explanation": "Under high uncertainty: maintain flexibility (keep options open, avoid lock-in) and minimize investment (reduce total risk). You don't commit heavily until uncertainty resolves. This is the real options logic applied to strategy."
+    },
+    {
+      "q": "Which type of intellectual property protection does NOT require formal registration?",
+      "options": [
+        "Patent",
+        "Trademark",
+        "Copyright",
+        "Design patent"
+      ],
+      "correct": 2,
+      "explanation": "Copyright is automatic upon creation — no registration needed. It lasts life + 70 years. Patents and trademarks both require formal application/registration. This automatic nature makes copyright unique among IP protections."
+    },
+    {
+      "q": "The 'chasm' exists between which two groups in the technology adoption lifecycle?",
+      "options": [
+        "Innovators and early adopters",
+        "Early adopters and early majority",
+        "Early majority and late majority",
+        "Late majority and laggards"
+      ],
+      "correct": 1,
+      "explanation": "The chasm is between early adopters (visionaries, 13.5%) and early majority (pragmatists, 34%). Visionaries buy for competitive advantage; pragmatists want proven solutions. Different marketing strategies are needed for each — this is why many products die in this gap."
+    },
+    {
+      "q": "In the DARPA model of innovation, which element is NOT part of the approach?",
+      "options": [
+        "Ambitious goals",
+        "Temporary project teams",
+        "Independence from bureaucracy",
+        "General managers overseeing each project"
+      ],
+      "correct": 3,
+      "explanation": "DARPA uses NO general managers — projects are led by technical experts (program managers) on temporary assignments. The model includes ambitious goals, temporary teams, and independence. Google ATAP adopted the same approach."
+    },
+    {
+      "q": "Qualitative decision-making tools compare projects on the basis of:",
+      "options": [
+        "Numerical calculations only",
+        "Cash flow projections",
+        "Scales or words",
+        "Statistical simulations"
+      ],
+      "correct": 2,
+      "explanation": "Qualitative tools use scales or words (e.g., high/medium/low, checklists). Quantitative tools use numerical calculations (NPV, IRR, Monte Carlo). AHP is semi-quantitative — it uses numbers but based on subjective pairwise comparisons."
+    },
+    {
+      "q": "Which of the following best explains why established firms often fail to respond to disruptive technologies?",
+      "options": [
+        "They lack the financial resources to invest",
+        "They focus on their most profitable customers and ignore less profitable segments",
+        "Their R&D teams are less talented than those at startups",
+        "Government regulations prevent them from entering new markets"
+      ],
+      "correct": 1,
+      "explanation": "Christensen's core insight: incumbents focus on most demanding/profitable customers, overshooting mainstream needs and ignoring low-end or new-market segments. This opens the door for disruptors. Nokia and Eli Lilly both fell into this trap."
+    },
+    {
+      "q": "What occurs during the 'shakeout' phase of industry evolution?",
+      "options": [
+        "Many new firms enter the market",
+        "Product innovation reaches its peak",
+        "A large percentage of firms exit the market",
+        "The dominant design is first introduced"
+      ],
+      "correct": 2,
+      "explanation": "During shakeout, ~52% of firms exit. It occurs after the dominant design is established — competition shifts from product variation to efficiency and cost. Firms that can't compete on process efficiency are eliminated."
+    },
+    {
+      "q": "Complementary technologies are technologies that:",
+      "options": [
+        "Replace the focal technology entirely",
+        "Are used along with the focal technology",
+        "Compete directly with the focal technology",
+        "Are developed by government research labs"
+      ],
+      "correct": 1,
+      "explanation": "Complementary technologies are used alongside the focal technology. Example: game software is complementary to game consoles. Complementary assets (manufacturing, distribution) are similarly important — Teece's framework shows how control of these determines who captures value."
+    },
+    {
+      "q": "The creation of new products through changes in social attitudes is illustrated by which example?",
+      "options": [
+        "The development of nuclear energy",
+        "The invention of the printing press",
+        "Products that mask body odor",
+        "The discovery of penicillin"
+      ],
+      "correct": 2,
+      "explanation": "Body odor products emerged because of changing social attitudes about personal hygiene — a social/cultural change, not a technological one. Nuclear energy = political/technological. Printing press = technological. Penicillin = accidental technological innovation."
+    },
+    {
+      "q": "A firm at the upper portion of its technology S-curve is most likely experiencing:",
+      "options": [
+        "Very little performance improvement for each unit of effort",
+        "Rapid improvement for each unit of effort",
+        "Constant improvement for each unit of effort",
+        "Decreasing improvement for each unit of effort"
+      ],
+      "correct": 3,
+      "explanation": "At the top of the S-curve: decreasing/diminishing returns — each unit of effort produces less improvement. This is when a firm should invest in alternative technologies. Veisdal uses both 'very little' (bottom) and 'decreasing' (top) — the distinction is subtle."
+    },
+    {
+      "q": "Adverse selection in innovation financing occurs:",
+      "options": [
+        "After the investment has been made",
+        "Before the investment — when investors cannot distinguish good from bad projects",
+        "Only in government-funded research",
+        "When entrepreneurs have too much information"
+      ],
+      "correct": 1,
+      "explanation": "Adverse selection = PRE-investment information asymmetry. Investors can't tell good from bad projects before investing. Moral hazard = POST-investment — entrepreneur may change behavior after receiving funds. Key distinction for the exam."
+    },
+    {
+      "q": "A comparative decision-making tool is best described as one that:",
+      "options": [
+        "Evaluates projects using numerical cash flow calculations",
+        "Compares projects against standard scales",
+        "Pits projects against each other",
+        "Uses expert panels to rank projects"
+      ],
+      "correct": 2,
+      "explanation": "Comparative tools pit projects AGAINST EACH OTHER (e.g., AHP pairwise comparison). This is different from individual evaluation (NPV — each project evaluated alone) or standard scales (checklists — compared against criteria, not each other)."
+    },
+    {
+      "q": "Nokia's failure was primarily caused by insufficient R&D investment.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "correct": 1,
+      "explanation": "False. Nokia spent MORE on R&D than Apple. The failure was organizational: an atmosphere of fear suppressed honest reporting, the company was locked into hardware/Symbian thinking, and leadership chose Windows Phone over Android. Resources were not the problem."
+    },
+    {
+      "q": "What is the correct sequence in the process model of R&D investment?",
+      "options": [
+        "Innovation → Invention → R&D → Product",
+        "Investment in R&D → Invention → Innovation → New products",
+        "Invention → R&D → Product → Innovation",
+        "R&D → Innovation → Invention → Product"
+      ],
+      "correct": 1,
+      "explanation": "The process model: Investment in R&D → technological invention → innovation (practical implementation) → new or improved products/processes. Investment in R&D must come BEFORE invention, not after."
+    },
+    {
+      "q": "Which IP protection can potentially last forever?",
+      "options": [
+        "Patent",
+        "Trade secret",
+        "Copyright",
+        "Design patent"
+      ],
+      "correct": 1,
+      "explanation": "Trade secrets last indefinitely — as long as the information remains secret. Coca-Cola's formula has been protected for 130+ years. Patents expire after 20 years, copyright after life + 70 years, trademarks after 10 years (but are renewable)."
+    },
+    {
+      "q": "Which adopter category is most price-sensitive and requires strong evidence of low cost and reliability?",
+      "options": [
+        "Innovators",
+        "Early adopters",
+        "Late majority",
+        "Laggards"
+      ],
+      "correct": 3,
+      "explanation": "Laggards (16%) are the most price-sensitive and skeptical. They adopt only when the technology is mature, cheap, and essentially unavoidable. Advertising to laggards should emphasize reliability and low cost. Late majority is also skeptical but adopts earlier than laggards."
+    },
+    {
+      "q": "Most opportunities for innovation result from:",
+      "options": [
+        "A single technological breakthrough",
+        "Government regulation alone",
+        "A combination of technological, political, social and demographic changes",
+        "Individual genius inventors"
+      ],
+      "correct": 2,
+      "explanation": "Most innovation opportunities arise from a COMBINATION of factors — technological, political/regulatory, social, and demographic changes interact to create opportunities. Rarely does a single factor drive innovation alone."
+    },
+    {
+      "q": "The Selden patent case demonstrates that broad patents can be circumvented through:",
+      "options": [
+        "Lobbying for patent law changes",
+        "Waiting for the patent to expire",
+        "Alternative technical approaches",
+        "Ignoring the patent entirely"
+      ],
+      "correct": 2,
+      "explanation": "Ford circumvented Selden's broad automobile patent by using a four-cycle engine instead of the patented Brayton two-stroke. Key lesson: broad patents can be worked around through alternative technical approaches. AutoStore vs Ocado mirrors this same dynamic."
+    }
+  ],
+  "Veisdal-Style Mock 3": [
+    {
+      "q": "Which force determines the availability of capital and human resources for innovative activity?",
+      "options": [
+        "Political",
+        "Social",
+        "Economic",
+        "Competitive"
+      ],
+      "correct": 2,
+      "explanation": "The economic environment determines RESOURCES (capital, labor, market size). Political = rules. Social = attitudes/demographics. Competitive = actions of other firms. This is a frequently tested distinction."
+    },
+    {
+      "q": "As part of which strategic action should you use modular designs that can be adapted for different uses?",
+      "options": [
+        "Maintaining flexibility",
+        "Minimizing investment",
+        "Seeking high returns",
+        "Reallocating uncertainty to others"
+      ],
+      "correct": 0,
+      "explanation": "Modular, adaptable designs = maintaining flexibility. You keep options open by avoiding commitment to a single configuration. If the market shifts, you can reconfigure without starting over. This is different from minimizing investment (spending less overall)."
+    },
+    {
+      "q": "Which phase of the Abernathy-Utterback model is characterized by a focus on cost reduction and efficient production?",
+      "options": [
+        "Fluid phase",
+        "Transitional phase",
+        "Specific phase",
+        "Innovation phase"
+      ],
+      "correct": 2,
+      "explanation": "The specific phase: dominant design is established, product innovation is low, process innovation peaks, competition is based on cost reduction and efficiency. Firms that survive the shakeout compete by producing the dominant design more efficiently."
+    },
+    {
+      "q": "What is the primary reason for the 'gap' or 'chasm' between early adopters and the early majority?",
+      "options": [
+        "Price differences between the groups",
+        "Early adopters want competitive advantage while the early majority wants proven, complete solutions",
+        "Geographic distance between the groups",
+        "Government regulations slow adoption"
+      ],
+      "correct": 1,
+      "explanation": "Early adopters (visionaries) buy for competitive advantage and tolerate incomplete products. The early majority (pragmatists) wants proven solutions with references and full product packages. The same sales pitch doesn't work for both — this is why products die in the chasm."
+    },
+    {
+      "q": "Over 70% of total R&D spending comes from colleges and universities.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "correct": 1,
+      "explanation": "False. Over 70% of R&D spending comes from COMPANIES, not universities. Universities contribute to basic research but account for a much smaller share of total R&D expenditure."
+    },
+    {
+      "q": "What does the term 'dominant design' refer to?",
+      "options": [
+        "The product with the highest market share",
+        "A product architecture that becomes the accepted standard in the industry",
+        "The most innovative product on the market",
+        "The cheapest product available to consumers"
+      ],
+      "correct": 1,
+      "explanation": "A dominant design is the architecture/configuration that becomes the industry standard. After it emerges, competition shifts from product variation to process innovation. Examples: QWERTY keyboard, VHS over Betamax, the basic car layout."
+    },
+    {
+      "q": "Which type of innovation keeps existing components but changes how they are linked together?",
+      "options": [
+        "Incremental innovation",
+        "Radical innovation",
+        "Architectural innovation",
+        "Modular innovation"
+      ],
+      "correct": 2,
+      "explanation": "Henderson & Clark: Architectural = same components, NEW linkages/architecture. Incremental = same both. Modular = new components, same architecture. Radical = new both. Architectural innovation is especially dangerous to incumbents because they don't realize their knowledge is being undermined."
+    },
+    {
+      "q": "For which adopter segment would a marketing message emphasizing cutting-edge technology and visionary potential be most effective?",
+      "options": [
+        "Innovators",
+        "Early adopters",
+        "Early majority",
+        "Late majority"
+      ],
+      "correct": 1,
+      "explanation": "Early adopters (13.5%) are visionaries who want competitive advantage. They respond to messages about strategic potential and being ahead of competitors. Innovators are technology enthusiasts (different motivation). Early majority wants practical proof."
+    },
+    {
+      "q": "The internal rate of return is the discount rate that yields a net present value of zero.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "correct": 0,
+      "explanation": "True. IRR is exactly the discount rate where NPV = 0. If IRR > hurdle rate (required return), the project is worth pursuing. If IRR < hurdle rate, reject it."
+    },
+    {
+      "q": "Which of the following is NOT something that can be patented?",
+      "options": [
+        "A process for manufacturing steel",
+        "A new machine for harvesting crops",
+        "A mathematical formula for predicting weather",
+        "A new chemical compound for treating disease"
+      ],
+      "correct": 2,
+      "explanation": "Mathematical formulas cannot be patented, along with ideas, natural laws, and natural substances. Processes, machines, manufactured items, and compositions of matter (chemical compounds) CAN be patented."
+    },
+    {
+      "q": "Nokia failed because it did not create an operating system.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "correct": 1,
+      "explanation": "False. Nokia DID have an operating system — Symbian. The problem was that Symbian couldn't compete with iOS and Android's app ecosystems. Nokia's failure was about ecosystem and software strategy, not the absence of an OS."
+    },
+    {
+      "q": "A technology that permits strategic flexibility for new firms and has broad applicability is called a:",
+      "options": [
+        "Radical innovation",
+        "Sustaining technology",
+        "General purpose technology",
+        "Disruptive technology"
+      ],
+      "correct": 2,
+      "explanation": "General purpose technologies (GPTs) have broad applicability and enable strategic flexibility — new firms can apply them across many different use cases. Examples: electricity, internet, AI, steam engine."
+    },
+    {
+      "q": "Which of the following is a characteristic of a mechanistic organizational structure?",
+      "options": [
+        "Flat hierarchy with few management levels",
+        "Decentralized decision making",
+        "Informal communication channels",
+        "Centralized decision making with formal rules and procedures"
+      ],
+      "correct": 3,
+      "explanation": "Mechanistic = centralized decisions, formal rules, many hierarchy levels, specialized roles, vertical communication. Organic = the opposite on all dimensions. Mechanistic suits stable environments; organic suits uncertain/innovative environments."
+    },
+    {
+      "q": "What happens when a technology trajectory exceeds what mainstream customers need?",
+      "options": [
+        "Market share automatically increases",
+        "The basis of competition shifts to a dimension where the incumbent may not be dominant",
+        "Customers willingly pay premium prices for the extra performance",
+        "The technology enters a new S-curve"
+      ],
+      "correct": 1,
+      "explanation": "Overshooting: when technology exceeds mainstream needs, the basis of competition shifts. Eli Lilly overshot insulin purity (customers were 'pretty happy with pork insulin'), allowing Novo Nordisk to compete on convenience instead."
+    },
+    {
+      "q": "Venture capital firms typically charge a management fee of:",
+      "options": [
+        "0.5%",
+        "2%",
+        "5%",
+        "10%"
+      ],
+      "correct": 1,
+      "explanation": "Standard VC: 2% management fee + 20-30% carried interest (profit share). They target 5-10x returns over ~7 years. The extreme skewness means 0.4% of investments generate ~97% of total returns."
+    },
+    {
+      "q": "The Barras reverse product cycle describes how in service industries:",
+      "options": [
+        "Product innovation always comes before process innovation",
+        "Process innovation comes first, then enables new product/service innovations",
+        "Innovation follows the same pattern as manufacturing",
+        "Only radical innovations occur"
+      ],
+      "correct": 1,
+      "explanation": "Barras (1986) reversed the A-U model for services: process innovation first (e.g., IT systems for efficiency), then those process improvements enable entirely new services (product innovation). Opposite of manufacturing where product innovation leads."
+    },
+    {
+      "q": "Which is NOT one of the four strategic actions for dealing with uncertainty in innovation?",
+      "options": [
+        "Maintaining flexibility",
+        "Minimizing investment",
+        "Maximizing market share",
+        "Seeking high returns"
+      ],
+      "correct": 2,
+      "explanation": "The four strategic actions are: (1) maintaining flexibility, (2) minimizing investment, (3) seeking high returns, (4) reallocating uncertainty to others. Maximizing market share is a business goal, not one of Shane's four strategies for handling innovation uncertainty."
+    },
+    {
+      "q": "In the VHS vs Betamax standards battle, VHS won primarily because of:",
+      "options": [
+        "Superior video quality",
+        "Lower manufacturing cost",
+        "Network externalities and increasing returns to adoption",
+        "Government regulation favoring VHS"
+      ],
+      "correct": 2,
+      "explanation": "VHS won despite Betamax having arguably better quality. VHS had more content (longer recording time attracted movie studios), which attracted more users, which attracted more content — a positive feedback loop. Classic example of increasing returns and network externalities."
+    },
+    {
+      "q": "Moral hazard in the context of financing innovation refers to:",
+      "options": [
+        "The risk that investors cannot distinguish good projects from bad ones",
+        "The risk that entrepreneurs change behavior after receiving funding",
+        "The risk of market downturns affecting innovation",
+        "The risk of patent infringement"
+      ],
+      "correct": 1,
+      "explanation": "Moral hazard = POST-investment risk that the entrepreneur may shirk, take excessive risks, or divert resources after getting funded. Adverse selection = PRE-investment inability to distinguish good from bad projects. VCs mitigate moral hazard through staged funding, board seats, and covenants."
+    },
+    {
+      "q": "What is the typical adoption percentage for the early majority segment?",
+      "options": [
+        "2.5%",
+        "13.5%",
+        "34%",
+        "16%"
+      ],
+      "correct": 2,
+      "explanation": "Early majority = 34%. Full distribution: innovators 2.5%, early adopters 13.5%, early majority 34%, late majority 34%, laggards 16%. The early and late majority each represent the largest segments at 34%."
+    },
+    {
+      "q": "Which appropriability mechanism allows Coca-Cola to protect its formula for over 130 years?",
+      "options": [
+        "Patent",
+        "Copyright",
+        "Trade secret",
+        "Trademark"
+      ],
+      "correct": 2,
+      "explanation": "Coca-Cola uses trade secret — the formula has never been disclosed publicly. A patent would have expired after 20 years AND required public disclosure. Trade secrets last indefinitely as long as secrecy is maintained. The Nike swoosh is protected by trademark, Disney by copyright."
+    },
+    {
+      "q": "In Apple's functional organizational structure, R&D executive bonuses are based on:",
+      "options": [
+        "Individual product line P&L performance",
+        "Companywide performance",
+        "Department-level revenue targets",
+        "Number of patents filed"
+      ],
+      "correct": 1,
+      "explanation": "Apple runs under ONE P&L — executive bonuses are based on companywide performance, not individual product results. This encourages cross-functional collaboration rather than internal competition between product divisions."
+    },
+    {
+      "q": "P&G's R&D spending as a percentage of sales changed from:",
+      "options": [
+        "2.1% to 4.8%",
+        "4.8% to 3.4%",
+        "6.2% to 4.8%",
+        "3.4% to 1.2%"
+      ],
+      "correct": 1,
+      "explanation": "P&G reduced R&D from 4.8% to 3.4% of sales while MORE THAN DOUBLING their innovation success rate. This was achieved through Connect and Develop — sourcing ideas externally while developing them internally."
+    },
+    {
+      "q": "Which of the following is the strongest motivation for firms to seek patent protection?",
+      "options": [
+        "Licensing revenue",
+        "Enhancing company reputation",
+        "Preventing copying",
+        "Use in negotiation"
+      ],
+      "correct": 2,
+      "explanation": "Preventing copying: 96% (top motivation). Blocking others: 82%. Preventing lawsuits: 59%. Reputation: 48%. Negotiation: 47%. Licensing: only 28%. Most firms patent defensively, not to generate licensing income."
+    },
+    {
+      "q": "Moderna's competitive advantage came from its integrated, cross-functional platform approach. Spinning off the COVID business would have:",
+      "options": [
+        "Increased speed of vaccine development",
+        "Created the silos Moderna specifically designed its organization to avoid",
+        "Reduced costs through focused operations",
+        "Improved regulatory approval timelines"
+      ],
+      "correct": 1,
+      "explanation": "Moderna's advantage was 'shared understanding and shared data across all departments and teams.' Spinning off COVID would create silos — the exact organizational structure Moderna had 'seen the detrimental effects of in big pharma.' The integrated platform enables cross-learning between all 23 programs."
+    }
   ]
 }
