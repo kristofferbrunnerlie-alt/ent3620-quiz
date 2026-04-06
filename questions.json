@@ -9050,5 +9050,274 @@
       "correct": 1,
       "explanation": "From lectures: 'If hipsters like it, it was likely at some point the victim of creative destruction.' Examples: vinyl records, typewriters, mechanical watches, cargo bikes, brick buildings. These products were displaced by newer alternatives but maintained niche appeal."
     }
+  ],
+  "Final Prep: Exam Eve": [
+    {
+      "q": "What is a complementor?",
+      "options": [
+        "A firm whose products increase the value of other firms' products",
+        "A company that directly competes for the same customers by offering substitute products at lower prices",
+        "A government agency that provides subsidies for innovation and technological development",
+        "A consultant who helps organizations restructure their R&D departments for greater efficiency"
+      ],
+      "correct": 0,
+      "explanation": "A complementor increases the value of another firm's products. Example: game developers are complementors to console makers. Short and direct — the other options are longer distractors."
+    },
+    {
+      "q": "Requiring R&D labs to use different facilities is a good way to link research to development.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "correct": 1,
+      "explanation": "False. SAME facilities encourages linking. DIFFERENT facilities creates disconnect — this is what happened at Xerox PARC (California) vs Xerox HQ (Connecticut)."
+    },
+    {
+      "q": "Which is NOT a patentability requirement?",
+      "options": [
+        "Novel",
+        "Non-obvious",
+        "Useful",
+        "Profitable"
+      ],
+      "correct": 3,
+      "explanation": "Profitable is NOT required. The three requirements: useful, novel, non-obvious. Many patented inventions never make money."
+    },
+    {
+      "q": "The economic environment influences:",
+      "options": [
+        "the attitudes and fears that shape consumer behavior and social norms around technology adoption",
+        "the resources available for innovation",
+        "the competitive strategies that firms deploy against each other in domestic and international markets",
+        "the legal and regulatory framework within which firms must operate when pursuing innovation"
+      ],
+      "correct": 1,
+      "explanation": "Economic = resources. Political = rules. Social = attitudes/demographics. Competitive = other firms' actions."
+    },
+    {
+      "q": "A dominant design is best described as:",
+      "options": [
+        "The most expensive product available on the market at any given time",
+        "A product architecture that becomes the accepted industry standard",
+        "A government-mandated specification that all manufacturers in a regulated industry must follow",
+        "The design that receives the most investment from venture capital firms during the fluid phase"
+      ],
+      "correct": 1,
+      "explanation": "Dominant design = the architecture that becomes standard. After it emerges, competition shifts from product variation to process efficiency. Examples: QWERTY, VHS, basic car layout."
+    },
+    {
+      "q": "Adverse selection occurs:",
+      "options": [
+        "after funding, when entrepreneurs change their behavior and take on excessive risk with investor money",
+        "before funding, when investors cannot distinguish good from bad projects",
+        "when government regulations prevent firms from entering profitable markets they have identified",
+        "when competing firms simultaneously develop identical innovations and flood the market"
+      ],
+      "correct": 1,
+      "explanation": "Adverse selection = PRE-investment. Moral hazard = POST-investment. VCs mitigate moral hazard through staged funding, board seats, covenants."
+    },
+    {
+      "q": "What type of organization has hierarchical communication and specialized jobs?",
+      "options": [
+        "Organic",
+        "Decentralized",
+        "Mechanistic",
+        "Functional"
+      ],
+      "correct": 2,
+      "explanation": "Mechanistic = hierarchical, specialized, formal, centralized. Organic = flat, unspecialized, informal, lateral communication."
+    },
+    {
+      "q": "Centralization encourages:",
+      "options": [
+        "radical innovation",
+        "idea generation at lower levels of the organization through autonomy and employee empowerment",
+        "faster market response times by distributing decision-making authority across multiple divisions",
+        "noncore innovation through independent business units operating with their own P&L statements"
+      ],
+      "correct": 0,
+      "explanation": "Centralization encourages radical innovation — top management can direct large investments toward risky long-term bets. Decentralization encourages idea generation and noncore innovation."
+    },
+    {
+      "q": "The Moderna vaccine was shipped to NIH within how many days of the genome sequence?",
+      "options": [
+        "14 days, which represented a moderate improvement over the previous fastest timeline of 8 months",
+        "42 days",
+        "90 days, making it twice as fast as the previous record set during the H1N1 pandemic response",
+        "120 days, utilizing an accelerated clinical trial protocol approved by the FDA and EMA"
+      ],
+      "correct": 1,
+      "explanation": "42 days (vs 20 months for SARS = 90% reduction). Design finalized in 2 days, first batch manufactured by day 25."
+    },
+    {
+      "q": "Small firms tend to be more innovative in:",
+      "options": [
+        "highly concentrated, capital-intensive industries with significant barriers to entry and economies of scale",
+        "advertising-intensive industries where brand recognition and customer loyalty drive purchasing decisions",
+        "less advertising-intensive industries",
+        "older, more established industries with well-defined regulatory frameworks and mature supply chains"
+      ],
+      "correct": 2,
+      "explanation": "Small firms thrive in younger, less advertising-intensive, less capital-intensive, less concentrated industries with simple products."
+    },
+    {
+      "q": "Fleming's discovery of penicillin is an example of:",
+      "options": [
+        "disruptive innovation that fundamentally challenged the existing pharmaceutical industry structure",
+        "process development aimed at improving the efficiency of existing antibiotic manufacturing methods",
+        "technology innovation",
+        "a carefully planned corporate R&D strategy executed by a large pharmaceutical company"
+      ],
+      "correct": 2,
+      "explanation": "Penicillin = accidental technological innovation. NOT disruptive (Christensen's specific process). Technological innovation can be both planned and accidental."
+    },
+    {
+      "q": "Demand for spin-off entrepreneurs has increased primarily because of:",
+      "options": [
+        "reduced costs in lower wage countries creating competitive pressure for established firms worldwide",
+        "growth in high-tech startups",
+        "the leasing of technology becoming an important revenue stream at many large corporations globally",
+        "government subsidies specifically designed to encourage technology transfer from universities to industry"
+      ],
+      "correct": 1,
+      "explanation": "Growth in high-tech startups drives demand for people who can take technology from corporations/universities and commercialize it through spin-offs."
+    },
+    {
+      "q": "Copyright protection lasts:",
+      "options": [
+        "20 years from filing",
+        "10 years, renewable",
+        "life plus 70 years",
+        "50 years from publication date, with an option to extend for an additional 25 years through formal application"
+      ],
+      "correct": 2,
+      "explanation": "Copyright = automatic, life + 70 years. Patent = 20 years (must apply). Trademark = 10 years (renewable)."
+    },
+    {
+      "q": "Real options help managers by:",
+      "options": [
+        "eliminating all uncertainty from innovation investment decisions through comprehensive data analysis",
+        "guaranteeing a positive return on any investment that passes the initial screening criteria",
+        "limiting decisions to information known at the current stage",
+        "providing a fixed discount rate that can be universally applied across all types of innovation projects"
+      ],
+      "correct": 2,
+      "explanation": "Real options = decide based on what you know NOW, with the flexibility to abandon, expand, or delay as new info emerges."
+    },
+    {
+      "q": "The 'working requirement' for patents means:",
+      "options": [
+        "the inventor must be employed full-time while developing the invention and maintain that employment throughout",
+        "the invention must be manufactured in the country where the patent was granted",
+        "patent holders must demonstrate the invention works by submitting detailed performance data annually",
+        "all workers involved in manufacturing must hold citizenship in the patent-granting country"
+      ],
+      "correct": 1,
+      "explanation": "Working requirement: the invention must be manufactured in the country where the patent was granted, within a specified period. This prevents companies from getting patents in countries where they don't intend to produce."
+    },
+    {
+      "q": "P&G's R&D as percentage of sales went from:",
+      "options": [
+        "4.8% to 3.4%",
+        "2.1% to 4.8%, representing a significant increase in internal research and development investment",
+        "6.2% to 4.8%, as the company shifted focus from basic research to applied development activities",
+        "3.4% to 1.2%, reflecting an aggressive outsourcing strategy that eliminated most internal R&D functions"
+      ],
+      "correct": 0,
+      "explanation": "4.8% → 3.4% while innovation success rate more than doubled. Connect and Develop = find ideas externally, develop internally."
+    },
+    {
+      "q": "Horizontal marketing strategy means:",
+      "options": [
+        "focusing deeply on one specific industry or vertical market segment to build expertise and references",
+        "serving customers in multiple industries simultaneously",
+        "marketing only to customers at the same level in the supply chain across different geographic regions",
+        "gradually expanding from a narrow beachhead to adjacent segments through systematic market development"
+      ],
+      "correct": 1,
+      "explanation": "Horizontal = multiple industries at once. Vertical = one industry deeply. When crossing the chasm, use VERTICAL (beachhead), not horizontal."
+    },
+    {
+      "q": "An advantage of corporate venturing is that it reduces risk.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "correct": 1,
+      "explanation": "False. Corporate venturing can INCREASE risk and interfere with ongoing operations. The advantage is exploring new opportunities, not reducing risk."
+    },
+    {
+      "q": "Nokia fell behind because it spent less on R&D than Apple.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "correct": 1,
+      "explanation": "False. Nokia spent MORE on R&D. The problem was organizational: fear culture, hardware-focus, wrong OS choice (Windows over Android)."
+    },
+    {
+      "q": "The IRR is the discount rate that yields:",
+      "options": [
+        "the highest possible net present value for a given investment over its projected lifetime",
+        "a net present value of zero",
+        "a positive cash flow in every single period throughout the duration of the project",
+        "the minimum acceptable return that satisfies all stakeholder requirements simultaneously"
+      ],
+      "correct": 1,
+      "explanation": "IRR = discount rate where NPV = 0. If IRR > hurdle rate → invest. NPV gives a dollar amount, IRR gives a percentage."
+    },
+    {
+      "q": "Schumpeterian rent refers to:",
+      "options": [
+        "profit earned between innovation and diffusion",
+        "ongoing monopoly profits derived from government-granted exclusive licenses and regulatory barriers to entry",
+        "returns generated through ownership of scarce natural resources that competitors cannot easily replicate",
+        "dividends paid to shareholders of publicly traded technology firms during periods of rapid growth"
+      ],
+      "correct": 0,
+      "explanation": "Schumpeterian/entrepreneurial rent = temporary profit between introducing an innovation and competitors catching up. Monopoly rent = industry position. Ricardian rent = firm-specific resources."
+    },
+    {
+      "q": "Teece's appropriability framework considers:",
+      "options": [
+        "only the number of patents a firm holds in its intellectual property portfolio",
+        "the strength of IP protection AND control of complementary assets",
+        "exclusively the size of the firm's R&D budget relative to its closest competitors in the same market",
+        "the geographic distribution of the firm's manufacturing and distribution facilities worldwide"
+      ],
+      "correct": 1,
+      "explanation": "Teece: (1) tightness of appropriability regime (can others copy?) + (2) control of complementary assets (manufacturing, distribution, brand). EMI invented CT scanner but GE/Siemens had the hospital sales networks."
+    },
+    {
+      "q": "A beachhead strategy is most appropriate:",
+      "options": [
+        "after successfully crossing the chasm and establishing broad market presence across multiple segments",
+        "during the decline stage of the product lifecycle when the firm needs to consolidate remaining customers",
+        "before crossing the chasm",
+        "when targeting laggards who require extensive proof of reliability and low-cost solutions before adoption"
+      ],
+      "correct": 2,
+      "explanation": "Beachhead = BEFORE the chasm. Focus on one narrow segment, build complete solution and references, then expand."
+    },
+    {
+      "q": "Functional organizations only work for companies selling to innovators and early adopters.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "correct": 1,
+      "explanation": "False. Apple uses functional structure at $260B revenue selling to mainstream consumers. Organizational structure is not determined by which adopter segment you target."
+    },
+    {
+      "q": "Applied research differs from basic research in that applied research:",
+      "options": [
+        "targets specific practical problems",
+        "seeks fundamental understanding of natural phenomena without any consideration for commercial application",
+        "is exclusively conducted by government-funded university laboratories under strict academic protocols",
+        "always produces commercially viable products within a predictable and well-defined timeframe"
+      ],
+      "correct": 0,
+      "explanation": "Applied = targets practical problems (Edison quadrant). Basic = fundamental understanding (Bohr quadrant). Pasteur's quadrant = both simultaneously."
+    }
   ]
 }
