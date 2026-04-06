@@ -9319,5 +9319,266 @@
       "correct": 0,
       "explanation": "Applied = targets practical problems (Edison quadrant). Basic = fundamental understanding (Bohr quadrant). Pasteur's quadrant = both simultaneously."
     }
+  ],
+  "Final Prep: Exam Eve 2": [
+    {
+      "q": "Which of the following would NOT be considered a reason companies have increased their level of technology innovation?",
+      "options": [
+        "To introduce new products to market faster",
+        "To generate competitive advantage",
+        "To increase profit from established products",
+        "To produce a greater variety of new products"
+      ],
+      "correct": 2,
+      "explanation": "Increasing profit from ESTABLISHED products is not a reason for increasing technology INNOVATION — that's optimization/efficiency. The reasons are: faster new product launches, competitive advantage, and greater product variety."
+    },
+    {
+      "q": "Moderna's operating model deviates from other pharma firms because it starts from digitizing data from randomized-control trials.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "correct": 1,
+      "explanation": "False. Moderna's model starts from digitizing the DRUG DESIGN process itself — drugs designed on computer, not in manual lab processes. The 2012 Excel incident drove this. The competitive advantage comes from the integrated digital platform, not just digitizing trial data."
+    },
+    {
+      "q": "Which is NOT a major reason for good innovative companies going bad?",
+      "options": [
+        "Managerial hubris",
+        "Lack of balance between exploration and exploitation",
+        "Allegiance to shareholders",
+        "Reaching the limits of growth"
+      ],
+      "correct": 2,
+      "explanation": "Allegiance to shareholders is NOT listed. The real reasons: managerial hubris, lack of balance between exploration and exploitation, reaching limits of growth, competency traps, narrow technological focus, lack of agility."
+    },
+    {
+      "q": "LNP delivery was NOT part of Moderna's operating model.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "correct": 1,
+      "explanation": "False. LNPs (lipid nanoparticles) are the 'hardware' in Moderna's model. mRNA = software, LNPs = hardware, individual drugs = apps. LNP delivery is CENTRAL to their platform."
+    },
+    {
+      "q": "The increasing number of women in the workforce is classified as a change in which factor?",
+      "options": [
+        "Technological",
+        "Political and regulatory",
+        "Social and demographic",
+        "All of the other answers"
+      ],
+      "correct": 2,
+      "explanation": "Social and demographic — it's a change in the composition of the labor force driven by social trends. NOT 'all of the above' — it's specifically social/demographic, not technological or political."
+    },
+    {
+      "q": "What is a 'working requirement' in patent law?",
+      "options": [
+        "The inventor must be employed while developing the invention",
+        "Workers must hold citizenship in the patent-granting country",
+        "The invention must be manufactured in the country where the patent was granted within a specified time",
+        "The patent holder must submit annual proof that the invention functions as described"
+      ],
+      "correct": 2,
+      "explanation": "Working requirement ensures companies don't get patents in countries where they won't produce. The invention must be manufactured locally within a set period."
+    },
+    {
+      "q": "Venture capital is a subset of:",
+      "options": [
+        "Public equity",
+        "Private equity",
+        "Government funding",
+        "Corporate bonds"
+      ],
+      "correct": 1,
+      "explanation": "VC is a subset of private equity — both involve investing in private (non-publicly traded) companies. VC focuses on early-stage, high-growth potential firms."
+    },
+    {
+      "q": "When Pfizer discovered Viagra while testing drugs for angina, this was an example of:",
+      "options": [
+        "Disruptive innovation targeting an underserved market segment",
+        "Technology innovation",
+        "A carefully planned process development initiative",
+        "Strategic diversification into adjacent pharmaceutical categories"
+      ],
+      "correct": 1,
+      "explanation": "Accidental technological innovation — same as Fleming/penicillin. NOT disruptive (Christensen's specific process). Both are examples of technology innovation being unplanned."
+    },
+    {
+      "q": "Which is NOT a major friction in financing innovative firms?",
+      "options": [
+        "Adverse selection",
+        "Moral hazard",
+        "Knightian uncertainty",
+        "Globalization"
+      ],
+      "correct": 3,
+      "explanation": "Globalization is not a friction in innovation financing. The three frictions: adverse selection (pre-investment info asymmetry), moral hazard (post-investment behavior change), Knightian uncertainty (unknowable future outcomes)."
+    },
+    {
+      "q": "Schumpeterian rents most directly describe:",
+      "options": [
+        "Profits from owning scarce natural resources",
+        "Profits from government-granted monopolies and regulatory barriers",
+        "Profit earned by innovators between innovation introduction and diffusion",
+        "Returns generated through economies of scale in mature industries"
+      ],
+      "correct": 2,
+      "explanation": "Schumpeterian/entrepreneurial rent = temporary profit between innovation and competitor catch-up. Ricardian = firm-specific resources. Monopoly = industry position/barriers."
+    },
+    {
+      "q": "Which is NOT a cost associated with R&D?",
+      "options": [
+        "Creates a strong intellectual property position",
+        "Difficult to appropriate the returns",
+        "Locks companies into particular strategies",
+        "Highly uncertain with low average financial returns"
+      ],
+      "correct": 0,
+      "explanation": "Creating strong IP is a BENEFIT, not a cost. The costs: hard to appropriate returns, locks you into strategies, highly uncertain. Tricky because all four sound negative, but IP position is actually positive."
+    },
+    {
+      "q": "In general, real options analysis generates a larger value than DCF when:",
+      "options": [
+        "The project has low uncertainty and predictable cash flows",
+        "The magnitude of outcome is large relative to the investment",
+        "The project requires immediate full commitment with no flexibility",
+        "The discount rate is set at zero"
+      ],
+      "correct": 1,
+      "explanation": "Real options add more value when outcomes are large relative to investment — because the flexibility to abandon (limiting downside) or expand (capturing upside) is worth more when the stakes are high and uncertainty is high."
+    },
+    {
+      "q": "One of the benefits of R&D is that it locks companies into particular strategies.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "correct": 1,
+      "explanation": "False. Locking into strategies is a COST of R&D, not a benefit. Benefits include: creating IP, building absorptive capacity, developing new products."
+    },
+    {
+      "q": "Demand is difficult to forecast because it is linear over time.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "correct": 1,
+      "explanation": "False. Demand is difficult to forecast precisely because it is NOT linear — it follows S-curves, is affected by network effects, and can be disrupted by competing technologies and economic shocks."
+    },
+    {
+      "q": "What is one factor that enabled Moderna to expedite COVID vaccine development?",
+      "options": [
+        "Government exemptions from clinical trials",
+        "Exclusive access to proprietary chemical compounds unavailable to competitors",
+        "Utilization of AI in drug therapy development",
+        "A merger with Pfizer that combined both companies' research capabilities"
+      ],
+      "correct": 2,
+      "explanation": "Moderna used AI/ML throughout their development process — ~20 algorithms in production by spring 2020. They did NOT receive exemptions from trials or have exclusive chemical access."
+    },
+    {
+      "q": "Laggards will often only adopt a product when:",
+      "options": [
+        "It offers cutting-edge features unavailable elsewhere",
+        "Alternatives to adoption are no longer available",
+        "Early adopters recommend it through word-of-mouth",
+        "The price drops below a specific industry-standard threshold"
+      ],
+      "correct": 1,
+      "explanation": "Laggards (16%) adopt only when forced — when alternatives disappear. They're the most resistant, price-sensitive, and skeptical group."
+    },
+    {
+      "q": "The disagreement about dividing innovation profits between employer and employee is the most basic explanation for spin-off creation.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "correct": 0,
+      "explanation": "True. When employees believe they deserve more of the innovation's value than the employer offers, they leave to start their own company — the fundamental driver of spin-offs."
+    },
+    {
+      "q": "A common set of international copyright laws automatically protects an author's work throughout the world.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "correct": 1,
+      "explanation": "False. There is no universal automatic international copyright protection. The Madrid Protocol helps with trademarks across borders, and various treaties exist, but copyright protection varies by country."
+    },
+    {
+      "q": "An effective technology strategy includes decisions about how to organize a company for innovation.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "correct": 0,
+      "explanation": "True. Technology strategy isn't just about WHAT to innovate — it includes HOW to organize for it (organic vs mechanistic, centralized vs decentralized, functional vs divisional)."
+    },
+    {
+      "q": "Where is the chasm located according to Geoffrey Moore?",
+      "options": [
+        "Between innovators and early adopters",
+        "Between early adopters and early majority",
+        "Between early majority and late majority",
+        "Between late majority and laggards"
+      ],
+      "correct": 1,
+      "explanation": "Between early adopters (visionaries, 13.5%) and early majority (pragmatists, 34%). Different buying motivations require different marketing strategies. Use vertical/beachhead strategy to cross."
+    },
+    {
+      "q": "New firms will eventually invest in new technologies because:",
+      "options": [
+        "Government regulations require minimum R&D spending levels for all firms above a certain size",
+        "The potential for improvement of new technologies exceeds that of old ones",
+        "Established firms voluntarily exit markets to make room for innovative newcomers",
+        "Venture capitalists mandate technology investment as a condition of funding agreements"
+      ],
+      "correct": 1,
+      "explanation": "When old technology hits diminishing returns (top of S-curve), new technology with higher improvement potential becomes more attractive. This is the S-curve substitution logic."
+    },
+    {
+      "q": "A patent on a novel drug compound protects the inventor for:",
+      "options": [
+        "Life plus 70 years",
+        "10 years, renewable indefinitely",
+        "20 years from filing date",
+        "As long as the inventor maintains secrecy"
+      ],
+      "correct": 2,
+      "explanation": "Patent = 20 years. Copyright = life + 70 (automatic). Trademark = 10 years (renewable). Trade secret = indefinite (as long as secret). Lipitor went from $13B to $2B after patent expiry."
+    },
+    {
+      "q": "What type of marketing strategy involves focusing deeply on one industry?",
+      "options": [
+        "Horizontal",
+        "Vertical",
+        "Diversified",
+        "Mass-market"
+      ],
+      "correct": 1,
+      "explanation": "Vertical = one industry deeply. Horizontal = multiple industries at once. When crossing the chasm: use vertical (beachhead strategy)."
+    },
+    {
+      "q": "R&D intensity is higher for small firms than large ones.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "correct": 0,
+      "explanation": "True. Small firms spend a higher PERCENTAGE of revenue on R&D (higher intensity) and produce innovations at lower cost. Large firms spend more in absolute terms but have lower intensity."
+    },
+    {
+      "q": "Which decision-making tool pits projects against each other rather than evaluating them individually?",
+      "options": [
+        "Net present value",
+        "Internal rate of return",
+        "Analytical hierarchy process",
+        "Real options"
+      ],
+      "correct": 2,
+      "explanation": "AHP is a COMPARATIVE tool — it pits projects against each other through pairwise comparison on weighted criteria. NPV and IRR evaluate projects individually. Real options values flexibility."
+    }
   ]
 }
