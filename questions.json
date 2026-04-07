@@ -9580,5 +9580,282 @@
       "correct": 2,
       "explanation": "AHP is a COMPARATIVE tool — it pits projects against each other through pairwise comparison on weighted criteria. NPV and IRR evaluate projects individually. Real options values flexibility."
     }
+  ],
+  "Game Day Mock": [
+    {
+      "q": "Which force most directly influences the rules of society in which technology advance takes place?",
+      "options": [
+        "Economic",
+        "Social",
+        "Political",
+        "Competitive"
+      ],
+      "correct": 2,
+      "explanation": "Political = rules. Economic = incentives/resources. Social = attitudes. Competitive = other firms' actions."
+    },
+    {
+      "q": "A firm at the upper portion of the S-curve is most likely experiencing:",
+      "options": [
+        "Rapid improvement for each unit of effort spent on R&D and product development",
+        "Decreasing improvement for each unit of effort",
+        "Constant improvement that matches industry-wide patterns of incremental development",
+        "Very little improvement because the technology has not yet been fully understood"
+      ],
+      "correct": 1,
+      "explanation": "Top of S-curve = diminishing returns. Bottom = very little (technology immature). Middle = rapid. This is when firms should invest in alternative technologies."
+    },
+    {
+      "q": "Which group of adopters is between one and two standard deviations before the mean?",
+      "options": [
+        "Innovators",
+        "Early adopters",
+        "Early majority",
+        "Late majority"
+      ],
+      "correct": 1,
+      "explanation": "Early adopters (13.5%) are 1-2 SD before the mean. Innovators (2.5%) are MORE than 2 SD before. Early majority (34%) is at the mean."
+    },
+    {
+      "q": "Tacit knowledge is best defined as knowledge that:",
+      "options": [
+        "Has a low degree of appropriability and therefore cannot generate Schumpeterian rents for the originating firm",
+        "Cannot be readily codified or transferred in writing",
+        "Is automatically eligible for copyright protection under international intellectual property law",
+        "Has been formally documented in patents, blueprints, or technical specifications for public review"
+      ],
+      "correct": 1,
+      "explanation": "Tacit = lives in people's heads, learned by doing, hard to write down. Codified = written down, transfers instantly. Plant manager intuition vs blueprints."
+    },
+    {
+      "q": "Which is NOT a strategic action for dealing with uncertainty in innovation?",
+      "options": [
+        "Maintaining flexibility",
+        "Maximizing market share",
+        "Seeking high returns",
+        "Reallocating uncertainty to others"
+      ],
+      "correct": 1,
+      "explanation": "The four are: maintain flexibility, minimize investment, seek high returns, reallocate uncertainty. Maximizing market share is a business goal, not a Shane uncertainty strategy."
+    },
+    {
+      "q": "What is the typical management fee VC firms charge?",
+      "options": [
+        "0.5%",
+        "2%",
+        "5%",
+        "10%"
+      ],
+      "correct": 1,
+      "explanation": "VC: 2% annual mgmt fee + 20-30% carried interest. Target 5-10x returns over 7 years. 0.4% of investments → 97% of returns."
+    },
+    {
+      "q": "Which is a benefit of centralization in organizational structure?",
+      "options": [
+        "Improves grassroots idea generation by giving lower-level employees more autonomy and decision authority",
+        "Encourages investment in radical innovation",
+        "Facilitates innovation in noncore areas through independent business units operating with separate budgets",
+        "Reduces coordination costs by spreading decisions across multiple geographically dispersed locations"
+      ],
+      "correct": 1,
+      "explanation": "Centralization → top management can direct large investments toward radical bets. Decentralization → idea generation and noncore innovation."
+    },
+    {
+      "q": "Apple's organizational structure is best described as:",
+      "options": [
+        "Multi-divisional with separate P&L for each product line",
+        "Matrix with dual reporting to product and function",
+        "Functional with one P&L for the entire company",
+        "Holacracy with no formal hierarchy"
+      ],
+      "correct": 2,
+      "explanation": "Apple = functional structure under ONE P&L. Jobs fired all general managers in a single day in 1997. R&D bonuses based on companywide performance."
+    },
+    {
+      "q": "Christensen argues that Uber is NOT disruptive because:",
+      "options": [
+        "It targeted existing taxi users in well-served markets and offered a better service",
+        "Its business model has not generated consistent profits in any of the major metropolitan markets it serves",
+        "Government regulations have prevented it from expanding into the low-end segment of the transportation market",
+        "It relies on existing automobile technology rather than developing entirely new vehicle platforms"
+      ],
+      "correct": 0,
+      "explanation": "Uber launched in SF (well-served), targeted existing taxi customers (not nonconsumers), offered BETTER service (not 'good enough'). Built mainstream first — opposite of disruption direction."
+    },
+    {
+      "q": "The Madrid Protocol simplifies which type of IP filing across multiple countries?",
+      "options": [
+        "Patents",
+        "Trademarks",
+        "Copyrights",
+        "Trade secrets"
+      ],
+      "correct": 1,
+      "explanation": "Madrid Protocol = trademarks (70 signatories). PCT = patents (30 months, 100 countries). Paris Convention = patent priority. TRIPS = uniform 20-year patent length."
+    },
+    {
+      "q": "According to Christensen, what should incumbents facing disruption do?",
+      "options": [
+        "Pivot the entire organization to the disruptive technology as quickly as possible to avoid being left behind",
+        "Acquire the disruptive entrant immediately to eliminate the competitive threat before it gains scale",
+        "Continue sustaining innovation in the core AND create a separate division for disruption",
+        "Wait until the disruptive technology has fully matured before deciding whether to enter that market"
+      ],
+      "correct": 2,
+      "explanation": "Both: keep investing in core for current customers AND create SEPARATE division for disruption. Don't dismantle profitable business. 'Disrupt or be disrupted' can misguide."
+    },
+    {
+      "q": "Moderna shipped its COVID vaccine to NIH in approximately how many days?",
+      "options": [
+        "14 days",
+        "42 days",
+        "90 days",
+        "120 days"
+      ],
+      "correct": 1,
+      "explanation": "42 days vs 20 months (SARS) = 90% reduction. Design finalized day 2, first batch day 25, shipped day 42."
+    },
+    {
+      "q": "Real options analysis adds value over NPV when:",
+      "options": [
+        "The investment outcome is small relative to the total project budget",
+        "Cash flows are highly predictable and the discount rate is well established by the market",
+        "The magnitude of outcome is large relative to investment",
+        "Government regulation prevents the firm from abandoning the project once initiated"
+      ],
+      "correct": 2,
+      "explanation": "Real options add more value when outcomes are large relative to investment — flexibility (abandon, expand, delay) is worth more under high uncertainty and high stakes."
+    },
+    {
+      "q": "P&G's Connect and Develop screening ratio for external ideas is approximately:",
+      "options": [
+        "10 to 1",
+        "100 to 1",
+        "1000 to 1",
+        "All evaluated ideas reach market"
+      ],
+      "correct": 1,
+      "explanation": "Only 1 in 100 external ideas reaches market. P&G needed strong INTERNAL capabilities to screen, evaluate, and develop. R&D fell from 4.8% to 3.4% of sales while success rate doubled."
+    },
+    {
+      "q": "Adverse selection in innovation financing occurs:",
+      "options": [
+        "When entrepreneurs deliberately select investors who will provide the least oversight and monitoring",
+        "Before investment, when investors cannot distinguish good projects from bad",
+        "After funding, when entrepreneurs change behavior and take excessive risks with investor capital",
+        "When government regulators select which companies receive subsidies for their R&D programs"
+      ],
+      "correct": 1,
+      "explanation": "Adverse selection = PRE-investment info asymmetry. Moral hazard = POST-investment behavior change. Both are key frictions in innovation financing."
+    },
+    {
+      "q": "Nokia's failure was primarily caused by:",
+      "options": [
+        "Insufficient R&D investment compared to Apple and other smartphone manufacturers in the global market",
+        "Lack of touchscreen technology, which Nokia engineers had not developed before the iPhone launched",
+        "Organizational issues including a fear culture that suppressed honest information from reaching top management",
+        "Government regulations in Finland that prevented the company from expanding internationally"
+      ],
+      "correct": 2,
+      "explanation": "Nokia spent MORE on R&D than Apple and HAD touchscreen tech before iPhone. Failure was organizational: fear culture, hardware-focus, choosing Windows over Android."
+    },
+    {
+      "q": "Which of the following can be patented?",
+      "options": [
+        "Mathematical formulas",
+        "Natural laws",
+        "A new chemical compound",
+        "Abstract ideas without physical implementation"
+      ],
+      "correct": 2,
+      "explanation": "Patentable: process, machine, manufactured item, composition of matter. NOT patentable: ideas, natural laws, mathematical formulas, natural substances."
+    },
+    {
+      "q": "What enables Moderna's competitive advantage?",
+      "options": [
+        "Government exemptions from clinical trial requirements that other pharmaceutical firms must follow",
+        "Shared data and integrated platform across all departments",
+        "Exclusive access to proprietary chemical compounds developed in collaboration with the NIH",
+        "A larger R&D budget than any other biotech company in North America or Western Europe"
+      ],
+      "correct": 1,
+      "explanation": "Moderna's advantage: integrated digital platform, shared data, no silos. This is why they should NOT spin off COVID — it would destroy the cross-program learning."
+    },
+    {
+      "q": "Demand for spin-off entrepreneurs has increased because:",
+      "options": [
+        "Of significant growth in high-tech startups",
+        "Reduced costs and quality improvements in lower-wage countries have created competitive pressure",
+        "More commodity-product firms are differentiating their offerings to compete in saturated markets",
+        "Technology leasing has become an important revenue stream at many established corporations"
+      ],
+      "correct": 0,
+      "explanation": "Growth in high-tech startups drives demand for people who can take technology from corporations/universities and spin it off. The other answers describe real trends but not THIS specific demand."
+    },
+    {
+      "q": "Penicillin's discovery is an example of:",
+      "options": [
+        "Disruptive innovation that fundamentally challenged the existing pharmaceutical industry structure",
+        "Technology innovation",
+        "A planned R&D project carried out by a major pharmaceutical company in the early twentieth century",
+        "Process development aimed at improving existing antibacterial manufacturing techniques and methods"
+      ],
+      "correct": 1,
+      "explanation": "Penicillin = accidental technological innovation. Technology innovation can be planned OR accidental. NOT disruptive (Christensen's specific process). Same logic applies to Pfizer/Viagra."
+    },
+    {
+      "q": "An organic organizational structure is most appropriate when:",
+      "options": [
+        "The firm operates in a stable environment with routine, repetitive tasks and well-defined procedures",
+        "The firm needs to explore new technologies in uncertain environments",
+        "Cost reduction and efficiency are the primary competitive priorities for the foreseeable future",
+        "The firm has achieved dominant market share in a mature industry with predictable demand patterns"
+      ],
+      "correct": 1,
+      "explanation": "Organic = flat, decentralized, informal — suits uncertain environments and exploration. Mechanistic = hierarchical, formal — suits stable environments and efficiency."
+    },
+    {
+      "q": "Copyright lasts for:",
+      "options": [
+        "20 years from filing",
+        "10 years, renewable",
+        "Life plus 70 years",
+        "Indefinitely as long as the work remains in commercial use by the original creator"
+      ],
+      "correct": 2,
+      "explanation": "Copyright = automatic, life + 70 years. Patent = 20 years. Trademark = 10 years (renewable). Trade secret = indefinite (as long as secret)."
+    },
+    {
+      "q": "When crossing the chasm, you should focus on:",
+      "options": [
+        "Vertical marketing strategy targeting one specific industry segment deeply",
+        "Horizontal marketing strategy serving customers across multiple industries simultaneously",
+        "Mass-market advertising campaigns to reach the broadest possible audience as quickly as possible",
+        "Direct sales efforts focused exclusively on government and institutional buyers in regulated markets"
+      ],
+      "correct": 0,
+      "explanation": "Crossing the chasm = VERTICAL (beachhead) strategy. Pick one industry, build complete solution and references, then expand. Horizontal comes AFTER you've crossed."
+    },
+    {
+      "q": "Which decision-making tool limits decision making to information known at the current stage?",
+      "options": [
+        "Net present value",
+        "Internal rate of return",
+        "Real options",
+        "Analytical hierarchy process"
+      ],
+      "correct": 2,
+      "explanation": "Real options = decide based on what you know NOW, with flexibility to abandon, expand, or delay. NPV/IRR force you to estimate ALL future cash flows upfront."
+    },
+    {
+      "q": "Which is NOT a primary reason for good companies going bad?",
+      "options": [
+        "Competency traps",
+        "Narrow technological focus",
+        "Lack of agility in responding to market shifts",
+        "Excessive investment in research and development activities across multiple business units"
+      ],
+      "correct": 3,
+      "explanation": "Excessive R&D is NOT a reason — good companies often DO too much R&D. The reasons: competency traps, narrow technological focus, lack of agility, managerial hubris, lack of exploration/exploitation balance."
+    }
   ]
 }
